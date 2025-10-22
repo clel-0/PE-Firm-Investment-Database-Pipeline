@@ -17,40 +17,60 @@ aic_url = "https://investmentcouncil.com.au/site/Shared_Content/Smart-Suite/Smar
 
 
 def response_handler(r):
-    """Handles HTTP responses to filter and log specific JSON data from AIC member pages, and saves it in a structured JSONL format."""
-    # Only process XHR and fetch requests
-    if r.request.resource_type != "xhr" and r.request.resource_type !="fetch":
+    # Only process network types that can carry JSON
+    if r.request.resource_type not in ("xhr", "fetch"):
         return
 
-    #only process json responses
+    url = r.url
+    ctype = r.headers.get("content-type", "")
+    print(f"[RESP] {r.request.resource_type} {r.status} {ctype} {url}")
+
+    # (Optional, but helps): ignore obvious Google tile noise early
+    if "maps.googleapis.com" in url:
+        return
+
+    # Strong domain hint: we're after AIC
+    if "investmentcouncil.com.au" not in url:
+        return
+
+    # Only try JSON when likely JSON
+    if "json" not in ctype.lower():
+        # You can still peek at text if you want:
+        # preview = r.text()[:120]
+        # print("[RESP] Non-JSON AIC body preview:", preview)
+        return
+
+    # Parse JSON, safely
     try:
         data = r.json()
-    except Exception:
+    except Exception as e:
+        print("[RESP] JSON parse failed:", e)
         return
-    
-    #check for specific structure in the json data to match AIC member data
-    if isinstance(data,dict):
-        if "Items" in data:
-            if "$values" in data["Items"]:
-               if "Website" in data["Items"]["$values"][0]:
 
-                    # Prepares jsonl formatted string for logging
-                    responseData = {"datetime": date_time, 
-                                   "url" : r.url, 
-                                   "status" : r.status, 
-                                   "headers" : dict(r.headers), 
-                                   "JSON" : data
-                    }
-                    # Convert to jsonl string
-                    jString = json.dumps(responseData, ensure_ascii=False, separators=(",", ":")) + "\n"
-                    print("Logging AIC member data from: " + r.url)
+    # Payload-shape detection (no fragile indexing)
+    vals = None
+    if isinstance(data, dict):
+        items = data.get("Items")
+        if isinstance(items, dict):
+            vals = items.get("$values")
 
-                    # Append to output file
-                    with open(OUTPUT_DIR, "a", encoding="utf-8") as f:
-                        f.write(jString)
-                    print("Logged AIC member data to " + str(OUTPUT_DIR))
+    if not (isinstance(vals, list) and any(isinstance(x, dict) for x in vals)):
+        # Not the members payload shape
+        return
 
-    return
+    # Good — log it
+    record = {
+        "datetime": datetime.now().isoformat(),
+        "url": url,
+        "status": r.status,
+        "headers": dict(r.headers),
+        "JSON": data,
+    }
+    line = json.dumps(record, ensure_ascii=False, separators=(",", ":")) + "\n"
+    with open(OUTPUT_DIR, "a", encoding="utf-8") as f:
+        f.write(line)
+    print("[RESP] Logged AIC payload:", url)
+
 
 
 
@@ -61,7 +81,7 @@ def map_sweep(page : playwright.sync_api.Page):
     loc = page.locator('[aria-label="Map"][role="region"]')
     if loc.count() == 0:
         loc = page.locator('div[aria-roledescription="map"]')
-    if not loc:
+    if loc.count() == 0:
         raise Exception("Could not find map element")
     # Get map boundaries
     box = loc.bounding_box()
@@ -161,9 +181,16 @@ def open_aic_page(url = aic_url):
     """Opens the AIC member directory page and performs a map sweep to trigger loading of all member data."""
     try:
         with sync_playwright() as p:
+            # Launch browser with clean context
             browser = p.chromium.launch(headless=False)
-            page = browser.new_page()
+            context = browser.new_context(
+                ignore_https_errors=True,
+                viewport={'width': 1920, 'height': 1080}
+            )
+            page = context.new_page()
             
+            # Clear storage before starting
+            page.context.clear_cookies()
 
             # Attach the response handler to log relevant responses
             page.on("response", response_handler)
@@ -202,7 +229,10 @@ def extract_PE_firms(PATH: Path = OUTPUT_DIR) -> list[dict]:
             data  = record.get("JSON", record)
 
             #check for specific structure in the json data to match AIC member data
-            keyIdentifier = "FullName" in data["Items"]["$values"][0] and "FullName" in data["Items"]["$values"][0]
+            if len(data["Items"]["$values"]) > 0:
+                keyIdentifier = "FullName" in data["Items"]["$values"][0] and "FullName" in data["Items"]["$values"][0]
+            else:
+                keyIdentifier = False
 
             if isinstance(data, dict):
                 if data["Items"]:
