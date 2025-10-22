@@ -315,16 +315,16 @@ def extract_PE_firms(PATH: Path = OUTPUT_DIR) -> list[dict]:
                             if firm["filter-Member Type"] in {"PE", "private equity"} and "Australia" in firm["LongLatAddress"] and firm["FullName"] not in seenFirms:
                                 firms.append(firm)
                                 seenFirms.add(firm["FullName"])
-                                print(f"Line {i} in {PATH.name()} contains the info corresponding to {firm['FullName']}")
+                                print(f"Line {i} in {PATH.name} contains the info corresponding to {firm['FullName']}")
 
                             else:
-                                print(f"Line {i} in {PATH.name()} does not correspond to a PE firm in Australia.")
+                                print(f"Line {i} in {PATH.name} does not correspond to a PE firm in Australia.")
 
                     else:
-                        print(f"Line {i} in {PATH.name()} does not contain expected member data structure.")
+                        print(f"Line {i} in {PATH.name} does not contain expected member data structure.")
 
                 else:
-                    print(f"Line {i} in {PATH.name()} does not contain expected member data structure.")
+                    print(f"Line {i} in {PATH.name} does not contain expected member data structure.")
 
 
                                 
