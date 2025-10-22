@@ -14,7 +14,84 @@ OUTPUT_DIR.parent.mkdir(parents=True, exist_ok=True)
 
 aic_url = "https://investmentcouncil.com.au/site/Shared_Content/Smart-Suite/Smart-Maps/Public/Member-Directory-Search.aspx"
 
+# --- robust map locator finder (sync playwright) ---
+from typing import Optional
+from playwright.sync_api import Page, Locator
 
+MAP_SELECTORS = [
+    '[role="region"][aria-label="Map"]',
+    'div[aria-roledescription="map"]',
+    'div[aria-label="Map"]',
+    'div[role="application"][aria-label*="Map"]',
+    # fallbacks seen on some Google Maps embeds:
+    'div[class*="gm-style"]',
+    'div[id^="map"], div[class^="map"]',
+]
+
+def find_map_locator(page: Page, timeout_ms: int = 10000) -> Locator:
+    # 1) Handle cookie/consent overlays if present (non-fatal if not found)
+    for sel in ['button:has-text("Accept")',
+                'button:has-text("I agree")',
+                'button:has-text("Got it")',
+                '[aria-label*="accept"]',
+                '[data-testid="cookie"] button']:
+        try:
+            page.locator(sel).first.click(timeout=1500)
+        except Exception:
+            pass
+
+    # 2) Wait for page to settle a bit
+    try:
+        page.wait_for_load_state("networkidle", timeout=timeout_ms)
+    except Exception:
+        pass
+
+    # 3) Try on main page first
+    for sel in MAP_SELECTORS:
+        loc = page.locator(sel).first
+        try:
+            loc.wait_for(state="visible", timeout=2000)
+            # ensure on-screen or bounding_box() returns None
+            try:
+                loc.scroll_into_view_if_needed(timeout=1500)
+            except Exception:
+                pass
+            if loc.bounding_box() is not None:
+                return loc
+        except Exception:
+            continue
+
+    # 4) Try inside iframes
+    for frame in page.frames:
+        if frame is page.main_frame:
+            continue
+        for sel in MAP_SELECTORS:
+            loc = frame.locator(sel).first
+            try:
+                loc.wait_for(state="visible", timeout=2000)
+                try:
+                    loc.scroll_into_view_if_needed(timeout=1500)
+                except Exception:
+                    pass
+                if loc.bounding_box() is not None:
+                    return loc
+            except Exception:
+                continue
+
+    # 5) Last resort: use viewport center as a “map click” fallback
+    vp = page.viewport_size or {"width": 1280, "height": 720}
+    page.mouse.click(vp["width"]//2, vp["height"]//2)
+    # retry main selectors once more
+    for sel in MAP_SELECTORS:
+        loc = page.locator(sel).first
+        try:
+            loc.wait_for(state="visible", timeout=1500)
+            if loc.bounding_box() is not None:
+                return loc
+        except Exception:
+            continue
+
+    raise Exception("Could not find map locator on page or in iframes.")
 
 def response_handler(r):
     # Only process network types that can carry JSON
@@ -25,19 +102,16 @@ def response_handler(r):
     ctype = r.headers.get("content-type", "")
     print(f"[RESP] {r.request.resource_type} {r.status} {ctype} {url}")
 
-    # (Optional, but helps): ignore obvious Google tile noise early
+    #ignore Google tile noise requests
     if "maps.googleapis.com" in url:
         return
 
-    # Strong domain hint: we're after AIC
+    # Only process AIC URLs
     if "investmentcouncil.com.au" not in url:
         return
 
     # Only try JSON when likely JSON
     if "json" not in ctype.lower():
-        # You can still peek at text if you want:
-        # preview = r.text()[:120]
-        # print("[RESP] Non-JSON AIC body preview:", preview)
         return
 
     # Parse JSON, safely
@@ -77,16 +151,15 @@ def response_handler(r):
 
 def map_sweep(page : playwright.sync_api.Page):
     """Performs a systematic sweep of the map interface on the AIC member directory page to trigger loading of all member data via simulated mouse and keyboard actions."""
-    # Try primary selector first, then fall back to alternative
-    loc = page.locator('[aria-label="Map"][role="region"]')
-    if loc.count() == 0:
-        loc = page.locator('div[aria-roledescription="map"]')
-    if loc.count() == 0:
-        raise Exception("Could not find map element")
-    # Get map boundaries
+    loc = find_map_locator(page)          # <— robust finder
     box = loc.bounding_box()
     if not box:
-        raise Exception("Could not find map element")
+        # ensure on screen and try again once
+        loc.scroll_into_view_if_needed()
+        page.wait_for_timeout(300)
+        box = loc.bounding_box()
+    if not box:
+        raise RuntimeError("Map element is not visible (no bounding box).")
     
     # Calculate map dimensions and center
     map_width = box['width']
