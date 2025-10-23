@@ -28,25 +28,19 @@ MAP_SELECTORS = [
     'div[id^="map"], div[class^="map"]',
 ]
 
-def find_map_locator(page: Page, timeout_ms: int = 10000) -> Locator:
-    # 1) Handle cookie/consent overlays if present (non-fatal if not found)
-    for sel in ['button:has-text("Accept")',
-                'button:has-text("I agree")',
-                'button:has-text("Got it")',
-                '[aria-label*="accept"]',
-                '[data-testid="cookie"] button']:
-        try:
-            page.locator(sel).first.click(timeout=1500)
-        except Exception:
-            pass
 
-    # 2) Wait for page to settle a bit
+def find_map_locator(page: Page, timeout_ms: int = 10000) -> Locator:
+    """Attempts to robustly find the map locator on the given Playwright page, including within iframes.
+    If found, returns the Locator object; otherwise raises an exception.
+    """
+
+    # 1) Wait for page to settle a bit
     try:
         page.wait_for_load_state("networkidle", timeout=timeout_ms)
     except Exception:
         pass
 
-    # 3) Try on main page first
+    # 2) Try on main page first
     for sel in MAP_SELECTORS:
         loc = page.locator(sel).first
         try:
@@ -61,7 +55,8 @@ def find_map_locator(page: Page, timeout_ms: int = 10000) -> Locator:
         except Exception:
             continue
 
-    # 4) Try inside iframes
+    # 3) Try inside iframes
+    # iframes (short for inline frames) are HTML elements that allow embedding another HTML document within the current document.
     for frame in page.frames:
         if frame is page.main_frame:
             continue
@@ -78,7 +73,7 @@ def find_map_locator(page: Page, timeout_ms: int = 10000) -> Locator:
             except Exception:
                 continue
 
-    # 5) Last resort: use viewport center as a “map click” fallback
+    # 4) Last resort: use viewport center as a “map click” fallback
     vp = page.viewport_size or {"width": 1280, "height": 720}
     page.mouse.click(vp["width"]//2, vp["height"]//2)
     # retry main selectors once more
@@ -99,8 +94,9 @@ def response_handler(r):
         return
 
     url = r.url
+    #c-type is short for content-type
     ctype = r.headers.get("content-type", "")
-    print(f"[RESP] {r.request.resource_type} {r.status} {ctype} {url}")
+    print(f"[RESP] {r.request.resource_type} {r.status} {ctype}")
 
     #ignore Google tile noise requests
     if "maps.googleapis.com" in url:
@@ -121,7 +117,7 @@ def response_handler(r):
         print("[RESP] JSON parse failed:", e)
         return
 
-    # Payload-shape detection (no fragile indexing)
+    # Payload-shape detection — look for Items.$values array of objects
     vals = None
     if isinstance(data, dict):
         items = data.get("Items")
@@ -167,11 +163,11 @@ def map_sweep(page : playwright.sync_api.Page):
     cx = box['x'] + map_width/2
     cy = box['y'] + map_height/2
     
-    # Calculate initial position (⅓ up and left from center)
+    # Calculate initial position (3/8 up and left from center (1/8 margin))
     dx = map_width/2  # Half map width for horizontal movement
     dy = map_height/2  # Half map height for vertical movement
-    start_x = cx - map_width/3
-    start_y = cy - map_height/3
+    start_x = cx - 3*map_width/8
+    start_y = cy - 3*map_height/8
     
     # Buffer to ensure map interface recognizes mouse
     e = 5  # pixels
@@ -181,11 +177,15 @@ def map_sweep(page : playwright.sync_api.Page):
     # click on map to focus
     page.mouse.move(cx, cy)
     page.mouse.click(cx, cy)
+    page.wait_for_timeout(1000)
 
     # Move to starting position
     page.mouse.move(start_x, start_y)
+    page.wait_for_timeout(1000)
     page.mouse.down()
-    page.mouse.move(cx, cy)
+    page.wait_for_timeout(1000)
+    page.mouse.move(cx, cy, steps=25)
+    page.wait_for_timeout(1000)
     page.mouse.up()
     
     print("Map focused and starting position set.")
@@ -195,14 +195,18 @@ def map_sweep(page : playwright.sync_api.Page):
         page.keyboard.press("Shift+=")
         page.wait_for_timeout(500)  # Wait for zoom animation (0.5 seconds)
     
-    # Calculate target distances (4/6 of total map size * 32 due to zoom)
-    target_horizontal = (4/6) * 32 * map_width
-    target_vertical = (4/6) * 32 * map_height
+
+    # Calculate target distances (6/8 of total map size * 32 due to zoom)
+    target_horizontal = (6/8) * 32 * map_width
+    target_vertical = (6/8) * 32 * map_height
     
     total_horizontal = 0
     total_vertical = 0
     direction = 1  # 1 for right, -1 for left
     
+    
+    
+
     # Main sweeping loop
     while total_vertical < target_vertical:
         # Move horizontally across the map
