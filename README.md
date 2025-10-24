@@ -44,10 +44,10 @@ However, in order to receive the required JSON containing the desired investment
 Furthermore, even though Founded_Year, Focus_Sectors and Portfolio_Count_estimate were required fields to extract from the AIC Members page, without signing up to be a member this information is not on the page nor within any JSON responses received from the site. Thus, these must be found separately through crawling the Firm websites provided by the AIC members page. In order to validate the number chosen from the AIC members page, the number will be cross-referenced with a Google API search.
 
 #### Procedure
-1. open_aic_page(): Opens the AIC member directory page and performs a map sweep to trigger loading of all member data.
 
-Detail:
-Use sync_playwright to open a chromium browswer, and attach a response_handler(response) function that logs any relevant responses (Note: this runs for every response received by the page) (This will be covered in more detail below). Then, on the chromium page navigate to the AIC members page. 
+open_aic_page(): Opens the AIC member directory page and performs a map sweep to trigger loading of all member data.
+
+1. Use sync_playwright to open a chromium browswer, and attach a response_handler(response) function that logs any relevant responses (Note: this runs for every response received by the page) (This will be covered in more detail below). Then, on the chromium page navigate to the AIC members page. 
 
 2. Now, with the chromium members page as the argument, execute map_sweep(page):<br>
 
