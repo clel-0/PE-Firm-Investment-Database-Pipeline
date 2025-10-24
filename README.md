@@ -49,7 +49,7 @@ Furthermore, even though Founded_Year, Focus_Sectors and Portfolio_Count_estimat
 Detail:
 Use sync_playwright to open a chromium browswer, and attach a response_handler(response) function that logs any relevant responses (Note: this runs for every response received by the page) (This will be covered in more detail below). Then, on the chromium page navigate to the AIC members page. 
 
-Now, with the chromium members page as the argument, execute map_sweep(page):<br>
+2. Now, with the chromium members page as the argument, execute map_sweep(page):<br>
 
 - Firstly, we need to find the locator of the interactive map within the html code of the page. find_map_locator() attempts to robustly find the map locator on the given Playwright page, including within iframes. Within the find_map_locator() function, we first allow the AIC members page to completely load (in this case we need to wait for the googleMapsAPI response be received). 
 
@@ -57,13 +57,13 @@ Through manually reading the html element code of the AIC members page, it was d
 
 If no selectors work anywhere on the page, we attempt the same check, but for any iframes within the AIC members HTML document. If none of the selectors work within any of the iframes, we fall back to using the viewport of the HTML itself as the bounding box, however we raise an exception to let the user know of the unsuccessful determination of the locator, where in this case the map sweep attempted will most likely not work. Note that within this case, the correct locator was found. 
 
-- Then, using the bounding_box() info from the locator discovered find_map_locator(), we centre the map about the top-left corner of the default window (with a 1/8 margin to save time and stil ensure all cities are covered), and zoom in 5 times. Them we perform a serpentine sweep of the map. Once the investment firms' markers for a given city appear on the window, a JSON response is received by the page, that contains a dictionary for each investment firm, which contain the following useful keys: 
+3. Using the bounding_box() info from the locator discovered find_map_locator(), we centre the map about the top-left corner of the default window (with a 1/8 margin to save time and stil ensure all cities are covered), and zoom in 5 times. Them we perform a serpentine sweep of the map. Once the investment firms' markers for a given city appear on the window, a JSON response is received by the page, that contains a dictionary for each investment firm, which contain the following useful keys: 
 
 "Website", "FullName", "Phone", "Email", "FullName5", "UserId", "Latitude", "Longitude", "LongLatAddress", "filter-Member Type". Like all other responses, these responses are fed through the response_handler():
 
-- response_handler(): Handles network responses, filtering for AIC JSON payloads and logging them to a file. Firstly, we check that the request type is either "xhr" or "fetch". If not, this indicates that the response isn't a result of an interaction with the site. Then, we ignore any requests that are from the Google Map API. Note: while interaction with the Google Map interface results in the desired JSON being sent, the JSON is not requests from Google Maps. Namely, it is held by the AIC. For this reason, we ensure that the AIC url is within the request url. Then, we check whether "json" is listed as the content-type of the request (Note that the desired information is within a JSON file, as manually discovered through analysing the fetch/xhr responses from the AIC site).
+4. response_handler(): Handles network responses, filtering for AIC JSON payloads and logging them to a file. Firstly, we check that the request type is either "xhr" or "fetch". If not, this indicates that the response isn't a result of an interaction with the site. Then, we ignore any requests that are from the Google Map API. Note: while interaction with the Google Map interface results in the desired JSON being sent, the JSON is not requests from Google Maps. Namely, it is held by the AIC. For this reason, we ensure that the AIC url is within the request url. Then, we check whether "json" is listed as the content-type of the request (Note that the desired information is within a JSON file, as manually discovered through analysing the fetch/xhr responses from the AIC site).
 
-Following this, since we know the reponse is of type JSON, we capture the json string from the file. Now, we check the structure of the json file: from manual analysis, the desired file has a first-layer dict with key 'items', whose value is a dictionary containing a key '$values', and finally the value of data["items"]["$values"] is itself a list of dicts, where each dict hold info on a given investment firm (Example Snippet Below): 
+5. Following this, since we know the reponse is of type JSON, we capture the json string from the file. Now, we check the structure of the json file: from manual analysis, the desired file has a first-layer dict with key 'items', whose value is a dictionary containing a key '$values', and finally the value of data["items"]["$values"] is itself a list of dicts, where each dict hold info on a given investment firm (Example Snippet Below): 
 
 {
     "$type": "Asi.Soa.Core.DataContracts.PagedResult, Asi.Contracts",
@@ -89,7 +89,7 @@ Following this, since we know the reponse is of type JSON, we capture the json s
             }, 
             ...
 
-For any response that passes this filtering, it will be wrapped with its metadata (time of retreival, url, status, headers, JSON string), and appended to this session's JSONL file, to allow for testing analysis to occur to debug and ensure performance. Note that each JSONL file is named with the date-time stamp corresponding to when the program was run. Thus, since the date-time stamp measures to the second, this ensures that even if there are multiple JSONL files within the logs, the program will only append and read the JSONL file created this session. 
+6. For any response that passes this filtering, it will be wrapped with its metadata (time of retreival, url, status, headers, JSON string), and appended to this session's JSONL file, to allow for testing analysis to occur to debug and ensure performance. Note that each JSONL file is named with the date-time stamp corresponding to when the program was run. Thus, since the date-time stamp measures to the second, this ensures that even if there are multiple JSONL files within the logs, the program will only append and read the JSONL file created this session. 
 
 
 
