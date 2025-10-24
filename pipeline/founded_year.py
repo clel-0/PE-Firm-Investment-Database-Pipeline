@@ -11,6 +11,7 @@ import requests
 
 
 def Finding_Founded_Year(firms: list[dict]) -> list[dict]:
+    """Extracts the founded year for each firm from its website using multiple methods."""
     
     YEAR_RE = re.compile(r"\b(18\d{2}|19\d{2}|20\d{2})\b") #matches years from 1800 to 2099 (future component of range will be filtered later)
     ANCHORS = re.compile(r"\b(founded|since|est\.?|established|incorporated|dating|founding|©)\b", re.IGNORECASE) #re.IGNORECASE makes the regex case insensitive
@@ -222,15 +223,16 @@ def Finding_Founded_Year(firms: list[dict]) -> list[dict]:
                         if jsonExtraction:
                             print(f"Years found from JSON-LD: {min(jsonExtraction)} (all: {jsonExtraction})")
                             year = min(jsonExtraction)
-                        elif googleYears:
-                            print(f"Years found from Google API: {min(googleYears)} (all: {googleYears})")
-                            year = min(googleYears)
                         elif pageCheck:
                             print(f"Years found from relevant pages: {min(pageCheck)} (all: {pageCheck})")
                             year = min(pageCheck)
                         elif homepageCheck:
                             print(f"Years found from homepage: {min(homepageCheck)} (all: {homepageCheck})")
                             year = min(homepageCheck)
+
+                        elif googleYears:
+                            print(f"Years found from Google API: {min(googleYears)} (all: {googleYears})")
+                            year = min(googleYears)
                         else:
                             print("No years found by any method.")
                             year = None
