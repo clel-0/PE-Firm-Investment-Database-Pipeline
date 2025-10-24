@@ -31,7 +31,13 @@ python founded_year.py
 
 ### Phase 1: Australian PE firms identification
 
-Aim:
+Aim:\\
 Seed list: crawl Australian Investment Council members page and parse PE firms
 
-Context:
+Context:\\
+AIC displays its members on the following website:\\
+"https://investmentcouncil.com.au/site/Shared_Content/Smart-Suite/Smart-Maps/Public/Member-Directory-Search.aspx"\\
+
+However, in order to receive the required JSON containing the desired investment firm data, the interactive map must been zoomed in (+5) into the location of the firm, with each firm data belonging to a JSON that represents the firms in each state.\\
+
+Furthermore, even though Founded_Year, Focus_Sectors and Portfolio_Count_estimate were required fields to extract from the AIC Members page, without signing up to be a member this information is not on the page nor within any JSON responses received from the site. Thus, these must be found separately through crawling the Firm websites provided by the AIC members page. In order to validate the number chosen from the AIC members page, the number will be cross-referenced with a Google API search.
