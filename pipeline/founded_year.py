@@ -13,7 +13,7 @@ import requests
 def Finding_Founded_Year(firms: list[dict]) -> list[dict]:
     
     YEAR_RE = re.compile(r"\b(18\d{2}|19\d{2}|20\d{2})\b") #matches years from 1800 to 2099 (future component of range will be filtered later)
-    ANCHORS = re.compile(r"\b(founded|since|est\.?|established|incorporated|dating|founding)\b", re.IGNORECASE) #re.IGNORECASE makes the regex case insensitive
+    ANCHORS = re.compile(r"\b(founded|since|est\.?|established|incorporated|dating|founding|©)\b", re.IGNORECASE) #re.IGNORECASE makes the regex case insensitive
     
     #Note: scraper tends to mistake postcode numbers for years, so we will filter out any years that share the same textbox as address-related keywords
     ADDRESS_KEYWORDS = re.compile(r"\b(address|location|headquarters|hq|office|street|road|ave|avenue|blvd|boulevard|st\.?|rd\.?|suite|zip|postal|city|state|country)\b", re.IGNORECASE)
@@ -104,7 +104,7 @@ def Finding_Founded_Year(firms: list[dict]) -> list[dict]:
                         # .locator("*").all()[:200] selects all child elements (i.e. all text written within that divider) within that content area as a list of locators, but limits to the first 200 elements to avoid overload
                         # e.inner_text() extracts the text content from each locator element (i.e. bypasses all HTML tags)
                         TEXTY = "p,li,span,div,a,section,article,header,h1,h2,h3,h4,h5,h6"
-                        nodes = page.locator("main, body").locator(TEXTY).all()[:400]
+                        nodes = page.locator("main, body, footer").locator(TEXTY).all()[:400]
                         potentialTexts = []
                         for el in nodes:
                             try:
@@ -120,7 +120,7 @@ def Finding_Founded_Year(firms: list[dict]) -> list[dict]:
                 def check_homepage(page) -> list[int]:
                     """Checks the homepage for founding year information."""
                     TEXTY = "p,li,span,div,a,section,article,header,h1,h2,h3,h4,h5,h6"
-                    nodes = page.locator("main, body").locator(TEXTY).all()[:400]
+                    nodes = page.locator("main, body, footer").locator(TEXTY).all()[:400]
                     potentialTexts = []
                     for el in nodes:
                         try:
@@ -133,6 +133,7 @@ def Finding_Founded_Year(firms: list[dict]) -> list[dict]:
                         relevantTexts += check_Anchors(text)
                     return sorted(relevantTexts) if relevantTexts else None
             
+                #currently encountering 429 errors when using Google API
                 def search_GoogleAPI() -> list[int]:
                     """Check first portion of text results for the with check anchors function."""
                     
