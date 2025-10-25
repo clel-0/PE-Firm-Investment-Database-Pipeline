@@ -356,8 +356,8 @@ def extract_PE_firms(PATH: Path = OUTPUT_DIR) -> list[dict]:
 def export_PE_firms(firms: list[dict], main_export_path: Path = Path("output/PE_firms.csv")):
     """Exports the list of private equity firms to a CSV file at the specified path."""
     df = pd.DataFrame(firms)
-    original_columns = ["FullName", "Website", "Founded_Year"]
-    detailed_columns = ["FullName", "Website", "Phone", "Founded_Year", "Email", "Latitude", "Longitude", "LongLatAddress"]
+    original_columns = ["FullName", "Website"]
+    detailed_columns = ["FullName", "Website", "Phone", "Email", "Latitude", "Longitude", "LongLatAddress"]
 
     df_OG = df[original_columns]
     df_detailed = df[detailed_columns]
