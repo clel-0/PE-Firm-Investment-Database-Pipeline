@@ -50,8 +50,8 @@ The following python programs operate through both sequential and nested functio
 #### Procedure for Extracting Data from the AIC Members Page: seed_aic.py
 
 ##### Top-Level Functional Trace:
-url: str ->  &ensp; [open_aic_page(url)]  -> &ensp;  None (creates and writes to JSONL file with Path OUTPUT_DIR) <br> 
-OUTPUT_DIR: Path  -> &ensp;  [extract_PE_firms(Path)]  -> &ensp;  firms: list[dict]  -> &ensp;  [export_PE_firms(firms, Path)]  -> &ensp;  None (creates and writes to csv file)
+url: str &ensp; ->  &ensp; [open_aic_page(url)] &ensp;  -> &ensp;  None (creates and writes to JSONL file with Path OUTPUT_DIR) <br> 
+OUTPUT_DIR: Path &ensp; -> &ensp;  [extract_PE_firms(Path)] &ensp; -> &ensp;  firms: list[dict] &ensp; -> &ensp;  [export_PE_firms(firms, Path)] &ensp; -> &ensp;  None (creates and writes to csv file)
 
 ##### Steps:
 open_aic_page(url): Opens the AIC member directory page and performs a map sweep to trigger loading of all member data.
@@ -113,7 +113,7 @@ Note that other, non-desired responses may also make it through the filtering, h
 
 ##### Top-Level Functional Trace:
 
-firms: list[dict] &ensp; -> Finding_Founded_Year(firms) &ensp; -> firms: list[dict]
+firms: list[dict] &ensp; -> &ensp; Finding_Founded_Year(firms) &ensp; -> &ensp; firms: list[dict]
 
 Finding_Founded_Year(firms): Extracts the founded year for each firm from its website using multiple methods.
 
