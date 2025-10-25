@@ -50,8 +50,8 @@ The following python programs operate through both sequential and nested functio
 #### Procedure for Extracting Data from the AIC Members Page: seed_aic.py
 
 ##### Top-Level Functional Trace:
-url: str -> [open_aic_page(url)] -> None (creates and writes to JSONL file) 
-OUTPUT_DIR: Path (of JSONL file from open_aic_page(url)) -> [extract_PE_firms(Path)] -> firms: list[dict] -> [export_PE_firms(firms, Path)] -> None (creates and writes to csv file)
+url: str   ->   [open_aic_page(url)]   ->   None (creates and writes to JSONL file) <br> 
+OUTPUT_DIR: Path (of JSONL file from open_aic_page(url))   ->   [extract_PE_firms(Path)]   ->   firms: list[dict]   ->   [export_PE_firms(firms, Path)]   ->   None (creates and writes to csv file)
 
 ##### Steps:
 open_aic_page(url): Opens the AIC member directory page and performs a map sweep to trigger loading of all member data.
