@@ -144,7 +144,8 @@ def Finding_Founded_Year(firms: list[dict]) -> list[dict]:
                     query = f"site:{firm['Website']} founded OR since OR established"
                     url = f"https://www.googleapis.com/customsearch/v1?q={requests.utils.quote(query)}&key={API_KEY}&cx={CX}"
                     
-                    response = requests.get(url)
+                    response = requests.get(url) 
+                    
 
                     if response.status_code == 200: #code 200 means successful request
                         data = response.json()
@@ -258,6 +259,6 @@ if __name__ == "__main__":
     # Test: ensure founding year extraction works on sample data
     print("Testing founding year extraction on sample data...")
     df = pd.read_csv("output/PE_firms.csv")
-    sample_firms = df.to_dict(orient="records")  # Get list of firm dicts
+    sample_firms = df.to_dict(orient="records")  # Get list of firm dicts: orient="records" converts each row to a dict, and stores all dicts in a list
     firms_with_years = Finding_Founded_Year(sample_firms)
     print(firms_with_years)
