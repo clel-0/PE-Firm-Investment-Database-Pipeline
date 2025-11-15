@@ -139,13 +139,40 @@ def Finding_Founded_Year(firms: list[dict]) -> list[dict]:
                     """Check first portion of text results for the with check anchors function."""
                     
                     # Google Custom Search API credentials
-                    API_KEY = "AIzaSyA7idi5kLLBoPOp43LlFzgctqq9tOGwnn0"
-                    CX = "75bd1883284f343f8"
+                    import os
+                    import time
+                    API_KEY = os.getenv("GOOGLE_API_KEY")
+                    CX = os.getenv("GOOGLE_CX")
                     query = f"site:{firm['Website']} founded OR since OR established"
-                    url = f"https://www.googleapis.com/customsearch/v1?q={requests.utils.quote(query)}&key={API_KEY}&cx={CX}"
+                    params = {
+                        "key": API_KEY,
+                        "cx": CX,
+                        "q": query,
+                        "num": 10,  # Ensure num is between 1 and 10
+                        "safe": "off",
+                        "hl": "en"
+
+                    }
+                    response = requests.get(url = "https://www.googleapis.com/customsearch/v1", params=params, timeout=10)
+                    attempt = 0
+                    retries = 5
+                    backoff = 2  # exponential backoff base in seconds
+
+
                     
-                    response = requests.get(url) 
-                    
+                    while True:
+                        if response.status_code == 429:
+                            print(f"Google API rate limit hit for {firm['FullName']}, backing off...")
+                            # too many requests -> backoff
+                            attempt += 1
+                            if attempt > retries:
+                                print(f"Google API request failed for {firm['FullName']} after {retries} retries due to rate limiting.")
+                                return None
+                            else:
+                                time.sleep(backoff ** attempt)
+                        else:
+                            break
+
 
                     if response.status_code == 200: #code 200 means successful request
                         data = response.json()
