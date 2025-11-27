@@ -372,11 +372,18 @@ if __name__ == "__main__":
     open_aic_page()
     print("AIC page processing completed. Extracting PE firms...")
     pe_firms = extract_PE_firms()
+    if not pe_firms:
+        print("No PE firms were extracted from the AIC data.")
+    else:
+        print(f"Extracted {len(pe_firms)} PE firms from AIC data.")
+        if len(pe_firms) == 0:
+            print("No PE firms found to export.")
+        else:
+            export_PE_firms(pe_firms)
+            print("Exported PE firms to CSV successfully.")
     
-    print(f"Extracted {len(pe_firms)} PE firms from AIC data.")
-    export_PE_firms(pe_firms)
-    
-    print("PE firm data export completed.")
+   
+
 
     # Test: ensure founding year extraction works on sample data
     # print("Testing founding year extraction on sample data...")
