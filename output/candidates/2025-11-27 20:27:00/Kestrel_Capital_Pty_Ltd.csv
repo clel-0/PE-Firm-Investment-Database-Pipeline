@@ -1,0 +1,56 @@
+card_id,text,raw_text,type,rank
+0,Connect on LinkedIn,Connect on LinkedIn,a_inner_text,D
+0,phillip carter 7476a13,https://www.linkedin.com/in/phillip-carter-7476a13/,href,C
+1,Connect on LinkedIn,Connect on LinkedIn,a_inner_text,D
+1,niallcairns,https://www.linkedin.com/in/niallcairns/,href,C
+2,Connect on LinkedIn,Connect on LinkedIn,a_inner_text,D
+2,phillip carter 7476a13,https://www.linkedin.com/in/phillip-carter-7476a13/,href,C
+3,Connect on LinkedIn,Connect on LinkedIn,a_inner_text,D
+3,niallcairns,https://www.linkedin.com/in/niallcairns/,href,C
+4,Home,Home,a_inner_text,D
+4,kestrelcapital,https://www.kestrelcapital.com.au,href,D
+5,About Us,About Us,a_inner_text,D
+5,kestrelcapital,https://www.kestrelcapital.com.au,href,D
+6,Team,Team,a_inner_text,D
+6,blank,https://www.kestrelcapital.com.au/blank,href,C
+7,KTT Partnership Fund,KTT Partnership Fund,a_inner_text,D
+7,ktt fund,https://www.kestrelcapital.com.au/ktt-fund,href,C
+8,Kestrel Growth Companies Fund,Kestrel Growth Companies Fund,a_inner_text,D
+8,kgc fund,https://www.kestrelcapital.com.au/kgc-fund,href,C
+9,Kestrel Structured Capital Fund,Kestrel Structured Capital Fund,a_inner_text,D
+9,blank 1,https://www.kestrelcapital.com.au/blank-1,href,C
+10,Sustainability,Sustainability,a_inner_text,D
+10,sustainability 1,https://www.kestrelcapital.com.au/sustainability-1,href,C
+11,Contact,Contact,a_inner_text,D
+11,home 1 1,https://www.kestrelcapital.com.au/home-1-1,href,C
+12,LinkedIn,LinkedIn,img_alt_text,E
+13,X,X,img_alt_text,E
+26,media,"https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png",image_src,I
+28,5f1ef9 288c87bddf484fe7ba5bbff0904de838~mv2,"https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png",image_src,I
+30,fill,"https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png",image_src,I
+32,"w 69,h 36,al c,q 85,usm 0","https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png",image_src,I
+34,5f1ef9 288c87bddf484fe7ba5bbff0904de838~mv2,"https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png",image_src,I
+36,media,"https://static.wixstatic.com/media/5f1ef9_23d3cd7e8197402595ed10c528b2dde3~mv2.png/v1/fill/w_49,h_28,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Kestrel%20Capital%20Website%20Imagery.png",image_src,I
+38,5f1ef9 23d3cd7e8197402595ed10c528b2dde3~mv2,"https://static.wixstatic.com/media/5f1ef9_23d3cd7e8197402595ed10c528b2dde3~mv2.png/v1/fill/w_49,h_28,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Kestrel%20Capital%20Website%20Imagery.png",image_src,I
+40,fill,"https://static.wixstatic.com/media/5f1ef9_23d3cd7e8197402595ed10c528b2dde3~mv2.png/v1/fill/w_49,h_28,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Kestrel%20Capital%20Website%20Imagery.png",image_src,I
+42,"w 49,h 28,al c,q 85,usm 0","https://static.wixstatic.com/media/5f1ef9_23d3cd7e8197402595ed10c528b2dde3~mv2.png/v1/fill/w_49,h_28,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Kestrel%20Capital%20Website%20Imagery.png",image_src,I
+44,Kestrel%20Capital%20Website%20Imagery,"https://static.wixstatic.com/media/5f1ef9_23d3cd7e8197402595ed10c528b2dde3~mv2.png/v1/fill/w_49,h_28,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Kestrel%20Capital%20Website%20Imagery.png",image_src,I
+46,media,"https://static.wixstatic.com/media/5f1ef9_7dbd712de91f44368249726fe1b7d977~mv2.png/v1/crop/x_0,y_97,w_1080,h_1080/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Phillip%20Carter.png",image_src,I
+48,5f1ef9 7dbd712de91f44368249726fe1b7d977~mv2,"https://static.wixstatic.com/media/5f1ef9_7dbd712de91f44368249726fe1b7d977~mv2.png/v1/crop/x_0,y_97,w_1080,h_1080/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Phillip%20Carter.png",image_src,I
+50,crop,"https://static.wixstatic.com/media/5f1ef9_7dbd712de91f44368249726fe1b7d977~mv2.png/v1/crop/x_0,y_97,w_1080,h_1080/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Phillip%20Carter.png",image_src,I
+52,"x 0,y 97,w 1080,h 1080","https://static.wixstatic.com/media/5f1ef9_7dbd712de91f44368249726fe1b7d977~mv2.png/v1/crop/x_0,y_97,w_1080,h_1080/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Phillip%20Carter.png",image_src,I
+54,fill,"https://static.wixstatic.com/media/5f1ef9_7dbd712de91f44368249726fe1b7d977~mv2.png/v1/crop/x_0,y_97,w_1080,h_1080/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Phillip%20Carter.png",image_src,I
+56,"w 49,h 49,al c,q 85,usm 0","https://static.wixstatic.com/media/5f1ef9_7dbd712de91f44368249726fe1b7d977~mv2.png/v1/crop/x_0,y_97,w_1080,h_1080/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Phillip%20Carter.png",image_src,I
+58,Phillip%20Carter,"https://static.wixstatic.com/media/5f1ef9_7dbd712de91f44368249726fe1b7d977~mv2.png/v1/crop/x_0,y_97,w_1080,h_1080/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Phillip%20Carter.png",image_src,I
+60,media,"https://static.wixstatic.com/media/5f1ef9_72e5f9f03f554ce2a7376f206f78ba4d~mv2.png/v1/fill/w_49,h_61,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Niall%20Cairns.png",image_src,I
+62,5f1ef9 72e5f9f03f554ce2a7376f206f78ba4d~mv2,"https://static.wixstatic.com/media/5f1ef9_72e5f9f03f554ce2a7376f206f78ba4d~mv2.png/v1/fill/w_49,h_61,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Niall%20Cairns.png",image_src,I
+64,fill,"https://static.wixstatic.com/media/5f1ef9_72e5f9f03f554ce2a7376f206f78ba4d~mv2.png/v1/fill/w_49,h_61,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Niall%20Cairns.png",image_src,I
+66,"w 49,h 61,al c,q 85,usm 0","https://static.wixstatic.com/media/5f1ef9_72e5f9f03f554ce2a7376f206f78ba4d~mv2.png/v1/fill/w_49,h_61,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Niall%20Cairns.png",image_src,I
+68,Niall%20Cairns,"https://static.wixstatic.com/media/5f1ef9_72e5f9f03f554ce2a7376f206f78ba4d~mv2.png/v1/fill/w_49,h_61,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Niall%20Cairns.png",image_src,I
+70,media,"https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/crop/x_3,y_2,w_680,h_360/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/kestrel_logo_COL.png",image_src,I
+72,5f1ef9 288c87bddf484fe7ba5bbff0904de838~mv2,"https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/crop/x_3,y_2,w_680,h_360/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/kestrel_logo_COL.png",image_src,I
+74,crop,"https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/crop/x_3,y_2,w_680,h_360/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/kestrel_logo_COL.png",image_src,I
+76,"x 3,y 2,w 680,h 360","https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/crop/x_3,y_2,w_680,h_360/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/kestrel_logo_COL.png",image_src,I
+78,fill,"https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/crop/x_3,y_2,w_680,h_360/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/kestrel_logo_COL.png",image_src,I
+80,"w 69,h 36,al c,q 85,usm 0","https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/crop/x_3,y_2,w_680,h_360/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/kestrel_logo_COL.png",image_src,I
+82,kestrel logo COL,"https://static.wixstatic.com/media/5f1ef9_288c87bddf484fe7ba5bbff0904de838~mv2.png/v1/crop/x_3,y_2,w_680,h_360/fill/w_69,h_36,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/kestrel_logo_COL.png",image_src,I
