@@ -13,22 +13,24 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 playwright install
 ```
-Currently, only the seed_aic.py is fully operational and accurate. founded_year.py is not yet being used to add founding years to PE_firms.csv due to the appearance of 429 errors in response to GoogleAPI requests, that still need to be resolved. 
+Currently, only the seed_aic.py and the portCo_Identification pipeline is fully operational and accurate. founded_year.py is not yet being used to add founding years to PE_firms.csv due to the appearance of 429 errors in response to GoogleAPI requests, that still need to be resolved. 
 
-Then to run seed_aic.py, enter the following within the terminal:
+To run seed_aic.py, enter the following within the terminal:
 
 ```bash
 python seed_aic.py
 ```
 
-and to execute the test run for founded_year.py enter the following within the terminal:
+Then, to run the portCo_Identification pipeline, enter the following within the terminal:
 
 ```bash
-python founded_year.py
+python portCo_Identification/main_portCo.py
 ```
 
-## Methodology
 
+
+## Methodology
+(Note: Methodology for portCo name identification yet to be completed, however the code is complete).
 ### Phase 1: Australian PE firms identification
 
 #### Aim
