@@ -49,8 +49,9 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
         for k in range(L):
             masked = list(sig)
             masked[k] = "x"          # wildcard for the variable segment
+            parent = list(sig)[-2] if L >= 2 else "ROOT"  # parent segment
             masked_key = tuple(masked)
-            groups[masked_key].add(name)
+            groups[(parent,*masked_key)].add(name)
 
     # Optionally filter groups to only those with enough members
     if min_group_size is not None and min_group_size > 1:

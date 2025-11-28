@@ -30,7 +30,7 @@ def params(q):
 
 
 
-def normalise_text(s: str) -> str:
+def normalise_text(s: str, PE_name) -> str:
     """Basic normalisation used across the pipeline."""
     if not isinstance(s, str):
         return ""
@@ -38,6 +38,17 @@ def normalise_text(s: str) -> str:
     s = re.sub(r"\s+", " ", s)
     s = re.sub("case study", "", s, flags=re.IGNORECASE)
     s = re.sub("logo", "", s, flags=re.IGNORECASE)
+    s = re.sub(PE_name, "", s, flags=re.IGNORECASE)
+    # remove parts of PE name individually
+    PE_name_parts = PE_name.split()
+    for part in PE_name_parts:
+        s = re.sub(part, "", s, flags=re.IGNORECASE)
+
+    #removing PE name acronyms
+    if len(PE_name_parts)>2:
+        acro = "".join([word[0] for word in PE_name_parts if word])
+        s = re.sub(acro, "", s, flags=re.IGNORECASE)
+            
     return s.strip()
 
 
@@ -112,8 +123,8 @@ def pe_name_in_snippets(pe_name_norm: str, snippets: list[str], min_hits: int = 
     at least `min_hits` times?
     """
     big_text = " ".join(snippets)
-    big_text_norm = normalise_text(big_text).lower()
-    pe_norm = normalise_text(pe_name_norm).lower()
+    big_text_norm = normalise_text(big_text,pe_name_norm).lower()
+    pe_norm = pe_name_norm.lower()
     return big_text_norm.count(pe_norm) >= min_hits
 
 
@@ -135,7 +146,7 @@ def google_confirm_name(name: str, pe_name_norm: str, google_search_fn) -> bool:
         print("No snippets returned from Google search.")
         return False
 
-    return pe_name_in_snippets(pe_name_norm, snippets, min_hits=2)
+    return pe_name_in_snippets(pe_name_norm, snippets, min_hits=1)
 
 
 def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_fn) -> pd.DataFrame:
@@ -174,7 +185,9 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
 
     # --- 1. Cleaning & basic filtering ---
 
-    df["clean_text"] = df["text"].fillna("").apply(normalise_text)
+    df["clean_text"] = df["text"].fillna("").apply(
+        lambda t: normalise_text(t, pe_full_name)
+    )
     #due to double ups from inner text and href/src from same card, deduplicate here   
     df["dupKey"] = df["clean_text"].str.lower().str.replace(r"\s+", "", regex=True)
     df = df.drop_duplicates(subset=["dupKey"])
@@ -216,9 +229,9 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
     # --- 3. Build path signatures and list keys for all candidates ---
 
     df["path_sig"] = df["soup_object"].apply(element_path_signature)
-    df["list_key"] = df.apply(
-        lambda row: derive_list_key(row["path_sig"]), axis=1
-    )
+    #df["list_key"] = df.apply(
+    #    lambda row: derive_list_key(row["path_sig"]), axis=1
+    #)
 
     # --- Group by structural patterns to find homogeneous lists ---
 
@@ -229,6 +242,15 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
         min_group_size=3
     )
 
+    #removing duplicates within groups
+    seen = set()
+    new_groups = dict()
+    for k, names in groups.items():
+        names = frozenset(names) # make hashable
+        if names not in seen:
+            new_groups[k] = names
+            seen.add(names)
+    groups = new_groups
     
     for names in groups.values():
         if names:
@@ -250,6 +272,7 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
         if candidates:
             print(f"Group {group} confirmed by Google search.")
             final_portcos = df[df["clean_text"].isin(group)].copy()
+            
             break  # stop at first confirmed group
         else:
             print(f"Group {group} NOT confirmed by Google search.")

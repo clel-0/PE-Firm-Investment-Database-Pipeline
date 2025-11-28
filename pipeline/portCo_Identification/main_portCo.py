@@ -46,7 +46,7 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
 
     """
     print("Starting PortCo Extraction for PE firms...")
-    results = []
+    results = pd.DataFrame()
     current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     for pe_firm in pe_firms:
         print(f"Processing PE firm: {pe_firm['FullName']} with website: {pe_firm['Website']}")
@@ -150,16 +150,22 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
                     # two cards of different structures will combine to form the full set of portCo names for a given PE firm, as the listing of portCos is usually uniform in structure.
                     if A1portcos:
                         print("Now proceeding to scoring text candidates with A1 portCos available...")
-                        results = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search, A1portcos)
-                        if not results.empty: #checking if not empty
-                            print(f"Results after scoring with A1 portCos: {results.head()}")
+                        nameResults = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search, A1portcos)
+                        if not nameResults.empty: #checking if not empty
+                            print(f"Results after scoring with A1 portCos: {nameResults.head()}")
+                            nameResults["PE_Firm_Name"] = pe_firm['FullName']
+                            finalResults = nameResults["clean_text","PE_Firm_Name"].copy()
+                            results = pd.concat([results, finalResults], ignore_index=True)
                         else:
                             print("No portCos selected after scoring with A1 portCos.")
                     else:
                         print("Now proceeding to scoring text candidates without A1 portCos...") 
-                        results = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search)
-                        if not results.empty: #checking if not empty
-                            print(f"Results after scoring with A1 portCos: {results.head()}")
+                        nameResults = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search)
+                        if not nameResults.empty: #checking if not empty
+                            print(f"Results after scoring with A1 portCos: {nameResults.head()}")
+                            nameResults["PE_Firm_Name"] = pe_firm['FullName']
+                            finalResults = nameResults[["clean_text","PE_Firm_Name"]].copy()
+                            results = pd.concat([results, finalResults], ignore_index=True)
                         else:
                             print("No portCos selected after scoring without A1 portCos.")
                 else:
