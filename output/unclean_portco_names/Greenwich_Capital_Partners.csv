@@ -1,0 +1,26 @@
+card_id,text,raw_text,type,rank
+0,GTK logo,GTK logo,img_alt_text,E
+0,"svg+xml;charset=utf 8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww","data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20185%20187'%2F%3E",src,E
+1,contact@greenwichcapital.com.au,contact@greenwichcapital.com.au,a_inner_text,D
+1,contact@greenwichcapital.com,mailto:contact@greenwichcapital.com.au,href,C
+2,Privacy Policy,Privacy Policy,a_inner_text,D
+2,privacy policy,https://greenwichcapital.com.au/privacy-policy/,href,C
+6,greenwich logo,https://greenwichcapital.com.au/wp-content/uploads/2023/11/greenwich-logo.png,image_src,I
+8,mage,"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201000%20385'%2F%3E",image_src,I
+10,"svg+xml;charset=utf 8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww","data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201000%20385'%2F%3E",image_src,I
+12,mage,"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20185%20187'%2F%3E",image_src,I
+14,"svg+xml;charset=utf 8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww","data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20185%20187'%2F%3E",image_src,I
+16,mage,"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20388%20114'%2F%3E",image_src,I
+18,"svg+xml;charset=utf 8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww","data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20388%20114'%2F%3E",image_src,I
+20,mage,"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20222%20174'%2F%3E",image_src,I
+22,"svg+xml;charset=utf 8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww","data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20222%20174'%2F%3E",image_src,I
+24,mage,"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20325%20175'%2F%3E",image_src,I
+26,"svg+xml;charset=utf 8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww","data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20325%20175'%2F%3E",image_src,I
+28,mage,"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20462%20132'%2F%3E",image_src,I
+30,"svg+xml;charset=utf 8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww","data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20462%20132'%2F%3E",image_src,I
+32,mage,"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20486%20175'%2F%3E",image_src,I
+34,"svg+xml;charset=utf 8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww","data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%20486%20175'%2F%3E",image_src,I
+36,mage,"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201920%20652'%2F%3E",image_src,I
+38,"svg+xml;charset=utf 8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww","data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201920%20652'%2F%3E",image_src,I
+40,mage,"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201046%20329'%2F%3E",image_src,I
+42,"svg+xml;charset=utf 8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww","data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201046%20329'%2F%3E",image_src,I

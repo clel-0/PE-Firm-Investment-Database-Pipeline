@@ -1,0 +1,274 @@
+card_id,text,raw_text,type,rank
+0,Team,Team,a_inner_text,A
+0,team,https://nextcapital.com.au/team/,href,C
+1,Investments,Investments,a_inner_text,A
+1,investments,https://nextcapital.com.au/investments/,href,C
+2,News,News,a_inner_text,A
+2,news,https://nextcapital.com.au/news/,href,C
+3,Contact,Contact,a_inner_text,A
+3,contact,https://nextcapital.com.au/contact/,href,C
+4,Investor Login,Investor Login,a_inner_text,A
+4,dynamo,https://dynamo.dynamosoftware.com/,href,D
+5,Current,Current,a_inner_text,A
+5,,#,href,D
+6,Past,Past,a_inner_text,A
+6,,#,href,D
+7,Read more,Read more,a_inner_text,A
+7,,#modal0,href,D
+8,Travviahttps://www.travviagroup.com/,Travviahttps://www.travviagroup.com/,a_inner_text,A
+8,travviagroup,https://www.travviagroup.com/,href,D
+9,Read more,Read more,a_inner_text,A
+9,,#modal1,href,D
+10,Enviropacificwww.enviropacific.com.au,Enviropacificwww.enviropacific.com.au,a_inner_text,A
+10,enviropacific,http://www.enviropacific.com.au,href,D
+11,Read more,Read more,a_inner_text,A
+11,,#modal2,href,D
+12,Eptecwww.eptec.com.au,Eptecwww.eptec.com.au,a_inner_text,A
+12,eptec,http://www.eptec.com.au,href,D
+13,Read more,Read more,a_inner_text,A
+13,,#modal3,href,D
+14,TMXwww.tmxtransform.com,TMXwww.tmxtransform.com,a_inner_text,A
+14,tmxtransform,http://www.tmxtransform.com,href,D
+15,Read more,Read more,a_inner_text,A
+15,,#modal4,href,D
+16,Silver Chefwww.silverchef.com.au,Silver Chefwww.silverchef.com.au,a_inner_text,A
+16,silverchef,http://www.silverchef.com.au,href,D
+17,Read more,Read more,a_inner_text,A
+17,,#modal5,href,D
+18,NZ Buscareers.nzbus.co.nz/home,NZ Buscareers.nzbus.co.nz/home,a_inner_text,A
+18,home,http://careers.nzbus.co.nz/home,href,C
+19,Read more,Read more,a_inner_text,A
+19,,#modal6,href,D
+20,iSeekwww.iseek.com.au,iSeekwww.iseek.com.au,a_inner_text,A
+20,iseek,http://www.iseek.com.au,href,D
+21,Read more,Read more,a_inner_text,A
+21,,#modal7,href,D
+22,Noisettewww.noisette.com.au,Noisettewww.noisette.com.au,a_inner_text,A
+22,noisette,http://www.noisette.com.au,href,D
+23,Read more,Read more,a_inner_text,A
+23,,#modal8,href,D
+24,Funlabwww.fun-lab.com,Funlabwww.fun-lab.com,a_inner_text,A
+24,fun lab,http://www.fun-lab.com,href,D
+25,Read more,Read more,a_inner_text,A
+25,,#modal9,href,D
+26,Lynch Groupwww.lynchgroup.com.au,Lynch Groupwww.lynchgroup.com.au,a_inner_text,A
+26,lynchgroup,http://www.lynchgroup.com.au,href,D
+27,Read more,Read more,a_inner_text,A
+27,,#modal10,href,D
+28,Zenith Paymentswww.zenithpayments.com.au,Zenith Paymentswww.zenithpayments.com.au,a_inner_text,A
+28,zenithpayments,http://www.zenithpayments.com.au,href,D
+29,Read more,Read more,a_inner_text,A
+29,,#modal11,href,D
+30,Scentiawww.scentia.com.au,Scentiawww.scentia.com.au,a_inner_text,A
+30,scentia,http://www.scentia.com.au,href,D
+31,Read more,Read more,a_inner_text,A
+31,,#modal12,href,D
+32,Globewestwww.globewest.com.au,Globewestwww.globewest.com.au,a_inner_text,A
+32,globewest,http://www.globewest.com.au,href,D
+33,Read more,Read more,a_inner_text,A
+33,,#modal13,href,D
+34,Alloggiowww.alloggio.com.au,Alloggiowww.alloggio.com.au,a_inner_text,A
+34,alloggio,http://www.alloggio.com.au,href,D
+35,Read more,Read more,a_inner_text,A
+35,,#modal14,href,D
+36,Infin8 Carehttps://www.infin8care.com.au/,Infin8 Carehttps://www.infin8care.com.au/,a_inner_text,A
+36,infin8care,https://www.infin8care.com.au/,href,D
+37,Read more,Read more,a_inner_text,A
+37,,#modal15,href,D
+38,Scottish Pacifichttps://www.scotpac.com.au/,Scottish Pacifichttps://www.scotpac.com.au/,a_inner_text,A
+38,scotpac,https://www.scotpac.com.au/,href,D
+39,Read more,Read more,a_inner_text,A
+39,,#modal16,href,D
+40,Aerocarewww.aerocare.com.au,Aerocarewww.aerocare.com.au,a_inner_text,A
+40,aerocare,http://www.aerocare.com.au,href,D
+41,Read more,Read more,a_inner_text,A
+41,,#modal17,href,D
+42,Discoveryhttps://www.gdaygroup.com.au/,Discoveryhttps://www.gdaygroup.com.au/,a_inner_text,A
+42,gdaygroup,https://www.gdaygroup.com.au/,href,D
+43,Read more,Read more,a_inner_text,A
+43,,#modal18,href,D
+44,Vitacohttps://vitacohealth.com/,Vitacohttps://vitacohealth.com/,a_inner_text,A
+44,vitacohealth,https://vitacohealth.com/,href,D
+45,Read more,Read more,a_inner_text,A
+45,,#modal19,href,D
+46,GoBushttps://gobus.co.nz/,GoBushttps://gobus.co.nz/,a_inner_text,A
+46,gobus,https://gobus.co.nz/,href,D
+47,Read more,Read more,a_inner_text,A
+47,,#modal20,href,D
+48,Compare Clubhttps://compareclub.com.au,Compare Clubhttps://compareclub.com.au,a_inner_text,A
+48,compareclub,https://compareclub.com.au,href,D
+49,Read more,Read more,a_inner_text,A
+49,,#modal21,href,D
+50,Country Care Grouphttps://www.countrycaregroup.com.au/,Country Care Grouphttps://www.countrycaregroup.com.au/,a_inner_text,A
+50,countrycaregroup,https://www.countrycaregroup.com.au/,href,D
+51,Team,Team,a_inner_text,A
+51,team,https://nextcapital.com.au/team/,href,C
+52,Investments,Investments,a_inner_text,A
+52,investments,https://nextcapital.com.au/investments/,href,C
+53,News,News,a_inner_text,A
+53,news,https://nextcapital.com.au/news/,href,C
+54,Contact,Contact,a_inner_text,A
+54,contact,https://nextcapital.com.au/contact/,href,C
+55,Privacy Policy,Privacy Policy,a_inner_text,A
+55,privacy policy,https://nextcapital.com.au/privacy-policy/,href,C
+56,Disclaimer,Disclaimer,a_inner_text,A
+56,disclaimer,https://nextcapital.com.au/disclaimer/,href,C
+57,walterwakefield,walterwakefield,a_inner_text,A
+57,walterwakefield,https://walterwakefield.com.au/,href,D
+58,info@nextcapital.com.au,info@nextcapital.com.au,a_inner_text,A
+58,info@nextcapital.com,mailto:info@nextcapital.com.au,href,C
+60,Read more,Read more,a_inner_text,D
+60,,#modal0,href,D
+61,Travviahttps://www.travviagroup.com/,Travviahttps://www.travviagroup.com/,a_inner_text,D
+61,travviagroup,https://www.travviagroup.com/,href,D
+62,Read more,Read more,a_inner_text,D
+62,,#modal1,href,D
+63,Enviropacificwww.enviropacific.com.au,Enviropacificwww.enviropacific.com.au,a_inner_text,D
+63,enviropacific,http://www.enviropacific.com.au,href,D
+64,Read more,Read more,a_inner_text,D
+64,,#modal2,href,D
+65,Eptecwww.eptec.com.au,Eptecwww.eptec.com.au,a_inner_text,D
+65,eptec,http://www.eptec.com.au,href,D
+66,Read more,Read more,a_inner_text,D
+66,,#modal3,href,D
+67,TMXwww.tmxtransform.com,TMXwww.tmxtransform.com,a_inner_text,D
+67,tmxtransform,http://www.tmxtransform.com,href,D
+68,Read more,Read more,a_inner_text,D
+68,,#modal4,href,D
+69,Silver Chefwww.silverchef.com.au,Silver Chefwww.silverchef.com.au,a_inner_text,D
+69,silverchef,http://www.silverchef.com.au,href,D
+70,Read more,Read more,a_inner_text,D
+70,,#modal5,href,D
+71,NZ Buscareers.nzbus.co.nz/home,NZ Buscareers.nzbus.co.nz/home,a_inner_text,D
+71,home,http://careers.nzbus.co.nz/home,href,C
+72,Read more,Read more,a_inner_text,D
+72,,#modal6,href,D
+73,iSeekwww.iseek.com.au,iSeekwww.iseek.com.au,a_inner_text,D
+73,iseek,http://www.iseek.com.au,href,D
+74,Read more,Read more,a_inner_text,D
+74,,#modal7,href,D
+75,Noisettewww.noisette.com.au,Noisettewww.noisette.com.au,a_inner_text,D
+75,noisette,http://www.noisette.com.au,href,D
+76,Read more,Read more,a_inner_text,D
+76,,#modal8,href,D
+77,Funlabwww.fun-lab.com,Funlabwww.fun-lab.com,a_inner_text,D
+77,fun lab,http://www.fun-lab.com,href,D
+78,Read more,Read more,a_inner_text,D
+78,,#modal9,href,D
+79,Lynch Groupwww.lynchgroup.com.au,Lynch Groupwww.lynchgroup.com.au,a_inner_text,D
+79,lynchgroup,http://www.lynchgroup.com.au,href,D
+80,Read more,Read more,a_inner_text,D
+80,,#modal10,href,D
+81,Zenith Paymentswww.zenithpayments.com.au,Zenith Paymentswww.zenithpayments.com.au,a_inner_text,D
+81,zenithpayments,http://www.zenithpayments.com.au,href,D
+82,Read more,Read more,a_inner_text,D
+82,,#modal11,href,D
+83,Scentiawww.scentia.com.au,Scentiawww.scentia.com.au,a_inner_text,D
+83,scentia,http://www.scentia.com.au,href,D
+84,Read more,Read more,a_inner_text,D
+84,,#modal12,href,D
+85,Globewestwww.globewest.com.au,Globewestwww.globewest.com.au,a_inner_text,D
+85,globewest,http://www.globewest.com.au,href,D
+86,Read more,Read more,a_inner_text,D
+86,,#modal13,href,D
+87,Alloggiowww.alloggio.com.au,Alloggiowww.alloggio.com.au,a_inner_text,D
+87,alloggio,http://www.alloggio.com.au,href,D
+88,Read more,Read more,a_inner_text,D
+88,,#modal14,href,D
+89,Infin8 Carehttps://www.infin8care.com.au/,Infin8 Carehttps://www.infin8care.com.au/,a_inner_text,D
+89,infin8care,https://www.infin8care.com.au/,href,D
+90,Read more,Read more,a_inner_text,D
+90,,#modal15,href,D
+91,Scottish Pacifichttps://www.scotpac.com.au/,Scottish Pacifichttps://www.scotpac.com.au/,a_inner_text,D
+91,scotpac,https://www.scotpac.com.au/,href,D
+92,Read more,Read more,a_inner_text,D
+92,,#modal16,href,D
+93,Aerocarewww.aerocare.com.au,Aerocarewww.aerocare.com.au,a_inner_text,D
+93,aerocare,http://www.aerocare.com.au,href,D
+94,Read more,Read more,a_inner_text,D
+94,,#modal17,href,D
+95,Discoveryhttps://www.gdaygroup.com.au/,Discoveryhttps://www.gdaygroup.com.au/,a_inner_text,D
+95,gdaygroup,https://www.gdaygroup.com.au/,href,D
+96,Read more,Read more,a_inner_text,D
+96,,#modal18,href,D
+97,Vitacohttps://vitacohealth.com/,Vitacohttps://vitacohealth.com/,a_inner_text,D
+97,vitacohealth,https://vitacohealth.com/,href,D
+98,Read more,Read more,a_inner_text,D
+98,,#modal19,href,D
+99,GoBushttps://gobus.co.nz/,GoBushttps://gobus.co.nz/,a_inner_text,D
+99,gobus,https://gobus.co.nz/,href,D
+100,Read more,Read more,a_inner_text,D
+100,,#modal20,href,D
+101,Compare Clubhttps://compareclub.com.au,Compare Clubhttps://compareclub.com.au,a_inner_text,D
+101,compareclub,https://compareclub.com.au,href,D
+102,Read more,Read more,a_inner_text,D
+102,,#modal21,href,D
+103,Country Care Grouphttps://www.countrycaregroup.com.au/,Country Care Grouphttps://www.countrycaregroup.com.au/,a_inner_text,D
+103,countrycaregroup,https://www.countrycaregroup.com.au/,href,D
+206,logo bl 1,https://nextcapital.com.au/wp-content/uploads/2024/10/logo-bl-1.svg,image_src,I
+208,Rectangle66,https://nextcapital.com.au/wp-content/uploads/2024/10/Rectangle66.png,image_src,I
+210,JUCY image e1734559075709,https://nextcapital.com.au/wp-content/uploads/2024/11/JUCY-image-e1734559075709.jpg,image_src,I
+212,TRAVVIA,https://nextcapital.com.au/wp-content/uploads/2025/01/TRAVVIA.png,image_src,I
+214,TRAVVIA,https://nextcapital.com.au/wp-content/uploads/2025/01/TRAVVIA.svg,image_src,I
+216,Enviro,https://nextcapital.com.au/wp-content/uploads/2024/11/Enviro.png,image_src,I
+218,EnviroPacific,https://nextcapital.com.au/wp-content/uploads/2024/10/EnviroPacific.svg,image_src,I
+220,Enviropacific fav,https://nextcapital.com.au/wp-content/uploads/2024/10/Enviropacific-fav.svg,image_src,I
+222,Picture1 e1742162904681 535x281,https://nextcapital.com.au/wp-content/uploads/2025/03/Picture1-e1742162904681-535x281.jpg,image_src,I
+224,Eptec 1,https://nextcapital.com.au/wp-content/uploads/2024/10/Eptec-1.svg,image_src,I
+226,Eptec fav,https://nextcapital.com.au/wp-content/uploads/2024/10/Eptec-fav.svg,image_src,I
+228,TMX image,https://nextcapital.com.au/wp-content/uploads/2024/11/TMX-image.png,image_src,I
+230,TMX 2,https://nextcapital.com.au/wp-content/uploads/2024/10/TMX-2.svg,image_src,I
+232,TM Insight fav,https://nextcapital.com.au/wp-content/uploads/2024/10/TM-Insight-fav.svg,image_src,I
+234,Silverchef image 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/Silverchef-image-535x281.jpg,image_src,I
+236,SilverChef,https://nextcapital.com.au/wp-content/uploads/2024/10/SilverChef.svg,image_src,I
+238,SilverChef fav,https://nextcapital.com.au/wp-content/uploads/2024/10/SilverChef-fav.svg,image_src,I
+240,new auckland yutong bus 1024x731 1 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/new-auckland-yutong-bus-1024x731-1-535x281.jpg,image_src,I
+242,NZBus,https://nextcapital.com.au/wp-content/uploads/2024/10/NZBus.svg,image_src,I
+244,NZBus fav,https://nextcapital.com.au/wp-content/uploads/2024/10/NZBus-fav.svg,image_src,I
+246,iseek 2 450x281,https://nextcapital.com.au/wp-content/uploads/2024/11/iseek-2-450x281.jpg,image_src,I
+248,iseek,https://nextcapital.com.au/wp-content/uploads/2024/10/iseek.svg,image_src,I
+250,image 6,https://nextcapital.com.au/wp-content/uploads/2024/10/image-6.svg,image_src,I
+252,noisette image 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/noisette-image-535x281.jpg,image_src,I
+254,Noisette,https://nextcapital.com.au/wp-content/uploads/2024/10/Noisette.svg,image_src,I
+256,Noisette fav,https://nextcapital.com.au/wp-content/uploads/2024/10/Noisette-fav.svg,image_src,I
+258,funlab 1,https://nextcapital.com.au/wp-content/uploads/2024/11/funlab-1.jpg,image_src,I
+260,Funlab,https://nextcapital.com.au/wp-content/uploads/2024/10/Funlab.svg,image_src,I
+262,Funlab fav,https://nextcapital.com.au/wp-content/uploads/2024/10/Funlab-fav.svg,image_src,I
+264,lynch group image 1,https://nextcapital.com.au/wp-content/uploads/2024/11/lynch-group-image-1.jpg,image_src,I
+266,Lynch Group,https://nextcapital.com.au/wp-content/uploads/2024/10/Lynch-Group.svg,image_src,I
+268,Lynchgroup fav,https://nextcapital.com.au/wp-content/uploads/2024/10/Lynchgroup-fav.svg,image_src,I
+270,zenith stock image 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/zenith-stock-image-535x281.jpg,image_src,I
+272,Zenith,https://nextcapital.com.au/wp-content/uploads/2024/11/Zenith.svg,image_src,I
+274,scentia image 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/scentia-image-535x281.jpg,image_src,I
+276,scentia logo,https://nextcapital.com.au/wp-content/uploads/2024/11/scentia-logo.png,image_src,I
+278,scentia fav,https://nextcapital.com.au/wp-content/uploads/2024/11/scentia-fav.svg,image_src,I
+280,GW image 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/GW-image-535x281.jpg,image_src,I
+282,GLOBEWEST,https://nextcapital.com.au/wp-content/uploads/2024/11/GLOBEWEST.svg,image_src,I
+284,GW fav,https://nextcapital.com.au/wp-content/uploads/2024/11/GW-fav.svg,image_src,I
+286,alloggio image 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/alloggio-image-535x281.jpg,image_src,I
+288,alloggio,https://nextcapital.com.au/wp-content/uploads/2024/11/alloggio.svg,image_src,I
+290,alloggio fav,https://nextcapital.com.au/wp-content/uploads/2024/11/alloggio-fav.svg,image_src,I
+292,INFINITE IPSWICH 220309 4672 1200x800,https://nextcapital.com.au/wp-content/uploads/2024/11/INFINITE_IPSWICH_220309_4672-1200x800.jpg.avif,image_src,I
+294,Infin8 Care,https://nextcapital.com.au/wp-content/uploads/2024/10/Infin8-Care.png,image_src,I
+296,Infin8 fav,https://nextcapital.com.au/wp-content/uploads/2024/10/Infin8-fav.svg,image_src,I
+298,scottish pacific 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/scottish-pacific-535x281.jpg,image_src,I
+300,logo ic2,https://nextcapital.com.au/wp-content/uploads/2024/10/logo_ic2.png,image_src,I
+302,ScotPac,https://nextcapital.com.au/wp-content/uploads/2024/10/ScotPac.svg,image_src,I
+304,aerocare 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/aerocare-535x281.jpg,image_src,I
+306,Aerocare,https://nextcapital.com.au/wp-content/uploads/2024/10/Aerocare.png,image_src,I
+308,Aerocare fav,https://nextcapital.com.au/wp-content/uploads/2024/10/Aerocare-fav.svg,image_src,I
+310,Discovery parks fav,https://nextcapital.com.au/wp-content/uploads/2024/10/Discovery-parks-fav.png,image_src,I
+312,Discovery parks fav,https://nextcapital.com.au/wp-content/uploads/2024/10/Discovery-parks-fav.svg,image_src,I
+314,vitaco staff shot 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/vitaco_staff_shot-535x281.jpg,image_src,I
+316,Vitaco,https://nextcapital.com.au/wp-content/uploads/2024/10/Vitaco.png,image_src,I
+318,Vitaco fav,https://nextcapital.com.au/wp-content/uploads/2024/10/Vitaco-fav.svg,image_src,I
+320,gobus image 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/gobus-image-535x281.jpg,image_src,I
+322,logo ic4,https://nextcapital.com.au/wp-content/uploads/2024/10/logo_ic4.png,image_src,I
+324,GoBus fav,https://nextcapital.com.au/wp-content/uploads/2024/10/GoBus-fav.svg,image_src,I
+326,compareclubimage 535x281,https://nextcapital.com.au/wp-content/uploads/2024/11/compareclubimage-535x281.webp,image_src,I
+328,compareclub large e1731370383447,https://nextcapital.com.au/wp-content/uploads/2024/11/compareclub-large-e1731370383447.jpg,image_src,I
+330,compareclubsmall e1731362212962,https://nextcapital.com.au/wp-content/uploads/2024/11/compareclubsmall-e1731362212962.png,image_src,I
+332,CCG Image 535x281,https://nextcapital.com.au/wp-content/uploads/2025/02/CCG-Image-535x281.jpg,image_src,I
+334,country care logo padded e1740525145590,https://nextcapital.com.au/wp-content/uploads/2025/02/country-care-logo-padded-e1740525145590.png,image_src,I
+336,CCG S POS RGB Copy,https://nextcapital.com.au/wp-content/uploads/2025/02/CCG_S_POS_RGB-Copy.png,image_src,I
+338,logo foot,https://nextcapital.com.au/wp-content/uploads/2024/10/logo_foot.svg,image_src,I

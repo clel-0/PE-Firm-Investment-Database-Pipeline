@@ -1,0 +1,283 @@
+card_id,text,raw_text,type,rank
+0,About us,About us,a_inner_text,D
+0,about us,/about-us,href,C
+1,Investments,Investments,a_inner_text,D
+1,investments,/investments,href,C
+2,News & Updates,News & Updates,a_inner_text,D
+2,news,/news,href,C
+3,Careers,Careers,a_inner_text,D
+3,careers,/careers,href,C
+4,Investor Login,Investor Login,a_inner_text,D
+4,login,https://iam.intralinks.com/idp/login/?applicationid=c3b3d6c3-46f5-4496-a17d-0eeb271fd601&br=5b30820e-5933-4be5-8d3a-33ba24960a56&hostname=allegro.investorvision.intralinks.com,href,C
+5,Contact,Contact,a_inner_text,D
+5,contact,/contact,href,C
+6,Return to home page,Return to home page,a_inner_text,D
+6,,/,href,D
+7,Contact us,Contact us,a_inner_text,D
+7,contact,/contact,href,C
+8,About us,About us,a_inner_text,D
+8,about us,/about-us,href,C
+9,Investments,Investments,a_inner_text,D
+9,investments,/investments,href,C
+10,ESG and Responsible Investing,ESG and Responsible Investing,a_inner_text,D
+10,esg and responsible investing,/esg-and-responsible-investing,href,C
+11,News & Updates,News & Updates,a_inner_text,D
+11,news,/news,href,C
+12,Careers,Careers,a_inner_text,D
+12,careers,/careers,href,C
+13,Linkedin,Linkedin,a_inner_text,D
+13,allegro funds pty ltd,https://www.linkedin.com/company/allegro-funds-pty-ltd/?viewAsMember=true,href,B
+14,IR@allegrofunds.com.au,IR@allegrofunds.com.au,a_inner_text,D
+14,IR@allegrofunds.com,mailto:IR@allegrofunds.com.au,href,C
+15,Privacy Policy,Privacy Policy,a_inner_text,D
+15,privacy policy,/privacy-policy,href,C
+16,Disclaimer,Disclaimer,a_inner_text,D
+16,website disclaimer,/website-disclaimer,href,C
+17,About us,About us,a_inner_text,D
+17,about us,/about-us,href,C
+18,Investments,Investments,a_inner_text,D
+18,investments,/investments,href,C
+19,News & Updates,News & Updates,a_inner_text,D
+19,news,/news,href,C
+20,Careers,Careers,a_inner_text,D
+20,careers,/careers,href,C
+21,Investor Login,Investor Login,a_inner_text,D
+21,login,https://iam.intralinks.com/idp/login/?applicationid=c3b3d6c3-46f5-4496-a17d-0eeb271fd601&br=5b30820e-5933-4be5-8d3a-33ba24960a56&hostname=allegro.investorvision.intralinks.com,href,C
+22,Contact,Contact,a_inner_text,D
+22,contact,/contact,href,C
+23,About us,About us,a_inner_text,D
+23,about us,/about-us,href,C
+24,Investments,Investments,a_inner_text,D
+24,investments,/investments,href,C
+25,News & Updates,News & Updates,a_inner_text,D
+25,news,/news,href,C
+26,Careers,Careers,a_inner_text,D
+26,careers,/careers,href,C
+27,Investor Login,Investor Login,a_inner_text,D
+27,login,https://iam.intralinks.com/idp/login/?applicationid=c3b3d6c3-46f5-4496-a17d-0eeb271fd601&br=5b30820e-5933-4be5-8d3a-33ba24960a56&hostname=allegro.investorvision.intralinks.com,href,C
+28,Contact,Contact,a_inner_text,D
+28,contact,/contact,href,C
+29,About us,About us,a_inner_text,D
+29,about us,/about-us,href,C
+30,Investments,Investments,a_inner_text,D
+30,investments,/investments,href,C
+31,News & Updates,News & Updates,a_inner_text,D
+31,news,/news,href,C
+32,Careers,Careers,a_inner_text,D
+32,careers,/careers,href,C
+33,Investor Login,Investor Login,a_inner_text,D
+33,login,https://iam.intralinks.com/idp/login/?applicationid=c3b3d6c3-46f5-4496-a17d-0eeb271fd601&br=5b30820e-5933-4be5-8d3a-33ba24960a56&hostname=allegro.investorvision.intralinks.com,href,C
+34,Contact,Contact,a_inner_text,D
+34,contact,/contact,href,C
+35,About us,About us,a_inner_text,D
+35,about us,/about-us,href,C
+36,Investments,Investments,a_inner_text,D
+36,investments,/investments,href,C
+37,News & Updates,News & Updates,a_inner_text,D
+37,news,/news,href,C
+38,Careers,Careers,a_inner_text,D
+38,careers,/careers,href,C
+39,Investor Login,Investor Login,a_inner_text,D
+39,login,https://iam.intralinks.com/idp/login/?applicationid=c3b3d6c3-46f5-4496-a17d-0eeb271fd601&br=5b30820e-5933-4be5-8d3a-33ba24960a56&hostname=allegro.investorvision.intralinks.com,href,C
+40,Contact,Contact,a_inner_text,D
+40,contact,/contact,href,C
+41,About us,About us,a_inner_text,D
+41,about us,/about-us,href,C
+42,Investments,Investments,a_inner_text,D
+42,investments,/investments,href,C
+43,News & Updates,News & Updates,a_inner_text,D
+43,news,/news,href,C
+44,Careers,Careers,a_inner_text,D
+44,careers,/careers,href,C
+45,Investor Login,Investor Login,a_inner_text,D
+45,login,https://iam.intralinks.com/idp/login/?applicationid=c3b3d6c3-46f5-4496-a17d-0eeb271fd601&br=5b30820e-5933-4be5-8d3a-33ba24960a56&hostname=allegro.investorvision.intralinks.com,href,C
+46,Contact,Contact,a_inner_text,D
+46,contact,/contact,href,C
+47,About us,About us,a_inner_text,D
+47,about us,/about-us,href,C
+48,Investments,Investments,a_inner_text,D
+48,investments,/investments,href,C
+49,News & Updates,News & Updates,a_inner_text,D
+49,news,/news,href,C
+50,Careers,Careers,a_inner_text,D
+50,careers,/careers,href,C
+51,About us,About us,a_inner_text,D
+51,about us,/about-us,href,C
+52,Investments,Investments,a_inner_text,D
+52,investments,/investments,href,C
+53,News & Updates,News & Updates,a_inner_text,D
+53,news,/news,href,C
+54,Careers,Careers,a_inner_text,D
+54,careers,/careers,href,C
+55,Investor Login,Investor Login,a_inner_text,D
+55,login,https://iam.intralinks.com/idp/login/?applicationid=c3b3d6c3-46f5-4496-a17d-0eeb271fd601&br=5b30820e-5933-4be5-8d3a-33ba24960a56&hostname=allegro.investorvision.intralinks.com,href,C
+56,Contact,Contact,a_inner_text,D
+56,contact,/contact,href,C
+57,Investor Login,Investor Login,a_inner_text,D
+57,login,https://iam.intralinks.com/idp/login/?applicationid=c3b3d6c3-46f5-4496-a17d-0eeb271fd601&br=5b30820e-5933-4be5-8d3a-33ba24960a56&hostname=allegro.investorvision.intralinks.com,href,C
+58,Investor Login,Investor Login,a_inner_text,D
+58,login,https://iam.intralinks.com/idp/login/?applicationid=c3b3d6c3-46f5-4496-a17d-0eeb271fd601&br=5b30820e-5933-4be5-8d3a-33ba24960a56&hostname=allegro.investorvision.intralinks.com,href,C
+59,Return to home page,Return to home page,a_inner_text,D
+59,,/,href,D
+60,Return to home page,Return to home page,a_inner_text,D
+60,,/,href,D
+61,Return to home page,Return to home page,a_inner_text,D
+61,,/,href,D
+62,Return to home page,Return to home page,a_inner_text,D
+62,,/,href,D
+63,Return to home page,Return to home page,a_inner_text,D
+63,,/,href,D
+64,Return to home page,Return to home page,a_inner_text,D
+64,,/,href,D
+65,Contact us,Contact us,a_inner_text,D
+65,contact,/contact,href,C
+66,Contact us,Contact us,a_inner_text,D
+66,contact,/contact,href,C
+67,Contact us,Contact us,a_inner_text,D
+67,contact,/contact,href,C
+68,Contact us,Contact us,a_inner_text,D
+68,contact,/contact,href,C
+69,About us,About us,a_inner_text,D
+69,about us,/about-us,href,C
+70,Investments,Investments,a_inner_text,D
+70,investments,/investments,href,C
+71,ESG and Responsible Investing,ESG and Responsible Investing,a_inner_text,D
+71,esg and responsible investing,/esg-and-responsible-investing,href,C
+72,News & Updates,News & Updates,a_inner_text,D
+72,news,/news,href,C
+73,Careers,Careers,a_inner_text,D
+73,careers,/careers,href,C
+74,Linkedin,Linkedin,a_inner_text,D
+74,allegro funds pty ltd,https://www.linkedin.com/company/allegro-funds-pty-ltd/?viewAsMember=true,href,B
+75,IR@allegrofunds.com.au,IR@allegrofunds.com.au,a_inner_text,D
+75,IR@allegrofunds.com,mailto:IR@allegrofunds.com.au,href,C
+76,Privacy Policy,Privacy Policy,a_inner_text,D
+76,privacy policy,/privacy-policy,href,C
+77,Disclaimer,Disclaimer,a_inner_text,D
+77,website disclaimer,/website-disclaimer,href,C
+78,About us,About us,a_inner_text,D
+78,about us,/about-us,href,C
+79,Investments,Investments,a_inner_text,D
+79,investments,/investments,href,C
+80,ESG and Responsible Investing,ESG and Responsible Investing,a_inner_text,D
+80,esg and responsible investing,/esg-and-responsible-investing,href,C
+81,News & Updates,News & Updates,a_inner_text,D
+81,news,/news,href,C
+82,Careers,Careers,a_inner_text,D
+82,careers,/careers,href,C
+83,Linkedin,Linkedin,a_inner_text,D
+83,allegro funds pty ltd,https://www.linkedin.com/company/allegro-funds-pty-ltd/?viewAsMember=true,href,B
+84,IR@allegrofunds.com.au,IR@allegrofunds.com.au,a_inner_text,D
+84,IR@allegrofunds.com,mailto:IR@allegrofunds.com.au,href,C
+85,Privacy Policy,Privacy Policy,a_inner_text,D
+85,privacy policy,/privacy-policy,href,C
+86,Disclaimer,Disclaimer,a_inner_text,D
+86,website disclaimer,/website-disclaimer,href,C
+87,About us,About us,a_inner_text,D
+87,about us,/about-us,href,C
+88,Investments,Investments,a_inner_text,D
+88,investments,/investments,href,C
+89,ESG and Responsible Investing,ESG and Responsible Investing,a_inner_text,D
+89,esg and responsible investing,/esg-and-responsible-investing,href,C
+90,News & Updates,News & Updates,a_inner_text,D
+90,news,/news,href,C
+91,Careers,Careers,a_inner_text,D
+91,careers,/careers,href,C
+92,Linkedin,Linkedin,a_inner_text,D
+92,allegro funds pty ltd,https://www.linkedin.com/company/allegro-funds-pty-ltd/?viewAsMember=true,href,B
+93,IR@allegrofunds.com.au,IR@allegrofunds.com.au,a_inner_text,D
+93,IR@allegrofunds.com,mailto:IR@allegrofunds.com.au,href,C
+94,Privacy Policy,Privacy Policy,a_inner_text,D
+94,privacy policy,/privacy-policy,href,C
+95,Disclaimer,Disclaimer,a_inner_text,D
+95,website disclaimer,/website-disclaimer,href,C
+96,About us,About us,a_inner_text,D
+96,about us,/about-us,href,C
+97,Investments,Investments,a_inner_text,D
+97,investments,/investments,href,C
+98,ESG and Responsible Investing,ESG and Responsible Investing,a_inner_text,D
+98,esg and responsible investing,/esg-and-responsible-investing,href,C
+99,News & Updates,News & Updates,a_inner_text,D
+99,news,/news,href,C
+100,Careers,Careers,a_inner_text,D
+100,careers,/careers,href,C
+101,Linkedin,Linkedin,a_inner_text,D
+101,allegro funds pty ltd,https://www.linkedin.com/company/allegro-funds-pty-ltd/?viewAsMember=true,href,B
+102,IR@allegrofunds.com.au,IR@allegrofunds.com.au,a_inner_text,D
+102,IR@allegrofunds.com,mailto:IR@allegrofunds.com.au,href,C
+103,Privacy Policy,Privacy Policy,a_inner_text,D
+103,privacy policy,/privacy-policy,href,C
+104,Disclaimer,Disclaimer,a_inner_text,D
+104,website disclaimer,/website-disclaimer,href,C
+105,About us,About us,a_inner_text,D
+105,about us,/about-us,href,C
+106,Investments,Investments,a_inner_text,D
+106,investments,/investments,href,C
+107,ESG and Responsible Investing,ESG and Responsible Investing,a_inner_text,D
+107,esg and responsible investing,/esg-and-responsible-investing,href,C
+108,News & Updates,News & Updates,a_inner_text,D
+108,news,/news,href,C
+109,Careers,Careers,a_inner_text,D
+109,careers,/careers,href,C
+110,Linkedin,Linkedin,a_inner_text,D
+110,allegro funds pty ltd,https://www.linkedin.com/company/allegro-funds-pty-ltd/?viewAsMember=true,href,B
+111,IR@allegrofunds.com.au,IR@allegrofunds.com.au,a_inner_text,D
+111,IR@allegrofunds.com,mailto:IR@allegrofunds.com.au,href,C
+112,Privacy Policy,Privacy Policy,a_inner_text,D
+112,privacy policy,/privacy-policy,href,C
+113,Disclaimer,Disclaimer,a_inner_text,D
+113,website disclaimer,/website-disclaimer,href,C
+114,About us,About us,a_inner_text,D
+114,about us,/about-us,href,C
+115,Investments,Investments,a_inner_text,D
+115,investments,/investments,href,C
+116,ESG and Responsible Investing,ESG and Responsible Investing,a_inner_text,D
+116,esg and responsible investing,/esg-and-responsible-investing,href,C
+117,News & Updates,News & Updates,a_inner_text,D
+117,news,/news,href,C
+118,Careers,Careers,a_inner_text,D
+118,careers,/careers,href,C
+119,Linkedin,Linkedin,a_inner_text,D
+119,allegro funds pty ltd,https://www.linkedin.com/company/allegro-funds-pty-ltd/?viewAsMember=true,href,B
+120,IR@allegrofunds.com.au,IR@allegrofunds.com.au,a_inner_text,D
+120,IR@allegrofunds.com,mailto:IR@allegrofunds.com.au,href,C
+121,About us,About us,a_inner_text,D
+121,about us,/about-us,href,C
+122,Investments,Investments,a_inner_text,D
+122,investments,/investments,href,C
+123,ESG and Responsible Investing,ESG and Responsible Investing,a_inner_text,D
+123,esg and responsible investing,/esg-and-responsible-investing,href,C
+124,News & Updates,News & Updates,a_inner_text,D
+124,news,/news,href,C
+125,Careers,Careers,a_inner_text,D
+125,careers,/careers,href,C
+126,Linkedin,Linkedin,a_inner_text,D
+126,allegro funds pty ltd,https://www.linkedin.com/company/allegro-funds-pty-ltd/?viewAsMember=true,href,B
+127,About us,About us,a_inner_text,D
+127,about us,/about-us,href,C
+128,Investments,Investments,a_inner_text,D
+128,investments,/investments,href,C
+129,ESG and Responsible Investing,ESG and Responsible Investing,a_inner_text,D
+129,esg and responsible investing,/esg-and-responsible-investing,href,C
+130,News & Updates,News & Updates,a_inner_text,D
+130,news,/news,href,C
+131,Careers,Careers,a_inner_text,D
+131,careers,/careers,href,C
+132,Linkedin,Linkedin,a_inner_text,D
+132,allegro funds pty ltd,https://www.linkedin.com/company/allegro-funds-pty-ltd/?viewAsMember=true,href,B
+133,IR@allegrofunds.com.au,IR@allegrofunds.com.au,a_inner_text,D
+133,IR@allegrofunds.com,mailto:IR@allegrofunds.com.au,href,C
+134,IR@allegrofunds.com.au,IR@allegrofunds.com.au,a_inner_text,D
+134,IR@allegrofunds.com,mailto:IR@allegrofunds.com.au,href,C
+135,Privacy Policy,Privacy Policy,a_inner_text,D
+135,privacy policy,/privacy-policy,href,C
+136,Disclaimer,Disclaimer,a_inner_text,D
+136,website disclaimer,/website-disclaimer,href,C
+137,Privacy Policy,Privacy Policy,a_inner_text,D
+137,privacy policy,/privacy-policy,href,C
+138,Disclaimer,Disclaimer,a_inner_text,D
+138,website disclaimer,/website-disclaimer,href,C
+139,Privacy Policy,Privacy Policy,a_inner_text,D
+139,privacy policy,/privacy-policy,href,C
+140,Disclaimer,Disclaimer,a_inner_text,D
+140,website disclaimer,/website-disclaimer,href,C

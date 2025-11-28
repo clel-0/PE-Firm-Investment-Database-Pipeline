@@ -207,7 +207,7 @@ if __name__ == "__main__":
     df = pd.read_csv("output/PE_Firms.csv")
     pe_firms = df.to_dict(orient="records")
     portco_results = PortCo_Extraction(pe_firms)
-    portco_results.to_csv("output/PortCoName_Results.csv", index=False)
+    portco_results.to_csv("output/PortCoName_Results_Cleaned.csv", index=False)
     #with open("output/PortCo_Results.json", "w") as f:
     #    json.dump(portco_results, f, indent=4)
 

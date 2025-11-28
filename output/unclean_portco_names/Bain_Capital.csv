@@ -1,0 +1,996 @@
+card_id,text,raw_text,type,rank
+0,more,more,a_inner_text,D
+0,void(0),javascript:void(0),href,C
+1,INVESTOR LOGIN,INVESTOR LOGIN,a_inner_text,D
+1,,https://services.dataexchange.fiscloudservices.com/Document/2449254,href,C
+2,LOCATIONS,LOCATIONS,a_inner_text,D
+2,locations,/locations,href,C
+3,SEARCH,SEARCH,a_inner_text,D
+3,void(0),javascript:void(0),href,C
+4,Bain Capital,Bain Capital,img_alt_text,E
+4,bain capital logo,/themes/custom/baincapital/images/bain-capital-logo.svg,src,E
+5,Explore,Explore,a_inner_text,D
+5,about us,https://www.baincapital.com/about-us,href,C
+6,Overview,Overview,a_inner_text,D
+6,about us,https://www.baincapital.com/about-us#overview,href,C
+7,Purpose and values,Purpose and values,a_inner_text,D
+7,about us,https://www.baincapital.com/about-us#purposeandValue,href,C
+8,How we partner,How we partner,a_inner_text,D
+8,about us,https://www.baincapital.com/about-us#ourpartnership,href,C
+9,Our global presence,Our global presence,a_inner_text,D
+9,about us,https://www.baincapital.com/about-us#globalpresence,href,C
+10,"Our purpose, in our words","Our purpose, in our words",a_inner_text,D
+10,about us,https://www.baincapital.com/about-us,href,C
+11,Explore,Explore,a_inner_text,D
+11,about us,https://www.baincapital.com/about-us,href,C
+12,Overview,Overview,a_inner_text,D
+12,about us,https://www.baincapital.com/about-us#overview,href,C
+13,Purpose and values,Purpose and values,a_inner_text,D
+13,about us,https://www.baincapital.com/about-us#purposeandValue,href,C
+14,How we partner,How we partner,a_inner_text,D
+14,about us,https://www.baincapital.com/about-us#ourpartnership,href,C
+15,Our global presence,Our global presence,a_inner_text,D
+15,about us,https://www.baincapital.com/about-us#globalpresence,href,C
+16,Explore,Explore,a_inner_text,D
+16,about us,https://www.baincapital.com/about-us,href,C
+17,Overview,Overview,a_inner_text,D
+17,about us,https://www.baincapital.com/about-us#overview,href,C
+18,Purpose and values,Purpose and values,a_inner_text,D
+18,about us,https://www.baincapital.com/about-us#purposeandValue,href,C
+19,How we partner,How we partner,a_inner_text,D
+19,about us,https://www.baincapital.com/about-us#ourpartnership,href,C
+20,Our global presence,Our global presence,a_inner_text,D
+20,about us,https://www.baincapital.com/about-us#globalpresence,href,C
+21,"Our purpose, in our words","Our purpose, in our words",a_inner_text,D
+21,about us,https://www.baincapital.com/about-us,href,C
+22,Global Private Equity>,Global Private Equity>,a_inner_text,D
+22,baincapitalprivateequity,https://www.baincapitalprivateequity.com/,href,D
+23,Double Impact>,Double Impact>,a_inner_text,D
+23,baincapitaldoubleimpact,https://www.baincapitaldoubleimpact.com/,href,D
+24,Insurance>,Insurance>,a_inner_text,D
+24,baincapitalinsurance,https://www.baincapitalinsurance.com/,href,D
+25,Ventures>,Ventures>,a_inner_text,D
+25,ventures,/ventures,href,C
+26,Life Sciences>,Life Sciences>,a_inner_text,D
+26,baincapitallifesciences,https://www.baincapitallifesciences.com/,href,D
+27,Tech Opportunities>,Tech Opportunities>,a_inner_text,D
+27,baincapitaltechopportunities,https://www.baincapitaltechopportunities.com/,href,D
+28,Crypto>,Crypto>,a_inner_text,D
+28,crypto,/crypto,href,C
+29,Special Situations>,Special Situations>,a_inner_text,D
+29,baincapitalspecialsituations,https://baincapitalspecialsituations.com/,href,D
+30,Partnership Strategies>,Partnership Strategies>,a_inner_text,D
+30,baincapitalpartnershipstrategies,https://www.baincapitalpartnershipstrategies.com/,href,D
+31,Credit>,Credit>,a_inner_text,D
+31,baincapitalcredit,https://www.baincapitalcredit.com/,href,D
+32,Public Equity>,Public Equity>,a_inner_text,D
+32,baincapitalpublicequity,https://www.baincapitalpublicequity.com/,href,D
+33,Real Estate>,Real Estate>,a_inner_text,D
+33,baincapitalrealestate,https://www.baincapitalrealestate.com/,href,D
+34,Special Situations>,Special Situations>,a_inner_text,D
+34,baincapitalspecialsituations,https://baincapitalspecialsituations.com/,href,D
+35,Explore,Explore,a_inner_text,D
+35,sustainability and impact,https://www.baincapital.com/sustainability-and-impact,href,C
+36,Active governance & stewardship,Active governance & stewardship,a_inner_text,D
+36,active governance and stewardship,https://www.baincapital.com/sustainability-and-impact/active-governance-and-stewardship,href,C
+37,Sustainable growth & reducing climate impact,Sustainable growth & reducing climate impact,a_inner_text,D
+37,sustainable growth reducing climate impact,https://www.baincapital.com/sustainability-and-impact/sustainable-growth-reducing-climate-impact,href,C
+38,"Fair employment, engagement & well-being","Fair employment, engagement & well-being",a_inner_text,D
+38,fair employment engagement well being,https://www.baincapital.com/sustainability-and-impact/fair-employment-engagement-well-being,href,C
+39,"Diversity, equity & inclusion","Diversity, equity & inclusion",a_inner_text,D
+39,diversity equity and inclusion,https://www.baincapital.com/sustainability-and-impact/diversity-equity-and-inclusion,href,C
+40,Community engagement,Community engagement,a_inner_text,D
+40,community engagement,https://www.baincapital.com/sustainability-and-impact/community-engagement,href,C
+41,Driving sustainable value,Driving sustainable value,a_inner_text,D
+41,Bain Capital Sustainability Report June2025 0,https://cdn-east2.baincapital.com/2025-06/Bain-Capital-Sustainability-Report-June2025_0.pdf?VersionId=g_eEXbw1xbuP1q8YuljPD5jzIevSVKpu,href,C
+42,Explore,Explore,a_inner_text,D
+42,sustainability and impact,https://www.baincapital.com/sustainability-and-impact,href,C
+43,Active governance & stewardship,Active governance & stewardship,a_inner_text,D
+43,active governance and stewardship,https://www.baincapital.com/sustainability-and-impact/active-governance-and-stewardship,href,C
+44,Sustainable growth & reducing climate impact,Sustainable growth & reducing climate impact,a_inner_text,D
+44,sustainable growth reducing climate impact,https://www.baincapital.com/sustainability-and-impact/sustainable-growth-reducing-climate-impact,href,C
+45,"Fair employment, engagement & well-being","Fair employment, engagement & well-being",a_inner_text,D
+45,fair employment engagement well being,https://www.baincapital.com/sustainability-and-impact/fair-employment-engagement-well-being,href,C
+46,"Diversity, equity & inclusion","Diversity, equity & inclusion",a_inner_text,D
+46,diversity equity and inclusion,https://www.baincapital.com/sustainability-and-impact/diversity-equity-and-inclusion,href,C
+47,Community engagement,Community engagement,a_inner_text,D
+47,community engagement,https://www.baincapital.com/sustainability-and-impact/community-engagement,href,C
+48,Explore,Explore,a_inner_text,D
+48,sustainability and impact,https://www.baincapital.com/sustainability-and-impact,href,C
+49,Active governance & stewardship,Active governance & stewardship,a_inner_text,D
+49,active governance and stewardship,https://www.baincapital.com/sustainability-and-impact/active-governance-and-stewardship,href,C
+50,Sustainable growth & reducing climate impact,Sustainable growth & reducing climate impact,a_inner_text,D
+50,sustainable growth reducing climate impact,https://www.baincapital.com/sustainability-and-impact/sustainable-growth-reducing-climate-impact,href,C
+51,"Fair employment, engagement & well-being","Fair employment, engagement & well-being",a_inner_text,D
+51,fair employment engagement well being,https://www.baincapital.com/sustainability-and-impact/fair-employment-engagement-well-being,href,C
+52,"Diversity, equity & inclusion","Diversity, equity & inclusion",a_inner_text,D
+52,diversity equity and inclusion,https://www.baincapital.com/sustainability-and-impact/diversity-equity-and-inclusion,href,C
+53,Community engagement,Community engagement,a_inner_text,D
+53,community engagement,https://www.baincapital.com/sustainability-and-impact/community-engagement,href,C
+54,Driving sustainable value,Driving sustainable value,a_inner_text,D
+54,Bain Capital Sustainability Report June2025 0,https://cdn-east2.baincapital.com/2025-06/Bain-Capital-Sustainability-Report-June2025_0.pdf?VersionId=g_eEXbw1xbuP1q8YuljPD5jzIevSVKpu,href,C
+55,Explore,Explore,a_inner_text,D
+55,careers,https://www.baincapital.com/careers,href,C
+56,Opportunity,Opportunity,a_inner_text,D
+56,careers,https://www.baincapital.com/careers#your-opprotunity,href,C
+57,Growth,Growth,a_inner_text,D
+57,careers,https://www.baincapital.com/careers#our-support,href,C
+58,Join us,Join us,a_inner_text,D
+58,careers,https://www.baincapital.com/careers#join-the-team,href,C
+59,Our people are the heart of our advantage,Our people are the heart of our advantage,a_inner_text,D
+59,careers,https://www.baincapital.com/careers,href,C
+60,Explore,Explore,a_inner_text,D
+60,careers,https://www.baincapital.com/careers,href,C
+61,Opportunity,Opportunity,a_inner_text,D
+61,careers,https://www.baincapital.com/careers#your-opprotunity,href,C
+62,Growth,Growth,a_inner_text,D
+62,careers,https://www.baincapital.com/careers#our-support,href,C
+63,Join us,Join us,a_inner_text,D
+63,careers,https://www.baincapital.com/careers#join-the-team,href,C
+64,Explore,Explore,a_inner_text,D
+64,careers,https://www.baincapital.com/careers,href,C
+65,Opportunity,Opportunity,a_inner_text,D
+65,careers,https://www.baincapital.com/careers#your-opprotunity,href,C
+66,Growth,Growth,a_inner_text,D
+66,careers,https://www.baincapital.com/careers#our-support,href,C
+67,Join us,Join us,a_inner_text,D
+67,careers,https://www.baincapital.com/careers#join-the-team,href,C
+68,Our people are the heart of our advantage,Our people are the heart of our advantage,a_inner_text,D
+68,careers,https://www.baincapital.com/careers,href,C
+69,View All,View All,a_inner_text,D
+69,news,https://www.baincapital.com/news,href,C
+70,Press releases,Press releases,a_inner_text,D
+70,news,https://www.baincapital.com/news?filter=&newscategory=press-releases,href,C
+71,In the news,In the news,a_inner_text,D
+71,news,https://www.baincapital.com/news?filter=&newscategory=in-the-news,href,C
+72,Bain Capital Closes Fourteenth Flagship Private Equity Fund at $14 Billion,Bain Capital Closes Fourteenth Flagship Private Equity Fund at $14 Billion,a_inner_text,D
+72,bain capital closes fourteenth flagship private equity fund 14 billion,/news/bain-capital-closes-fourteenth-flagship-private-equity-fund-14-billion,href,C
+73,View All,View All,a_inner_text,D
+73,news,https://www.baincapital.com/news,href,C
+74,Press releases,Press releases,a_inner_text,D
+74,news,https://www.baincapital.com/news?filter=&newscategory=press-releases,href,C
+75,In the news,In the news,a_inner_text,D
+75,news,https://www.baincapital.com/news?filter=&newscategory=in-the-news,href,C
+76,View All,View All,a_inner_text,D
+76,news,https://www.baincapital.com/news,href,C
+77,Press releases,Press releases,a_inner_text,D
+77,news,https://www.baincapital.com/news?filter=&newscategory=press-releases,href,C
+78,In the news,In the news,a_inner_text,D
+78,news,https://www.baincapital.com/news?filter=&newscategory=in-the-news,href,C
+79,See our approach in action,See our approach in action,a_inner_text,D
+79,,,href,C
+80,Fulfill your potential,Fulfill your potential,a_inner_text,D
+80,careers,/careers,href,C
+81,See our approach in action,See our approach in action,a_inner_text,D
+81,,,href,C
+82,Fulfill your potential,Fulfill your potential,a_inner_text,D
+82,careers,/careers,href,C
+83,See our approach in action,See our approach in action,a_inner_text,D
+83,,,href,C
+84,Fulfill your potential,Fulfill your potential,a_inner_text,D
+84,careers,/careers,href,C
+85,Global Private Equity>,Global Private Equity>,a_inner_text,D
+85,baincapitalprivateequity,https://www.baincapitalprivateequity.com/,href,D
+86,Double Impact>,Double Impact>,a_inner_text,D
+86,baincapitaldoubleimpact,https://www.baincapitaldoubleimpact.com/,href,D
+87,Insurance>,Insurance>,a_inner_text,D
+87,baincapitalinsurance,https://www.baincapitalinsurance.com/,href,D
+88,Ventures>,Ventures>,a_inner_text,D
+88,ventures,/ventures,href,C
+89,Life Sciences>,Life Sciences>,a_inner_text,D
+89,baincapitallifesciences,https://www.baincapitallifesciences.com/,href,D
+90,Tech Opportunities>,Tech Opportunities>,a_inner_text,D
+90,baincapitaltechopportunities,https://www.baincapitaltechopportunities.com/,href,D
+91,Crypto>,Crypto>,a_inner_text,D
+91,crypto,/crypto,href,C
+92,Special Situations>,Special Situations>,a_inner_text,D
+92,baincapitalspecialsituations,https://baincapitalspecialsituations.com/,href,D
+93,Partnership Strategies>,Partnership Strategies>,a_inner_text,D
+93,baincapitalpartnershipstrategies,https://www.baincapitalpartnershipstrategies.com/,href,D
+94,Credit>,Credit>,a_inner_text,D
+94,baincapitalcredit,https://www.baincapitalcredit.com/,href,D
+95,Public Equity>,Public Equity>,a_inner_text,D
+95,baincapitalpublicequity,https://www.baincapitalpublicequity.com/,href,D
+96,Real Estate>,Real Estate>,a_inner_text,D
+96,baincapitalrealestate,https://www.baincapitalrealestate.com/,href,D
+97,Special Situations>,Special Situations>,a_inner_text,D
+97,baincapitalspecialsituations,https://baincapitalspecialsituations.com/,href,D
+98,Global Private Equity>,Global Private Equity>,a_inner_text,D
+98,baincapitalprivateequity,https://www.baincapitalprivateequity.com/,href,D
+99,Double Impact>,Double Impact>,a_inner_text,D
+99,baincapitaldoubleimpact,https://www.baincapitaldoubleimpact.com/,href,D
+100,Insurance>,Insurance>,a_inner_text,D
+100,baincapitalinsurance,https://www.baincapitalinsurance.com/,href,D
+101,Ventures>,Ventures>,a_inner_text,D
+101,ventures,/ventures,href,C
+102,Life Sciences>,Life Sciences>,a_inner_text,D
+102,baincapitallifesciences,https://www.baincapitallifesciences.com/,href,D
+103,Tech Opportunities>,Tech Opportunities>,a_inner_text,D
+103,baincapitaltechopportunities,https://www.baincapitaltechopportunities.com/,href,D
+104,Crypto>,Crypto>,a_inner_text,D
+104,crypto,/crypto,href,C
+105,Special Situations>,Special Situations>,a_inner_text,D
+105,baincapitalspecialsituations,https://baincapitalspecialsituations.com/,href,D
+106,Partnership Strategies>,Partnership Strategies>,a_inner_text,D
+106,baincapitalpartnershipstrategies,https://www.baincapitalpartnershipstrategies.com/,href,D
+107,Credit>,Credit>,a_inner_text,D
+107,baincapitalcredit,https://www.baincapitalcredit.com/,href,D
+108,Public Equity>,Public Equity>,a_inner_text,D
+108,baincapitalpublicequity,https://www.baincapitalpublicequity.com/,href,D
+109,Real Estate>,Real Estate>,a_inner_text,D
+109,baincapitalrealestate,https://www.baincapitalrealestate.com/,href,D
+110,Special Situations>,Special Situations>,a_inner_text,D
+110,baincapitalspecialsituations,https://baincapitalspecialsituations.com/,href,D
+111,Global Private Equity>,Global Private Equity>,a_inner_text,D
+111,baincapitalprivateequity,https://www.baincapitalprivateequity.com/,href,D
+112,Double Impact>,Double Impact>,a_inner_text,D
+112,baincapitaldoubleimpact,https://www.baincapitaldoubleimpact.com/,href,D
+113,Insurance>,Insurance>,a_inner_text,D
+113,baincapitalinsurance,https://www.baincapitalinsurance.com/,href,D
+114,Ventures>,Ventures>,a_inner_text,D
+114,ventures,/ventures,href,C
+115,Life Sciences>,Life Sciences>,a_inner_text,D
+115,baincapitallifesciences,https://www.baincapitallifesciences.com/,href,D
+116,Tech Opportunities>,Tech Opportunities>,a_inner_text,D
+116,baincapitaltechopportunities,https://www.baincapitaltechopportunities.com/,href,D
+117,Crypto>,Crypto>,a_inner_text,D
+117,crypto,/crypto,href,C
+118,Special Situations>,Special Situations>,a_inner_text,D
+118,baincapitalspecialsituations,https://baincapitalspecialsituations.com/,href,D
+119,Partnership Strategies>,Partnership Strategies>,a_inner_text,D
+119,baincapitalpartnershipstrategies,https://www.baincapitalpartnershipstrategies.com/,href,D
+120,Credit>,Credit>,a_inner_text,D
+120,baincapitalcredit,https://www.baincapitalcredit.com/,href,D
+121,Public Equity>,Public Equity>,a_inner_text,D
+121,baincapitalpublicequity,https://www.baincapitalpublicequity.com/,href,D
+122,Real Estate>,Real Estate>,a_inner_text,D
+122,baincapitalrealestate,https://www.baincapitalrealestate.com/,href,D
+123,Special Situations>,Special Situations>,a_inner_text,D
+123,baincapitalspecialsituations,https://baincapitalspecialsituations.com/,href,D
+124,TECHNOLOGYLeading companies into the future,TECHNOLOGYLeading companies into the future,a_inner_text,D
+124,technology,https://www.baincapital.com/technology/,href,C
+125,HEALTHCAREBuilding great companies to serve patients,HEALTHCAREBuilding great companies to serve patients,a_inner_text,D
+125,healthcare,https://www.baincapital.com/healthcare/,href,C
+126,Bain Capital Technology,Bain Capital Technology,img_alt_text,E
+126,investment spotlight tech v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-tech-v2.jpg?VersionId=ZneUgARdepaVedhzfoJKX40ThAnfvUvk&itok=hLv8UoXG,src,E
+127,Bain Capital Healthcare,Bain Capital Healthcare,img_alt_text,E
+127,investment spotlight health v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-health-v2.png.jpg?VersionId=YYzyulpCTMTsal.TUBXD4K5nHZlxFfRD&itok=Dj5x_MR9,src,E
+128,TECHNOLOGYLeading companies into the future,TECHNOLOGYLeading companies into the future,a_inner_text,A
+128,technology,https://www.baincapital.com/technology/,href,C
+129,HEALTHCAREBuilding great companies to serve patients,HEALTHCAREBuilding great companies to serve patients,a_inner_text,A
+129,healthcare,https://www.baincapital.com/healthcare/,href,C
+130,Bain Capital Technology,Bain Capital Technology,img_alt_text,B
+130,investment spotlight tech v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-tech-v2.jpg?VersionId=ZneUgARdepaVedhzfoJKX40ThAnfvUvk&itok=hLv8UoXG,src,B
+131,Bain Capital Healthcare,Bain Capital Healthcare,img_alt_text,B
+131,investment spotlight health v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-health-v2.png.jpg?VersionId=YYzyulpCTMTsal.TUBXD4K5nHZlxFfRD&itok=Dj5x_MR9,src,B
+132,TECHNOLOGYLeading companies into the future,TECHNOLOGYLeading companies into the future,a_inner_text,A
+132,technology,https://www.baincapital.com/technology/,href,C
+133,HEALTHCAREBuilding great companies to serve patients,HEALTHCAREBuilding great companies to serve patients,a_inner_text,A
+133,healthcare,https://www.baincapital.com/healthcare/,href,C
+134,Bain Capital Technology,Bain Capital Technology,img_alt_text,B
+134,investment spotlight tech v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-tech-v2.jpg?VersionId=ZneUgARdepaVedhzfoJKX40ThAnfvUvk&itok=hLv8UoXG,src,B
+135,Bain Capital Healthcare,Bain Capital Healthcare,img_alt_text,B
+135,investment spotlight health v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-health-v2.png.jpg?VersionId=YYzyulpCTMTsal.TUBXD4K5nHZlxFfRD&itok=Dj5x_MR9,src,B
+136,TECHNOLOGYLeading companies into the future,TECHNOLOGYLeading companies into the future,a_inner_text,A
+136,technology,https://www.baincapital.com/technology/,href,C
+137,Bain Capital Technology,Bain Capital Technology,img_alt_text,B
+137,investment spotlight tech v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-tech-v2.jpg?VersionId=ZneUgARdepaVedhzfoJKX40ThAnfvUvk&itok=hLv8UoXG,src,B
+138,HEALTHCAREBuilding great companies to serve patients,HEALTHCAREBuilding great companies to serve patients,a_inner_text,A
+138,healthcare,https://www.baincapital.com/healthcare/,href,C
+139,Bain Capital Healthcare,Bain Capital Healthcare,img_alt_text,B
+139,investment spotlight health v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-health-v2.png.jpg?VersionId=YYzyulpCTMTsal.TUBXD4K5nHZlxFfRD&itok=Dj5x_MR9,src,B
+140,Driving sustainable value,Driving sustainable value,a_inner_text,D
+140,Bain Capital Sustainability Report June2025 0,https://cdn-east2.baincapital.com/2025-06/Bain-Capital-Sustainability-Report-June2025_0.pdf?VersionId=g_eEXbw1xbuP1q8YuljPD5jzIevSVKpu,href,C
+141,Active governance & stewardship,Active governance & stewardship,a_inner_text,D
+141,active governance and stewardship,https://www.baincapital.com/sustainability-and-impact/active-governance-and-stewardship,href,C
+142,Sustainable growth & reducing climate impact,Sustainable growth & reducing climate impact,a_inner_text,D
+142,sustainable growth reducing climate impact,https://www.baincapital.com/sustainability-and-impact/sustainable-growth-reducing-climate-impact,href,C
+143,"Fair employment, engagement & well-being","Fair employment, engagement & well-being",a_inner_text,D
+143,fair employment engagement well being,https://www.baincapital.com/sustainability-and-impact/fair-employment-engagement-well-being,href,C
+144,"Diversity, equity & inclusion","Diversity, equity & inclusion",a_inner_text,D
+144,diversity equity and inclusion,https://www.baincapital.com/sustainability-and-impact/diversity-equity-and-inclusion,href,C
+145,Community engagement,Community engagement,a_inner_text,D
+145,community engagement,https://www.baincapital.com/sustainability-and-impact/community-engagement,href,C
+146,Explore Sustainability & Impact at Bain Capital,Explore Sustainability & Impact at Bain Capital,a_inner_text,D
+146,sustainability and impact,/sustainability-and-impact,href,C
+147,2025 Sustainability Report,2025 Sustainability Report,a_inner_text,D
+147,Bain Capital Sustainability Report June2025 0,https://cdn-east2.baincapital.com/2025-06/Bain-Capital-Sustainability-Report-June2025_0.pdf?VersionId=g_eEXbw1xbuP1q8YuljPD5jzIevSVKpu,href,C
+148,Explore Commitment,Explore Commitment,a_inner_text,D
+148,active governance and stewardship,https://www.baincapital.com/sustainability-and-impact/active-governance-and-stewardship,href,C
+149,Explore Commitment,Explore Commitment,a_inner_text,D
+149,sustainable growth reducing climate impact,https://www.baincapital.com/sustainability-and-impact/sustainable-growth-reducing-climate-impact,href,C
+150,Explore Commitment,Explore Commitment,a_inner_text,D
+150,fair employment engagement well being,https://www.baincapital.com/sustainability-and-impact/fair-employment-engagement-well-being,href,C
+151,Explore Commitment,Explore Commitment,a_inner_text,D
+151,diversity equity and inclusion,https://www.baincapital.com/sustainability-and-impact/diversity-equity-and-inclusion,href,C
+152,Explore Commitment,Explore Commitment,a_inner_text,D
+152,community engagement,https://www.baincapital.com/sustainability-and-impact/community-engagement,href,C
+153,Driving sustainable value,Driving sustainable value,img_alt_text,E
+153,bcsi25 cover 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-cover_0.jpg?VersionId=nPYETQcZ2Xs4QlxphBjsUxcpblN15y_x&itok=NXxq4c7g,src,E
+154,Active governance & stewardship,Active governance & stewardship,img_alt_text,E
+154,bcsi25 engaged governance and stewardship 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-engaged-governance-and-stewardship_0.jpg?VersionId=5cGdHgyI9bgHa5Qn2hWyOgfQv1W2rv12&itok=hBggZGzW,src,E
+155,Sustainable growth & reducing climate impact,Sustainable growth & reducing climate impact,img_alt_text,E
+155,bcsi25 sustainable growth and resilience 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-sustainable-growth-and-resilience_0.jpg?VersionId=gwYK2JxYTGGMnPu4.RYRd.nNldoPq6Ze&itok=VfWJAqCX,src,E
+156,"Fair employment, engagement & well-being","Fair employment, engagement & well-being",img_alt_text,E
+156,bcsi25 high performance teams 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-high-performance-teams_0.jpg?VersionId=i1Ld.In1N50Y1EOYX9H.H5z9tYVpdCOF&itok=CFgIuqNk,src,E
+157,"Diversity, equity & inclusion","Diversity, equity & inclusion",img_alt_text,E
+157,diversity inclusion big v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/diversity-inclusion-big-v2.jpg?VersionId=9JpKWjKk5C.S4oy4IwyNmJZK4WFj81pv&itok=aO8teQKv,src,E
+158,Community engagement,Community engagement,img_alt_text,E
+158,bcsi25 diversity equity inclusion community 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-diversity-equity-inclusion-community_0.jpg?VersionId=WMV6lygzLpeLKjOACHkW46qKy_TZKY.N&itok=MI_lhCN7,src,E
+159,2025 Sustainability Report,2025 Sustainability Report,a_inner_text,D
+159,Bain Capital Sustainability Report June2025 0,https://cdn-east2.baincapital.com/2025-06/Bain-Capital-Sustainability-Report-June2025_0.pdf?VersionId=g_eEXbw1xbuP1q8YuljPD5jzIevSVKpu,href,C
+160,Driving sustainable value,Driving sustainable value,img_alt_text,E
+160,bcsi25 cover 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-cover_0.jpg?VersionId=nPYETQcZ2Xs4QlxphBjsUxcpblN15y_x&itok=NXxq4c7g,src,E
+161,Explore Commitment,Explore Commitment,a_inner_text,D
+161,active governance and stewardship,https://www.baincapital.com/sustainability-and-impact/active-governance-and-stewardship,href,C
+162,Active governance & stewardship,Active governance & stewardship,img_alt_text,E
+162,bcsi25 engaged governance and stewardship 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-engaged-governance-and-stewardship_0.jpg?VersionId=5cGdHgyI9bgHa5Qn2hWyOgfQv1W2rv12&itok=hBggZGzW,src,E
+163,Explore Commitment,Explore Commitment,a_inner_text,D
+163,sustainable growth reducing climate impact,https://www.baincapital.com/sustainability-and-impact/sustainable-growth-reducing-climate-impact,href,C
+164,Sustainable growth & reducing climate impact,Sustainable growth & reducing climate impact,img_alt_text,E
+164,bcsi25 sustainable growth and resilience 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-sustainable-growth-and-resilience_0.jpg?VersionId=gwYK2JxYTGGMnPu4.RYRd.nNldoPq6Ze&itok=VfWJAqCX,src,E
+165,Explore Commitment,Explore Commitment,a_inner_text,D
+165,fair employment engagement well being,https://www.baincapital.com/sustainability-and-impact/fair-employment-engagement-well-being,href,C
+166,"Fair employment, engagement & well-being","Fair employment, engagement & well-being",img_alt_text,E
+166,bcsi25 high performance teams 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-high-performance-teams_0.jpg?VersionId=i1Ld.In1N50Y1EOYX9H.H5z9tYVpdCOF&itok=CFgIuqNk,src,E
+167,Explore Commitment,Explore Commitment,a_inner_text,D
+167,diversity equity and inclusion,https://www.baincapital.com/sustainability-and-impact/diversity-equity-and-inclusion,href,C
+168,"Diversity, equity & inclusion","Diversity, equity & inclusion",img_alt_text,E
+168,diversity inclusion big v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/diversity-inclusion-big-v2.jpg?VersionId=9JpKWjKk5C.S4oy4IwyNmJZK4WFj81pv&itok=aO8teQKv,src,E
+169,Explore Commitment,Explore Commitment,a_inner_text,D
+169,community engagement,https://www.baincapital.com/sustainability-and-impact/community-engagement,href,C
+170,Community engagement,Community engagement,img_alt_text,E
+170,bcsi25 diversity equity inclusion community 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-diversity-equity-inclusion-community_0.jpg?VersionId=WMV6lygzLpeLKjOACHkW46qKy_TZKY.N&itok=MI_lhCN7,src,E
+171,Meet our people,Meet our people,a_inner_text,D
+171,people,https://www.baincapital.com/people,href,C
+172,Chris Gordon,Chris Gordon,a_inner_text,D
+172,chris gordon,https://www.baincapital.com/people/chris-gordon,href,C
+173,Paul Moskowitz,Paul Moskowitz,a_inner_text,D
+173,paul moskowitz,https://www.baincapital.com/people/paul-moskowitz,href,C
+174,Alana Gilmer,Alana Gilmer,a_inner_text,D
+174,,,href,C
+175,Team Name1,Team Name1,a_inner_text,D
+175,,,href,C
+176,Team Name2,Team Name2,a_inner_text,D
+176,,,href,C
+177,Team Name3,Team Name3,a_inner_text,D
+177,,,href,C
+178,Meet our people,Meet our people,a_inner_text,D
+178,people,https://www.baincapital.com/people,href,C
+179,Chris Gordon,Chris Gordon,a_inner_text,D
+179,chris gordon,https://www.baincapital.com/people/chris-gordon,href,C
+180,Paul Moskowitz,Paul Moskowitz,a_inner_text,D
+180,paul moskowitz,https://www.baincapital.com/people/paul-moskowitz,href,C
+181,Alana Gilmer,Alana Gilmer,a_inner_text,D
+181,,,href,C
+182,Team Name1,Team Name1,a_inner_text,D
+182,,,href,C
+183,Team Name2,Team Name2,a_inner_text,D
+183,,,href,C
+184,Team Name3,Team Name3,a_inner_text,D
+184,,,href,C
+185,Meet our people,Meet our people,a_inner_text,D
+185,people,https://www.baincapital.com/people,href,C
+186,Chris Gordon,Chris Gordon,a_inner_text,D
+186,chris gordon,https://www.baincapital.com/people/chris-gordon,href,C
+187,Paul Moskowitz,Paul Moskowitz,a_inner_text,D
+187,paul moskowitz,https://www.baincapital.com/people/paul-moskowitz,href,C
+188,Alana Gilmer,Alana Gilmer,a_inner_text,D
+188,,,href,C
+189,Team Name1,Team Name1,a_inner_text,D
+189,,,href,C
+190,Team Name2,Team Name2,a_inner_text,D
+190,,,href,C
+191,Team Name3,Team Name3,a_inner_text,D
+191,,,href,C
+192,"Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications","Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications",a_inner_text,D
+192,bain capital invest hso global leader microsoft cloud ai business applications,/news/bain-capital-invest-hso-global-leader-microsoft-cloud-ai-business-applications,href,C
+193,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+193,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+194,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+194,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+195,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+195,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+196,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+196,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+197,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+197,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+198,See all news,See all news,a_inner_text,D
+198,news,https://www.baincapital.com/news,href,C
+199,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+199,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+200,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+200,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+201,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+201,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+202,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+202,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+203,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+203,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+204,See all news,See all news,a_inner_text,D
+204,news,https://www.baincapital.com/news,href,C
+205,"Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications","Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications",a_inner_text,D
+205,bain capital invest hso global leader microsoft cloud ai business applications,/news/bain-capital-invest-hso-global-leader-microsoft-cloud-ai-business-applications,href,C
+206,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+206,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+207,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+207,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+208,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+208,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+209,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+209,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+210,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+210,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+211,See all news,See all news,a_inner_text,D
+211,news,https://www.baincapital.com/news,href,C
+212,"Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications","Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications",a_inner_text,D
+212,bain capital invest hso global leader microsoft cloud ai business applications,/news/bain-capital-invest-hso-global-leader-microsoft-cloud-ai-business-applications,href,C
+213,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+213,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+214,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+214,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+215,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+215,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+216,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+216,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+217,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+217,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+218,See all news,See all news,a_inner_text,D
+218,news,https://www.baincapital.com/news,href,C
+219,"Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications","Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications",a_inner_text,D
+219,bain capital invest hso global leader microsoft cloud ai business applications,/news/bain-capital-invest-hso-global-leader-microsoft-cloud-ai-business-applications,href,C
+220,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+220,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+221,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+221,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+222,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+222,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+223,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+223,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+224,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+224,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+225,See all news,See all news,a_inner_text,D
+225,news,https://www.baincapital.com/news,href,C
+226,"Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications","Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications",a_inner_text,D
+226,bain capital invest hso global leader microsoft cloud ai business applications,/news/bain-capital-invest-hso-global-leader-microsoft-cloud-ai-business-applications,href,C
+227,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+227,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+228,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+228,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+229,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+229,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+230,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+230,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+231,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+231,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+232,See all news,See all news,a_inner_text,D
+232,news,https://www.baincapital.com/news,href,C
+233,"Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications","Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications",a_inner_text,D
+233,bain capital invest hso global leader microsoft cloud ai business applications,/news/bain-capital-invest-hso-global-leader-microsoft-cloud-ai-business-applications,href,C
+234,"Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications","Bain Capital to Invest in HSO, a Global Leader in Microsoft Cloud & AI Business Applications",a_inner_text,D
+234,bain capital invest hso global leader microsoft cloud ai business applications,/news/bain-capital-invest-hso-global-leader-microsoft-cloud-ai-business-applications,href,C
+235,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+235,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+236,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+236,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+237,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+237,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+238,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+238,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+239,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+239,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+240,See all news,See all news,a_inner_text,D
+240,news,https://www.baincapital.com/news,href,C
+241,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+241,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+242,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+242,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+243,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+243,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+244,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+244,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+245,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+245,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+246,See all news,See all news,a_inner_text,D
+246,news,https://www.baincapital.com/news,href,C
+247,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+247,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+248,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+248,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+249,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+249,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+250,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+250,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+251,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+251,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+252,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+252,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+253,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+253,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+254,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+254,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+255,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+255,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+256,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+256,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+257,See all news,See all news,a_inner_text,D
+257,news,https://www.baincapital.com/news,href,C
+258,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,Bain Capital GSS Investment Corp. Announces the Separate Trading of its Ordinary Shares and Warrants Commencing,a_inner_text,D
+258,bain capital gss investment corp announces separate trading its ordinary shares and warrants,/news/bain-capital-gss-investment-corp-announces-separate-trading-its-ordinary-shares-and-warrants,href,C
+259,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,Clearlake Exits its Investment in Concert Golf Partners as Bain Capital Invests to Support Further Growth,a_inner_text,D
+259,clearlake exits its investment concert golf partners bain capital invests support further,/news/clearlake-exits-its-investment-concert-golf-partners-bain-capital-invests-support-further,href,C
+260,"Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share","Bain Capital Specialty Finance, Inc. Announces September 30, 2025 Financial Results and Declares Fourth Quarter 2025 Dividend of $0.42 per Share",a_inner_text,D
+260,bain capital specialty finance inc announces september 30 2025 financial results and declares,/news/bain-capital-specialty-finance-inc-announces-september-30-2025-financial-results-and-declares,href,C
+261,"Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform","Bain Capital Partners with Restaurant Executive Steve Ritchie to Launch Prosper Growth Partners, New Franchise Platform",a_inner_text,D
+261,bain capital partners restaurant executive steve ritchie launch prosper growth partners new,/news/bain-capital-partners-restaurant-executive-steve-ritchie-launch-prosper-growth-partners-new,href,C
+262,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,Griffin Global Asset Management Announces Closing of Inaugural $1.245 Billion Series into Mid-Life Aircraft Master Trust Platform,a_inner_text,D
+262,griffin global asset management announces closing inaugural 1245 billion series mid life,/news/griffin-global-asset-management-announces-closing-inaugural-1245-billion-series-mid-life,href,C
+263,All,All,a_inner_text,D
+263,void(0),javascript:void(0),href,C
+264,Credit,Credit,a_inner_text,D
+264,void(0),javascript:void(0),href,C
+265,Crypto,Crypto,a_inner_text,D
+265,void(0),javascript:void(0),href,C
+266,Double Impact,Double Impact,a_inner_text,D
+266,void(0),javascript:void(0),href,C
+267,Insurance,Insurance,a_inner_text,D
+267,void(0),javascript:void(0),href,C
+268,Life Sciences,Life Sciences,a_inner_text,D
+268,void(0),javascript:void(0),href,C
+269,Partnership Strategies,Partnership Strategies,a_inner_text,D
+269,void(0),javascript:void(0),href,C
+270,Private Equity,Private Equity,a_inner_text,D
+270,void(0),javascript:void(0),href,C
+271,Public Equity,Public Equity,a_inner_text,D
+271,void(0),javascript:void(0),href,C
+272,Real Estate,Real Estate,a_inner_text,D
+272,void(0),javascript:void(0),href,C
+273,Special Situations,Special Situations,a_inner_text,D
+273,void(0),javascript:void(0),href,C
+274,Tech Opportunities,Tech Opportunities,a_inner_text,D
+274,void(0),javascript:void(0),href,C
+275,Ventures,Ventures,a_inner_text,D
+275,void(0),javascript:void(0),href,C
+276,Global Locations,Global Locations,a_inner_text,D
+276,,#tabmap,href,D
+277,Americas,Americas,a_inner_text,D
+277,,#americas,href,D
+278,Asia-Pacific,Asia-Pacific,a_inner_text,D
+278,,#asia-pacific,href,D
+279,Europe,Europe,a_inner_text,D
+279,,#europe,href,D
+282,Google Maps,Google Maps,a_inner_text,D
+282,data=!3m1!4b1!4m2!3m1!1s0x89e37a0ceab1c1ed:0xab39ce53f62cb1c3,"https://www.google.com/maps/place/John+Hancock+Tower,+200+Clarendon+St,+Boston,+MA+02116,+USA/@42.3492166,-71.0773136,17z/data=!3m1!4b1!4m2!3m1!1s0x89e37a0ceab1c1ed:0xab39ce53f62cb1c3?hl=en",href,C
+284,Google Maps,Google Maps,a_inner_text,D
+284,data=!3m1!4b1!4m6!3m5!1s0x880e2cbec103f27b:0x13df44a5e61123bd!8m2!3d41.8795771!4d 87.6347181!16s%2Fg%2F11c1yx5qb7,"https://www.google.com/maps/place/222+W+Adams+St,+Chicago,+IL+60606/@41.8795771,-87.637293,17z/data=!3m1!4b1!4m6!3m5!1s0x880e2cbec103f27b:0x13df44a5e61123bd!8m2!3d41.8795771!4d-87.6347181!16s%2Fg%2F11c1yx5qb7?entry=ttu",href,C
+287,Google Maps,Google Maps,a_inner_text,D
+287,"data=!4m13!1m7!3m6!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!2s535+Madison+Ave,+New+York,+NY+10022!3b1!8m2!3d40.7604954!4d 73.9731882!3m4!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!8m2!3d40.7604954!4d 73","https://www.google.com/maps/place/535+Madison+Ave,+New+York,+NY+10022/@40.7604994,-73.9753822,17z/data=!4m13!1m7!3m6!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!2s535+Madison+Ave,+New+York,+NY+10022!3b1!8m2!3d40.7604954!4d-73.9731882!3m4!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!8m2!3d40.7604954!4d-73.973",href,C
+289,Google Maps,Google Maps,a_inner_text,D
+289,data=!3m1!4b1!4m5!3m4!1s0x89c2599976c59d7f:0xe26cbabe980dfcf1!8m2!3d40.7323831!4d 73,"https://www.google.com/maps/place/799+Broadway,+New+York,+NY+10003/@40.7323871,-73.9936775,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2599976c59d7f:0xe26cbabe980dfcf1!8m2!3d40.7323831!4d-73.9914888",href,C
+291,Google Maps,Google Maps,a_inner_text,D
+291,data=!3m1!4b1!4m5!3m4!1s0x808fbb3ece499363:0xb406739a5ba4c127!8m2!3d37.4478028!4d 122,"https://www.google.com/maps/place/524+Hamilton+Ave,+Palo+Alto,+CA+94301/@37.447807,-122.1593862,17z/data=!3m1!4b1!4m5!3m4!1s0x808fbb3ece499363:0xb406739a5ba4c127!8m2!3d37.4478028!4d-122.1571975",href,C
+293,Google Maps,Google Maps,a_inner_text,D
+293,data=!3m1!4b1!4m6!3m5!1s0x808580f514749d57:0x14f82452d870d191!8m2!3d37.7976402!4d 122.4030566!16s%2Fg%2F11bw3wsn8p,"https://www.google.com/maps/place/450+Pacific+Ave,+San+Francisco,+CA+94133/@37.7976402,-122.4056315,17z/data=!3m1!4b1!4m6!3m5!1s0x808580f514749d57:0x14f82452d870d191!8m2!3d37.7976402!4d-122.4030566!16s%2Fg%2F11bw3wsn8p?entry=ttu",href,C
+294,Google Maps,Google Maps,a_inner_text,D
+294,data=!3m1!4b1!4m5!3m4!1s0x3402ff0f0fa7f099:0x6cef4ce84871fee4!8m2!3d23.122864!4d113,"https://www.google.com/maps/place/Zhu+Jiang+Dong+Lu,+Tianhe+Qu,+Guangzhou+Shi,+Guangdong+Sheng,+China,+510620/@23.122864,113.3238829,17z/data=!3m1!4b1!4m5!3m4!1s0x3402ff0f0fa7f099:0x6cef4ce84871fee4!8m2!3d23.122864!4d113.3260769",href,C
+297,Google Maps,Google Maps,a_inner_text,D
+297,data=!3m1!4b1!4m5!3m4!1s0x34040067b61b109b:0x49c187fb4e65b9a6!8m2!3d22.2776447!4d114,"https://www.google.com/maps/place/Suite+2501,+Level+25,+One+Pacific+Place,+88+Queensway,+Admiralty,+Hong+Kong/@22.2776496,114.1632049,17z/data=!3m1!4b1!4m5!3m4!1s0x34040067b61b109b:0x49c187fb4e65b9a6!8m2!3d22.2776447!4d114.1653936",href,C
+300,Google Maps,Google Maps,a_inner_text,D
+300,data=!4m10!1m2!2m1!1sEbene+Heights+Building+Mauritius!3m6!1s0x217c5ae214052969:0x59f599a32899287a!8m2!3d 20.2428196!4d57.4922964!15sCiBFYmVuZSBIZWlnaHRzIEJ1aWxkaW5nIE1hdXJpdGl1c5IBEWNvbXBvdW5kX2,"https://www.google.com/maps/place/Ebene+Heights,+34,+Quatre+Bornes,+Mauritius/@-20.2428958,57.4913017,18z/data=!4m10!1m2!2m1!1sEbene+Heights+Building+Mauritius!3m6!1s0x217c5ae214052969:0x59f599a32899287a!8m2!3d-20.2428196!4d57.4922964!15sCiBFYmVuZSBIZWlnaHRzIEJ1aWxkaW5nIE1hdXJpdGl1c5IBEWNvbXBvdW5kX2",href,C
+302,Google Maps,Google Maps,a_inner_text,D
+302,data=!3m1!4b1!4m2!3m1!1s0x6ad642c821f25843:0xe2cf50fabbc69245,"https://www.google.com/maps/place/20%2F101+Collins+St,+Melbourne+VIC+3000,+Australia/@-37.8145656,144.9684958,17z/data=!3m1!4b1!4m2!3m1!1s0x6ad642c821f25843:0xe2cf50fabbc69245",href,C
+304,Google Maps,Google Maps,a_inner_text,D
+304,data=!3m1!4b1!4m5!3m4!1s0x3be7d1e8d34ef5d7:0xd03369a7fcfee789!8m2!3d18.9281713!4d72,"https://www.google.com/maps/place/Express+Towers,+Ramnath+Goenka+Marg,+Nariman+Point,+Mumbai,+Maharashtra+400021,+India/@18.9281764,72.8200946,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7d1e8d34ef5d7:0xd03369a7fcfee789!8m2!3d18.9281713!4d72.8222833",href,C
+306,Google Maps,Google Maps,a_inner_text,D
+306,data=!4m6!3m5!1s0x6000e68f07000001:0xa684e6b145ca9d5!8m2!3d34.7038394!4d135.4949209!16s%2Fg%2F12b02n906,"https://www.google.com/maps/place/Grand+Front+Osaka/@34.7038394,135.4949209,15z/data=!4m6!3m5!1s0x6000e68f07000001:0xa684e6b145ca9d5!8m2!3d34.7038394!4d135.4949209!16s%2Fg%2F12b02n906",href,C
+309,Google Maps,Google Maps,a_inner_text,D
+309,data=!3m1!4b1!4m5!3m4!1s0x357ca46aa1beb59b:0x621bf4490b492a95!8m2!3d37.5095059!4d127,"https://www.google.com/maps/place/Parnas+Tower/@37.5095101,127.0590419,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca46aa1beb59b:0x621bf4490b492a95!8m2!3d37.5095059!4d127.0612306",href,C
+311,Google Maps,Google Maps,a_inner_text,D
+311,data=!3m1!4b1!4m5!3m4!1s0x35b2701b4ac28641:0x46449d670dfa742b!8m2!3d31.227654!4d121,"https://www.google.com/maps/place/1266+Nanjing+W+Rd,+Jingan+Qu,+Shanghai+Shi,+China,+200010/@31.227654,121.450442,17z/data=!3m1!4b1!4m5!3m4!1s0x35b2701b4ac28641:0x46449d670dfa742b!8m2!3d31.227654!4d121.452636",href,C
+313,Google Maps,Google Maps,a_inner_text,D
+313,data=!4m2!3m1!1s0x35b270fade9b1a17:0x1fcdc6918caca9d8,"https://www.google.com/maps/place/8+Shi+Ji+Da+Dao,+LuJiaZui,+Pudong+Xinqu,+Shanghai+Shi,+China,+200120/@31.240545,121.491365,15z/data=!4m2!3m1!1s0x35b270fade9b1a17:0x1fcdc6918caca9d8?hl=en",href,C
+315,Google Maps,Google Maps,a_inner_text,D
+315,data=!3m2!4b1!5s0x31da190c074a4c25:0x7234a693b59634af!4m5!3m4!1s0x31da193f0e2b8b4f:0xd1225a27807c05e9!8m2!3d1.2842254!4d103,"https://www.google.com/maps/place/CapitaSpring/@1.2842308,103.8480383,17z/data=!3m2!4b1!5s0x31da190c074a4c25:0x7234a693b59634af!4m5!3m4!1s0x31da193f0e2b8b4f:0xd1225a27807c05e9!8m2!3d1.2842254!4d103.850227",href,C
+317,Google Maps,Google Maps,a_inner_text,D
+317,data=!3m1!4b1!4m5!3m4!1s0x6b12ae6a23b6d9b5:0xc87be738fbbc27ba!8m2!3d 33.8647133!4d151,"https://www.google.com/maps/place/88+Phillip+St,+Sydney+NSW+2000,+Australia/@-33.8647088,151.2098302,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae6a23b6d9b5:0xc87be738fbbc27ba!8m2!3d-33.8647133!4d151.2120189",href,C
+320,Google Maps,Google Maps,a_inner_text,D
+320,data=!3m1!4b1!4m2!3m1!1s0x0:0x0,"https://www.google.com/maps/place/35%C2%B041'06.7%22N+139%C2%B045'41.5%22E/@35.685189,139.7593273,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0?hl=en",href,C
+323,Google Maps,Google Maps,a_inner_text,D
+323,data=!3m1!4b1!4m5!3m4!1s0x48670ebda53a96fd:0x277378734d59299!8m2!3d53.3330937!4d 6,"https://www.google.com/maps/place/45+Mespil+Rd,+Dublin,+Ireland/@53.3330969,-6.2499251,17z/data=!3m1!4b1!4m5!3m4!1s0x48670ebda53a96fd:0x277378734d59299!8m2!3d53.3330937!4d-6.2477364",href,C
+324,Google Maps,Google Maps,a_inner_text,D
+324,data=!3m1!4b1!4m5!3m4!1s0xd1933776521f637:0x855a2666ba2fbc07!8m2!3d38.7235209!4d 9,"https://www.google.com/maps/place/Av.+da+Liberdade+245,+1250-096+Lisboa,+Portugal/@38.7235209,-9.1513917,17z/data=!3m1!4b1!4m5!3m4!1s0xd1933776521f637:0x855a2666ba2fbc07!8m2!3d38.7235209!4d-9.149203",href,C
+327,Google Maps,Google Maps,a_inner_text,D
+327,"data=!4m13!1m7!3m6!1s0x48760529b3a8a2c1:0x95958a457128ba12!2sDevonshire+House,+London,+UK!3b1!8m2!3d51.5072829!4d 0.1430413!3m4!1s0x48760529b3a8a2c1:0x95958a457128ba12!8m2!3d51.5072829!4d 0","https://www.google.com/maps/place/Devonshire+House,+London,+UK/@51.5072829,-0.14523,17z/data=!4m13!1m7!3m6!1s0x48760529b3a8a2c1:0x95958a457128ba12!2sDevonshire+House,+London,+UK!3b1!8m2!3d51.5072829!4d-0.1430413!3m4!1s0x48760529b3a8a2c1:0x95958a457128ba12!8m2!3d51.5072829!4d-0.1430413",href,C
+329,Google Maps,Google Maps,a_inner_text,D
+329,data=!3m1!4b1!4m6!3m5!1s0x47954f1faabe5443:0x64e9d12aa78aa918!8m2!3d49.6335!4d6.17664!16s%2Fg%2F11h03g3sk,"https://www.google.com/maps/place/Regus+-+Luxembourg,+Kirchberg+Oksigen/@49.6335034,6.1740651,17z/data=!3m1!4b1!4m6!3m5!1s0x47954f1faabe5443:0x64e9d12aa78aa918!8m2!3d49.6335!4d6.17664!16s%2Fg%2F11h03g3sk_?entry=ttu",href,C
+330,Google Maps,Google Maps,a_inner_text,D
+330,data=!4m5!3m4!1s0xd4228972b76fb59:0xa8bffc319deb286b!8m2!3d40.4259025!4d 3,"https://www.google.com/maps/place/Calle+de+Serrano,+38,+28001+Madrid,+Spain/@40.4259025,-3.7049145,14z/data=!4m5!3m4!1s0xd4228972b76fb59:0xa8bffc319deb286b!8m2!3d40.4259025!4d-3.6873997",href,C
+333,Google Maps,Google Maps,a_inner_text,D
+333,data=!3m1!4b1!4m2!3m1!1s0x479e758b8ba3e13b:0xbc71dd572389d887,"https://www.google.com/maps/place/Maximilianstra%C3%9Fe+11,+80539+M%C3%BCnchen,+Germany/@48.1392105,11.578381,17z/data=!3m1!4b1!4m2!3m1!1s0x479e758b8ba3e13b:0xbc71dd572389d887?hl=en",href,C
+334,All,All,a_inner_text,D
+334,void(0),javascript:void(0),href,C
+335,Credit,Credit,a_inner_text,D
+335,void(0),javascript:void(0),href,C
+336,Crypto,Crypto,a_inner_text,D
+336,void(0),javascript:void(0),href,C
+337,Double Impact,Double Impact,a_inner_text,D
+337,void(0),javascript:void(0),href,C
+338,Insurance,Insurance,a_inner_text,D
+338,void(0),javascript:void(0),href,C
+339,Life Sciences,Life Sciences,a_inner_text,D
+339,void(0),javascript:void(0),href,C
+340,Partnership Strategies,Partnership Strategies,a_inner_text,D
+340,void(0),javascript:void(0),href,C
+341,Private Equity,Private Equity,a_inner_text,D
+341,void(0),javascript:void(0),href,C
+342,Public Equity,Public Equity,a_inner_text,D
+342,void(0),javascript:void(0),href,C
+343,Real Estate,Real Estate,a_inner_text,D
+343,void(0),javascript:void(0),href,C
+344,Special Situations,Special Situations,a_inner_text,D
+344,void(0),javascript:void(0),href,C
+345,Tech Opportunities,Tech Opportunities,a_inner_text,D
+345,void(0),javascript:void(0),href,C
+346,Ventures,Ventures,a_inner_text,D
+346,void(0),javascript:void(0),href,C
+347,Global Locations,Global Locations,a_inner_text,D
+347,,#tabmap,href,D
+348,Americas,Americas,a_inner_text,D
+348,,#americas,href,D
+349,Asia-Pacific,Asia-Pacific,a_inner_text,D
+349,,#asia-pacific,href,D
+350,Europe,Europe,a_inner_text,D
+350,,#europe,href,D
+353,Google Maps,Google Maps,a_inner_text,D
+353,data=!3m1!4b1!4m2!3m1!1s0x89e37a0ceab1c1ed:0xab39ce53f62cb1c3,"https://www.google.com/maps/place/John+Hancock+Tower,+200+Clarendon+St,+Boston,+MA+02116,+USA/@42.3492166,-71.0773136,17z/data=!3m1!4b1!4m2!3m1!1s0x89e37a0ceab1c1ed:0xab39ce53f62cb1c3?hl=en",href,C
+355,Google Maps,Google Maps,a_inner_text,D
+355,data=!3m1!4b1!4m6!3m5!1s0x880e2cbec103f27b:0x13df44a5e61123bd!8m2!3d41.8795771!4d 87.6347181!16s%2Fg%2F11c1yx5qb7,"https://www.google.com/maps/place/222+W+Adams+St,+Chicago,+IL+60606/@41.8795771,-87.637293,17z/data=!3m1!4b1!4m6!3m5!1s0x880e2cbec103f27b:0x13df44a5e61123bd!8m2!3d41.8795771!4d-87.6347181!16s%2Fg%2F11c1yx5qb7?entry=ttu",href,C
+358,Google Maps,Google Maps,a_inner_text,D
+358,"data=!4m13!1m7!3m6!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!2s535+Madison+Ave,+New+York,+NY+10022!3b1!8m2!3d40.7604954!4d 73.9731882!3m4!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!8m2!3d40.7604954!4d 73","https://www.google.com/maps/place/535+Madison+Ave,+New+York,+NY+10022/@40.7604994,-73.9753822,17z/data=!4m13!1m7!3m6!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!2s535+Madison+Ave,+New+York,+NY+10022!3b1!8m2!3d40.7604954!4d-73.9731882!3m4!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!8m2!3d40.7604954!4d-73.973",href,C
+360,Google Maps,Google Maps,a_inner_text,D
+360,data=!3m1!4b1!4m5!3m4!1s0x89c2599976c59d7f:0xe26cbabe980dfcf1!8m2!3d40.7323831!4d 73,"https://www.google.com/maps/place/799+Broadway,+New+York,+NY+10003/@40.7323871,-73.9936775,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2599976c59d7f:0xe26cbabe980dfcf1!8m2!3d40.7323831!4d-73.9914888",href,C
+362,Google Maps,Google Maps,a_inner_text,D
+362,data=!3m1!4b1!4m5!3m4!1s0x808fbb3ece499363:0xb406739a5ba4c127!8m2!3d37.4478028!4d 122,"https://www.google.com/maps/place/524+Hamilton+Ave,+Palo+Alto,+CA+94301/@37.447807,-122.1593862,17z/data=!3m1!4b1!4m5!3m4!1s0x808fbb3ece499363:0xb406739a5ba4c127!8m2!3d37.4478028!4d-122.1571975",href,C
+364,Google Maps,Google Maps,a_inner_text,D
+364,data=!3m1!4b1!4m6!3m5!1s0x808580f514749d57:0x14f82452d870d191!8m2!3d37.7976402!4d 122.4030566!16s%2Fg%2F11bw3wsn8p,"https://www.google.com/maps/place/450+Pacific+Ave,+San+Francisco,+CA+94133/@37.7976402,-122.4056315,17z/data=!3m1!4b1!4m6!3m5!1s0x808580f514749d57:0x14f82452d870d191!8m2!3d37.7976402!4d-122.4030566!16s%2Fg%2F11bw3wsn8p?entry=ttu",href,C
+365,Google Maps,Google Maps,a_inner_text,D
+365,data=!3m1!4b1!4m5!3m4!1s0x3402ff0f0fa7f099:0x6cef4ce84871fee4!8m2!3d23.122864!4d113,"https://www.google.com/maps/place/Zhu+Jiang+Dong+Lu,+Tianhe+Qu,+Guangzhou+Shi,+Guangdong+Sheng,+China,+510620/@23.122864,113.3238829,17z/data=!3m1!4b1!4m5!3m4!1s0x3402ff0f0fa7f099:0x6cef4ce84871fee4!8m2!3d23.122864!4d113.3260769",href,C
+368,Google Maps,Google Maps,a_inner_text,D
+368,data=!3m1!4b1!4m5!3m4!1s0x34040067b61b109b:0x49c187fb4e65b9a6!8m2!3d22.2776447!4d114,"https://www.google.com/maps/place/Suite+2501,+Level+25,+One+Pacific+Place,+88+Queensway,+Admiralty,+Hong+Kong/@22.2776496,114.1632049,17z/data=!3m1!4b1!4m5!3m4!1s0x34040067b61b109b:0x49c187fb4e65b9a6!8m2!3d22.2776447!4d114.1653936",href,C
+371,Google Maps,Google Maps,a_inner_text,D
+371,data=!4m10!1m2!2m1!1sEbene+Heights+Building+Mauritius!3m6!1s0x217c5ae214052969:0x59f599a32899287a!8m2!3d 20.2428196!4d57.4922964!15sCiBFYmVuZSBIZWlnaHRzIEJ1aWxkaW5nIE1hdXJpdGl1c5IBEWNvbXBvdW5kX2,"https://www.google.com/maps/place/Ebene+Heights,+34,+Quatre+Bornes,+Mauritius/@-20.2428958,57.4913017,18z/data=!4m10!1m2!2m1!1sEbene+Heights+Building+Mauritius!3m6!1s0x217c5ae214052969:0x59f599a32899287a!8m2!3d-20.2428196!4d57.4922964!15sCiBFYmVuZSBIZWlnaHRzIEJ1aWxkaW5nIE1hdXJpdGl1c5IBEWNvbXBvdW5kX2",href,C
+373,Google Maps,Google Maps,a_inner_text,D
+373,data=!3m1!4b1!4m2!3m1!1s0x6ad642c821f25843:0xe2cf50fabbc69245,"https://www.google.com/maps/place/20%2F101+Collins+St,+Melbourne+VIC+3000,+Australia/@-37.8145656,144.9684958,17z/data=!3m1!4b1!4m2!3m1!1s0x6ad642c821f25843:0xe2cf50fabbc69245",href,C
+375,Google Maps,Google Maps,a_inner_text,D
+375,data=!3m1!4b1!4m5!3m4!1s0x3be7d1e8d34ef5d7:0xd03369a7fcfee789!8m2!3d18.9281713!4d72,"https://www.google.com/maps/place/Express+Towers,+Ramnath+Goenka+Marg,+Nariman+Point,+Mumbai,+Maharashtra+400021,+India/@18.9281764,72.8200946,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7d1e8d34ef5d7:0xd03369a7fcfee789!8m2!3d18.9281713!4d72.8222833",href,C
+377,Google Maps,Google Maps,a_inner_text,D
+377,data=!4m6!3m5!1s0x6000e68f07000001:0xa684e6b145ca9d5!8m2!3d34.7038394!4d135.4949209!16s%2Fg%2F12b02n906,"https://www.google.com/maps/place/Grand+Front+Osaka/@34.7038394,135.4949209,15z/data=!4m6!3m5!1s0x6000e68f07000001:0xa684e6b145ca9d5!8m2!3d34.7038394!4d135.4949209!16s%2Fg%2F12b02n906",href,C
+380,Google Maps,Google Maps,a_inner_text,D
+380,data=!3m1!4b1!4m5!3m4!1s0x357ca46aa1beb59b:0x621bf4490b492a95!8m2!3d37.5095059!4d127,"https://www.google.com/maps/place/Parnas+Tower/@37.5095101,127.0590419,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca46aa1beb59b:0x621bf4490b492a95!8m2!3d37.5095059!4d127.0612306",href,C
+382,Google Maps,Google Maps,a_inner_text,D
+382,data=!3m1!4b1!4m5!3m4!1s0x35b2701b4ac28641:0x46449d670dfa742b!8m2!3d31.227654!4d121,"https://www.google.com/maps/place/1266+Nanjing+W+Rd,+Jingan+Qu,+Shanghai+Shi,+China,+200010/@31.227654,121.450442,17z/data=!3m1!4b1!4m5!3m4!1s0x35b2701b4ac28641:0x46449d670dfa742b!8m2!3d31.227654!4d121.452636",href,C
+384,Google Maps,Google Maps,a_inner_text,D
+384,data=!4m2!3m1!1s0x35b270fade9b1a17:0x1fcdc6918caca9d8,"https://www.google.com/maps/place/8+Shi+Ji+Da+Dao,+LuJiaZui,+Pudong+Xinqu,+Shanghai+Shi,+China,+200120/@31.240545,121.491365,15z/data=!4m2!3m1!1s0x35b270fade9b1a17:0x1fcdc6918caca9d8?hl=en",href,C
+386,Google Maps,Google Maps,a_inner_text,D
+386,data=!3m2!4b1!5s0x31da190c074a4c25:0x7234a693b59634af!4m5!3m4!1s0x31da193f0e2b8b4f:0xd1225a27807c05e9!8m2!3d1.2842254!4d103,"https://www.google.com/maps/place/CapitaSpring/@1.2842308,103.8480383,17z/data=!3m2!4b1!5s0x31da190c074a4c25:0x7234a693b59634af!4m5!3m4!1s0x31da193f0e2b8b4f:0xd1225a27807c05e9!8m2!3d1.2842254!4d103.850227",href,C
+388,Google Maps,Google Maps,a_inner_text,D
+388,data=!3m1!4b1!4m5!3m4!1s0x6b12ae6a23b6d9b5:0xc87be738fbbc27ba!8m2!3d 33.8647133!4d151,"https://www.google.com/maps/place/88+Phillip+St,+Sydney+NSW+2000,+Australia/@-33.8647088,151.2098302,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae6a23b6d9b5:0xc87be738fbbc27ba!8m2!3d-33.8647133!4d151.2120189",href,C
+391,Google Maps,Google Maps,a_inner_text,D
+391,data=!3m1!4b1!4m2!3m1!1s0x0:0x0,"https://www.google.com/maps/place/35%C2%B041'06.7%22N+139%C2%B045'41.5%22E/@35.685189,139.7593273,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0?hl=en",href,C
+394,Google Maps,Google Maps,a_inner_text,D
+394,data=!3m1!4b1!4m5!3m4!1s0x48670ebda53a96fd:0x277378734d59299!8m2!3d53.3330937!4d 6,"https://www.google.com/maps/place/45+Mespil+Rd,+Dublin,+Ireland/@53.3330969,-6.2499251,17z/data=!3m1!4b1!4m5!3m4!1s0x48670ebda53a96fd:0x277378734d59299!8m2!3d53.3330937!4d-6.2477364",href,C
+395,Google Maps,Google Maps,a_inner_text,D
+395,data=!3m1!4b1!4m5!3m4!1s0xd1933776521f637:0x855a2666ba2fbc07!8m2!3d38.7235209!4d 9,"https://www.google.com/maps/place/Av.+da+Liberdade+245,+1250-096+Lisboa,+Portugal/@38.7235209,-9.1513917,17z/data=!3m1!4b1!4m5!3m4!1s0xd1933776521f637:0x855a2666ba2fbc07!8m2!3d38.7235209!4d-9.149203",href,C
+398,Google Maps,Google Maps,a_inner_text,D
+398,"data=!4m13!1m7!3m6!1s0x48760529b3a8a2c1:0x95958a457128ba12!2sDevonshire+House,+London,+UK!3b1!8m2!3d51.5072829!4d 0.1430413!3m4!1s0x48760529b3a8a2c1:0x95958a457128ba12!8m2!3d51.5072829!4d 0","https://www.google.com/maps/place/Devonshire+House,+London,+UK/@51.5072829,-0.14523,17z/data=!4m13!1m7!3m6!1s0x48760529b3a8a2c1:0x95958a457128ba12!2sDevonshire+House,+London,+UK!3b1!8m2!3d51.5072829!4d-0.1430413!3m4!1s0x48760529b3a8a2c1:0x95958a457128ba12!8m2!3d51.5072829!4d-0.1430413",href,C
+400,Google Maps,Google Maps,a_inner_text,D
+400,data=!3m1!4b1!4m6!3m5!1s0x47954f1faabe5443:0x64e9d12aa78aa918!8m2!3d49.6335!4d6.17664!16s%2Fg%2F11h03g3sk,"https://www.google.com/maps/place/Regus+-+Luxembourg,+Kirchberg+Oksigen/@49.6335034,6.1740651,17z/data=!3m1!4b1!4m6!3m5!1s0x47954f1faabe5443:0x64e9d12aa78aa918!8m2!3d49.6335!4d6.17664!16s%2Fg%2F11h03g3sk_?entry=ttu",href,C
+401,Google Maps,Google Maps,a_inner_text,D
+401,data=!4m5!3m4!1s0xd4228972b76fb59:0xa8bffc319deb286b!8m2!3d40.4259025!4d 3,"https://www.google.com/maps/place/Calle+de+Serrano,+38,+28001+Madrid,+Spain/@40.4259025,-3.7049145,14z/data=!4m5!3m4!1s0xd4228972b76fb59:0xa8bffc319deb286b!8m2!3d40.4259025!4d-3.6873997",href,C
+404,Google Maps,Google Maps,a_inner_text,D
+404,data=!3m1!4b1!4m2!3m1!1s0x479e758b8ba3e13b:0xbc71dd572389d887,"https://www.google.com/maps/place/Maximilianstra%C3%9Fe+11,+80539+M%C3%BCnchen,+Germany/@48.1392105,11.578381,17z/data=!3m1!4b1!4m2!3m1!1s0x479e758b8ba3e13b:0xbc71dd572389d887?hl=en",href,C
+405,All,All,a_inner_text,D
+405,void(0),javascript:void(0),href,C
+406,Credit,Credit,a_inner_text,D
+406,void(0),javascript:void(0),href,C
+407,Crypto,Crypto,a_inner_text,D
+407,void(0),javascript:void(0),href,C
+408,Double Impact,Double Impact,a_inner_text,D
+408,void(0),javascript:void(0),href,C
+409,Insurance,Insurance,a_inner_text,D
+409,void(0),javascript:void(0),href,C
+410,Life Sciences,Life Sciences,a_inner_text,D
+410,void(0),javascript:void(0),href,C
+411,Partnership Strategies,Partnership Strategies,a_inner_text,D
+411,void(0),javascript:void(0),href,C
+412,Private Equity,Private Equity,a_inner_text,D
+412,void(0),javascript:void(0),href,C
+413,Public Equity,Public Equity,a_inner_text,D
+413,void(0),javascript:void(0),href,C
+414,Real Estate,Real Estate,a_inner_text,D
+414,void(0),javascript:void(0),href,C
+415,Special Situations,Special Situations,a_inner_text,D
+415,void(0),javascript:void(0),href,C
+416,Tech Opportunities,Tech Opportunities,a_inner_text,D
+416,void(0),javascript:void(0),href,C
+417,Ventures,Ventures,a_inner_text,D
+417,void(0),javascript:void(0),href,C
+418,Global Locations,Global Locations,a_inner_text,D
+418,,#tabmap,href,D
+419,Americas,Americas,a_inner_text,D
+419,,#americas,href,D
+420,Asia-Pacific,Asia-Pacific,a_inner_text,D
+420,,#asia-pacific,href,D
+421,Europe,Europe,a_inner_text,D
+421,,#europe,href,D
+422,All,All,a_inner_text,A
+422,void(0),javascript:void(0),href,C
+423,Credit,Credit,a_inner_text,A
+423,void(0),javascript:void(0),href,C
+424,Crypto,Crypto,a_inner_text,A
+424,void(0),javascript:void(0),href,C
+425,Double Impact,Double Impact,a_inner_text,A
+425,void(0),javascript:void(0),href,C
+426,Insurance,Insurance,a_inner_text,A
+426,void(0),javascript:void(0),href,C
+427,Life Sciences,Life Sciences,a_inner_text,A
+427,void(0),javascript:void(0),href,C
+428,Partnership Strategies,Partnership Strategies,a_inner_text,A
+428,void(0),javascript:void(0),href,C
+429,Private Equity,Private Equity,a_inner_text,A
+429,void(0),javascript:void(0),href,C
+430,Public Equity,Public Equity,a_inner_text,A
+430,void(0),javascript:void(0),href,C
+431,Real Estate,Real Estate,a_inner_text,A
+431,void(0),javascript:void(0),href,C
+432,Special Situations,Special Situations,a_inner_text,A
+432,void(0),javascript:void(0),href,C
+433,Tech Opportunities,Tech Opportunities,a_inner_text,A
+433,void(0),javascript:void(0),href,C
+434,Ventures,Ventures,a_inner_text,A
+434,void(0),javascript:void(0),href,C
+437,Google Maps,Google Maps,a_inner_text,D
+437,data=!3m1!4b1!4m2!3m1!1s0x89e37a0ceab1c1ed:0xab39ce53f62cb1c3,"https://www.google.com/maps/place/John+Hancock+Tower,+200+Clarendon+St,+Boston,+MA+02116,+USA/@42.3492166,-71.0773136,17z/data=!3m1!4b1!4m2!3m1!1s0x89e37a0ceab1c1ed:0xab39ce53f62cb1c3?hl=en",href,C
+439,Google Maps,Google Maps,a_inner_text,D
+439,data=!3m1!4b1!4m6!3m5!1s0x880e2cbec103f27b:0x13df44a5e61123bd!8m2!3d41.8795771!4d 87.6347181!16s%2Fg%2F11c1yx5qb7,"https://www.google.com/maps/place/222+W+Adams+St,+Chicago,+IL+60606/@41.8795771,-87.637293,17z/data=!3m1!4b1!4m6!3m5!1s0x880e2cbec103f27b:0x13df44a5e61123bd!8m2!3d41.8795771!4d-87.6347181!16s%2Fg%2F11c1yx5qb7?entry=ttu",href,C
+442,Google Maps,Google Maps,a_inner_text,D
+442,"data=!4m13!1m7!3m6!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!2s535+Madison+Ave,+New+York,+NY+10022!3b1!8m2!3d40.7604954!4d 73.9731882!3m4!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!8m2!3d40.7604954!4d 73","https://www.google.com/maps/place/535+Madison+Ave,+New+York,+NY+10022/@40.7604994,-73.9753822,17z/data=!4m13!1m7!3m6!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!2s535+Madison+Ave,+New+York,+NY+10022!3b1!8m2!3d40.7604954!4d-73.9731882!3m4!1s0x89c258fb7407c505:0x3d689ad5784fa9aa!8m2!3d40.7604954!4d-73.973",href,C
+444,Google Maps,Google Maps,a_inner_text,D
+444,data=!3m1!4b1!4m5!3m4!1s0x89c2599976c59d7f:0xe26cbabe980dfcf1!8m2!3d40.7323831!4d 73,"https://www.google.com/maps/place/799+Broadway,+New+York,+NY+10003/@40.7323871,-73.9936775,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2599976c59d7f:0xe26cbabe980dfcf1!8m2!3d40.7323831!4d-73.9914888",href,C
+446,Google Maps,Google Maps,a_inner_text,D
+446,data=!3m1!4b1!4m5!3m4!1s0x808fbb3ece499363:0xb406739a5ba4c127!8m2!3d37.4478028!4d 122,"https://www.google.com/maps/place/524+Hamilton+Ave,+Palo+Alto,+CA+94301/@37.447807,-122.1593862,17z/data=!3m1!4b1!4m5!3m4!1s0x808fbb3ece499363:0xb406739a5ba4c127!8m2!3d37.4478028!4d-122.1571975",href,C
+448,Google Maps,Google Maps,a_inner_text,D
+448,data=!3m1!4b1!4m6!3m5!1s0x808580f514749d57:0x14f82452d870d191!8m2!3d37.7976402!4d 122.4030566!16s%2Fg%2F11bw3wsn8p,"https://www.google.com/maps/place/450+Pacific+Ave,+San+Francisco,+CA+94133/@37.7976402,-122.4056315,17z/data=!3m1!4b1!4m6!3m5!1s0x808580f514749d57:0x14f82452d870d191!8m2!3d37.7976402!4d-122.4030566!16s%2Fg%2F11bw3wsn8p?entry=ttu",href,C
+449,Google Maps,Google Maps,a_inner_text,D
+449,data=!3m1!4b1!4m5!3m4!1s0x3402ff0f0fa7f099:0x6cef4ce84871fee4!8m2!3d23.122864!4d113,"https://www.google.com/maps/place/Zhu+Jiang+Dong+Lu,+Tianhe+Qu,+Guangzhou+Shi,+Guangdong+Sheng,+China,+510620/@23.122864,113.3238829,17z/data=!3m1!4b1!4m5!3m4!1s0x3402ff0f0fa7f099:0x6cef4ce84871fee4!8m2!3d23.122864!4d113.3260769",href,C
+452,Google Maps,Google Maps,a_inner_text,D
+452,data=!3m1!4b1!4m5!3m4!1s0x34040067b61b109b:0x49c187fb4e65b9a6!8m2!3d22.2776447!4d114,"https://www.google.com/maps/place/Suite+2501,+Level+25,+One+Pacific+Place,+88+Queensway,+Admiralty,+Hong+Kong/@22.2776496,114.1632049,17z/data=!3m1!4b1!4m5!3m4!1s0x34040067b61b109b:0x49c187fb4e65b9a6!8m2!3d22.2776447!4d114.1653936",href,C
+455,Google Maps,Google Maps,a_inner_text,D
+455,data=!4m10!1m2!2m1!1sEbene+Heights+Building+Mauritius!3m6!1s0x217c5ae214052969:0x59f599a32899287a!8m2!3d 20.2428196!4d57.4922964!15sCiBFYmVuZSBIZWlnaHRzIEJ1aWxkaW5nIE1hdXJpdGl1c5IBEWNvbXBvdW5kX2,"https://www.google.com/maps/place/Ebene+Heights,+34,+Quatre+Bornes,+Mauritius/@-20.2428958,57.4913017,18z/data=!4m10!1m2!2m1!1sEbene+Heights+Building+Mauritius!3m6!1s0x217c5ae214052969:0x59f599a32899287a!8m2!3d-20.2428196!4d57.4922964!15sCiBFYmVuZSBIZWlnaHRzIEJ1aWxkaW5nIE1hdXJpdGl1c5IBEWNvbXBvdW5kX2",href,C
+457,Google Maps,Google Maps,a_inner_text,D
+457,data=!3m1!4b1!4m2!3m1!1s0x6ad642c821f25843:0xe2cf50fabbc69245,"https://www.google.com/maps/place/20%2F101+Collins+St,+Melbourne+VIC+3000,+Australia/@-37.8145656,144.9684958,17z/data=!3m1!4b1!4m2!3m1!1s0x6ad642c821f25843:0xe2cf50fabbc69245",href,C
+459,Google Maps,Google Maps,a_inner_text,D
+459,data=!3m1!4b1!4m5!3m4!1s0x3be7d1e8d34ef5d7:0xd03369a7fcfee789!8m2!3d18.9281713!4d72,"https://www.google.com/maps/place/Express+Towers,+Ramnath+Goenka+Marg,+Nariman+Point,+Mumbai,+Maharashtra+400021,+India/@18.9281764,72.8200946,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7d1e8d34ef5d7:0xd03369a7fcfee789!8m2!3d18.9281713!4d72.8222833",href,C
+461,Google Maps,Google Maps,a_inner_text,D
+461,data=!4m6!3m5!1s0x6000e68f07000001:0xa684e6b145ca9d5!8m2!3d34.7038394!4d135.4949209!16s%2Fg%2F12b02n906,"https://www.google.com/maps/place/Grand+Front+Osaka/@34.7038394,135.4949209,15z/data=!4m6!3m5!1s0x6000e68f07000001:0xa684e6b145ca9d5!8m2!3d34.7038394!4d135.4949209!16s%2Fg%2F12b02n906",href,C
+464,Google Maps,Google Maps,a_inner_text,D
+464,data=!3m1!4b1!4m5!3m4!1s0x357ca46aa1beb59b:0x621bf4490b492a95!8m2!3d37.5095059!4d127,"https://www.google.com/maps/place/Parnas+Tower/@37.5095101,127.0590419,17z/data=!3m1!4b1!4m5!3m4!1s0x357ca46aa1beb59b:0x621bf4490b492a95!8m2!3d37.5095059!4d127.0612306",href,C
+466,Google Maps,Google Maps,a_inner_text,D
+466,data=!3m1!4b1!4m5!3m4!1s0x35b2701b4ac28641:0x46449d670dfa742b!8m2!3d31.227654!4d121,"https://www.google.com/maps/place/1266+Nanjing+W+Rd,+Jingan+Qu,+Shanghai+Shi,+China,+200010/@31.227654,121.450442,17z/data=!3m1!4b1!4m5!3m4!1s0x35b2701b4ac28641:0x46449d670dfa742b!8m2!3d31.227654!4d121.452636",href,C
+468,Google Maps,Google Maps,a_inner_text,D
+468,data=!4m2!3m1!1s0x35b270fade9b1a17:0x1fcdc6918caca9d8,"https://www.google.com/maps/place/8+Shi+Ji+Da+Dao,+LuJiaZui,+Pudong+Xinqu,+Shanghai+Shi,+China,+200120/@31.240545,121.491365,15z/data=!4m2!3m1!1s0x35b270fade9b1a17:0x1fcdc6918caca9d8?hl=en",href,C
+470,Google Maps,Google Maps,a_inner_text,D
+470,data=!3m2!4b1!5s0x31da190c074a4c25:0x7234a693b59634af!4m5!3m4!1s0x31da193f0e2b8b4f:0xd1225a27807c05e9!8m2!3d1.2842254!4d103,"https://www.google.com/maps/place/CapitaSpring/@1.2842308,103.8480383,17z/data=!3m2!4b1!5s0x31da190c074a4c25:0x7234a693b59634af!4m5!3m4!1s0x31da193f0e2b8b4f:0xd1225a27807c05e9!8m2!3d1.2842254!4d103.850227",href,C
+472,Google Maps,Google Maps,a_inner_text,D
+472,data=!3m1!4b1!4m5!3m4!1s0x6b12ae6a23b6d9b5:0xc87be738fbbc27ba!8m2!3d 33.8647133!4d151,"https://www.google.com/maps/place/88+Phillip+St,+Sydney+NSW+2000,+Australia/@-33.8647088,151.2098302,17z/data=!3m1!4b1!4m5!3m4!1s0x6b12ae6a23b6d9b5:0xc87be738fbbc27ba!8m2!3d-33.8647133!4d151.2120189",href,C
+475,Google Maps,Google Maps,a_inner_text,D
+475,data=!3m1!4b1!4m2!3m1!1s0x0:0x0,"https://www.google.com/maps/place/35%C2%B041'06.7%22N+139%C2%B045'41.5%22E/@35.685189,139.7593273,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x0?hl=en",href,C
+478,Google Maps,Google Maps,a_inner_text,D
+478,data=!3m1!4b1!4m5!3m4!1s0x48670ebda53a96fd:0x277378734d59299!8m2!3d53.3330937!4d 6,"https://www.google.com/maps/place/45+Mespil+Rd,+Dublin,+Ireland/@53.3330969,-6.2499251,17z/data=!3m1!4b1!4m5!3m4!1s0x48670ebda53a96fd:0x277378734d59299!8m2!3d53.3330937!4d-6.2477364",href,C
+479,Google Maps,Google Maps,a_inner_text,D
+479,data=!3m1!4b1!4m5!3m4!1s0xd1933776521f637:0x855a2666ba2fbc07!8m2!3d38.7235209!4d 9,"https://www.google.com/maps/place/Av.+da+Liberdade+245,+1250-096+Lisboa,+Portugal/@38.7235209,-9.1513917,17z/data=!3m1!4b1!4m5!3m4!1s0xd1933776521f637:0x855a2666ba2fbc07!8m2!3d38.7235209!4d-9.149203",href,C
+482,Google Maps,Google Maps,a_inner_text,D
+482,"data=!4m13!1m7!3m6!1s0x48760529b3a8a2c1:0x95958a457128ba12!2sDevonshire+House,+London,+UK!3b1!8m2!3d51.5072829!4d 0.1430413!3m4!1s0x48760529b3a8a2c1:0x95958a457128ba12!8m2!3d51.5072829!4d 0","https://www.google.com/maps/place/Devonshire+House,+London,+UK/@51.5072829,-0.14523,17z/data=!4m13!1m7!3m6!1s0x48760529b3a8a2c1:0x95958a457128ba12!2sDevonshire+House,+London,+UK!3b1!8m2!3d51.5072829!4d-0.1430413!3m4!1s0x48760529b3a8a2c1:0x95958a457128ba12!8m2!3d51.5072829!4d-0.1430413",href,C
+484,Google Maps,Google Maps,a_inner_text,D
+484,data=!3m1!4b1!4m6!3m5!1s0x47954f1faabe5443:0x64e9d12aa78aa918!8m2!3d49.6335!4d6.17664!16s%2Fg%2F11h03g3sk,"https://www.google.com/maps/place/Regus+-+Luxembourg,+Kirchberg+Oksigen/@49.6335034,6.1740651,17z/data=!3m1!4b1!4m6!3m5!1s0x47954f1faabe5443:0x64e9d12aa78aa918!8m2!3d49.6335!4d6.17664!16s%2Fg%2F11h03g3sk_?entry=ttu",href,C
+485,Google Maps,Google Maps,a_inner_text,D
+485,data=!4m5!3m4!1s0xd4228972b76fb59:0xa8bffc319deb286b!8m2!3d40.4259025!4d 3,"https://www.google.com/maps/place/Calle+de+Serrano,+38,+28001+Madrid,+Spain/@40.4259025,-3.7049145,14z/data=!4m5!3m4!1s0xd4228972b76fb59:0xa8bffc319deb286b!8m2!3d40.4259025!4d-3.6873997",href,C
+488,Google Maps,Google Maps,a_inner_text,D
+488,data=!3m1!4b1!4m2!3m1!1s0x479e758b8ba3e13b:0xbc71dd572389d887,"https://www.google.com/maps/place/Maximilianstra%C3%9Fe+11,+80539+M%C3%BCnchen,+Germany/@48.1392105,11.578381,17z/data=!3m1!4b1!4m2!3m1!1s0x479e758b8ba3e13b:0xbc71dd572389d887?hl=en",href,C
+489,Privacy Policy,Privacy Policy,a_inner_text,D
+489,privacy policy,https://www.baincapital.com/privacy-policy,href,C
+490,Terms of Use,Terms of Use,a_inner_text,D
+490,terms use,https://www.baincapital.com/terms-use,href,C
+491,Regulatory Disclosures,Regulatory Disclosures,a_inner_text,D
+491,regulatory disclosures,https://www.baincapital.com/regulatory-disclosures,href,C
+492,Fraud and Cybersecurity Warning,Fraud and Cybersecurity Warning,a_inner_text,D
+492,fraud and cybersecurity warning,https://www.baincapital.com/fraud-and-cybersecurity-warning,href,C
+493,警告：网络欺诈及网络钓鱼,警告：网络欺诈及网络钓鱼,a_inner_text,D
+493,fraud and cybersecurity warning chinese,https://www.baincapital.com/fraud-and-cybersecurity-warning-chinese,href,C
+494,Fraude y advertencia de ciberseguridad,Fraude y advertencia de ciberseguridad,a_inner_text,D
+494,fraud and cybersecurity warning spanish,https://www.baincapital.com/fraud-and-cybersecurity-warning-spanish,href,C
+495,About Us,About Us,a_inner_text,D
+495,about us,https://www.baincapital.com/about-us,href,C
+496,Sustainability & Impact,Sustainability & Impact,a_inner_text,D
+496,sustainability and impact,https://www.baincapital.com/sustainability-and-impact,href,C
+497,People,People,a_inner_text,D
+497,people,https://www.baincapital.com/people,href,C
+498,Careers,Careers,a_inner_text,D
+498,careers,https://www.baincapital.com/careers,href,C
+499,News,News,a_inner_text,D
+499,news,https://www.baincapital.com/news,href,C
+500,Locations,Locations,a_inner_text,D
+500,locations,https://www.baincapital.com/locations,href,C
+501,Japan - 日本,Japan - 日本,a_inner_text,D
+501,baincapital,https://www.baincapital.co.jp/,href,D
+502,Private Equity,Private Equity,a_inner_text,D
+502,baincapitalprivateequity,https://www.baincapitalprivateequity.com/,href,D
+503,Credit,Credit,a_inner_text,D
+503,baincapitalcredit,https://www.baincapitalcredit.com/,href,D
+504,Ventures,Ventures,a_inner_text,D
+504,ventures,https://www.baincapital.com/ventures,href,C
+505,Real Estate,Real Estate,a_inner_text,D
+505,baincapitalrealestate,https://www.baincapitalrealestate.com/,href,D
+506,Special Situations,Special Situations,a_inner_text,D
+506,baincapitalspecialsituations,https://baincapitalspecialsituations.com/,href,D
+507,Life Sciences,Life Sciences,a_inner_text,D
+507,baincapitallifesciences,https://www.baincapitallifesciences.com,href,D
+508,Public Equity,Public Equity,a_inner_text,D
+508,baincapitalpublicequity,https://www.baincapitalpublicequity.com/,href,D
+509,Partnership Strategies,Partnership Strategies,a_inner_text,D
+509,baincapitalpartnershipstrategies,https://www.baincapitalpartnershipstrategies.com/,href,D
+510,Tech Opportunities,Tech Opportunities,a_inner_text,D
+510,baincapitaltechopportunities,https://www.baincapitaltechopportunities.com/,href,D
+511,Double Impact,Double Impact,a_inner_text,D
+511,baincapitaldoubleimpact,https://www.baincapitaldoubleimpact.com/,href,D
+512,Insurance,Insurance,a_inner_text,D
+512,baincapitalinsurance,https://www.baincapitalinsurance.com,href,D
+513,Crypto,Crypto,a_inner_text,D
+513,crypto,https://www.baincapital.com/crypto,href,C
+514,Privacy Policy,Privacy Policy,a_inner_text,D
+514,privacy policy,https://www.baincapital.com/privacy-policy,href,C
+515,Terms of Use,Terms of Use,a_inner_text,D
+515,terms use,https://www.baincapital.com/terms-use,href,C
+516,Regulatory Disclosures,Regulatory Disclosures,a_inner_text,D
+516,regulatory disclosures,https://www.baincapital.com/regulatory-disclosures,href,C
+517,Fraud and Cybersecurity Warning,Fraud and Cybersecurity Warning,a_inner_text,D
+517,fraud and cybersecurity warning,https://www.baincapital.com/fraud-and-cybersecurity-warning,href,C
+518,警告：网络欺诈及网络钓鱼,警告：网络欺诈及网络钓鱼,a_inner_text,D
+518,fraud and cybersecurity warning chinese,https://www.baincapital.com/fraud-and-cybersecurity-warning-chinese,href,C
+519,Fraude y advertencia de ciberseguridad,Fraude y advertencia de ciberseguridad,a_inner_text,D
+519,fraud and cybersecurity warning spanish,https://www.baincapital.com/fraud-and-cybersecurity-warning-spanish,href,C
+520,ir@baincapital.com,ir@baincapital.com,a_inner_text,D
+520,ir@baincapital,mailto:ir@baincapital.com,href,C
+521,Sign on to your account,Sign on to your account,a_inner_text,D
+521,,https://services.dataexchange.fiscloudservices.com/Document/2449254,href,C
+522,Privacy Policy,Privacy Policy,a_inner_text,D
+522,privacy policy,https://www.baincapital.com/privacy-policy,href,C
+523,Terms of Use,Terms of Use,a_inner_text,D
+523,terms use,https://www.baincapital.com/terms-use,href,C
+524,Regulatory Disclosures,Regulatory Disclosures,a_inner_text,D
+524,regulatory disclosures,https://www.baincapital.com/regulatory-disclosures,href,C
+525,Fraud and Cybersecurity Warning,Fraud and Cybersecurity Warning,a_inner_text,D
+525,fraud and cybersecurity warning,https://www.baincapital.com/fraud-and-cybersecurity-warning,href,C
+526,警告：网络欺诈及网络钓鱼,警告：网络欺诈及网络钓鱼,a_inner_text,D
+526,fraud and cybersecurity warning chinese,https://www.baincapital.com/fraud-and-cybersecurity-warning-chinese,href,C
+527,Fraude y advertencia de ciberseguridad,Fraude y advertencia de ciberseguridad,a_inner_text,D
+527,fraud and cybersecurity warning spanish,https://www.baincapital.com/fraud-and-cybersecurity-warning-spanish,href,C
+528,search-icon,search-icon,img_alt_text,E
+528,search icon,https://www.baincapital.com/themes/custom/baincapital/images/search-icon.svg,src,E
+529,search-icon,search-icon,img_alt_text,E
+529,search icon grey,https://www.baincapital.com/themes/custom/baincapital/images/search-icon-grey.svg,src,E
+530,About Us,About Us,a_inner_text,D
+530,about us,https://www.baincapital.com/about-us,href,C
+531,Sustainability & Impact,Sustainability & Impact,a_inner_text,D
+531,sustainability and impact,https://www.baincapital.com/sustainability-and-impact,href,C
+532,People,People,a_inner_text,D
+532,people,https://www.baincapital.com/people,href,C
+533,Careers,Careers,a_inner_text,D
+533,careers,https://www.baincapital.com/careers,href,C
+534,News,News,a_inner_text,D
+534,news,https://www.baincapital.com/news,href,C
+535,Locations,Locations,a_inner_text,D
+535,locations,https://www.baincapital.com/locations,href,C
+536,Japan - 日本,Japan - 日本,a_inner_text,D
+536,baincapital,https://www.baincapital.co.jp/,href,D
+537,Private Equity,Private Equity,a_inner_text,D
+537,baincapitalprivateequity,https://www.baincapitalprivateequity.com/,href,D
+538,Credit,Credit,a_inner_text,D
+538,baincapitalcredit,https://www.baincapitalcredit.com/,href,D
+539,Ventures,Ventures,a_inner_text,D
+539,ventures,https://www.baincapital.com/ventures,href,C
+540,Real Estate,Real Estate,a_inner_text,D
+540,baincapitalrealestate,https://www.baincapitalrealestate.com/,href,D
+541,Special Situations,Special Situations,a_inner_text,D
+541,baincapitalspecialsituations,https://baincapitalspecialsituations.com/,href,D
+542,Life Sciences,Life Sciences,a_inner_text,D
+542,baincapitallifesciences,https://www.baincapitallifesciences.com,href,D
+543,Public Equity,Public Equity,a_inner_text,D
+543,baincapitalpublicequity,https://www.baincapitalpublicequity.com/,href,D
+544,Partnership Strategies,Partnership Strategies,a_inner_text,D
+544,baincapitalpartnershipstrategies,https://www.baincapitalpartnershipstrategies.com/,href,D
+545,Tech Opportunities,Tech Opportunities,a_inner_text,D
+545,baincapitaltechopportunities,https://www.baincapitaltechopportunities.com/,href,D
+546,Double Impact,Double Impact,a_inner_text,D
+546,baincapitaldoubleimpact,https://www.baincapitaldoubleimpact.com/,href,D
+547,Insurance,Insurance,a_inner_text,D
+547,baincapitalinsurance,https://www.baincapitalinsurance.com,href,D
+548,Crypto,Crypto,a_inner_text,D
+548,crypto,https://www.baincapital.com/crypto,href,C
+549,Privacy Policy,Privacy Policy,a_inner_text,D
+549,privacy policy,https://www.baincapital.com/privacy-policy,href,C
+550,Terms of Use,Terms of Use,a_inner_text,D
+550,terms use,https://www.baincapital.com/terms-use,href,C
+551,Regulatory Disclosures,Regulatory Disclosures,a_inner_text,D
+551,regulatory disclosures,https://www.baincapital.com/regulatory-disclosures,href,C
+552,Fraud and Cybersecurity Warning,Fraud and Cybersecurity Warning,a_inner_text,D
+552,fraud and cybersecurity warning,https://www.baincapital.com/fraud-and-cybersecurity-warning,href,C
+553,警告：网络欺诈及网络钓鱼,警告：网络欺诈及网络钓鱼,a_inner_text,D
+553,fraud and cybersecurity warning chinese,https://www.baincapital.com/fraud-and-cybersecurity-warning-chinese,href,C
+554,Fraude y advertencia de ciberseguridad,Fraude y advertencia de ciberseguridad,a_inner_text,D
+554,fraud and cybersecurity warning spanish,https://www.baincapital.com/fraud-and-cybersecurity-warning-spanish,href,C
+555,Privacy Policy,Privacy Policy,a_inner_text,D
+555,privacy policy,https://www.baincapital.com/privacy-policy,href,C
+556,Terms of Use,Terms of Use,a_inner_text,D
+556,terms use,https://www.baincapital.com/terms-use,href,C
+557,Regulatory Disclosures,Regulatory Disclosures,a_inner_text,D
+557,regulatory disclosures,https://www.baincapital.com/regulatory-disclosures,href,C
+558,Fraud and Cybersecurity Warning,Fraud and Cybersecurity Warning,a_inner_text,D
+558,fraud and cybersecurity warning,https://www.baincapital.com/fraud-and-cybersecurity-warning,href,C
+559,警告：网络欺诈及网络钓鱼,警告：网络欺诈及网络钓鱼,a_inner_text,D
+559,fraud and cybersecurity warning chinese,https://www.baincapital.com/fraud-and-cybersecurity-warning-chinese,href,C
+560,Fraude y advertencia de ciberseguridad,Fraude y advertencia de ciberseguridad,a_inner_text,D
+560,fraud and cybersecurity warning spanish,https://www.baincapital.com/fraud-and-cybersecurity-warning-spanish,href,C
+942,2d3c9ea7,https://d21y75miwcfqoq.cloudfront.net/2d3c9ea7,image_src,I
+944,2d3c9ea7,https://d21y75miwcfqoq.cloudfront.net/2d3c9ea7,image_src,I
+946,themes,/themes/custom/baincapital/images/bain-capital-logo.svg,image_src,I
+948,custom,/themes/custom/baincapital/images/bain-capital-logo.svg,image_src,I
+950,baincapital,/themes/custom/baincapital/images/bain-capital-logo.svg,image_src,I
+952,images,/themes/custom/baincapital/images/bain-capital-logo.svg,image_src,I
+954,bain capital logo,/themes/custom/baincapital/images/bain-capital-logo.svg,image_src,I
+956,homepage banner,https://cdn-east2.baincapital.com/2024-04/homepage-banner.jpg,image_src,I
+958,bcsi25 cover,https://cdn-east2.baincapital.com/2025-06/bcsi25-cover.jpg,image_src,I
+960,bc tvp video menu,https://cdn-east2.baincapital.com/2024-11/bc-tvp-video-menu.jpg,image_src,I
+962,News,https://cdn-east2.baincapital.com/News/GettyImages-1942702729_0.jpg,image_src,I
+964,GettyImages 1942702729 0,https://cdn-east2.baincapital.com/News/GettyImages-1942702729_0.jpg,image_src,I
+966,styles,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-tech-v2.jpg?VersionId=ZneUgARdepaVedhzfoJKX40ThAnfvUvk&itok=hLv8UoXG,image_src,I
+968,optimize image,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-tech-v2.jpg?VersionId=ZneUgARdepaVedhzfoJKX40ThAnfvUvk&itok=hLv8UoXG,image_src,I
+970,investment spotlight tech v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-tech-v2.jpg?VersionId=ZneUgARdepaVedhzfoJKX40ThAnfvUvk&itok=hLv8UoXG,image_src,I
+972,styles,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-health-v2.png.jpg?VersionId=YYzyulpCTMTsal.TUBXD4K5nHZlxFfRD&itok=Dj5x_MR9,image_src,I
+974,optimize image,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-health-v2.png.jpg?VersionId=YYzyulpCTMTsal.TUBXD4K5nHZlxFfRD&itok=Dj5x_MR9,image_src,I
+976,investment spotlight health v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/investment-spotlight-health-v2.png.jpg?VersionId=YYzyulpCTMTsal.TUBXD4K5nHZlxFfRD&itok=Dj5x_MR9,image_src,I
+978,styles,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-cover_0.jpg?VersionId=nPYETQcZ2Xs4QlxphBjsUxcpblN15y_x&itok=NXxq4c7g,image_src,I
+980,optimize image,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-cover_0.jpg?VersionId=nPYETQcZ2Xs4QlxphBjsUxcpblN15y_x&itok=NXxq4c7g,image_src,I
+982,bcsi25 cover 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-cover_0.jpg?VersionId=nPYETQcZ2Xs4QlxphBjsUxcpblN15y_x&itok=NXxq4c7g,image_src,I
+984,styles,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-engaged-governance-and-stewardship_0.jpg?VersionId=5cGdHgyI9bgHa5Qn2hWyOgfQv1W2rv12&itok=hBggZGzW,image_src,I
+986,optimize image,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-engaged-governance-and-stewardship_0.jpg?VersionId=5cGdHgyI9bgHa5Qn2hWyOgfQv1W2rv12&itok=hBggZGzW,image_src,I
+988,bcsi25 engaged governance and stewardship 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-engaged-governance-and-stewardship_0.jpg?VersionId=5cGdHgyI9bgHa5Qn2hWyOgfQv1W2rv12&itok=hBggZGzW,image_src,I
+990,styles,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-sustainable-growth-and-resilience_0.jpg?VersionId=gwYK2JxYTGGMnPu4.RYRd.nNldoPq6Ze&itok=VfWJAqCX,image_src,I
+992,optimize image,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-sustainable-growth-and-resilience_0.jpg?VersionId=gwYK2JxYTGGMnPu4.RYRd.nNldoPq6Ze&itok=VfWJAqCX,image_src,I
+994,bcsi25 sustainable growth and resilience 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-sustainable-growth-and-resilience_0.jpg?VersionId=gwYK2JxYTGGMnPu4.RYRd.nNldoPq6Ze&itok=VfWJAqCX,image_src,I
+996,styles,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-high-performance-teams_0.jpg?VersionId=i1Ld.In1N50Y1EOYX9H.H5z9tYVpdCOF&itok=CFgIuqNk,image_src,I
+998,optimize image,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-high-performance-teams_0.jpg?VersionId=i1Ld.In1N50Y1EOYX9H.H5z9tYVpdCOF&itok=CFgIuqNk,image_src,I
+1000,bcsi25 high performance teams 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-high-performance-teams_0.jpg?VersionId=i1Ld.In1N50Y1EOYX9H.H5z9tYVpdCOF&itok=CFgIuqNk,image_src,I
+1002,styles,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/diversity-inclusion-big-v2.jpg?VersionId=9JpKWjKk5C.S4oy4IwyNmJZK4WFj81pv&itok=aO8teQKv,image_src,I
+1004,optimize image,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/diversity-inclusion-big-v2.jpg?VersionId=9JpKWjKk5C.S4oy4IwyNmJZK4WFj81pv&itok=aO8teQKv,image_src,I
+1006,diversity inclusion big v2,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2024-11/diversity-inclusion-big-v2.jpg?VersionId=9JpKWjKk5C.S4oy4IwyNmJZK4WFj81pv&itok=aO8teQKv,image_src,I
+1008,styles,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-diversity-equity-inclusion-community_0.jpg?VersionId=WMV6lygzLpeLKjOACHkW46qKy_TZKY.N&itok=MI_lhCN7,image_src,I
+1010,optimize image,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-diversity-equity-inclusion-community_0.jpg?VersionId=WMV6lygzLpeLKjOACHkW46qKy_TZKY.N&itok=MI_lhCN7,image_src,I
+1012,bcsi25 diversity equity inclusion community 0,https://cdn-east2.baincapital.com/styles/optimize_image/s3/2025-06/bcsi25-diversity-equity-inclusion-community_0.jpg?VersionId=WMV6lygzLpeLKjOACHkW46qKy_TZKY.N&itok=MI_lhCN7,image_src,I
+1014,News,https://cdn-east2.baincapital.com/News/HSO 2.jpg,image_src,I
+1016,HSO 2,https://cdn-east2.baincapital.com/News/HSO 2.jpg,image_src,I
+1018,hemes,themes/custom/baincapital/images/loader.gif,image_src,I
+1020,custom,themes/custom/baincapital/images/loader.gif,image_src,I
+1022,baincapital,themes/custom/baincapital/images/loader.gif,image_src,I
+1024,images,themes/custom/baincapital/images/loader.gif,image_src,I
+1026,loader,themes/custom/baincapital/images/loader.gif,image_src,I
+1028,themes,https://www.baincapital.com/themes/custom/baincapital/images/search-icon.svg,image_src,I
+1030,custom,https://www.baincapital.com/themes/custom/baincapital/images/search-icon.svg,image_src,I
+1032,baincapital,https://www.baincapital.com/themes/custom/baincapital/images/search-icon.svg,image_src,I
+1034,images,https://www.baincapital.com/themes/custom/baincapital/images/search-icon.svg,image_src,I
+1036,search icon,https://www.baincapital.com/themes/custom/baincapital/images/search-icon.svg,image_src,I
+1038,themes,https://www.baincapital.com/themes/custom/baincapital/images/search-icon-grey.svg,image_src,I
+1040,custom,https://www.baincapital.com/themes/custom/baincapital/images/search-icon-grey.svg,image_src,I
+1042,baincapital,https://www.baincapital.com/themes/custom/baincapital/images/search-icon-grey.svg,image_src,I
+1044,images,https://www.baincapital.com/themes/custom/baincapital/images/search-icon-grey.svg,image_src,I
+1046,search icon grey,https://www.baincapital.com/themes/custom/baincapital/images/search-icon-grey.svg,image_src,I

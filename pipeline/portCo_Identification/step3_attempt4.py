@@ -61,7 +61,7 @@ From this example, we would extract 'be-campbell' as the portCo name.
 """
 
 
-HREF_ANCHORS_A = {"investments", "portfolio", "companies"}
+HREF_ANCHORS_A = {"investments", "portfolio", "companies", "investment-portfolio"}
 HREF_ANCHORS_B = {"company", "funds"}
 
 
