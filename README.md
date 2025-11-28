@@ -29,6 +29,29 @@ python portCo_Identification/main_portCo.py
 NOTE: All of the code for the portCo identification process can be found in pipeline/portCo_Identification.
 
 
+By running seed_aic.py followed by portCo_Identification.py, the system:
+Collects data on all PE firms listed on the AIC website
+Then visits each firm’s site to identify and extract their Portfolio Companies
+
+### Current Results
+
+- Successfully identifies all 28 AIC member PE firms
+(output/PE_firms.csv)
+
+- Locates Portfolio pages for 22 out of 28 firms (78%)
+(output/PortCo_Website_Example.csv)
+
+- Extracts full Portfolio Company lists from 11 of those 22 pages (50%).
+These lists are complete but currently include some incorrect entries (false positives).
+Firms: Anchorage, Bridgeport, CPE, Fortitude, LivingBridge, Mercury, Navis, Next, PEP, Salter Brothers, Riverside
+(folder: output/unclean_portco_names)
+
+- Implemented a cleaning system (text_scoring.py) which has successfully removed incorrect entries from 8 of the 11 extracted lists so far.
+Examples can be cumulatively seen in:
+output/PortCoName_Results_Cleaned_Example.csv
+output/PortCoName_Results_Cleaned_Example_2.csv
+
+
 ## Methodology
 (Note: Methodology for portCo name identification yet to be completed, however the code is complete).
 ### Phase 1: Australian PE firms identification
