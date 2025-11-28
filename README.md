@@ -13,7 +13,7 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 playwright install
 ```
-Currently, only the seed_aic.py and the portCo_Identification pipeline is fully operational and accurate. founded_year.py is not yet being used to add founding years to PE_firms.csv due to the appearance of 429 errors in response to GoogleAPI requests, that still need to be resolved. 
+Currently, only the seed_aic.py is fully operational and accurate, with the portCo_Identification pipeline being fully operational but not completely accurate. founded_year.py is not yet being used to add founding years to PE_firms.csv due to the appearance of 429 errors in response to GoogleAPI requests, that still need to be resolved. 
 
 To run seed_aic.py, enter the following within the terminal:
 
