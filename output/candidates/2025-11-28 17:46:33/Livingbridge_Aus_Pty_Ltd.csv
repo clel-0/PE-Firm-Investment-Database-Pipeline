@@ -1,0 +1,289 @@
+card_id,text,raw_text,type,rank
+0,Investor Portal,Investor Portal,a_inner_text,A
+0,Login,https://icx.efrontcloud.com/@5263/LivingbridgeUK/Login.aspx,href,C
+1,Our Story,Our Story,a_inner_text,A
+1,story,https://www.livingbridge.com/story,href,C
+2,Our Portfolio,Our Portfolio,a_inner_text,A
+2,portfolio,https://www.livingbridge.com/portfolio,href,C
+3,Our Expertise,Our Expertise,a_inner_text,A
+3,expertise,https://www.livingbridge.com/expertise,href,C
+4,Our People,Our People,a_inner_text,A
+4,people,https://www.livingbridge.com/people,href,C
+5,Read about our Software Advisory Board,Read about our Software Advisory Board,a_inner_text,A
+5,software advisory board,https://www.livingbridge.com/software-advisory-board,href,C
+6,Read about our Software Advisory Board,Read about our Software Advisory Board,a_inner_text,A
+6,software advisory board,https://www.livingbridge.com/software-advisory-board,href,C
+7,Read about our Software Advisory Board,Read about our Software Advisory Board,a_inner_text,D
+7,software advisory board,https://www.livingbridge.com/software-advisory-board,href,C
+8,Read about our Software Advisory Board,Read about our Software Advisory Board,a_inner_text,D
+8,software advisory board,https://www.livingbridge.com/software-advisory-board,href,C
+9,Read about our Software Advisory Board,Read about our Software Advisory Board,a_inner_text,D
+9,software advisory board,https://www.livingbridge.com/software-advisory-board,href,C
+10,Read about our Software Advisory Board,Read about our Software Advisory Board,a_inner_text,D
+10,software advisory board,https://www.livingbridge.com/software-advisory-board,href,C
+11,Read More,Read More,a_inner_text,A
+11,absolute collagen,https://www.livingbridge.com/portfolio/absolute-collagen,href,A
+12,Read More,Read More,a_inner_text,A
+12,active assistance,https://www.livingbridge.com/portfolio/active-assistance,href,A
+13,Read More,Read More,a_inner_text,A
+13,adarma,https://www.livingbridge.com/portfolio/adarma,href,A
+14,Read More,Read More,a_inner_text,A
+14,aims,https://www.livingbridge.com/portfolio/aims,href,A
+15,Read More,Read More,a_inner_text,A
+15,ajm healthcare,https://www.livingbridge.com/portfolio/ajm-healthcare,href,A
+16,Read More,Read More,a_inner_text,A
+16,americana,https://www.livingbridge.com/portfolio/americana,href,A
+17,Read More,Read More,a_inner_text,A
+17,audiotonix,https://www.livingbridge.com/portfolio/audiotonix,href,A
+18,Read More,Read More,a_inner_text,A
+18,autologic,https://www.livingbridge.com/portfolio/autologic,href,A
+19,Read More,Read More,a_inner_text,A
+19,better medical,https://www.livingbridge.com/portfolio/better-medical,href,A
+20,Read More,Read More,a_inner_text,A
+20,bistrot pierre,https://www.livingbridge.com/portfolio/bistrot-pierre,href,A
+21,Read More,Read More,a_inner_text,A
+21,blue 8,https://www.livingbridge.com/portfolio/blue-8,href,A
+22,Read More,Read More,a_inner_text,A
+22,boilerjuice,https://www.livingbridge.com/portfolio/boilerjuice,href,A
+23,Read More,Read More,a_inner_text,A
+23,absolute collagen,https://www.livingbridge.com/portfolio/absolute-collagen,href,A
+24,Read More,Read More,a_inner_text,A
+24,active assistance,https://www.livingbridge.com/portfolio/active-assistance,href,A
+25,Read More,Read More,a_inner_text,A
+25,adarma,https://www.livingbridge.com/portfolio/adarma,href,A
+26,Read More,Read More,a_inner_text,A
+26,aims,https://www.livingbridge.com/portfolio/aims,href,A
+27,Read More,Read More,a_inner_text,A
+27,ajm healthcare,https://www.livingbridge.com/portfolio/ajm-healthcare,href,A
+28,Read More,Read More,a_inner_text,A
+28,americana,https://www.livingbridge.com/portfolio/americana,href,A
+29,Read More,Read More,a_inner_text,A
+29,audiotonix,https://www.livingbridge.com/portfolio/audiotonix,href,A
+30,Read More,Read More,a_inner_text,A
+30,autologic,https://www.livingbridge.com/portfolio/autologic,href,A
+31,Read More,Read More,a_inner_text,A
+31,better medical,https://www.livingbridge.com/portfolio/better-medical,href,A
+32,Read More,Read More,a_inner_text,A
+32,bistrot pierre,https://www.livingbridge.com/portfolio/bistrot-pierre,href,A
+33,Read More,Read More,a_inner_text,A
+33,blue 8,https://www.livingbridge.com/portfolio/blue-8,href,A
+34,Read More,Read More,a_inner_text,A
+34,boilerjuice,https://www.livingbridge.com/portfolio/boilerjuice,href,A
+35,Read More,Read More,a_inner_text,A
+35,absolute collagen,https://www.livingbridge.com/portfolio/absolute-collagen,href,A
+36,Read More,Read More,a_inner_text,A
+36,active assistance,https://www.livingbridge.com/portfolio/active-assistance,href,A
+37,Read More,Read More,a_inner_text,A
+37,adarma,https://www.livingbridge.com/portfolio/adarma,href,A
+38,Read More,Read More,a_inner_text,A
+38,aims,https://www.livingbridge.com/portfolio/aims,href,A
+39,Read More,Read More,a_inner_text,A
+39,ajm healthcare,https://www.livingbridge.com/portfolio/ajm-healthcare,href,A
+40,Read More,Read More,a_inner_text,A
+40,americana,https://www.livingbridge.com/portfolio/americana,href,A
+41,Read More,Read More,a_inner_text,A
+41,audiotonix,https://www.livingbridge.com/portfolio/audiotonix,href,A
+42,Read More,Read More,a_inner_text,A
+42,autologic,https://www.livingbridge.com/portfolio/autologic,href,A
+43,Read More,Read More,a_inner_text,A
+43,better medical,https://www.livingbridge.com/portfolio/better-medical,href,A
+44,Read More,Read More,a_inner_text,A
+44,bistrot pierre,https://www.livingbridge.com/portfolio/bistrot-pierre,href,A
+45,Read More,Read More,a_inner_text,A
+45,blue 8,https://www.livingbridge.com/portfolio/blue-8,href,A
+46,Read More,Read More,a_inner_text,A
+46,boilerjuice,https://www.livingbridge.com/portfolio/boilerjuice,href,A
+47,Read More,Read More,a_inner_text,A
+47,absolute collagen,https://www.livingbridge.com/portfolio/absolute-collagen,href,A
+48,Read More,Read More,a_inner_text,A
+48,absolute collagen,https://www.livingbridge.com/portfolio/absolute-collagen,href,A
+49,Read More,Read More,a_inner_text,A
+49,absolute collagen,https://www.livingbridge.com/portfolio/absolute-collagen,href,A
+50,Read More,Read More,a_inner_text,A
+50,absolute collagen,https://www.livingbridge.com/portfolio/absolute-collagen,href,A
+51,Read More,Read More,a_inner_text,A
+51,active assistance,https://www.livingbridge.com/portfolio/active-assistance,href,A
+52,Read More,Read More,a_inner_text,A
+52,active assistance,https://www.livingbridge.com/portfolio/active-assistance,href,A
+53,Read More,Read More,a_inner_text,A
+53,active assistance,https://www.livingbridge.com/portfolio/active-assistance,href,A
+54,Read More,Read More,a_inner_text,A
+54,active assistance,https://www.livingbridge.com/portfolio/active-assistance,href,A
+55,Read More,Read More,a_inner_text,A
+55,adarma,https://www.livingbridge.com/portfolio/adarma,href,A
+56,Read More,Read More,a_inner_text,A
+56,adarma,https://www.livingbridge.com/portfolio/adarma,href,A
+57,Read More,Read More,a_inner_text,A
+57,adarma,https://www.livingbridge.com/portfolio/adarma,href,A
+58,Read More,Read More,a_inner_text,A
+58,adarma,https://www.livingbridge.com/portfolio/adarma,href,A
+59,Read More,Read More,a_inner_text,A
+59,aims,https://www.livingbridge.com/portfolio/aims,href,A
+60,Read More,Read More,a_inner_text,A
+60,aims,https://www.livingbridge.com/portfolio/aims,href,A
+61,Read More,Read More,a_inner_text,A
+61,aims,https://www.livingbridge.com/portfolio/aims,href,A
+62,Read More,Read More,a_inner_text,A
+62,aims,https://www.livingbridge.com/portfolio/aims,href,A
+63,Read More,Read More,a_inner_text,A
+63,ajm healthcare,https://www.livingbridge.com/portfolio/ajm-healthcare,href,A
+64,Read More,Read More,a_inner_text,A
+64,ajm healthcare,https://www.livingbridge.com/portfolio/ajm-healthcare,href,A
+65,Read More,Read More,a_inner_text,A
+65,ajm healthcare,https://www.livingbridge.com/portfolio/ajm-healthcare,href,A
+66,Read More,Read More,a_inner_text,A
+66,ajm healthcare,https://www.livingbridge.com/portfolio/ajm-healthcare,href,A
+67,Read More,Read More,a_inner_text,A
+67,americana,https://www.livingbridge.com/portfolio/americana,href,A
+68,Read More,Read More,a_inner_text,A
+68,americana,https://www.livingbridge.com/portfolio/americana,href,A
+69,Read More,Read More,a_inner_text,A
+69,americana,https://www.livingbridge.com/portfolio/americana,href,A
+70,Read More,Read More,a_inner_text,A
+70,americana,https://www.livingbridge.com/portfolio/americana,href,A
+71,Read More,Read More,a_inner_text,A
+71,audiotonix,https://www.livingbridge.com/portfolio/audiotonix,href,A
+72,Read More,Read More,a_inner_text,A
+72,audiotonix,https://www.livingbridge.com/portfolio/audiotonix,href,A
+73,Read More,Read More,a_inner_text,A
+73,audiotonix,https://www.livingbridge.com/portfolio/audiotonix,href,A
+74,Read More,Read More,a_inner_text,A
+74,audiotonix,https://www.livingbridge.com/portfolio/audiotonix,href,A
+75,Read More,Read More,a_inner_text,A
+75,autologic,https://www.livingbridge.com/portfolio/autologic,href,A
+76,Read More,Read More,a_inner_text,A
+76,autologic,https://www.livingbridge.com/portfolio/autologic,href,A
+77,Read More,Read More,a_inner_text,A
+77,autologic,https://www.livingbridge.com/portfolio/autologic,href,A
+78,Read More,Read More,a_inner_text,A
+78,autologic,https://www.livingbridge.com/portfolio/autologic,href,A
+79,Read More,Read More,a_inner_text,A
+79,better medical,https://www.livingbridge.com/portfolio/better-medical,href,A
+80,Read More,Read More,a_inner_text,A
+80,better medical,https://www.livingbridge.com/portfolio/better-medical,href,A
+81,Read More,Read More,a_inner_text,A
+81,better medical,https://www.livingbridge.com/portfolio/better-medical,href,A
+82,Read More,Read More,a_inner_text,A
+82,better medical,https://www.livingbridge.com/portfolio/better-medical,href,A
+83,Read More,Read More,a_inner_text,A
+83,bistrot pierre,https://www.livingbridge.com/portfolio/bistrot-pierre,href,A
+84,Read More,Read More,a_inner_text,A
+84,bistrot pierre,https://www.livingbridge.com/portfolio/bistrot-pierre,href,A
+85,Read More,Read More,a_inner_text,A
+85,bistrot pierre,https://www.livingbridge.com/portfolio/bistrot-pierre,href,A
+86,Read More,Read More,a_inner_text,A
+86,bistrot pierre,https://www.livingbridge.com/portfolio/bistrot-pierre,href,A
+87,Read More,Read More,a_inner_text,A
+87,blue 8,https://www.livingbridge.com/portfolio/blue-8,href,A
+88,Read More,Read More,a_inner_text,A
+88,blue 8,https://www.livingbridge.com/portfolio/blue-8,href,A
+89,Read More,Read More,a_inner_text,A
+89,blue 8,https://www.livingbridge.com/portfolio/blue-8,href,A
+90,Read More,Read More,a_inner_text,A
+90,blue 8,https://www.livingbridge.com/portfolio/blue-8,href,A
+91,Read More,Read More,a_inner_text,A
+91,boilerjuice,https://www.livingbridge.com/portfolio/boilerjuice,href,A
+92,Read More,Read More,a_inner_text,A
+92,boilerjuice,https://www.livingbridge.com/portfolio/boilerjuice,href,A
+93,Read More,Read More,a_inner_text,A
+93,boilerjuice,https://www.livingbridge.com/portfolio/boilerjuice,href,A
+94,Read More,Read More,a_inner_text,A
+94,boilerjuice,https://www.livingbridge.com/portfolio/boilerjuice,href,A
+95,Our Expertise,Our Expertise,a_inner_text,A
+95,expertise,/expertise,href,C
+96,Terms of Use,Terms of Use,a_inner_text,A
+96,terms of use,/terms-of-use,href,C
+97,Privacy Policy,Privacy Policy,a_inner_text,A
+97,privacy policy,/privacy-policy,href,C
+98,Complaints Policy,Complaints Policy,a_inner_text,A
+98,complaints policy,/complaints-policy,href,C
+99,Modern Slavery Statement,Modern Slavery Statement,a_inner_text,A
+99,modern slavery statement,/modern-slavery-statement,href,C
+100,Cookie Policy,Cookie Policy,a_inner_text,A
+100,cookie policy,/cookie-policy,href,C
+101,Instagram,Instagram,a_inner_text,A
+101,livingbridgepe,https://www.instagram.com/livingbridgepe,href,C
+102,LinkedIn,LinkedIn,a_inner_text,A
+102,livingbridge,https://www.linkedin.com/company/livingbridge/,href,B
+103,YouTube,YouTube,a_inner_text,A
+103,WeAreLivingBridge,https://www.youtube.com/WeAreLivingBridge,href,C
+104,Twitter,Twitter,a_inner_text,A
+104,Livingbridge PE,https://twitter.com/Livingbridge_PE,href,C
+105,"Science based targets, driving ambitious corporate climate action","Science based targets, driving ambitious corporate climate action",img_alt_text,B
+106,"Signatory of PRI, principles for responsible investment","Signatory of PRI, principles for responsible investment",img_alt_text,B
+107,Certified carbon neutral company,Certified carbon neutral company,img_alt_text,B
+108,Terms of Use,Terms of Use,a_inner_text,A
+108,terms of use,/terms-of-use,href,C
+109,Privacy Policy,Privacy Policy,a_inner_text,A
+109,privacy policy,/privacy-policy,href,C
+110,Complaints Policy,Complaints Policy,a_inner_text,A
+110,complaints policy,/complaints-policy,href,C
+111,Modern Slavery Statement,Modern Slavery Statement,a_inner_text,A
+111,modern slavery statement,/modern-slavery-statement,href,C
+112,Cookie Policy,Cookie Policy,a_inner_text,A
+112,cookie policy,/cookie-policy,href,C
+113,Instagram,Instagram,a_inner_text,A
+113,livingbridgepe,https://www.instagram.com/livingbridgepe,href,C
+114,LinkedIn,LinkedIn,a_inner_text,A
+114,livingbridge,https://www.linkedin.com/company/livingbridge/,href,B
+115,YouTube,YouTube,a_inner_text,A
+115,WeAreLivingBridge,https://www.youtube.com/WeAreLivingBridge,href,C
+116,Twitter,Twitter,a_inner_text,A
+116,Livingbridge PE,https://twitter.com/Livingbridge_PE,href,C
+117,"Science based targets, driving ambitious corporate climate action","Science based targets, driving ambitious corporate climate action",img_alt_text,B
+118,"Signatory of PRI, principles for responsible investment","Signatory of PRI, principles for responsible investment",img_alt_text,B
+119,Certified carbon neutral company,Certified carbon neutral company,img_alt_text,B
+120,Get in touch,Get in touch,a_inner_text,A
+120,get in touch,/get-in-touch,href,C
+121,Livingbridge,Livingbridge,a_inner_text,A
+121,,/,href,D
+122,Built by Buffalo,Built by Buffalo,a_inner_text,A
+122,builtbybuffalo,https://builtbybuffalo.com,href,D
+240,team,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Matthew-Jacobs.jpg,image_src,I
+242,Investment Team,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Matthew-Jacobs.jpg,image_src,I
+244,400x400 crop center center none,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Matthew-Jacobs.jpg,image_src,I
+246,Matthew Jacobs,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Matthew-Jacobs.jpg,image_src,I
+248,team,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Simon-Peet.jpg,image_src,I
+250,Investment Team,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Simon-Peet.jpg,image_src,I
+252,400x400 crop center center none,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Simon-Peet.jpg,image_src,I
+254,Simon Peet,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Simon-Peet.jpg,image_src,I
+256,team,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Sanjay-Panchal.jpg,image_src,I
+258,Investment Team,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Sanjay-Panchal.jpg,image_src,I
+260,400x400 crop center center none,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Sanjay-Panchal.jpg,image_src,I
+262,Sanjay Panchal,/uploads/team/Investment-Team/_400x400_crop_center-center_none/Sanjay-Panchal.jpg,image_src,I
+264,logos,/uploads/logos/_medium/ML_Absolute_Collagen_Logo_FOIL_ML.png,image_src,I
+266,medium,/uploads/logos/_medium/ML_Absolute_Collagen_Logo_FOIL_ML.png,image_src,I
+268,ML Absolute Collagen Logo FOIL ML,/uploads/logos/_medium/ML_Absolute_Collagen_Logo_FOIL_ML.png,image_src,I
+270,logos,/uploads/logos/_medium/1698138876-trimmy-Active-Assistance_BLK.png,image_src,I
+272,medium,/uploads/logos/_medium/1698138876-trimmy-Active-Assistance_BLK.png,image_src,I
+274,1698138876 trimmy Active Assistance BLK,/uploads/logos/_medium/1698138876-trimmy-Active-Assistance_BLK.png,image_src,I
+276,logos,/uploads/logos/_medium/1698138876-trimmy-Adarma_BLK.png,image_src,I
+278,medium,/uploads/logos/_medium/1698138876-trimmy-Adarma_BLK.png,image_src,I
+280,1698138876 trimmy Adarma BLK,/uploads/logos/_medium/1698138876-trimmy-Adarma_BLK.png,image_src,I
+282,logos,/uploads/logos/_medium/1698138876-trimmy-AIMS-Group_BLK.png,image_src,I
+284,medium,/uploads/logos/_medium/1698138876-trimmy-AIMS-Group_BLK.png,image_src,I
+286,1698138876 trimmy AIMS Group BLK,/uploads/logos/_medium/1698138876-trimmy-AIMS-Group_BLK.png,image_src,I
+288,logos,/uploads/logos/_medium/1698138876-trimmy-AJM_BLK.png,image_src,I
+290,medium,/uploads/logos/_medium/1698138876-trimmy-AJM_BLK.png,image_src,I
+292,1698138876 trimmy AJM BLK,/uploads/logos/_medium/1698138876-trimmy-AJM_BLK.png,image_src,I
+294,logos,/uploads/logos/_medium/1698138876-trimmy-Americana_BLK.png,image_src,I
+296,medium,/uploads/logos/_medium/1698138876-trimmy-Americana_BLK.png,image_src,I
+298,1698138876 trimmy Americana BLK,/uploads/logos/_medium/1698138876-trimmy-Americana_BLK.png,image_src,I
+300,logos,/uploads/logos/_medium/1698138876-trimmy-Audiotonix_BLK.png,image_src,I
+302,medium,/uploads/logos/_medium/1698138876-trimmy-Audiotonix_BLK.png,image_src,I
+304,1698138876 trimmy Audiotonix BLK,/uploads/logos/_medium/1698138876-trimmy-Audiotonix_BLK.png,image_src,I
+306,logos,/uploads/logos/_medium/1698138876-trimmy-Autologic_BLK.png,image_src,I
+308,medium,/uploads/logos/_medium/1698138876-trimmy-Autologic_BLK.png,image_src,I
+310,1698138876 trimmy Autologic BLK,/uploads/logos/_medium/1698138876-trimmy-Autologic_BLK.png,image_src,I
+312,logos,/uploads/logos/_medium/1698138876-trimmy-Better-Medical_BLK.png,image_src,I
+314,medium,/uploads/logos/_medium/1698138876-trimmy-Better-Medical_BLK.png,image_src,I
+316,1698138876 trimmy Better Medical BLK,/uploads/logos/_medium/1698138876-trimmy-Better-Medical_BLK.png,image_src,I
+318,logos,/uploads/logos/_medium/1698059874-trimmy-Bistrot-Pierre.png,image_src,I
+320,medium,/uploads/logos/_medium/1698059874-trimmy-Bistrot-Pierre.png,image_src,I
+322,1698059874 trimmy Bistrot Pierre,/uploads/logos/_medium/1698059874-trimmy-Bistrot-Pierre.png,image_src,I
+324,logos,/uploads/logos/_medium/1698138876-trimmy-Blue-8_BLK.png,image_src,I
+326,medium,/uploads/logos/_medium/1698138876-trimmy-Blue-8_BLK.png,image_src,I
+328,1698138876 trimmy Blue 8 BLK,/uploads/logos/_medium/1698138876-trimmy-Blue-8_BLK.png,image_src,I
+330,logos,/uploads/logos/_medium/1698138876-trimmy-Boiler-Juice_BLK.png,image_src,I
+332,medium,/uploads/logos/_medium/1698138876-trimmy-Boiler-Juice_BLK.png,image_src,I
+334,1698138876 trimmy Boiler Juice BLK,/uploads/logos/_medium/1698138876-trimmy-Boiler-Juice_BLK.png,image_src,I

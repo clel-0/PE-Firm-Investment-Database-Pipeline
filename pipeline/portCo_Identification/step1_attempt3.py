@@ -76,7 +76,7 @@ def step1_attempt_3(pe_firm: dict) -> dict:
     
     
     #returns most relevant result that is accessible
-    urls = google_search(params,pe_firm)
+    _, urls = google_search(params,pe_firm)
     if urls:
         for i,result in enumerate(urls):
             accessible, final_url = check_page_accessible(result)

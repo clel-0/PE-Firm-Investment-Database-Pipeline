@@ -11,6 +11,7 @@ import re
 import pandas as pd
 
 from grouping_cands import group_homogeneous_lists_df
+from step3_helperFunctions import _norm
 
 import os
 from dotenv import load_dotenv
@@ -48,7 +49,18 @@ def normalise_text(s: str, PE_name) -> str:
     if len(PE_name_parts)>2:
         acro = "".join([word[0] for word in PE_name_parts if word])
         s = re.sub(acro, "", s, flags=re.IGNORECASE)
-            
+    
+    def count_digits_loop(input_string):
+        count = 0
+        for char in input_string:
+            if char.isdigit():
+                count += 1
+        return count
+    s_list = s.split()
+    s = " ".join([word for word in s_list if count_digits_loop(word) <=5])  #remove words with more than 5 digits
+
+     # Final trim
+
     return s.strip()
 
 
@@ -88,8 +100,7 @@ def element_path_signature(el, max_depth: int = 8):
                 parts.append(tag)
             cur = cur.parent
             depth += 1
-            if depth >= max_depth:
-                break
+            #removing max depth limit for now, because the grouping is too lenient otherwise
     except Exception:
         # If anything goes wrong with weird nodes, just return what we have
         pass
@@ -117,39 +128,50 @@ def derive_list_key(path_sig):
     return ancestor_sig
 
 #Returns True if the normalised PE firm name appears in the snippets at least min_hits times
-def pe_name_in_snippets(pe_name_norm: str, snippets: list[str], min_hits: int = 2) -> bool:
+def pe_name_in_snippets(portco_name: str, pe_name_norm: str, snippets: list[str], min_hits: int = 2) -> bool:
     """
-    Simple check: does the normalised PE firm name appear in the combined snippets
-    at least `min_hits` times?
+    Simple check: does the normalised PE firm name and the portCo name appear in the same snippet? 
     """
-    big_text = " ".join(snippets)
-    big_text_norm = normalise_text(big_text,pe_name_norm).lower()
-    pe_norm = pe_name_norm.lower()
-    return big_text_norm.count(pe_norm) >= min_hits
+    hit_count = 0
+    for snippet in snippets:
+        snippet_norm = _norm(snippet).lower()
+        pe_norm = pe_name_norm.lower()
+        if pe_norm in snippet_norm and portco_name.lower() in snippet_norm:
+            hit_count += 1
+            if hit_count >= min_hits:
+                return True
+        
+    return False
+    
 
 
-def google_confirm_name(name: str, pe_name_norm: str, google_search_fn) -> bool:
+def google_confirm_name(name: str, pe_name_norm: str, google_search_fn, used_up: bool) -> bool:
     """
     Wrapper around your existing google_search function.
 
     Expects: google_search_fn(query) -> list[dict] with at least a 'snippet' field.
     """
-    query = f"which private equity firm invested in the company: {name}"
+    query = f"private equity firm {pe_name_norm} invested in company {name}"
     try:
-        results = google_search_fn(params(query), pe_name_norm, return_items=True)
+        used_up, results = google_search_fn(params(query), pe_name_norm, used_up, return_items=True)
     except Exception as e:
         print("Error during Google search for name confirmation:", e)
-        return False
-
+        return True, False
+    if used_up:
+        print("Skipping Google confirmation because API quota appears used up.")
+        return True, False
+    if not results:
+        print("No results returned from Google search.")
+        return used_up, False
     snippets = [r.get("snippet", "") for r in results if r.get("snippet")]
     if not snippets:
         print("No snippets returned from Google search.")
-        return False
+        return used_up, False
 
-    return pe_name_in_snippets(pe_name_norm, snippets, min_hits=1)
+    return used_up, pe_name_in_snippets(name, pe_name_norm, snippets, min_hits=1)
 
 
-def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_fn) -> pd.DataFrame:
+def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_fn, used_up) -> pd.DataFrame:
     """
     Select likely portfolio companies for a single PE firm from a candidate DataFrame.
 
@@ -179,7 +201,7 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
         print(f"Google API Key {API_KEY} and CX {CX} loaded successfully.")
 
     if df.empty:
-        return df
+        return used_up, df
 
     df = df.copy()
 
@@ -208,7 +230,7 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
     df = df[alpha_len >= 2]
 
     if df.empty:
-        return df
+        return used_up, df
 
     # --- 2. Quick win: href + rank 'A' ---
 
@@ -224,7 +246,7 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
             lambda row: derive_list_key(row["path_sig"]), axis=1
         )
         out["google_confirmed"] = False  # not checked in this fast path
-        return out[["clean_text", "type", "card_id", "list_key", "rank", "google_confirmed"]]
+        return used_up, out[["clean_text", "type", "card_id", "list_key", "rank", "google_confirmed"]]
 
     # --- 3. Build path signatures and list keys for all candidates ---
 
@@ -239,49 +261,58 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
         df,
         path_col="path_sig",
         name_col="clean_text",
+        type_col="type",
+        id_col="card_id",
         min_group_size=3
     )
 
-    #removing duplicates within groups
-    seen = set()
-    new_groups = dict()
-    for k, names in groups.items():
-        names = frozenset(names) # make hashable
-        if names not in seen:
-            new_groups[k] = names
-            seen.add(names)
-    groups = new_groups
-    
-    for names in groups.values():
-        if names:
-            print(f"Homogeneous group found with names: {names}")
+    for group in groups.values():
+        if group:
+            print(f"Homogeneous group found with names: {group['names']}")
 
 
     # --- 4. Google-based confirmation for candidates: changed to searching groups. Only check first 3 in group to confirm.  ---
 
     final_portcos = pd.DataFrame()
-    for i,group in enumerate(groups.values()):
+    href_rich_groups = [g for g in groups.values() if g.get("all_cards_have_href")]
+
+    # If exactly one group has corresponding hrefs, accept it immediately.
+    if len(href_rich_groups) == 1:
+        only_group = href_rich_groups[0]
+        print("Only one group has corresponding hrefs; accepting it without Google confirmation.")
+        final_portcos = df[df["clean_text"].isin(only_group["names"])].copy()
+        return used_up, final_portcos
+
+    # If multiple groups have hrefs, only consider those for Google confirmation; otherwise, consider all groups.
+    candidate_groups = href_rich_groups if href_rich_groups else list(groups.values())
+
+    for i, group in enumerate(candidate_groups):
+        group_names = list(group["names"])
         candidates = False
-        for name in list(group)[:3]:  # check up to first 3 candidates in the group
-            #idea: if any of the first 3 candidates in the group is google confirmed, we accept the whole group, as they are structurally similar
-            print(f"Google confirming candidate name '{name}' in group {i}...")
-            confirmed = google_confirm_name(name, pe_full_name, google_search_fn)
-            if confirmed:
-                candidates = True
+        if group["cross_type_matching"]:
+            print(f"Group {i} has cross-type matching; skipping Google confirmation.")
+            candidates = True
+        else:
+            for name in group_names[:3]:  # check up to first 3 candidates in the group
+                #idea: if any of the first 3 candidates in the group is google confirmed, we accept the whole group, as they are structurally similar
+                print(f"Google confirming candidate name '{name}' in group {i}...")
+                used_up, confirmed = google_confirm_name(name, _norm(pe_full_name), google_search_fn, used_up)
+                if confirmed:
+                    candidates = True
         
         if candidates:
             print(f"Group {group} confirmed by Google search.")
-            final_portcos = df[df["clean_text"].isin(group)].copy()
+            final_portcos = df[df["clean_text"].isin(group_names)].copy()
             
             break  # stop at first confirmed group
         else:
             print(f"Group {group} NOT confirmed by Google search.")
 
 
-    # --- 5. Group by structural pattern (list_key) to spread confidence ---
+ 
 
     
 
-    #mark all groups with size >=3 as g
+    
 
-    return final_portcos
+    return used_up, final_portcos

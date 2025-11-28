@@ -45,6 +45,7 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
         'portco_name': str, 'step3_method_used': int, 'class_confidence_used': int, 'extraction_confidence': int (for attempts 1,2 of step 3, 'extraction_method' will be the int of the attempt number).
 
     """
+    used_up = False  # Track if Google API quota is used up
     print("Starting PortCo Extraction for PE firms...")
     results = pd.DataFrame()
     current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -76,8 +77,24 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
             portfolio_website = step1_attempt_3(pe_firm)
         if not portfolio_website:
             print("Step 1 Attempt 3 failed to find any portfolio subpage.")
-            print("All Step 1 attempts failed. Trying other PortCo Extractions..")
-            print("NOTE: Due to the high flexibility of Step 1 Attempt 3 (Google Search just grabs the top result), it is likely that an error occurred within the implementation.")
+            #try to use cached data if available
+            try:
+                web_df = pd.read_csv("output/PortCo_Website_Example.csv")
+                cached_row = web_df[web_df['pe_firm_name'] == pe_firm['FullName']]
+                if not cached_row.empty:
+                    print("Using cached portfolio website data from output/PortCo_Website_Example.csv")
+                    portfolio_website = {
+                        "pe_firm_name": pe_firm["FullName"],
+                        "step1_method": "Cached",
+                        "website_found": cached_row.iloc[0]['website_found'],
+                        "website_confidence": cached_row.iloc[0]['website_confidence']
+                    }
+            except Exception as e:
+                print("No cached portfolio website data available.")
+
+
+                print("All Step 1 attempts failed. Trying other PortCo Extractions..")
+                print("NOTE: Due to the high flexibility of Step 1 Attempt 3 (Google Search just grabs the top result), it is likely that an error occurred within the implementation.")
             
                 
         #######
@@ -148,9 +165,12 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
                     # name_hint value, and other heuristics to determine the final portCo names. Note that a key component of this is that all true portCo names from a given site should have identical surrounding html structure.
                     # Thus, we can group all texts by their html structure (card), and for a given PE firm, choose which collection cards (or one card) contains the portCo names. It is very unlikely that 
                     # two cards of different structures will combine to form the full set of portCo names for a given PE firm, as the listing of portCos is usually uniform in structure.
+                    
+                    #currently no difference between if A1portcos exist or not, but in future we can use A1portcos to help with scoring if they exist.
+                    #reason: no A1 portcos found.
                     if A1portcos:
                         print("Now proceeding to scoring text candidates with A1 portCos available...")
-                        nameResults = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search, A1portcos)
+                        used_up, nameResults = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search, used_up)
                         if not nameResults.empty: #checking if not empty
                             print(f"Results after scoring with A1 portCos: {nameResults.head()}")
                             nameResults["PE_Firm_Name"] = pe_firm['FullName']
@@ -160,7 +180,7 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
                             print("No portCos selected after scoring with A1 portCos.")
                     else:
                         print("Now proceeding to scoring text candidates without A1 portCos...") 
-                        nameResults = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search)
+                        used_up, nameResults = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search, used_up)
                         if not nameResults.empty: #checking if not empty
                             print(f"Results after scoring with A1 portCos: {nameResults.head()}")
                             nameResults["PE_Firm_Name"] = pe_firm['FullName']

@@ -11,7 +11,7 @@ from urllib.parse import urljoin
 import time
 
 #helper function to perform Google Custom Search with retries on 429 errors
-def google_search(params, pe_firm, retries=5, backoff=2, return_items=False):
+def google_search(params, pe_firm, used_up = False, retries=5, backoff=2, return_items=False):
     """
     Helper function to perform Google Custom Search with retries on 429 errors.
     Returns same dict as step1_attempt_3 if successful, else returns empty list.
@@ -19,7 +19,8 @@ def google_search(params, pe_firm, retries=5, backoff=2, return_items=False):
     Will return a list of all valid results if successful.
     """
     websites = []
-    
+    if used_up:
+        return True,None  # return empty list if API quota is used up
     attempt = 0
     while True:
         try:
@@ -32,7 +33,7 @@ def google_search(params, pe_firm, retries=5, backoff=2, return_items=False):
                 attempt += 1
                 if attempt > retries:
                     print("Exceeded maximum retries for Google Custom Search API due to 429 errors.")
-                    return None  # return empty list on exceeding retries
+                    return True, None  # return empty list on exceeding retries
                 
                 time.sleep(backoff ** attempt)
                 continue
@@ -48,14 +49,14 @@ def google_search(params, pe_firm, retries=5, backoff=2, return_items=False):
             print("-------------------------------------------------")
             if response.status_code != 200:
                 print(f"Google Custom Search API error: {results.get('error', {}).get('message', 'Unknown error')}")
-                return None  # return empty list on other errors
+                return used_up, None  # return empty list on other errors
             else:
                 print(f"Google Custom Search API returned results successfully.")
             items = results.get("items", []) or []
             if not items:
                 print(f"No search results found from Google Custom Search API, for search: {params['q']}")
             if return_items:
-                return items
+                return used_up,items
             #process results and extract URLs
             for item in items:
                 top_result_url = item.get("link")
@@ -71,13 +72,13 @@ def google_search(params, pe_firm, retries=5, backoff=2, return_items=False):
                 pass
             else:
                 print(f"RequestException occurred while accessing Google Custom Search API: {e}. Exceeded allowed retries.")
-                return None  # exit gracefully on exception
+                return True, None  # exit gracefully on exception
     
     if websites:
-        return websites
+        return used_up, websites
     else:
         print(f"No search results found from Google Custom Search API, for search: {params['q']}")
-    return None
+    return used_up, None
 
 
 #commonly required function to check if a page is accessible
