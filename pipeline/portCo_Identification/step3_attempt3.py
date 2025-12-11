@@ -40,7 +40,7 @@ As a result, we will extract the substring of the 'src' values that:
     (otherwise for C-E from 2.1, E, due to the fact that 'src' values may contain many non-portCo images):
 
 
-Additionally, we will check the portCo name with a Google API, by searhing 'Who invested in {src_value}', and recording the top result's snippet text. If the snippet text contains the name of the PE firm, we will label that portCo as invested by the PE firm.
+
 
 Example for 3.3 (Adamantem Capital):
 

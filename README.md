@@ -53,7 +53,7 @@ output/PortCoName_Results_Cleaned_Example_2.csv
 
 
 ## Methodology
-(Note: Methodology for portCo name identification yet to be completed, however the code is complete).
+
 ### Phase 1: Australian PE firms identification
 
 #### Aim
@@ -212,3 +212,84 @@ Have check_relevant_pages() return a list of the potential founding years that w
     - footer|header|nav|menu|cookie|subscribe|social|share|breadcrumb|search|hero|banner|modal|popup
 
 
+##### Step 3 Attempt 1: Collate further information on all the classes found in step 2 (see below) and collate the JSON-LD scripts from the portfolio subpage:
+
+    
+- INFO TUPLE ON CLASSES FOUND IN STEP 2: (element, class_string, signals_dict)
+    Where element is a BeautifulSoup tag object, 
+    class_string is the joined string of class names, and signals_dict contains extracted signals like link domain, image domain, and name hint.
+
+##### Additionally, filter out any JSON-LD scripts that have properties indicating they do not contain the list of PortCos, i.e. contain Blacklist words and not Whitelist words (see sets of both below), doesn't contain a name attribute or if so, contains the PE firm as the name attribute:
+
+- WHITELIST: {"Organization","Corporation","LocalBusiness","Brand","Company"}
+- BLACKLIST: {"WebPage","WebSite","BreadcrumbList","Article","NewsArticle","Person","FAQPage","HowTo","BlogPosting"}
+
+
+##### Then, for each JSON-LD script, using the info tuples above for each selected class in step 2, match the JSON-LD script to the most likely class it corresponds to. 
+If the class is found, using the rank of the class, the similarities between the JSON-LD script and the class, as well as the presence of WHITELIST words, score the JSON-LD scripts and determine if any can be classified as the list of PortCos. If the class isn't found, but the JSON-LD script is org-like, add to candidates but with low confidence.
+
+
+
+##### Step 3 Attempt 2:  Extracting portCo names (a inner text, img alt text, figcaption> text):
+Within the chosen html classes from 2.1, we will search for any a tags, and extract the inner text of those a tags as portCo names. Then, search for any img tags, and extract the 'alt' text of those img tags as portCo names. Then, search for any figcaption tags, and extract the inner text of those figcaption tags as portCo names. If multiple portCos are found, we will return a list of dicts, where each dict corresponds to a portCo found.
+
+Rankings of PortCo name candidates:
+- A: if only a tags and below are found, within a class that is of rank A to B from 2.1.
+- B: if only img tags and below are found, within a class that is of rank A to B from 2.1.
+- C: if only  figcaption tags and below are found, within a class that is of rank A to B from 2.1.
+- D: if only a tags and below are found, if lower ranks from 2.1 (C to E).
+- E: if only img tags and below are found,  if lower ranks from 2.1 (C to E).
+- F: if only figcaption tags and below are found, if lower ranks from 2.1 (C to E).
+
+###### (FOLLOWING ATTEMPTS ONLY CAN OCCUR IF ATTEMPT 2 PRODUCED A NON-EMPTY LIST)
+
+##### Step 3 Attempt 3: Extracting portCo names ('src' values):
+Firstly, group text candidates from attempt 2 by the card (soup tag object) they were derived from. (This will allow us to boost confidence for high confidence tags in the same card)
+
+Then, if an 'src' link is found adjacent to an attempt 2 text candidate, extract the text from where the name of the portCo is most likely to be:
+
+- the first non-numerical component after '/uploads' (only alphabetic), and bounded to the right by either a hyphen, underscore, or file extension (., jpg, png, svg, etc).
+
+Finally, append the extracted 'src' text to the set of srcTexts for that given card.
+
+##### Step 3 Attempt 4: Extracting portCo names (href links):
+If a 'href' link is found adjacent to an attempt 3 text candidate, split the link by the "/" characters, and extract the text element following:
+
+- {"investments", "portfolio", "companies", "investment-portfolio"} (consider A-rank extraction)
+- {"company", "funds"} (considered B-rank extraction)
+
+If none of these words are found within the text elements in the href, extract the last text element in the href list. (C-rank extraction)
+
+Append the final candidate to the set of hrefTexts for that given card.
+
+
+##### AT THIS STAGE, ALL THE PORTCO NAME CANDIDATES (Text, Src, Href, Image) FOR A GIVEN PE FIRM ARE COLLATED INTO A CSV AND EXPORTED TO: output/unclean_portco_names/pe_firm['FullName'].csv
+
+##### REFINEMENT OF PORTCO NAME CANDIDATES: Text Scoring:
+
+(Initially, move all candidates from the csv into a Pandas DataFrame object for more efficient filtration)
+
+1) Cleaning and basic filtering: 
+- drop duplicate candidates (only differ due to formatting)
+- drop text candidates that match any texts in JUNK_STRINGS:
+JUNK_STRINGS = {
+    "portfolio", "for investors", "contact", "contact us", "",
+    "text hover", "for", "about us", "logo", "read more", "team",
+    "investments", "news", "placeholder", "strategies", "sustainability",
+    "terms of use", "privacy policy", "growth", "private equity",
+    "our people", "our board", "our senior team", "our team",
+    "advisory", "news press", "view profile", " ", "plugins", "basic", "assets", "app", "themes", "images"
+    }
+- drop text candidates that match an email-like structure (non-trivially contains @ symbol)
+- drop candidates with too few alphabetic characters
+- remove excess whitespace from text candidates
+
+2) Immediate high-confidence collection: rank-A href candidates:
+- If there exists rank-A href candidates, accept them all as the portCo names
+
+3) PortCo list assumption: within any Portfolio subpage, portfolios will be listed homogenously.
+- Group candidates together with the same html path
+- If 3 or more of the candidates within a given group satisfy the following google search confirmation, accept the whole group as the list of PortCo names:
+    - Use the query "private equity firm {pe_name} invested in company {name}" where name is the text candidate. If the search results the name and the pe_name appearing together in the snippet of at least 3 websites, accept the group.
+
+##### AT THIS STAGE, ALL THE PORTCO NAME CANDIDATES THAT PASSED THE REFINEMENT STAGE FOR A GIVEN PE FIRM ARE COLLATED INTO A CSV AND EXPORTED TO: output/portc_name_results_cleaned_.csv

@@ -232,7 +232,7 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
     if df.empty:
         return used_up, df
 
-    # --- 2. Quick win: href + rank 'A' ---
+    # --- 2. href + rank 'A' ---
 
     href_A = df[(df["type"] == "href") & (df["rank"] == "A")]
     href_A_names = href_A["clean_text"].dropna().unique()

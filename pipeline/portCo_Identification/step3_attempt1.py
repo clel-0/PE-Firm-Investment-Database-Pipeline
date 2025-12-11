@@ -225,7 +225,7 @@ def extract_portcos_from_jsonld(html, page_url, card_class_tokens, pe_firm_name,
     4) Use the _iter_jsonld_nodes helper function (which yields JSON-LD nodes from the soup) to iterate over each JSON-LD node found in the soup:
         a) Check if the node's @type intersects with the TYPE_BLACKLIST; if so, skip this node.
         b) Use the _extract_entity helper function to extract normalized fields from the JSON-LD node into a dict called ent.
-        c) Exclude entities that correspond to the PE firm itself, based on domain and name matching (using _name_matches).
+        c) Exclude entities that correspond to the PE firm itself, based on domain and name matching (using _name_matches). (THIS MAY NEED TO BE REMOVED AS IT IS TOO HARSH)
         d) Ensure the entity has at least a name; if not, skip it.
         e) Append a dict containing the extracted entity fields along with the originating script element and source kind to the entities list.
     5) Initialize an empty list called results to store the final matched portCo records.

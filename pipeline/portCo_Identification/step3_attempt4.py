@@ -30,11 +30,11 @@ __Step 3: Extracting portCo names (various methods)__:
 
 
 __Step 3 Attempt 4__: Extracting portCo names (href links):
-If 3.3 fails to find any portCos, we will scrape the chosen html classes for href links containing the following subsets of words. We will rank the subsets by reliability:
+Scrape the chosen html classes for href links containing the following subsets of words. We will rank the subsets by reliability:
     Rank:
     (A,B from 2.1): 
-    A: {'investments/', 'portfolio/', 'companies/' } (case insensitive)
-    B: {'company/', 'funds/'} (case insensitive)
+    A = {"investments", "portfolio", "companies", "investment-portfolio"}
+    B = {"company", "funds"}
     C: any href link.
     (otherwise for C-E from 2.1, E, due to the fact that href links may contain many non-portCo links)
 
