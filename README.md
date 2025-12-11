@@ -164,3 +164,51 @@ Have check_relevant_pages() return a list of the potential founding years that w
 8. *[Finding_Founded_Year(firms)][consensus_year()]* If within both step 6 and 7 an empty intersection is received, check if any method produces a non-empty list of possible founding years (Prioritising Reliable Methods). For the first method to return a non-empty list (in order of reliability), return the year as the minimum of the list.
 
 9. *[Finding_Founded_Year(firms)]* Complete steps 2 to 8 for each firm in firms (as previously stated in step 1), with each year being assigned to the value of the "Founded_Year" key within the firm's dictionary, in firms. Then return firms. 
+
+### Phase 2: PortCo identification
+
+#### Outline of Steps within Phase 2
+
+- Step 1: Find the portfolio subpage within the PE firm's website.
+(Exception: For Step 1 Attempt 2, we check if the firm has a PE subpage. This is because some of the PE firms that are listed with the AIC hold investments in fields other than PE, with PE just being one of the types of investments they have.)
+
+
+- Step 2: Extract ranked classes (which are attributes of Bs4 tag objects) from the html of the portfolio subpage.
+
+
+- Step 3: Find PortCo names within the portfolio subpage, checking both the JSON LD scripts and the classes found in step 2.
+
+
+##### Step 1 Attempt 1: Directly check if any of the following subpage patterns exist:
+
+    - firm["website"]+"/(portfolio|Portfolio|investments Investments|companies|Companies|funds|Funds)".
+
+    - firm["website"]+"/(holdings|Holdings|businesses|Businesses)"
+
+##### Step 1 Attempt 2: Directly check if any of the following subpage patterns exist:
+
+    - firm["website"]+"/(privateequity|private-equity|pe)" or firm["website"].split(".")[1] + ("privateequity"|"pe"|"investments"|"portfolio") + {".com",".com.au"} (case insensitive)
+
+##### Step 1 Attempt 3: Use a Google Custom Search API to search for the portfolio subpage, using the following siteSearch and query values:
+    
+    - siteSearch: pe_firm["Website"]
+    - q: (
+        "intitle:portfolio OR intitle:investments OR intitle:companies"
+            
+        "OR inurl:portfolio OR inurl:investments OR inurl:companies"
+        
+        "OR \"our companies\" OR \"portfolio companies\" OR porfolio OR investments"
+        )
+
+##### Step 2 Attempt 1: Collate the tag objects that contain the class attributes, and create a set of the distinct classes from that portfolio subpage. Furthermore, rank the classes on whether the following words are also found within the same Bs4 tag object:
+    
+    - A:[("portfolio", "card"), ("portfolio", "item"),
+        ("investment", "card"), ("investment", "item"),
+        ("investment", "box")], 
+    - B:[("portfolio",), ("investment",), ("company",)],
+    - C:[("item",), ("box",), ("card",), ("logo",)]
+
+    Additionally, any tag objects that contain any of the following words are not considered:
+    - footer|header|nav|menu|cookie|subscribe|social|share|breadcrumb|search|hero|banner|modal|popup
+
+

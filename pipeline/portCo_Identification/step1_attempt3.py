@@ -16,7 +16,9 @@ import time
 __Step 1 Attempt 3__:
 If that also fails, we will use the Google Custom Search API to search for the portfolio subpage, by searching for 
     Rank:
-    A: site:{firm['website']} (portfolio|investments)
+    A: siteSearch: pe_firm["Website"], q: (intitle:portfolio OR intitle:investments OR intitle:companies "
+            "OR inurl:portfolio OR inurl:investments OR inurl:companies"
+            "OR \"our companies\" OR \"portfolio companies\" OR porfolio OR investments)
 
     In order to accurately find the working portfolio subpage, we will first search for the above query with an expoenential backoff on 429 errors (Helper function: google_search),
     and then will ensure that the page is accessible by making a HEAD request and checking for a 200 status code (Helper function: check_page_accessible).

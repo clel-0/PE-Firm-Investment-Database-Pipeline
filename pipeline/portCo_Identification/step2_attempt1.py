@@ -25,13 +25,14 @@ def step2_attempt_1(portfolio_website: dict) -> dict[list[dict]]:
     Within the portfolio subpage html, record all the inner texts with the label "src", that are within a class
     with a name containing any of the following. We will rank subsets of words by how strongly they indicate the presence of portfolio companies:
         Rank:
-        A: {'Portfolio' and 'Card'}, {'Portfolio' and 'Item'}, {'Investment' and 'Card'}, {'Investment' and 'Item'}, {'Investment' and 'box'}, {'Investment' and 'box'} (case insensitive).
-        B: {'Portfolio'}, {'Investment'}, {'Company'} (case insensitive).
-        C: {'item'}, {'box'}, {'card'}, {'logo'} (case insensitive).
-        D: any class name, but with any of the words within A to C present in the inner text of the class.
-        E: any class name.
+        "A": [("portfolio", "card"), ("portfolio", "item"),
+          ("investment", "card"), ("investment", "item"),
+          ("investment", "box")],
+        "B": [("portfolio",), ("investment",), ("company",)],
+        "C": [("item",), ("box",), ("card",), ("logo",)]
+
         
-    Only ranks A to C will be considered, and D,E will only be used as a last resort if no portCos are found in A to C.
+
 
     
     Returns dict for each PE firm that contains:

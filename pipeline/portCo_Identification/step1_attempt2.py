@@ -14,7 +14,16 @@ import time
 
 def step1_attempt_2(pe_firm: dict) -> dict:
     """
-   Returns:
+    __Step 1 Attempt 2__: Accessing portfolio subpage (indirect):
+    Some PE firms are not only PE firms, but also have venture capital arms, or growth equity arms. As a result, there may exist no portfolio subpage on the main website.
+    In such cases, we will attempt to access the portfolio subpage from the PE firm's website, by entering the PE subpage of site, if available in
+    Rank: 
+        A: firm["website"]+"/(privateequity|private-equity|pe)" or firm["website"].split(".")[1] + ("privateequity"|"pe"|"investments"|"portfolio") + {".com",".com.au"} (case insensitive).
+        (NOTE: The above attempts are done more securely than what is displayed in the docs; see the actual code for implementation)
+        Then from the PE subpage, if found using privateequity|pe we will attempt to access the portfolio subpage using the same approach as in Step 1 Attempt 1
+        If found using investments|portfolio, we will assume that is the portfolio subpage.
+   
+    Returns:
         {
             'step1_method': 'Attempt 2',
             'website_found': str or None,
