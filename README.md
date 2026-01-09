@@ -13,6 +13,7 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 playwright install
 ```
+
 Currently, only the seed_aic.py is fully operational and accurate, with the portCo_Identification pipeline being fully operational but not completely accurate. founded_year.py is not yet being used to add founding years to PE_firms.csv due to the appearance of 429 errors in response to GoogleAPI requests, that still need to be resolved. 
 
 To run seed_aic.py, enter the following within the terminal:
@@ -147,9 +148,9 @@ Finding_Founded_Year(firms): Extracts the founded year for each firm from its we
 
 2. *[Finding_Founded_Year(firms)][jsonld_extraction()]* Search the JSON-LD scripts within the website, and return any value that contains the correct regex pattern of a founding year and has key containing the string "found" within it. Note: JSON-LD scripts are intentionally included for search engines to parse, increasing their reliability. On the other hand, other script may not contain reliable data.
 
-3. *[Finding_Founded_Year(firms)][check_relevant_pages()]* Check possible pages within the site that could contain relevant information regarding the founding date of the firm ("about","about-us","our-story","history","company","who-we-are"). Namely, check the "main", "body" and "footer section of the pages, and within these locators check sub-locators that tend to hold the HTML code for text that is visible on the website: (p,li,span,div,a,section,article,header,h1,h2,h3,h4,h5,h6). Within these sub-locators, parse the inner-text (i.e. the final layer of HTML code) through the function check_Anchors(text):
+3. *[Finding_Founded_Year(firms)][check_relevant_pages()]* Check possible pages within the site that could contain relevant information regarding the founding date of the firm ("about","about-us","our-story","history","company","who-we-are"). Namely, check the "main", "body" and "footer" section of the pages, and within these locators check sub-locators that tend to hold the HTML code for text that is visible on the website: (p,li,span,div,a,section,article,header,h1,h2,h3,h4,h5,h6). Within these sub-locators, parse the inner-text (i.e. the final layer of HTML code) through the function check_Anchors(text):
 
-- *[Finding_Founded_Year(firms)][check_Anchors(text)]* check_Anchors(text) returns the 4-digit numbers that match the correct regex patter of a founding year, if Anchors such as {founded, since, est., established,incorporated, dating, founding, ©}, are found within the same text. This increases the likehood that the context of the text includes the founding date, increasing the validity of the 4-digit numbers being considered as the firm's founding year.
+- *[Finding_Founded_Year(firms)][check_Anchors(text)]* check_Anchors(text) returns the 4-digit numbers that match the correct regex pattern of a founding year, if Anchors such as {founded, since, est., established,incorporated, dating, founding, ©}, are found within the same text. This increases the likehood that the context of the text includes the founding date, increasing the validity of the 4-digit numbers being considered as the firm's founding year.
 
 Have check_relevant_pages() return a list of the potential founding years that were found by check_Anchors(text) within this step. 
 
@@ -167,7 +168,7 @@ Have check_relevant_pages() return a list of the potential founding years that w
 
 ### Phase 2: PortCo identification
 
-#### Outline of Steps within Phase 2
+#### Outline of Steps within Phase 2 (Functional Trace Notation not yet added)
 
 - Step 1: Find the portfolio subpage within the PE firm's website.
 (Exception: For Step 1 Attempt 2, we check if the firm has a PE subpage. This is because some of the PE firms that are listed with the AIC hold investments in fields other than PE, with PE just being one of the types of investments they have.)
@@ -212,7 +213,7 @@ Have check_relevant_pages() return a list of the potential founding years that w
     - footer|header|nav|menu|cookie|subscribe|social|share|breadcrumb|search|hero|banner|modal|popup
 
 
-##### Step 3 Attempt 1: Collate further information on all the classes found in step 2 (see below) and collate the JSON-LD scripts from the portfolio subpage:
+##### Step 3 Attempt 1: Collate further information on all the tag objects containing the classes found in step 2 (see below) and collate the JSON-LD scripts from the portfolio subpage:
 
     
 - INFO TUPLE ON CLASSES FOUND IN STEP 2: (element, class_string, signals_dict)
@@ -236,7 +237,7 @@ Within the chosen html classes from 2.1, we will search for any a tags, and extr
 Rankings of PortCo name candidates:
 - A: if only a tags and below are found, within a class that is of rank A to B from 2.1.
 - B: if only img tags and below are found, within a class that is of rank A to B from 2.1.
-- C: if only  figcaption tags and below are found, within a class that is of rank A to B from 2.1.
+- C: if only figcaption tags and below are found, within a class that is of rank A to B from 2.1.
 - D: if only a tags and below are found, if lower ranks from 2.1 (C to E).
 - E: if only img tags and below are found,  if lower ranks from 2.1 (C to E).
 - F: if only figcaption tags and below are found, if lower ranks from 2.1 (C to E).
@@ -253,7 +254,7 @@ Then, if an 'src' link is found adjacent to an attempt 2 text candidate, extract
 Finally, append the extracted 'src' text to the set of srcTexts for that given card.
 
 ##### Step 3 Attempt 4: Extracting portCo names (href links):
-If a 'href' link is found adjacent to an attempt 3 text candidate, split the link by the "/" characters, and extract the text element following:
+If a 'href' link is found adjacent to an attempt 3 text candidate, split the link by the "/" characters, and extract the text element that follows:
 
 - {"investments", "portfolio", "companies", "investment-portfolio"} (consider A-rank extraction)
 - {"company", "funds"} (considered B-rank extraction)
@@ -287,9 +288,12 @@ JUNK_STRINGS = {
 2) Immediate high-confidence collection: rank-A href candidates:
 - If there exists rank-A href candidates, accept them all as the portCo names
 
-3) PortCo list assumption: within any Portfolio subpage, portfolios will be listed homogenously.
+3) (NEW) Immediate high-confidence collection: "logo" substring:
+- If the word "logo" exists in the first 3 strings, accept them all as portCo names (given the cleaning that has already occurred, remaining groups with the word logo indicate reference to portfolio logo imagery with high confidence)
+
+4) PortCo list assumption: within any Portfolio subpage, portfolios will be listed homogenously.
 - Group candidates together with the same html path
 - If 3 or more of the candidates within a given group satisfy the following google search confirmation, accept the whole group as the list of PortCo names:
     - Use the query "private equity firm {pe_name} invested in company {name}" where name is the text candidate. If the search results the name and the pe_name appearing together in the snippet of at least 3 websites, accept the group.
 
-##### AT THIS STAGE, ALL THE PORTCO NAME CANDIDATES THAT PASSED THE REFINEMENT STAGE FOR A GIVEN PE FIRM ARE COLLATED INTO A CSV AND EXPORTED TO: output/portc_name_results_cleaned_.csv
+##### AT THIS STAGE, ALL THE PORTCO NAME CANDIDATES THAT PASSED THE REFINEMENT STAGE FOR A GIVEN PE FIRM ARE COLLATED INTO A CSV AND EXPORTED TO: output/portco_name_results_cleaned_.csv

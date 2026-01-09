@@ -30,6 +30,42 @@ __Step 3: Extracting portCo names (various methods)__:
 
 """
 
+#helper function to extract inner text
+
+def inner_text(el, tag:str, link_type:str, provenance:str):
+    texts = []
+    for t in el.find_all(tag):
+        text = inner_text_logic(t, link_type, provenance)
+    if text:
+            #if not t.get(link_type):
+                
+                #print("__________")
+                #print(f"Warning: <{t.name}> tag with no {link_type} found in element with classes: {' '.join(cls)}")
+            texts.append({"text": _norm(text), "raw_text": text, "url": t.get(link_type), "provenance": provenance, "tag_name": t.name, "link_attr": link_type})
+            #print("__________")
+            #print(f"Found anchor text: {text} in element with classes: {' '.join(cls)}")
+
+    return texts
+
+
+#need this for the GNN extraction
+def inner_text_logic(t:str, link_type:str, provenance:str):
+    if t.name == "a":   
+        text = t.get_text(strip=True)
+        #print(f"text found in <a>: {text}")
+    if t.name == "img":
+        text = t.get("alt", "").strip()
+        #print(f"text found in <img>: {text}")
+    if t.name == "figcaption":
+        text = t.get_text(strip=True)
+        #print(f"text found in <figcaption>: {text}")
+        
+    if text:
+        return text
+    return None
+        
+    
+
 
 def _collect_cards(soup, card_class_tokens, attempt_num=1):
     """
@@ -117,47 +153,20 @@ def _collect_cards(soup, card_class_tokens, attempt_num=1):
             elif attempt_num == 2:
                 # full detail extraction for attempt 2
 
-                
-
-                #helper function to extract inner text
-
-                def inner_text(tag:str, link_type:str, provenance:str):
-                    texts = []
-                    for t in el.find_all(tag):
-                        if t.name == "a":   
-                            text = t.get_text(strip=True)
-                            #print(f"text found in <a>: {text}")
-                        if t.name == "img":
-                            text = t.get("alt", "").strip()
-                            #print(f"text found in <img>: {text}")
-                        if t.name == "figcaption":
-                            text = t.get_text(strip=True)
-                            #print(f"text found in <figcaption>: {text}")
-                        
-                        if text:
-                            #if not t.get(link_type):
-                                
-                                #print("__________")
-                                #print(f"Warning: <{t.name}> tag with no {link_type} found in element with classes: {' '.join(cls)}")
-                            texts.append({"text": _norm(text), "raw_text": text, "url": t.get(link_type), "provenance": provenance, "tag_name": t.name, "link_attr": link_type})
-                            #print("__________")
-                            #print(f"Found anchor text: {text} in element with classes: {' '.join(cls)}")
-                    return texts
-
                 #____1____#
                 # Search for any <a> tags, and extract the inner text of those <a> tags as portCo names.
                 ###########
-                inner_texts = inner_text("a", "href", "a_inner_text")
+                inner_texts = inner_text(el, "a", "href", "a_inner_text")
 
                 #____2____#
                 # Search for any <img> tags, and extract the 'alt' text of those <img> tags as portCo names.
                 ###########
-                inner_texts.extend(inner_text("img", "src", "img_alt_text"))
+                inner_texts.extend(inner_text(el, "img", "src", "img_alt_text"))
                 
                 #____3____#
                 # Search for any <figcaption> tags, and extract the inner text of those <figcaption> tags as portCo names.
                 ###########
-                inner_texts.extend(inner_text("figcaption", "src", "figcaption_text"))
+                inner_texts.extend(inner_text(el, "figcaption", "src", "figcaption_text"))
 
 
 

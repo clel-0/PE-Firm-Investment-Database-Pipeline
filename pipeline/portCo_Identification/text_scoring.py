@@ -293,12 +293,23 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
             print(f"Group {i} has cross-type matching; skipping Google confirmation.")
             candidates = True
         else:
+
+            logoCheck = True
             for name in group_names[:3]:  # check up to first 3 candidates in the group
-                #idea: if any of the first 3 candidates in the group is google confirmed, we accept the whole group, as they are structurally similar
-                print(f"Google confirming candidate name '{name}' in group {i}...")
-                used_up, confirmed = google_confirm_name(name, _norm(pe_full_name), google_search_fn, used_up)
-                if confirmed:
-                    candidates = True
+                #realisation: given the cleaning that has already occurred, we can also allow a match on groups that contain the word "logo" within them
+                if "logo" not in name.lower():
+                    logoCheck = False
+                
+            if logoCheck:
+                print(f"Group {i} consists of logo-only candidates; skipping Google confirmation.")
+                candidates = True
+            else:
+                for name in group_names[:3]:  # check up to first 3 candidates in the group
+                    #idea: if any of the first 3 candidates in the group is google confirmed, we accept the whole group, as they are structurally similar
+                    print(f"Google confirming candidate name '{name}' in group {i}...")
+                    used_up, confirmed = google_confirm_name(name, _norm(pe_full_name), google_search_fn, used_up)
+                    if confirmed:
+                        candidates = True
         
         if candidates:
             print(f"Group {group} confirmed by Google search.")
