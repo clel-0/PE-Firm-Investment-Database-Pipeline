@@ -7,7 +7,8 @@ from sentence_transformers import SentenceTransformer
 from step3_attempt3 import name_from_src
 from step3_attempt4 import name_from_href
 from step3_helperFunctions import inner_text_logic, _norm
-
+from text_scoring import element_path_signature
+#will be used to assign groupIDs to nodes
 
 """
 1) Convert bs4 html to tree with tags as nodes, and one-way edges from parent to child.
@@ -74,7 +75,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 #important step: clean up how previous nodes are stored, even in previous steps, to ensure that the bs4 nodes are stored properly.
 
 #1) 
-def convert_html_to_tree(soup: B):
+def convert_html_to_tree(soup: B, groupIDs: dict) -> dict:
     """
     Convert bs4 html to tree with tags as nodes, and one-way edges from parent to child.
     For each node, compute the 351 dim vector embedding as per the description above.
@@ -117,9 +118,16 @@ def convert_html_to_tree(soup: B):
             url_text = ""
             url_type = -1 #represents no url
 
+        #groupID 
+        sig = element_path_signature(bs4_element)
+        sig = tuple(sig)
+
+        groupIDs = groupIDs.get(sig, None)
+
+
         node = {
             'children': [],
-            'groupID': None, #NEED TO SET LATER BASED ON STEP 2 GROUPINGS
+            'groupIDs': groupIDs,
             'tagName': bs4_element.name if bs4_element.name else "",
             'class': class_raw,
             'UrlText': url_text,
@@ -299,14 +307,15 @@ def GNN_process(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c
 
 
 #4)
+#note: each leaf may belong to multiple groups
 def collate_leafnodes_by_group(headList):
     group_to_leafnodes = {}
     for leaf in headList:
-        group_id = leaf['groupID']
-        if group_id not in group_to_leafnodes:
-            group_to_leafnodes[group_id] = []
-        
-        group_to_leafnodes[group_id].append(leaf)
+        group_ids = leaf['groupIDs']
+        for group_id in group_ids:
+            if group_id not in group_to_leafnodes:
+                group_to_leafnodes[group_id] = []
+            group_to_leafnodes[group_id].append(leaf)
             
     return group_to_leafnodes
 
@@ -355,12 +364,12 @@ def select_group(group_score, group_to_leafnodes):
 
 
 
-def overall_GNN(soup: B, W_class, b_class, W_text, b_text, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci, W_g, b_g) -> list:
+def overall_GNN(soup: B, groupIDs: dict, W_class, b_class, W_text, b_text, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci, W_g, b_g) -> list:
     """
     Overall GNN process to extract portCo names from HTML soup.
     """
     #1) Convert HTML to tree
-    tree_head = convert_html_to_tree(soup)
+    tree_head = convert_html_to_tree(soup, groupIDs)
 
     #2) Convert nodes to vectors
     def traverse_and_vectorise(node):

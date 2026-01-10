@@ -257,7 +257,7 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
 
     # --- Group by structural patterns to find homogeneous lists ---
 
-    groups = group_homogeneous_lists_df(
+    groups, groupIDs = group_homogeneous_lists_df(
         df,
         path_col="path_sig",
         name_col="clean_text",
@@ -326,4 +326,4 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
 
     
 
-    return used_up, final_portcos
+    return used_up, final_portcos, groupIDs

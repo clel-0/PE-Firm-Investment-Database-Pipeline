@@ -2,6 +2,8 @@ from collections import defaultdict
 import math
 import pandas as pd
 
+
+#task: rewrite this function to prioritise near-identical path signatures that differ only in type (href v/s text), and by at most one segment.
 def group_homogeneous_lists_df(df: pd.DataFrame,
                                path_col: str = "path_sig",
                                name_col: str = "name",
@@ -32,9 +34,14 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
     dict[tuple[str, ...], dict]
         Key: masked path signature (one segment replaced by 'x').
         Value: metadata dict with keys: names, card_ids, type, cross_type_matching, all_cards_have_href.
+
+    dict: path sig -> groupID
+   
+    (for assigning group IDs back to cards in GNN processing)
     """
     groups = defaultdict(
         lambda: {
+            "sig": set(),
             "names": set(),
             "card_ids": set(),
             "type": None,
@@ -42,6 +49,9 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
             "all_cards_have_href": False,
         }
     )
+
+    groupIDs = {}  # path sig -> groupID
+
 
     # Precompute which card_ids already have href candidates or href tags in the card soup
     href_card_ids = set(df.loc[df[type_col] == "href", id_col])
@@ -63,6 +73,7 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
 
     # Pull the relevant columns as raw values
     # (faster and avoids issues with attribute-style access)
+
     for sig, name, typ, cardid in df[[path_col, name_col, type_col, id_col]].itertuples(index=False):
         # Basic sanity checks
         if sig is None or (isinstance(sig, float) and math.isnan(sig)):
@@ -73,8 +84,10 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
         # Ensure the signature is a tuple (hashable, stable)
         sig = tuple(sig)
         L = len(sig)
+
         if L == 0:
             continue
+
 
         # For each position, create a masked key
         for k in range(L):
@@ -87,6 +100,7 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
             groups[key]["names"].add(name)
             groups[key]["card_ids"].add(cardid)
             groups[key]["type"] = typ
+            groups[key]["sig"].add(sig) #store the original sigs too for reference
 
     # Optionally filter groups to only those with enough members
     if min_group_size is not None and min_group_size > 1:
@@ -115,11 +129,16 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
                     )
     
     
-        for group in groups.values():
+        for i,group in enumerate(groups.values()):
             if group:
                 print(f"Homogeneous group found with names and card_ids: {group}")
+                #assign list of groupIDs to each original sig in the group
+                for sig in group["sig"]:
+                    if sig not in groupIDs:
+                        groupIDs[sig] = set() #making a set to avoid duplicates
+                    groupIDs[sig].add(i)
 
-    return groups
+    return groups, groupIDs
 
 
 #NEW FUNCION: AIM: check if there is a parallel group of same length and same respective card_ids, but different type (href v/s text)
