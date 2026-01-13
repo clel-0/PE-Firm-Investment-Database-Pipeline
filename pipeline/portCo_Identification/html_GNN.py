@@ -2,6 +2,8 @@ import numpy as np
 from bs4 import BeautifulSoup as B
 from bs4 import Tag
 from sentence_transformers import SentenceTransformer
+import torch
+import torch.nn.functional as F
 
 
 from step3_attempt3 import name_from_src
@@ -87,7 +89,7 @@ def convert_html_to_tree(soup: B, groupIDs: dict) -> dict:
     {
         'children': list of child nodes (same structure),
         'tagID': int,
-        'groupID': int,
+        'groupIDs': list,
         'tagName': str,
         'class': str,
         'UrlText': str,
@@ -122,12 +124,12 @@ def convert_html_to_tree(soup: B, groupIDs: dict) -> dict:
         sig = element_path_signature(bs4_element)
         sig = tuple(sig)
 
-        groupIDs = groupIDs.get(sig, None)
+        sig_groups = groupIDs.get(sig, [])
 
 
         node = {
             'children': [],
-            'groupIDs': groupIDs,
+            'groupIDs': sig_groups,
             'tagName': bs4_element.name if bs4_element.name else "",
             'class': class_raw,
             'UrlText': url_text,
@@ -179,7 +181,7 @@ def convert_html_to_tree(soup: B, groupIDs: dict) -> dict:
 
 
 #2)
-def convert_node_to_vector(node, W_class, b_class, W_text, b_text) -> np.ndarray:
+def convert_node_to_vector(node, W_class, b_class, W_text, b_text) -> torch.Tensor:
     """
     For a given node from convert_html_to_tree, compute the 351 dim vector embedding as per the description above:
 
@@ -197,11 +199,14 @@ def convert_node_to_vector(node, W_class, b_class, W_text, b_text) -> np.ndarray
     InnerText_emb = model.encode(node['InnerText'] if node['InnerText'] else "", convert_to_numpy=True)
     class_emb_raw = model.encode(node['class'] if node['class'] else "", convert_to_numpy=True)
 
+    b_text = b_text.reshape(-1, 1)  # Convert bias to column vector
     #projecting text embeddings
-    for emb in [tagName_emb, UrlText_emb, InnerText_emb]:
+    def embed_and_project(emb):
         emb = emb.reshape(-1, 1)  # Convert to column vector: in .reshape(-1,1): -1 means to infer the correct number of rows, and 1 means 1 column, resulting in a column vector, regardless of original shape.
-        b_text = b_text.reshape(-1, 1)  # Convert bias to column vector
-        emb = W_text @ emb + b_text 
+        emb = W_text @ emb + b_text
+        return emb 
+
+    tagName_emb, UrlText_emb, InnerText_emb = embed_and_project(tagName_emb), embed_and_project(UrlText_emb), embed_and_project(InnerText_emb)
 
     #UrlType embedding
     if node['UrlType'] == -1:
@@ -218,7 +223,7 @@ def convert_node_to_vector(node, W_class, b_class, W_text, b_text) -> np.ndarray
 
 
     #concatenate all embeddings
-    final_vector = np.concatenate([
+    vector = np.concatenate([
         tagName_emb.flatten(), 
         class_emb.flatten(),
         UrlText_emb.flatten(),
@@ -226,34 +231,21 @@ def convert_node_to_vector(node, W_class, b_class, W_text, b_text) -> np.ndarray
         UrlType_emb.flatten()
     ]).reshape(-1,1)  # final_vector is now a column vector of shape (351, 1)
 
-    node['vector'] = final_vector  # Store the vector in the node for later reference
+    node['vector'] = vector  # Store the vector in the node for later reference
+
+    final_vector = torch.from_numpy(vector).float()
 
     return final_vector
 
 
 
-def normalise_vector(v: np.ndarray) -> np.ndarray:
+def normalise_vector(v: torch.Tensor) -> torch.Tensor:
     """
     Normalise a vector to unit length.
     """
-    norm = np.linalg.norm(v)
-    if norm == 0:
-        return v
-    return v / norm
+    return F.normalize(v, p=2, dim=-1)
 
-def softmax(scores: np.ndarray) -> np.ndarray:
-    """
-    Compute softmax over a 1D array of scores.
-    """
-    scores = scores.flatten()
-    exp_scores = np.exp(scores - np.max(scores))  
-    return exp_scores / np.sum(exp_scores)
 
-def reLU(v: np.ndarray) -> np.ndarray:
-    """
-    Apply ReLU activation element-wise.
-    """
-    return np.maximum(0, v)
 
 
 #3)
@@ -262,47 +254,85 @@ def GNN_process(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c
     done = False
     atStart = True
     headList = [tree_head]
+    leafList = []
 
     while not done:
-
+        new_headList = []
         for head in headList: 
+
+            
+            if head['children'] == []:
+                if atStart:
+                    h_s = head['vector']  # standard vector
+                    h_i = F.relu(W_i @ h_s + b_i)  # instruction vector
+                    head['standard'] = h_s
+                    head['instruction'] = h_i
+                    atStart = False
+                continue #leaf node, nothing to process
+
+
             if atStart:
                 h_s = head['vector']  # standard vector
-                h_i = reLU(W_i @ h_s + b_i)  # instruction vector
+                h_i = F.relu(W_i @ h_s + b_i)  # instruction vector
                 atStart = False
             else:
                 h_s = head['standard']
                 h_i = head['instruction']
 
-            h_query_s = reLU(W_qs @ h_i + b_qs)
-            h_query_i = reLU(W_qi @ h_i + b_qi)
 
+            #compute queries
+            h_query_s = F.relu(W_qs @ h_i + b_qs)
+            h_query_i = F.relu(W_qi @ h_i + b_qi)
+
+            #parallel lists for child nodes
+            raw_score_s_list = []
+            raw_score_i_list = []
+            c_context_list = []
+            c_instr_list = []
+
+            #construct the lists first
             for child in head['children']:
                 c_s = child['vector']
-                c_i = reLU(W_ci @ c_s + b_ci)
+                c_i = F.relu(W_ci @ c_s + b_ci)
 
-                c_key = reLU(W_k @ c_s + b_k)
-                c_context = reLU(W_c1 @ c_s + W_c2 @ h_s + w_c)
-                c_instr = reLU(W_i1 @ c_i + W_i2 @ h_i + w_i)
+                c_key = F.relu(W_k @ c_s + b_k)
+                c_context_list.append(F.relu(W_c1 @ c_s + W_c2 @ h_s + w_c))
+                c_instr_list.append(F.relu(W_i1 @ c_i + W_i2 @ h_i + w_i))
 
-                score_s = softmax((h_query_s.transpose @ c_key) / np.sqrt(351))
-                score_i = softmax((h_query_i.transpose @ c_key) / np.sqrt(351))
+                raw_score_s_list.append((h_query_s.transpose @ c_key) / torch.sqrt(351))
+                raw_score_i_list.append((h_query_i.transpose @ c_key) / torch.sqrt(351))
 
-                c_s = normalise_vector(c_s + score_s * c_context)
-                c_i = normalise_vector(c_i + score_i * c_instr)
+            #compute softmax scores
+            raw_score_s_array = torch.Tensor(raw_score_s_list).flatten()
+            raw_score_i_array = torch.Tensor(raw_score_i_list).flatten()
+            score_s_array = torch.softmax(raw_score_s_array, dim=0)
+            score_i_array = torch.softmax(raw_score_i_array, dim=0)
+
+            #update child nodes
+            for child,context,instr,score_s,score_i in zip(head['children'],c_context_list,c_instr_list,score_s_array, score_i_array):
+                c_s = child['vector']
+                c_i = F.relu(W_ci @ c_s + b_ci)
+
+                c_s = normalise_vector(c_s + score_s * context)
+                c_i = normalise_vector(c_i + score_i * instr)
 
                 child['standard'] = c_s
                 child['instruction'] = c_i
 
-                
-                headList.append(child) #at the end, only leaf nodes will remain in headList
+                new_headList.append(child) #at the end, only leaf nodes will remain in headList
+
+        headList = new_headList
+
+
 
         done = True
         for head in headList:
             if head['children'] != []:
                 done = False #still more to process
+            else:
+                leafList.append(head)  #collect leaf nodes. 
         
-    return headList  # at the end, only leaf nodes will remain in headList
+    return leafList 
 
 
 
@@ -322,14 +352,17 @@ def collate_leafnodes_by_group(headList):
 
 #5)
 def group_scores(group_to_leafnodes, W_g, b_g):
+    if not group_to_leafnodes:
+        print("No groups found in leaf nodes.")
+        return {}
     group_scores = {}
     for group_id, leaf_nodes in group_to_leafnodes.items():
         h_s_list = [leaf['standard'] for leaf in leaf_nodes]
-        stacked = np.hstack(h_s_list)
+        stacked = torch.hstack(h_s_list)
 
-        g_mean = np.mean(stacked, axis=1, keepdims=True)  # mean vector g_mean (x351)
+        g_mean = torch.mean(stacked, axis=1, keepdims=True)  # mean vector g_mean (x351)
 
-        portCo_score_vec = 1 / (1 + np.exp(-(W_g @ g_mean + b_g)))  # Sigmoid activation. Wg: 2x351, bg: x2 are learnable parameters
+        portCo_score_vec = 1 / (1 + torch.exp(-(W_g @ g_mean + b_g)))  # Sigmoid activation. Wg: 2x351, bg: x2 are learnable parameters
 
         group_scores[group_id] = portCo_score_vec.flatten()  # Store as 1D array
 
@@ -388,7 +421,47 @@ def overall_GNN(soup: B, groupIDs: dict, W_class, b_class, W_text, b_text, W_i, 
     #5) Compute group scores
     group_score = group_scores(group_to_leafnodes, W_g, b_g)
 
+    if not group_score:
+        print("No group scores computed, returning empty portCo names list.")
+        return []
+    
     #6) Select best group and extract portCo names
     portCo_names = select_group(group_score, group_to_leafnodes)
 
     return portCo_names
+
+
+
+def train_GNN(soup_groupID_dict, true_portCo_names_dict):
+    """
+    soup_group_ID_dict: dict of {sample_ID: (soup, groupIDs)}
+    true_portCo_names_dict: dict of {sample_ID: [true_portCo_names]}
+
+    1) Train in a supervised manner to adjust the weights of the GNN to better predict portCo names.
+    (Yet to explore semi-supervised methods, due to the complexity of simulating a html tree structure, for PE firm websites.)
+
+        Initially, define all torch.nn.Parameter weights here, and then use an optimizer to train them based on loss between predicted portCo names and true portCo names.
+
+        This will be done using torch.optim.Adam optimizer, and a suitable loss function (e.g., cross-entropy loss for classification), in a mini-batch training loop. Mini-batch size should similtaneously minimise overfitting while also not drowning out the intricacies of each individual sample.
+
+        Note that cross entropy should also take into account what percentage of the group the GNN correctly predicted. Furthermore, the difference between the length of the predicted portCo names list and the true portCo names list can be used as a penalty signal. This is because, due to the scarcity of the data, we need every bit of signal we can get from each sample. 
+
+    2) Reinforcement training: Use running window for loss function, and use user feedback to adjust the weights of the GNN to better predict portCo names.
+    (Note that this is the same as the first step, however what needs to be implemented is interactivity with the user)
+
+    What to do now:
+    Step 1) learn about cross-entropy loss functions in pytorch, and how to implement them.
+    Step 2) Write the first part of the training loop, with forward pass and loss computation.
+    Step 3) Collate the data: gather all the portfolio websites and manually pair them with true portCo names. 
+    Step 4) Run and debug the training loop, until the loop validly runs.
+    Step 5) Create a discrete spread of each hyperparameter, being aware of which ones correlate with others (may need grid spread for those)
+    Step 6) Run hyperparameter tuning using optuna or similar library, to find the best hyperparameters for the GNN.
+
+    (GIVEN THAT THE FIRST PART WORKS)
+
+    Step 7) Create reinforcement learning training loop, using reward signals based on percentage of correct portCo names predicted. The code should be similar to the first part, however interactivity with the user will be needed to provide feedback on the predictions.  
+
+
+
+    """
+    
