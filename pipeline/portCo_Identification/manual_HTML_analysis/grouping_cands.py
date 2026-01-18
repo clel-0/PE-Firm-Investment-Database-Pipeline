@@ -3,6 +3,10 @@ import math
 import pandas as pd
 
 
+#might have to remove grouping from GNN because groups arent guarateed to be correct
+
+
+
 #task: rewrite this function to prioritise near-identical path signatures that differ only in type (href v/s text), and by at most one segment.
 def group_homogeneous_lists_df(df: pd.DataFrame,
                                path_col: str = "path_sig",
@@ -94,9 +98,9 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
             cross_type_matching = False 
             masked = list(sig)
             masked[k] = "x"          # wildcard for the variable segment
-            parent = list(sig)[-2] if L >= 2 else "ROOT"  # parent segment
+            
             masked_key = tuple(masked)
-            key = (typ, parent, *masked_key)
+            key = (typ, *masked_key)
             groups[key]["names"].add(name)
             groups[key]["card_ids"].add(cardid)
             groups[key]["type"] = typ

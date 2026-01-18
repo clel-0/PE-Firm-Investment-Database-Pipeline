@@ -1,15 +1,58 @@
+
+
+
+
+
+
+
+
+
+
+"""
+
+
+
+
+
+
+
+NOTE: NOT USED ANYMORE, REPLACED BY html_GNN FOLDER, WHICH HAS CLEANER STRUCTURE AND BETTER MODULARITY.
+
+
+
+
+
+
+(will keep here for reference, and in case multi-file structure breaks)
+
+"""
+
+
+
+
+
+
+
+
+
+
+
+
 import numpy as np
 from bs4 import BeautifulSoup as B
 from bs4 import Tag
 from sentence_transformers import SentenceTransformer
 import torch
 import torch.nn.functional as F
+import requests
+
+from urllib.parse import urljoin
 
 
-from step3_attempt3 import name_from_src
-from step3_attempt4 import name_from_href
-from step3_helperFunctions import inner_text_logic, _norm
-from text_scoring import element_path_signature
+from manual_HTML_analysis.step3_attempt3 import name_from_src
+from manual_HTML_analysis.step3_attempt4 import name_from_href
+from manual_HTML_analysis.step3_helperFunctions import inner_text_logic, _norm
+from manual_HTML_analysis.text_scoring import element_path_signature
 #will be used to assign groupIDs to nodes
 
 """
@@ -76,6 +119,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 
 #important step: clean up how previous nodes are stored, even in previous steps, to ensure that the bs4 nodes are stored properly.
 
+
 #1) 
 def convert_html_to_tree(soup: B, groupIDs: dict) -> dict:
     """
@@ -134,11 +178,10 @@ def convert_html_to_tree(soup: B, groupIDs: dict) -> dict:
             'class': class_raw,
             'UrlText': url_text,
             'UrlType': url_type,
-            'InnerText': inner_text
+            'InnerText': inner_text,
+            'bs4_element': bs4_element  # Store the original bs4 element for reference: namely for href searching
         }
 
-        
-        
 
         return node    
     
@@ -183,7 +226,7 @@ def convert_html_to_tree(soup: B, groupIDs: dict) -> dict:
 #2)
 def convert_node_to_vector(node, W_class, b_class, W_text, b_text) -> torch.Tensor:
     """
-    For a given node from convert_html_to_tree, compute the 351 dim vector embedding as per the description above:
+    For a given node from convert_html_to_tree, compute the 351 dim vector embedding as per the description below
 
     [tagName (100 dim), class (50 dim), UrlText (100 dim), UrlType (1 dim), InnerText (100 dim)] -> concatenated to 351 dim vector
 
@@ -239,6 +282,7 @@ def convert_node_to_vector(node, W_class, b_class, W_text, b_text) -> torch.Tens
 
 
 
+
 def normalise_vector(v: torch.Tensor) -> torch.Tensor:
     """
     Normalise a vector to unit length.
@@ -247,9 +291,8 @@ def normalise_vector(v: torch.Tensor) -> torch.Tensor:
 
 
 
-
 #3)
-def GNN_process(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci):
+def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci):
 
     done = False
     atStart = True
@@ -289,6 +332,7 @@ def GNN_process(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c
             raw_score_i_list = []
             c_context_list = []
             c_instr_list = []
+       
 
             #construct the lists first
             for child in head['children']:
@@ -368,7 +412,7 @@ def group_scores(group_to_leafnodes, W_g, b_g):
 
     return group_scores
 
-#6) 
+#6) note: due to max being non-differentiable, this step is done outside the training loop. This is fine, since no learning params are involved here.
 def select_group(group_score, group_to_leafnodes):
     best_group_id = max(group_score, key=lambda gid: group_score[gid][0])  # group with highest portCo confidence score
     best_group_score = group_score[best_group_id]
@@ -397,12 +441,120 @@ def select_group(group_score, group_to_leafnodes):
 
 
 
-def overall_GNN(soup: B, groupIDs: dict, W_class, b_class, W_text, b_text, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci, W_g, b_g) -> list:
+
+
+#create portfolio page finder GNN
+def portfolio_page_finder_GNN(soup: B, W_class, b_class, W_text, b_text, W_down, b_down, W_up, b_up, W_info, b_info, W_key, b_key, W_final, b_final) -> dict:
+    """
+    use a simpler drip-down process, where the head node just passes down one vec to its children, and the children update their vectors based on that vec. Now, a href-leaf in this case is defined as a node with a href attribute, and no descendants with href attributes. So in this case, the candidate nodes are the href-leaf nodes.
+
+    
+
+    """
+
+    tree_head = convert_html_to_tree(soup, {})  #no groupIDs needed for this task
+
+    #Convert nodes to vectors
+    def traverse_and_vectorise(node):
+        convert_node_to_vector(node, W_class, b_class, W_text, b_text)
+        for child in node['children']:
+            traverse_and_vectorise(child)
+
+    traverse_and_vectorise(tree_head)
+
+
+    #GNN processing to find href-leaves
+    headlist = [tree_head]
+    hrefLeaves = []
+
+    while not done:
+
+        done = True
+
+        for head in headlist:
+
+            if not head['bs4_element'].find_all(href=True):
+                #this is a href-leaf
+                hrefLeaves.append(head)
+                continue
+
+            done = False #still more to process; if all were processed, while loop would have skipped due to continue above
+
+            new_headlist = []
+
+            score_list = []
+
+            for child in head['children']:
+                new_headlist.append(child)
+                v = child['vector']
+                h_info = F.relu(W_info @ head['vector'] + b_info)
+                v_key = F.relu(W_key @ v + b_key)
+
+                score = (h_info.transpose @ v_key) / torch.sqrt(351)
+                score_list.append(score)
+            
+            score_array = torch.Tensor(score_list).flatten()
+            score_softmax = torch.softmax(score_array, dim=0)
+
+            for child, score in zip(head['children'], score_softmax):
+                v = child['vector']
+                v = normalise_vector(v + score * F.relu(W_down @ head['vector'] + b_down))
+                child['vector'] = v
+
+                
+            headlist = new_headlist
+                
+
+    #After processing, compute final scores for href-leaves
+
+    raw_scores = [F.relu(W_final @ leaf['vector'] + b_final) for leaf in hrefLeaves]
+
+    final_scores = torch.softmax(torch.Tensor(raw_scores).flatten(), dim=0)
+
+    hrefleaf_to_score = {leaf: score.item() for leaf, score in zip(hrefLeaves, final_scores)}
+
+    return hrefleaf_to_score #note: since this will be trained, we cannot include max hrefleaf selection here, as that would be non-differentiable.
+
+
+
+
+        
+
+
+def overall_GNN(is_PF_subpage: bool, website: str, soup: B, groupIDs: dict, W_class, b_class, W_text, b_text, namesParams, subpageParams) -> list:
     """
     Overall GNN process to extract portCo names from HTML soup.
+
+    is_PF_subpage: bool, whether the soup is from a portfolio finder subpage. If True, use portfolio page finder GNN instead.
+
+    namesParams: [W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci, W_g, b_g]
+
+    subpageParams: [W_down, b_down, W_up, b_up, W_info, b_info, W_key, b_key, W_final, b_final]
+
     """
+    if not is_PF_subpage:
+        hrefleaf_to_score = portfolio_page_finder_GNN(soup, *subpageParams)
+        if not hrefleaf_to_score:
+            print("No href-leaf nodes found, returning empty portCo names list.")
+            return []
+        #select best href-leaf
+        best_leaf = max(hrefleaf_to_score, key=lambda leaf: hrefleaf_to_score[leaf])
+
+        #extract subpage URL from best_leaf
+        subpage_url = urljoin(website, best_leaf['bs4_element'].get('href'))
+
+        #fetch subpage soup
+        try:
+            response = requests.get(subpage_url, timeout=10)
+            response.raise_for_status()
+            subpage_soup = B(response.text, 'html.parser')
+        except Exception as e:
+            print(f"Failed to fetch subpage {subpage_url}: {e}")
+            return []
+                
+
     #1) Convert HTML to tree
-    tree_head = convert_html_to_tree(soup, groupIDs)
+    tree_head = convert_html_to_tree(subpage_soup, groupIDs)
 
     #2) Convert nodes to vectors
     def traverse_and_vectorise(node):
@@ -413,10 +565,12 @@ def overall_GNN(soup: B, groupIDs: dict, W_class, b_class, W_text, b_text, W_i, 
     traverse_and_vectorise(tree_head)
 
     #3) GNN processing
-    leafList = GNN_process(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci)
+    leafList = GNN_process_portCo(tree_head, *namesParams[:-2])  #all params except last two (W_g, b_g)
 
     #4) Collate leaf nodes by group
     group_to_leafnodes = collate_leafnodes_by_group(leafList)
+
+    W_g, b_g = namesParams[-2], namesParams[-1]
 
     #5) Compute group scores
     group_score = group_scores(group_to_leafnodes, W_g, b_g)

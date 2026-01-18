@@ -207,7 +207,7 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
 #writing this first to get overall structure:
 if __name__ == "__main__":
     df = pd.read_csv("output/PE_Firms.csv")
-    pe_firms = df.to_dict(orient="records")
+    pe_firms = df.to_dict(orient="records") #meaning: list of dicts, where each dict is a row with column names as keys
     portco_results, groupIDs = PortCo_Extraction(pe_firms)
     portco_results.to_csv("output/PortCoName_Results_Cleaned.csv", index=False)
     if groupIDs: 

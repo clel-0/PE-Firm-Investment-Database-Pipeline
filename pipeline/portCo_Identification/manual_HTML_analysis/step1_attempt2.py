@@ -9,7 +9,7 @@ import json
 import pandas as pd
 import re
 import requests
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 import time
 
 def step1_attempt_2(pe_firm: dict) -> dict:
@@ -52,20 +52,36 @@ def step1_attempt_2(pe_firm: dict) -> dict:
         # Construct full URL safely
         if subpage:
             candidate_url = urljoin(base_url + "/", subpath)
+            candidate_url_slash = urljoin(base_url + "/", subpath) + "/"
+            
         else:
-            #adding the subpage pattern directly to the name of the website
-            domain_parts = re.match(r"https?://(www\.)?([^/]+)", base_url)
-            if not domain_parts:
-                continue  # skip if URL is malformed
-            domain_name = domain_parts.group(2)
-            # Construct candidate URL by inserting subpath after domain, and before TLD (top-level domain)
-            candidate_url = f"https://{domain_name.split('.')[0]}{subpath}.{'.'.join(domain_name.split('.')[1:])}"
+            #remove www. if present for domain extraction
+            parsed_url = urlparse(base_url)
+            domain = parsed_url.netloc.replace("www.", "")
+            candidate_url = urljoin(domain,subpath)
+            candidate_url_slash = urljoin(domain,subpath) + "/"
+            hyphen_candidate = urljoin(domain + "-",subpath)
+
         try:
             # Make a lightweight HEAD request (no full page download)
             # requests.head() asks the website for headers only, to check if the page exists
             isAccessible, final_url = check_page_accessible(candidate_url)
+            
+            cands = [check_page_accessible(x) for x in [candidate_url, candidate_url_slash,hyphen_candidate]]
+
+            isAccessible = False
+            for tup in cands:
+                isAccessible, final_url = tup
+                if isAccessible:
+                    break
             if isAccessible:
                 if doAttempt1:
+                    # replace current url with final_url from HEAD request
+                    print(f"Accessible PE subpage found with Attempt 2: {final_url}")
+                    df = pd.read_csv("output/PE_Firms.csv")
+                    df.loc[df["FullName"] == pe_firm["FullName"], "Website"] = final_url
+                    df.to_csv("output/PE_Firms.csv", index=False)
+
                     # Now attempt Step 1 Attempt 1 on this subpage
                     subpage_result = step1_attempt_1({"Website": final_url})
                     if subpage_result:
