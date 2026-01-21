@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-
+from collections import defaultdict
 
             
 
@@ -21,18 +21,19 @@ def scores(leaflist, W_s, b_s):
         print("No leaf nodes provided for scoring.")
         return []
         
-    confidence_scores = []
-    type_scores = []
+    scores = defaultdict(lambda: {'confidence': None, 'type': None})
+    
 
+    #note: this for loop ensures that leaflist and scores are parallel
     for leaf in leaflist:
         v = leaf['vector']  # vector (351,1)
 
-        portCo_score_vec = 1 / (1 + torch.exp(-(W_s @ v + b_s)))  # Sigmoid activation. Ws: 2x351, bs: x2 are learnable parameters
+        portCo_score_vec = W_s @ v + b_s  # Sigmoid activation. Ws: 2x351, bs: 2x1 are learnable parameters
         
-        confidence_scores.append(portCo_score_vec[0].item())  # confidence score
-        type_scores.append(portCo_score_vec[1].item())  # type score
+        scores[leaf['tagID']]['confidence'] = portCo_score_vec.squeeze(1)[0] # confidence score (.squeeze(1) to convert from (1,1) to scalar)
+        scores[leaf['tagID']]['type'] = portCo_score_vec.squeeze(1)[1]
 
-    return confidence_scores, type_scores
+    return scores
 
 
 

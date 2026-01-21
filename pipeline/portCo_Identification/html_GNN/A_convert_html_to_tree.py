@@ -18,8 +18,8 @@ def convert_html_to_tree(soup: B) -> dict:
     Returns the head of the tree, where the node structure is as follows:
     {
         'children': list of child nodes (same structure),
+        'sig': tuple, #element path signature
         'tagID': int,
-        'groupIDs': list,
         'tagName': str,
         'class': str,
         'UrlText': str,
@@ -32,7 +32,7 @@ def convert_html_to_tree(soup: B) -> dict:
     """
   
  
-    def build_node(bs4_element) -> dict:
+    def build_node(bs4_element, id) -> dict:
         
         class_raw = bs4_element.get('class', [])
         class_raw = _norm(" ".join(class_raw)) if class_raw else ""
@@ -60,6 +60,7 @@ def convert_html_to_tree(soup: B) -> dict:
         node = {
             'children': [],
             'sig': sig,
+            'tagID': id,
             'tagName': bs4_element.name if bs4_element.name else "",
             'class': class_raw,
             'UrlText': url_text,
@@ -71,6 +72,7 @@ def convert_html_to_tree(soup: B) -> dict:
 
         return node    
     
+    id = 0  # unique tagID counter
 
     soup_heads = []
     soup_heads.append(soup.html) # starting from the html tag
@@ -97,7 +99,8 @@ def convert_html_to_tree(soup: B) -> dict:
         #builds the child nodes and appends them to the current tree node
         for child in children:
             if isinstance(child, B.Tag):
-                child_node = build_node(child)
+                child_node = build_node(child, id)
+                id += 1
                 current_tree_node['children'].append(child_node)
                 soup_heads.append(child)
         

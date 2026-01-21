@@ -103,12 +103,6 @@ Assumptions:
         3.3.4.2) Add this child node to the headlist if it has children.
     3.3.5) If any of the child nodes have at least one child node, remove the head node from the headlist, add all its child nodes to the headlist, and repeat from step 4.3.
 3.5) After all head nodes have been processed, the headList will contain only leaf nodes.
-4) Collate all the leaf nodes into their groups based on groupID. (Creating hashmap for referencing: groupID to node)
-5) For each group:
-    5.1) Compute the mean vector of all the leaf nodes within that group: g_mean = mean(h_s of all leaf nodes in group) (x351)
-    5.2) Pass the group mean vector through a feedforward network (one layer for now) to compute a length 2 vec, containing: the portCo confidence score, a binary classification of whether the innertext or the UrlText contains the portCo names.
-        portCo_score_vec = Sigmoid(Wg * g_mean + bg)  (Wg: 2x351, bg: x2 are learnable parameters)
-6) Choose the group with the highest portCo confidence score (portCo_score_vec[0]) as the group containing portCo names. If portCo_score_vec[1] > 0.5, extract from InnerText, else extract from UrlText.
 
 """
 
