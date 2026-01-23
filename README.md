@@ -25,7 +25,7 @@ python seed_aic.py
 Then, to run the portCo_Identification pipeline, enter the following within the terminal:
 
 ```bash
-python portCo_Identification/main_portCo.py
+python portCo_Identification/manual_HTML_analysis/main_portCo.py
 ```
 NOTE: All of the code for the portCo identification process can be found in pipeline/portCo_Identification.
 
