@@ -48,7 +48,7 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
     used_up = False  # Track if Google API quota is used up
     print("Starting PortCo Extraction for PE firms...")
     results = pd.DataFrame()
-    current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    current_date = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
     for pe_firm in pe_firms:
         print(f"Processing PE firm: {pe_firm['FullName']} with website: {pe_firm['Website']}")
         #might use later for steps 2 and 3
