@@ -145,7 +145,7 @@ def pe_name_in_snippets(portco_name: str, pe_name_norm: str, snippets: list[str]
     
 
 
-def google_confirm_name(name: str, pe_name_norm: str, google_search_fn, used_up: bool) -> bool:
+def google_confirm_name(name: str, pe_name_norm: str, google_search_fn, used_up: bool):
     """
     Wrapper around your existing google_search function.
 
@@ -171,7 +171,7 @@ def google_confirm_name(name: str, pe_name_norm: str, google_search_fn, used_up:
     return used_up, pe_name_in_snippets(name, pe_name_norm, snippets, min_hits=1)
 
 
-def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_fn, used_up) -> pd.DataFrame:
+def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_fn, used_up):
     """
     Select likely portfolio companies for a single PE firm from a candidate DataFrame.
 
@@ -242,9 +242,7 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
         out = href_A.drop_duplicates(subset=["clean_text"]).copy()
         # Build structural keys for inspection / later debugging
         out["path_sig"] = out["soup_object"].apply(element_path_signature)
-        out["list_key"] = out.apply(
-            lambda row: derive_list_key(row["path_sig"]), axis=1
-        )
+        out["list_key"] = out["path_sig"].apply(derive_list_key)
         out["google_confirmed"] = False  # not checked in this fast path
         return used_up, out[["clean_text", "type", "card_id", "list_key", "rank", "google_confirmed"]]
 

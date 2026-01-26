@@ -35,21 +35,22 @@ __Step 3: Extracting portCo names (various methods)__:
 def inner_text(el, tag:str, link_type:str, provenance:str):
     texts = []
     for t in el.find_all(tag):
-        text = inner_text_logic(t, link_type, provenance)
-    if text:
-            #if not t.get(link_type):
-                
+        text = inner_text_logic(t)
+        if text:
+                #if not t.get(link_type):
+                    
+                    #print("__________")
+                    #print(f"Warning: <{t.name}> tag with no {link_type} found in element with classes: {' '.join(cls)}")
+                texts.append({"text": _norm(text), "raw_text": text, "url": t.get(link_type), "provenance": provenance, "tag_name": t.name, "link_attr": link_type})
                 #print("__________")
-                #print(f"Warning: <{t.name}> tag with no {link_type} found in element with classes: {' '.join(cls)}")
-            texts.append({"text": _norm(text), "raw_text": text, "url": t.get(link_type), "provenance": provenance, "tag_name": t.name, "link_attr": link_type})
-            #print("__________")
-            #print(f"Found anchor text: {text} in element with classes: {' '.join(cls)}")
+                #print(f"Found anchor text: {text} in element with classes: {' '.join(cls)}")
 
     return texts
 
 
 #need this for the GNN extraction
-def inner_text_logic(t:str, link_type:str, provenance:str):
+def inner_text_logic(t):
+    text = ""
     if t.name == "a":   
         text = t.get_text(strip=True)
         #print(f"text found in <a>: {text}")

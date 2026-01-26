@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup as B
 from bs4 import Tag
 
 #1) 
-def convert_html_to_tree(soup: B) -> dict:
+def convert_html_to_tree(soup: B):
     """
     Convert bs4 html to tree with tags as nodes, and one-way edges from parent to child.
     For each node, compute the 351 dim vector embedding as per the description above.
@@ -32,7 +32,7 @@ def convert_html_to_tree(soup: B) -> dict:
     """
   
  
-    def build_node(bs4_element, id) -> dict:
+    def build_node(bs4_element):
         
         class_raw = bs4_element.get('class', [])
         class_raw = _norm(" ".join(class_raw)) if class_raw else ""
@@ -98,8 +98,8 @@ def convert_html_to_tree(soup: B) -> dict:
         
         #builds the child nodes and appends them to the current tree node
         for child in children:
-            if isinstance(child, B.Tag):
-                child_node = build_node(child, id)
+            if isinstance(child, Tag):
+                child_node = build_node(child)
                 id += 1
                 current_tree_node['children'].append(child_node)
                 soup_heads.append(child)

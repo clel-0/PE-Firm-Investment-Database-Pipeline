@@ -13,7 +13,7 @@ def normalise_vector(v: torch.Tensor) -> torch.Tensor:
     return F.normalize(v, p=2, dim=-1)
 
 
-def portfolio_page_finder_GNN(soup: B, W_class, b_class, W_text, b_text, W_sig, W_down, b_down, W_info, b_info, W_key, b_key, W_final, b_final) -> dict:
+def portfolio_page_finder_GNN(soup: B, W_class, b_class, W_text, b_text, W_sig, W_down, b_down, W_info, b_info, W_key, b_key, W_final, b_final):
     """
     use a simpler drip-down process, where the head node just passes down one vec to its children, and the children update their vectors based on that vec. Now, a href-leaf in this case is defined as a node with a href attribute, and no descendants with href attributes. So in this case, the candidate nodes are the href-leaf nodes.
 
@@ -28,7 +28,7 @@ def portfolio_page_finder_GNN(soup: B, W_class, b_class, W_text, b_text, W_sig, 
 
     """
 
-    tree_head = convert_html_to_tree(soup, {})  #no groupIDs needed for this task
+    tree_head = convert_html_to_tree(soup)  #no groupIDs needed for this task
 
     #Convert nodes to vectors
     def traverse_and_vectorise(node):
@@ -50,6 +50,9 @@ def portfolio_page_finder_GNN(soup: B, W_class, b_class, W_text, b_text, W_sig, 
 
         for head in headlist:
 
+            if not head:
+                continue
+            
             if not head['bs4_element'].find_all(href=True):
                 #this is a href-leaf
                 hrefLeaves.append(head)
@@ -67,7 +70,7 @@ def portfolio_page_finder_GNN(soup: B, W_class, b_class, W_text, b_text, W_sig, 
                 h_info = F.relu(W_info @ head['vector'] + b_info)
                 v_key = F.relu(W_key @ v + b_key)
 
-                score = (h_info.transpose @ v_key) / torch.sqrt(351)
+                score = (h_info.transpose(0,1) @ v_key) / torch.sqrt(torch.tensor([351.0]))
                 score_list.append(score)
             
             score_array = torch.stack(score_list).flatten()
