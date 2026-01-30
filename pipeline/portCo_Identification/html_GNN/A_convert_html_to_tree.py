@@ -30,10 +30,15 @@ def convert_html_to_tree(soup: B):
     (vector will be added later, as vectorisation is dependent on the above attributes)
 
     """
-  
+    id = 0  # unique tagID counter
+    id_to_node = {}
  
     def build_node(bs4_element):
         
+        nonlocal id
+        nonlocal id_to_node
+
+
         class_raw = bs4_element.get('class', [])
         class_raw = _norm(" ".join(class_raw)) if class_raw else ""
 
@@ -69,10 +74,10 @@ def convert_html_to_tree(soup: B):
             'bs4_element': bs4_element  # Store the original bs4 element for reference: namely for href searching
         }
 
-
+        id_to_node[id] = node
         return node    
     
-    id = 0  # unique tagID counter
+    
 
     soup_heads = []
     soup_heads.append(soup.html) # starting from the html tag
@@ -105,4 +110,4 @@ def convert_html_to_tree(soup: B):
                 soup_heads.append(child)
         
 
-    return tree_head
+    return tree_head, id_to_node

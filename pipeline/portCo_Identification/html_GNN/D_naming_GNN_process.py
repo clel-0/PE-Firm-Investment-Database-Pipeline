@@ -10,12 +10,13 @@ def s(x):
 
 
 def f(x, a, cutoff = 0.5):
-
+    a = torch.tensor(a, device=x.device, dtype=x.dtype)
+    cutoff = torch.tensor(cutoff, device=x.device, dtype=x.dtype)
     return (1 - s(a)) * x + s(a) * torch.sigmoid(a * (x - cutoff))
 
 
 #may need upflow from leaves to hrefs later, if the model underperforms
-def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci):
+def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci, dev='cpu'):
     """
     __Process: 'Drip-down" Graph Neural Network to find portCo names.__
         Assumptions:
@@ -28,7 +29,7 @@ def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_
     atStart = True
     headList = [tree_head]
     leafList = []
-    device = headList[0]['vector'].device
+    
     boost_score_now = []
     boost_score_later = []
 
@@ -45,7 +46,7 @@ def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_
 
             if head['children'] == []:
                 if atStart:
-                    head['level'] = 0
+                    head['level'] = torch.tensor(0, device=dev, dtype=torch.float32)
                     h_s = head['vector']  # standard vector
                     h_i = F.relu(W_i @ h_s + b_i)  # instruction vector
                     head['standard'] = h_s
@@ -55,7 +56,7 @@ def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_
 
 
             if atStart:
-                head['level'] = 0
+                head['level'] = torch.tensor(0, device=dev, dtype=torch.float32)
                 h_s = head['vector']  # standard vector
                 h_i = F.relu(W_i @ h_s + b_i)  # instruction vector
                 atStart = False
@@ -77,7 +78,7 @@ def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_
             
             #construct the lists first
             for child in head['children']:
-                child['level'] = head['level'] + 1
+                child['level'] = head['level'] + torch.tensor(1, device=dev, dtype=torch.float32)
                 c_s = child['vector']
                 c_sig = child['sig_vector']
                 c_i = F.relu(W_ci @ c_s + b_ci)
@@ -86,7 +87,7 @@ def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_
                 c_context_list.append(F.relu(W_c1 @ c_s + W_c2 @ h_s + w_c))
                 c_instr_list.append(F.relu(W_i1 @ c_i + W_i2 @ h_i + w_i))
 
-                boost = torch.tensor(0.0, device=device) #ensure boost is on correct device
+                boost = torch.tensor(0.0, device=dev, dtype=torch.float32) #ensure boost is on correct device
 
                 for (score, sig_vec) in boost_score_now:
                     boost += score * F.cosine_similarity(c_sig.flatten(), sig_vec.flatten(), dim=0)

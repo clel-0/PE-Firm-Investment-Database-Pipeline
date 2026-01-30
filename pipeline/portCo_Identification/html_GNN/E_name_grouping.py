@@ -30,7 +30,7 @@ def scores(leaflist, W_s, b_s):
 
         portCo_score_vec = W_s @ v + b_s  # Sigmoid activation. Ws: 2x351, bs: 2x1 are learnable parameters
         
-        scores[leaf['tagID']]['confidence'] = portCo_score_vec.squeeze(1)[0] # confidence score (.squeeze(1) to convert from (1,1) to scalar)
+        scores[leaf['tagID']]['confidence'] = portCo_score_vec.squeeze(1)[0] # confidence score (.squeeze(1) to convert from (1,1) to torch scalar)
         scores[leaf['tagID']]['type'] = portCo_score_vec.squeeze(1)[1]
 
     return scores

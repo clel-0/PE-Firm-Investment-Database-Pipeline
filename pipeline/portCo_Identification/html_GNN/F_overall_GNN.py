@@ -12,7 +12,7 @@ from D_naming_GNN_process import GNN_process_portCo
 from E_name_grouping import scores
 
 
-def overall_GNN(is_PF_subpage: bool, website: str, soup: B, W_class, b_class, W_text, b_text, W_sig, W_s, b_s, namesParams, subpageParams) -> list:
+def overall_GNN(is_PF_subpage: bool, website: str, soup: B, W_class, b_class, W_text, b_text, W_sig, W_s, b_s, namesParams, subpageParams, dev, dtype=torch.float32) -> list:
     """
     Overall GNN process to extract portCo names from HTML soup.
 
@@ -23,17 +23,20 @@ def overall_GNN(is_PF_subpage: bool, website: str, soup: B, W_class, b_class, W_
     subpageParams: [W_down, b_down, W_info, b_info, W_key, b_key, W_final, b_final]
 
     """
+    torch.set_default_dtype(dtype)
+
     if not is_PF_subpage:
         #note: in this case, groupIDs is empty, so we need to create it
 
         #1) Use portfolio page finder GNN to find best subpage
         subpageParams = [W_class, b_class, W_text, b_text, W_sig] + subpageParams 
-        hrefleaf_to_score = portfolio_page_finder_GNN(soup, *subpageParams)
-        if not hrefleaf_to_score:
+        id_to_score, id_to_node = portfolio_page_finder_GNN(soup, *subpageParams, dev=dev)
+        if not id_to_score:
             print("No href-leaf nodes found, returning empty portCo names list.")
             return []
         #select best href-leaf
-        best_leaf = max(hrefleaf_to_score, key=lambda leaf: hrefleaf_to_score[leaf])
+        best_leaf_id = max(id_to_score, key=lambda leaf_id: id_to_score[leaf_id])
+        best_leaf = id_to_node[best_leaf_id]
 
         #extract subpage URL from best_leaf
         subpage_url = urljoin(website, best_leaf['bs4_element'].get('href'))
@@ -55,24 +58,27 @@ def overall_GNN(is_PF_subpage: bool, website: str, soup: B, W_class, b_class, W_
 
     #2) Convert nodes to vectors
     def traverse_and_vectorise(node):
-        convert_node_to_vector(node, W_class, b_class, W_text, b_text, W_sig)
+        convert_node_to_vector(node, W_class, b_class, W_text, b_text, W_sig, dev=dev)
         for child in node['children']:
             traverse_and_vectorise(child)
 
     traverse_and_vectorise(tree_head)
 
     #3) GNN processing
-    leafList = GNN_process_portCo(tree_head, *namesParams) 
+    leafList = GNN_process_portCo(tree_head, *namesParams, dev=dev) 
 
     #4) Compute group scores
     confidence_scores, type_scores = scores(leafList, W_s, b_s) #these are the final scores and will be considered the output for training.
 
-    confidence_scores = 1 / (1 + torch.exp(-(confidence_scores))) #sigmoid to map to [0,1]
-    type_scores = 1 / (1 + torch.exp(-(type_scores)))  #sigmoid to map to [0,1]
+    
+    #5) Apply sigmoid to scores
+    #keep torch-tensor format for differentiability
+    confidence_scores = F.sigmoid(confidence_scores) #sigmoid to map to [0,1]
+    type_scores = F.sigmoid(type_scores)  #sigmoid to map to [0,1]
 
     #this way only relevant leafs are considered for overall type computation, while also allowing for differentiability
-    overall_type = sum(torch.dot(type_scores, confidence_scores))/ sum(type_scores) if sum(type_scores) != 0 else 0.0
-
+    overall_type = torch.dot(type_scores, confidence_scores).sum()/ type_scores.sum() if type_scores.sum() != 0 else torch.tensor(0.0, device=dev, dtype=dtype)
+    overall_type = overall_type.item()  #convert to standard float for later use
     if not confidence_scores:
         print("No scores computed, returning empty portCo names list.")
         return []
@@ -88,6 +94,7 @@ def overall_GNN(is_PF_subpage: bool, website: str, soup: B, W_class, b_class, W_
     type = "InnerText" if overall_type > 0.5 else "UrlText"
 
     for s,leaf in zip(confidence_scores, leafList):
+        s = s.item()
         if s > 0.8:
             portCo_names.append(leaf[type])
     

@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 #2)
-def convert_node_to_vector(node, W_class, b_class, W_text, b_text, W_sig) -> torch.Tensor:
+def convert_node_to_vector(node, W_class, b_class, W_text, b_text, W_sig, device='cpu') -> torch.Tensor:
     """
     For a given node from convert_html_to_tree, compute the 351 dim vector embedding as per the description below
 
@@ -64,8 +64,8 @@ def convert_node_to_vector(node, W_class, b_class, W_text, b_text, W_sig) -> tor
     sig = W_sig @ sig  # projected signature vector
 
 
-    node['vector'] = torch.from_numpy(vector).float()  # Store the vector in the node for later reference
-    node['sig_vector'] = torch.from_numpy(sig).float()  # Store the projected signature vector in the node for later reference
+    node['vector'] = torch.from_numpy(vector, device=device, dtype=torch.float32)  # Store the vector in the node for later reference
+    node['sig_vector'] = torch.from_numpy(sig, device=device, dtype=torch.float32)  # Store the projected signature vector in the node for later reference
 
     final_vector = node['vector']
 
