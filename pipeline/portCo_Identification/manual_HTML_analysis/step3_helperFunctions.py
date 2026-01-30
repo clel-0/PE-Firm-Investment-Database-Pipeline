@@ -68,6 +68,7 @@ def inner_text_logic(t):
     
 
 
+
 def _collect_cards(soup, card_class_tokens, attempt_num=1):
     """
     takes a BeautifulSoup object (soup) derived from the html of the PE firm site, and a list of class tokens (card_class_tokens) found from step 2, as the input parameters.

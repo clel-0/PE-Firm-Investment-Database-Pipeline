@@ -48,7 +48,7 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
     used_up = False  # Track if Google API quota is used up
     print("Starting PortCo Extraction for PE firms...")
     results = pd.DataFrame()
-    current_date = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+    current_date = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     for pe_firm in pe_firms:
         print(f"Processing PE firm: {pe_firm['FullName']} with website: {pe_firm['Website']}")
         #might use later for steps 2 and 3
@@ -170,7 +170,7 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
                     #reason: no A1 portcos found.
                     if A1portcos:
                         print("Now proceeding to scoring text candidates with A1 portCos available...")
-                        used_up, nameResults, groupIDs = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search, used_up)
+                        used_up, nameResults = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search, used_up)
                         if not nameResults.empty: #checking if not empty
                             print(f"Results after scoring with A1 portCos: {nameResults.head()}")
                             nameResults["PE_Firm_Name"] = pe_firm['FullName']
@@ -180,7 +180,7 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
                             print("No portCos selected after scoring with A1 portCos.")
                     else:
                         print("Now proceeding to scoring text candidates without A1 portCos...") 
-                        used_up, nameResults, groupIDs = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search, used_up)
+                        used_up, nameResults = select_portcos_for_firm(textCandidates, pe_firm['FullName'], google_search, used_up)
                         if not nameResults.empty: #checking if not empty
                             print(f"Results after scoring with A1 portCos: {nameResults.head()}")
                             nameResults["PE_Firm_Name"] = pe_firm['FullName']
@@ -193,10 +193,9 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
                     print("Note: even if Step 3")
                 
                 
-    if groupIDs:
-        return results, groupIDs
-    print("groupIDs not found, returning only results.")
-    return results, None
+    
+    
+    return results
 
    
 
@@ -208,11 +207,9 @@ def PortCo_Extraction(pe_firms: list[dict]) -> list[dict]:
 if __name__ == "__main__":
     df = pd.read_csv("output/PE_Firms.csv")
     pe_firms = df.to_dict(orient="records") #meaning: list of dicts, where each dict is a row with column names as keys
-    portco_results, groupIDs = PortCo_Extraction(pe_firms)
+    portco_results = PortCo_Extraction(pe_firms)
     portco_results.to_csv("output/PortCoName_Results_Cleaned.csv", index=False)
-    if groupIDs: 
-        pass
-        #implementation for GNN processing written here later
+    
         
     #with open("output/PortCo_Results.json", "w") as f:
     #    json.dump(portco_results, f, indent=4)

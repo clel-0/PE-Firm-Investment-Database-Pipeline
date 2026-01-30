@@ -49,12 +49,11 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
             "names": set(),
             "card_ids": set(),
             "type": None,
-            "cross_type_matching": False,
             "all_cards_have_href": False,
         }
     )
 
-    groupIDs = {}  # path sig -> groupID
+    
 
 
     # Precompute which card_ids already have href candidates or href tags in the card soup
@@ -69,7 +68,7 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
 
         for cardid, soup in first_soup_for_card.items():
             try:
-                if soup and getattr(soup, "find", None) and soup.find("a", href=True):
+                if soup and getattr(soup, "find", None) and soup.find("a", href=True): #ensures that: 1) the soup object exists, 2) has a .find method (i.e., is a BeautifulSoup object), and 3) contains at least one <a> tag (with "a" being the tag name) with an href attribute
                     href_card_ids.add(cardid)
             except Exception:
                 # If soup parsing fails, just skip the DOM-based href detection for that card
@@ -80,9 +79,9 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
 
     for sig, name, typ, cardid in df[[path_col, name_col, type_col, id_col]].itertuples(index=False):
         # Basic sanity checks
-        if sig is None or (isinstance(sig, float) and math.isnan(sig)):
+        if sig is None or (isinstance(sig, float) and math.isnan(sig)): #ensure sig is not None or NaN
             continue
-        if name is None or (isinstance(name, float) and math.isnan(name)):
+        if name is None or (isinstance(name, float) and math.isnan(name)): #ensure name is not None or NaN
             continue
 
         # Ensure the signature is a tuple (hashable, stable)
@@ -94,13 +93,12 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
 
 
         # For each position, create a masked key
-        for k in range(L):
-            cross_type_matching = False 
+        for k in range(L): 
             masked = list(sig)
             masked[k] = "x"          # wildcard for the variable segment
             
             masked_key = tuple(masked)
-            key = (typ, *masked_key)
+            key = (typ, *masked_key) # include type in the key to separate href/text groups initially
             groups[key]["names"].add(name)
             groups[key]["card_ids"].add(cardid)
             groups[key]["type"] = typ
@@ -118,34 +116,20 @@ def group_homogeneous_lists_df(df: pd.DataFrame,
             if g["type"] != "href" and g["card_ids"]:
                 g["all_cards_have_href"] = g["card_ids"].issubset(href_card_ids)
 
-        # Check if there are cross-type matching groups (same names+cards, different types)
-        group_items = list(groups.items())
-        for idx, (k1, group1) in enumerate(group_items):
-            for k2, group2 in group_items[idx + 1:]:
-                if k1 == k2 or group1["type"] == group2["type"]:
-                    continue
-                if group1["names"] == group2["names"] and group1["card_ids"] == group2["card_ids"]:
-                    group1["cross_type_matching"] = True
-                    group2["cross_type_matching"] = True
-                    print(
-                        f"Cross-type matching groups found with names and card_ids: "
-                        f"{group1['names']} and {group2['names']}"
-                    )
-    
+    #disabling cross-type matching for now; was too lenient
     
         for i,group in enumerate(groups.values()):
             if group:
                 print(f"Homogeneous group found with names and card_ids: {group}")
                 #assign list of groupIDs to each original sig in the group
-                for sig in group["sig"]:
-                    if sig not in groupIDs:
-                        groupIDs[sig] = set() #making a set to avoid duplicates
-                    groupIDs[sig].add(i)
+                
 
-    return groups, groupIDs
+    return groups 
 
 
 #NEW FUNCION: AIM: check if there is a parallel group of same length and same respective card_ids, but different type (href v/s text)
 def check_card_ids(group1, group2):
     
-    return group1["card_ids"] == group2["card_ids"]
+    if group1["card_ids"] == group2["card_ids"]:
+        return True
+    return False

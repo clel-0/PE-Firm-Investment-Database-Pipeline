@@ -10,7 +10,7 @@ JUNK_STRINGS = {
 import re
 import pandas as pd
 
-from grouping_cands import group_homogeneous_lists_df
+from grouping_cands import check_card_ids, group_homogeneous_lists_df
 from step3_helperFunctions import _norm
 
 import os
@@ -224,6 +224,9 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
     df = df[~df["clean_text"].apply(is_email_like)]
 
     #remove whitespace
+    
+    if df.empty:
+        return used_up, df
 
     # Drop rows with too few alphabetic chars
     alpha_len = df["clean_text"].str.replace(r"[^A-Za-z]", "", regex=True).str.len()
@@ -255,7 +258,7 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
 
     # --- Group by structural patterns to find homogeneous lists ---
 
-    groups, groupIDs = group_homogeneous_lists_df(
+    groups = group_homogeneous_lists_df(
         df,
         path_col="path_sig",
         name_col="clean_text",
@@ -284,31 +287,40 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
     # If multiple groups have hrefs, only consider those for Google confirmation; otherwise, consider all groups.
     candidate_groups = href_rich_groups if href_rich_groups else list(groups.values())
 
-    for i, group in enumerate(candidate_groups):
+    #remove duplicate groups (same names, same card_ids, different type)
+    unique_groups = []
+    for group in candidate_groups:
+        is_duplicate = False
+        for ugroup in unique_groups:
+            if group["names"] == ugroup["names"] and check_card_ids(group, ugroup):
+                is_duplicate = True
+                break
+        if not is_duplicate:
+            unique_groups.append(group)
+
+    for i, group in enumerate(unique_groups):
         group_names = list(group["names"])
         candidates = False
-        if group["cross_type_matching"]:
-            print(f"Group {i} has cross-type matching; skipping Google confirmation.")
+
+
+
+        logoCheck = True
+        for name in group_names[:3]:  # check up to first 3 candidates in the group
+            #realisation: given the cleaning that has already occurred, we can also allow a match on groups that contain the word "logo" within them
+            if "logo" not in name.lower():
+                logoCheck = False
+            
+        if logoCheck:
+            print(f"Group {i} consists of logo-only candidates; skipping Google confirmation.")
             candidates = True
         else:
-
-            logoCheck = True
             for name in group_names[:3]:  # check up to first 3 candidates in the group
-                #realisation: given the cleaning that has already occurred, we can also allow a match on groups that contain the word "logo" within them
-                if "logo" not in name.lower():
-                    logoCheck = False
-                
-            if logoCheck:
-                print(f"Group {i} consists of logo-only candidates; skipping Google confirmation.")
-                candidates = True
-            else:
-                for name in group_names[:3]:  # check up to first 3 candidates in the group
-                    #idea: if any of the first 3 candidates in the group is google confirmed, we accept the whole group, as they are structurally similar
-                    print(f"Google confirming candidate name '{name}' in group {i}...")
-                    used_up, confirmed = google_confirm_name(name, _norm(pe_full_name), google_search_fn, used_up)
-                    if confirmed:
-                        candidates = True
-        
+                #idea: if any of the first 3 candidates in the group is google confirmed, we accept the whole group, as they are structurally similar
+                print(f"Google confirming candidate name '{name}' in group {i}...")
+                used_up, confirmed = google_confirm_name(name, _norm(pe_full_name), google_search_fn, used_up)
+                if confirmed:
+                    candidates = True
+    
         if candidates:
             print(f"Group {group} confirmed by Google search.")
             final_portcos = df[df["clean_text"].isin(group_names)].copy()
@@ -324,4 +336,4 @@ def select_portcos_for_firm(df: pd.DataFrame, pe_full_name: str, google_search_f
 
     
 
-    return used_up, final_portcos, groupIDs
+    return used_up, final_portcos

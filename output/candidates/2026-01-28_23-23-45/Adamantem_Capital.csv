@@ -1,0 +1,86 @@
+card_id,text,raw_text,type,rank
+0,Skip to Content,Skip to Content,a_inner_text,D
+0,,#content,href,D
+1,Who we are,Who we are,a_inner_text,D
+1,,#,href,D
+2,About Us,About Us,a_inner_text,D
+2,about us,https://adamantem.com.au/about-us/,href,C
+3,Team,Team,a_inner_text,D
+3,team,https://adamantem.com.au/team/,href,C
+4,what we do,what we do,a_inner_text,D
+4,,#,href,D
+5,Strategies,Strategies,a_inner_text,D
+5,strategies,https://adamantem.com.au/strategies/,href,C
+6,Portfolio,Portfolio,a_inner_text,D
+6,portfolio,https://adamantem.com.au/portfolio/,href,C
+7,how we do it,how we do it,a_inner_text,D
+7,,#,href,D
+8,Investment Approach,Investment Approach,a_inner_text,D
+8,investment approach,https://adamantem.com.au/investment-approach/,href,C
+9,Sustainability,Sustainability,a_inner_text,D
+9,sustainability,https://adamantem.com.au/sustainability/,href,C
+10,what’s new,what’s new,a_inner_text,D
+10,,#,href,D
+11,Insights,Insights,a_inner_text,D
+11,insights,https://adamantem.com.au/insights/,href,C
+12,Connect,Connect,a_inner_text,D
+12,connect,https://adamantem.com.au/connect/,href,C
+13,Investor Login,Investor Login,a_inner_text,D
+13,,https://services.dataexchange.fiscloudservices.com/LogOn/3490076,href,C
+14,info@adamantem.com.au,info@adamantem.com.au,a_inner_text,D
+14,info@adamantem.com,mailto:info@adamantem.com.au,href,C
+15,Who we are,Who we are,a_inner_text,D
+15,,#,href,D
+16,About Us,About Us,a_inner_text,D
+16,about us,https://adamantem.com.au/about-us/,href,C
+17,Team,Team,a_inner_text,D
+17,team,https://adamantem.com.au/team/,href,C
+18,what we do,what we do,a_inner_text,D
+18,,#,href,D
+19,Strategies,Strategies,a_inner_text,D
+19,strategies,https://adamantem.com.au/strategies/,href,C
+20,Portfolio,Portfolio,a_inner_text,D
+20,portfolio,https://adamantem.com.au/portfolio/,href,C
+21,how we do it,how we do it,a_inner_text,D
+21,,#,href,D
+22,Investment Approach,Investment Approach,a_inner_text,D
+22,investment approach,https://adamantem.com.au/investment-approach/,href,C
+23,Sustainability,Sustainability,a_inner_text,D
+23,sustainability,https://adamantem.com.au/sustainability/,href,C
+24,what’s new,what’s new,a_inner_text,D
+24,,#,href,D
+25,Insights,Insights,a_inner_text,D
+25,insights,https://adamantem.com.au/insights/,href,C
+26,Connect,Connect,a_inner_text,D
+26,connect,https://adamantem.com.au/connect/,href,C
+27,Linkedin,Linkedin,a_inner_text,D
+27,adamantem capital,https://www.linkedin.com/company/adamantem-capital/,href,B
+28,Privacy Policy,Privacy Policy,a_inner_text,D
+28,privacy policy,https://adamantem.com.au/privacy-policy/,href,C
+29,Whistleblower Policy,Whistleblower Policy,a_inner_text,D
+29,whistleblower policy,https://adamantem.com.au/whistleblower-policy/,href,C
+30,Terms of Use,Terms of Use,a_inner_text,D
+30,terms of use,https://adamantem.com.au/terms-of-use/,href,C
+31,Investor Login,Investor Login,a_inner_text,D
+31,,https://services.dataexchange.fiscloudservices.com/LogOn/3490076,href,C
+32,To top,To top,a_inner_text,D
+32,,#wrapper,href,D
+33,Back to top,Back to top,a_inner_text,D
+33,,#wrapper,href,D
+34,Logo,Logo,img_alt_text,E
+34,Logo,https://adamantem.com.au/wp-content/uploads/2025/06/Logo.svg,src,E
+35,Logo,Logo,img_alt_text,E
+35,Logo,https://adamantem.com.au/wp-content/uploads/2025/06/Logo.svg,src,E
+36,image arrow,image arrow,img_alt_text,E
+36,arrow top,https://adamantem.com.au/wp-content/themes/adamantemcapital/images/arrow-top.svg,src,E
+37,Logo,Logo,img_alt_text,E
+37,Logo,https://adamantem.com.au/wp-content/uploads/2025/06/Logo.svg,src,E
+38,Logo,Logo,img_alt_text,E
+38,Logo,https://adamantem.com.au/wp-content/uploads/2025/06/Logo.svg,src,E
+78,Logo,https://adamantem.com.au/wp-content/uploads/2025/06/Logo.svg,image_src,I
+80,Logo,https://adamantem.com.au/wp-content/uploads/2025/06/Logo.svg,image_src,I
+82,wp content,https://adamantem.com.au/wp-content/themes/adamantemcapital/images/arrow-top.svg,image_src,I
+84,themes,https://adamantem.com.au/wp-content/themes/adamantemcapital/images/arrow-top.svg,image_src,I
+86,adamantemcapital,https://adamantem.com.au/wp-content/themes/adamantemcapital/images/arrow-top.svg,image_src,I
+88,images,https://adamantem.com.au/wp-content/themes/adamantemcapital/images/arrow-top.svg,image_src,I
+90,arrow top,https://adamantem.com.au/wp-content/themes/adamantemcapital/images/arrow-top.svg,image_src,I

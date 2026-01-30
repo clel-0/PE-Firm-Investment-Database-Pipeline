@@ -1,0 +1,972 @@
+card_id,text,raw_text,type,rank
+0,Investor Portal,Investor Portal,a_inner_text,A
+0,,javascript:;,href,C
+1,Investor Portal,Investor Portal,a_inner_text,A
+1,salterbrothers,https://app.junipersquare.com/i/salterbrothers,href,C
+2,Investor Portal (Pre 2024),Investor Portal (Pre 2024),a_inner_text,A
+2,investor portal,/investor-portal/,href,C
+3,Salter Brothers,Salter Brothers,a_inner_text,A
+3,salterbrothers,https://salterbrothers.com.au/,href,D
+4,Salter Brothers,Salter Brothers,a_inner_text,A
+4,salterbrothers,https://salterbrothers.com.au/,href,D
+5,About,About,a_inner_text,A
+5,about,https://salterbrothers.com.au/about/,href,C
+6,About Us,About Us,a_inner_text,A
+6,about,https://salterbrothers.com.au/about/,href,C
+7,ESG,ESG,a_inner_text,A
+7,about,https://salterbrothers.com.au/about/#esg,href,C
+8,Ratings & Awards,Ratings & Awards,a_inner_text,A
+8,ratings awards,https://salterbrothers.com.au/ratings-awards/,href,C
+9,Our Boards,Our Boards,a_inner_text,A
+9,our boards,https://salterbrothers.com.au/about/our-boards/,href,C
+10,Our Senior Team,Our Senior Team,a_inner_text,A
+10,our team,https://salterbrothers.com.au/about/our-team/,href,C
+11,Investors,Investors,a_inner_text,A
+11,investors,https://salterbrothers.com.au/investors/,href,C
+12,Funds Management,Funds Management,a_inner_text,A
+12,funds management,https://salterbrothers.com.au/funds-management/,href,C
+13,Property Funds,Property Funds,a_inner_text,A
+13,property funds,https://salterbrothers.com.au/funds-management/property-funds/,href,C
+14,Equity Funds,Equity Funds,a_inner_text,A
+14,private equity funds,https://salterbrothers.com.au/funds-management/private-equity-funds/,href,C
+15,Credit Funds,Credit Funds,a_inner_text,A
+15,credit funds,/funds-management/credit-funds/,href,C
+16,Decarbonisation,Decarbonisation,a_inner_text,A
+16,ksb,https://salterbrothers.com.au/ksb/,href,C
+17,Salter Brothers Emerging Companies Ltd,Salter Brothers Emerging Companies Ltd,a_inner_text,A
+17,emerging companies,https://salterbrothers.com.au/funds-management/emerging-companies/,href,C
+18,Salter Brothers Tech Fund,Salter Brothers Tech Fund,a_inner_text,A
+18,techfund,https://salterbrothers.com.au/techfund/,href,C
+19,Immigration Investment,Immigration Investment,a_inner_text,A
+19,immigration investment,https://salterbrothers.com.au/funds-management/immigration-investment/,href,C
+20,Advisory,Advisory,a_inner_text,A
+20,advisory,https://salterbrothers.com.au/advisory/,href,C
+21,Corporate & Strategic Advisory,Corporate & Strategic Advisory,a_inner_text,A
+21,corporate strategic advisory,https://salterbrothers.com.au/advisory/corporate-strategic-advisory/,href,C
+22,Mergers & Acquisitions,Mergers & Acquisitions,a_inner_text,A
+22,mergers and acquisitions advisory,https://salterbrothers.com.au/advisory/mergers-and-acquisitions-advisory/,href,C
+23,Equity Capital Markets,Equity Capital Markets,a_inner_text,A
+23,equity capital markets,https://salterbrothers.com.au/advisory/equity-capital-markets/,href,C
+24,Debt Capital Markets,Debt Capital Markets,a_inner_text,A
+24,debt capital markets,https://salterbrothers.com.au/advisory/debt-capital-markets/,href,C
+25,Hospitality,Hospitality,a_inner_text,A
+25,hospitality,https://salterbrothers.com.au/hospitality/,href,C
+26,Portfolio,Portfolio,a_inner_text,A
+26,portfolio,https://salterbrothers.com.au/portfolio/,href,C
+27,News & Insights,News & Insights,a_inner_text,A
+27,news press,https://salterbrothers.com.au/news-press/,href,C
+28,Latest News & Insights,Latest News & Insights,a_inner_text,A
+28,news press,https://salterbrothers.com.au/news-press/,href,C
+29,Research Reports,Research Reports,a_inner_text,A
+29,research reports,https://salterbrothers.com.au/research-reports/,href,C
+30,Investor Portals,Investor Portals,a_inner_text,A
+30,portals,https://salterbrothers.com.au/portals/,href,C
+31,Investor Portal,Investor Portal,a_inner_text,A
+31,salterbrothers,https://app.junipersquare.com/i/salterbrothers,href,C
+32,Investor Portal (Pre 2024),Investor Portal (Pre 2024),a_inner_text,A
+32,investor portal,/investor-portal/,href,C
+33,Contact,Contact,a_inner_text,A
+33,contact,https://salterbrothers.com.au/contact/,href,C
+34,About,About,a_inner_text,A
+34,about,https://salterbrothers.com.au/about/,href,C
+35,About Us,About Us,a_inner_text,A
+35,about,https://salterbrothers.com.au/about/,href,C
+36,ESG,ESG,a_inner_text,A
+36,about,https://salterbrothers.com.au/about/#esg,href,C
+37,Ratings & Awards,Ratings & Awards,a_inner_text,A
+37,ratings awards,https://salterbrothers.com.au/ratings-awards/,href,C
+38,Our Boards,Our Boards,a_inner_text,A
+38,our boards,https://salterbrothers.com.au/about/our-boards/,href,C
+39,Our Senior Team,Our Senior Team,a_inner_text,A
+39,our team,https://salterbrothers.com.au/about/our-team/,href,C
+40,Investors,Investors,a_inner_text,A
+40,investors,https://salterbrothers.com.au/investors/,href,C
+41,Funds Management,Funds Management,a_inner_text,A
+41,funds management,https://salterbrothers.com.au/funds-management/,href,C
+42,Property Funds,Property Funds,a_inner_text,A
+42,property funds,https://salterbrothers.com.au/funds-management/property-funds/,href,C
+43,Equity Funds,Equity Funds,a_inner_text,A
+43,private equity funds,https://salterbrothers.com.au/funds-management/private-equity-funds/,href,C
+44,Credit Funds,Credit Funds,a_inner_text,A
+44,credit funds,/funds-management/credit-funds/,href,C
+45,Decarbonisation,Decarbonisation,a_inner_text,A
+45,ksb,https://salterbrothers.com.au/ksb/,href,C
+46,Salter Brothers Emerging Companies Ltd,Salter Brothers Emerging Companies Ltd,a_inner_text,A
+46,emerging companies,https://salterbrothers.com.au/funds-management/emerging-companies/,href,C
+47,Salter Brothers Tech Fund,Salter Brothers Tech Fund,a_inner_text,A
+47,techfund,https://salterbrothers.com.au/techfund/,href,C
+48,Immigration Investment,Immigration Investment,a_inner_text,A
+48,immigration investment,https://salterbrothers.com.au/funds-management/immigration-investment/,href,C
+49,Advisory,Advisory,a_inner_text,A
+49,advisory,https://salterbrothers.com.au/advisory/,href,C
+50,Corporate & Strategic Advisory,Corporate & Strategic Advisory,a_inner_text,A
+50,corporate strategic advisory,https://salterbrothers.com.au/advisory/corporate-strategic-advisory/,href,C
+51,Mergers & Acquisitions,Mergers & Acquisitions,a_inner_text,A
+51,mergers and acquisitions advisory,https://salterbrothers.com.au/advisory/mergers-and-acquisitions-advisory/,href,C
+52,Equity Capital Markets,Equity Capital Markets,a_inner_text,A
+52,equity capital markets,https://salterbrothers.com.au/advisory/equity-capital-markets/,href,C
+53,Debt Capital Markets,Debt Capital Markets,a_inner_text,A
+53,debt capital markets,https://salterbrothers.com.au/advisory/debt-capital-markets/,href,C
+54,Hospitality,Hospitality,a_inner_text,A
+54,hospitality,https://salterbrothers.com.au/hospitality/,href,C
+55,Portfolio,Portfolio,a_inner_text,A
+55,portfolio,https://salterbrothers.com.au/portfolio/,href,C
+56,News & Insights,News & Insights,a_inner_text,A
+56,news press,https://salterbrothers.com.au/news-press/,href,C
+57,Latest News & Insights,Latest News & Insights,a_inner_text,A
+57,news press,https://salterbrothers.com.au/news-press/,href,C
+58,Research Reports,Research Reports,a_inner_text,A
+58,research reports,https://salterbrothers.com.au/research-reports/,href,C
+59,Investor Portals,Investor Portals,a_inner_text,A
+59,portals,https://salterbrothers.com.au/portals/,href,C
+60,Investor Portal,Investor Portal,a_inner_text,A
+60,salterbrothers,https://app.junipersquare.com/i/salterbrothers,href,C
+61,Investor Portal (Pre 2024),Investor Portal (Pre 2024),a_inner_text,A
+61,investor portal,/investor-portal/,href,C
+62,Contact,Contact,a_inner_text,A
+62,contact,https://salterbrothers.com.au/contact/,href,C
+63,All,All,a_inner_text,A
+63,,,href,C
+64,Hotel Portfolio Australia,Hotel Portfolio Australia,a_inner_text,A
+64,,#,href,D
+65,Hotel Portfolio USA,Hotel Portfolio USA,a_inner_text,A
+65,,#,href,D
+66,Hotel Portfolio Japan,Hotel Portfolio Japan,a_inner_text,A
+66,,#,href,D
+67,Retreats,Retreats,a_inner_text,A
+67,,#,href,D
+68,Private Equity Investments,Private Equity Investments,a_inner_text,A
+68,,#,href,D
+69,Residential & Commercial Australia,Residential & Commercial Australia,a_inner_text,A
+69,,#,href,D
+70,"Intercontinental MelbourneMelbourne, AustraliaThe InterContinental Melbourne is a 5 star rated hotel which reopened in late 2008 subsequent to a substantial refurbishment of an existing hotel, combining heritage features with modern facilities.","Intercontinental MelbourneMelbourne, AustraliaThe InterContinental Melbourne is a 5 star rated hotel which reopened in late 2008 subsequent to a substantial refurbishment of an existing hotel, combining heritage features with modern facilities.",a_inner_text,A
+70,intercontinental melbourne,https://salterbrothers.com.au/portfolio/intercontinental-melbourne/,href,A
+71,NextInterContinental Sydney Coogee Beach,NextInterContinental Sydney Coogee Beach,a_inner_text,A
+71,,#,href,D
+72,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+72,portfolio,/portfolio/,href,C
+73,"InterContinental Sydney Coogee BeachNew South Wales, AustraliaPositioned on Sydney’s iconic eastern coastline, InterContinental Sydney Coogee Beach is a 5 star rated hotel, offering a sophisticated coastal escape, exceptional dining and world-class hospitality.","InterContinental Sydney Coogee BeachNew South Wales, AustraliaPositioned on Sydney’s iconic eastern coastline, InterContinental Sydney Coogee Beach is a 5 star rated hotel, offering a sophisticated coastal escape, exceptional dining and world-class hospitality.",a_inner_text,A
+73,intercontinental sydney coogee beach,https://salterbrothers.com.au/portfolio/intercontinental-sydney-coogee-beach/,href,A
+74,PreviousIntercontinental Melbourne,PreviousIntercontinental Melbourne,a_inner_text,A
+74,,#,href,D
+75,NextBannisters Port Stephens,NextBannisters Port Stephens,a_inner_text,A
+75,,#,href,D
+76,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+76,portfolio,/portfolio/,href,C
+77,Bannisters Port StephensNew South WalesBannisters Port Stephens is a remodelled hotel and an ode to the glamour days of luxury hotels from the sixties and seventies.,Bannisters Port StephensNew South WalesBannisters Port Stephens is a remodelled hotel and an ode to the glamour days of luxury hotels from the sixties and seventies.,a_inner_text,A
+77,bannisters port stephens,https://salterbrothers.com.au/portfolio/bannisters-port-stephens/,href,A
+78,PreviousInterContinental Sydney Coogee Beach,PreviousInterContinental Sydney Coogee Beach,a_inner_text,A
+78,,#,href,D
+79,NextBannisters Pavilion,NextBannisters Pavilion,a_inner_text,A
+79,,#,href,D
+80,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+80,portfolio,/portfolio/,href,C
+81,Bannisters PavilionNew South WalesStylish and contemporary rooms and suites located near one of the south coast’s most beautiful beaches makes Bannisters Pavilion the perfect choice for a coastal getaway.,Bannisters PavilionNew South WalesStylish and contemporary rooms and suites located near one of the south coast’s most beautiful beaches makes Bannisters Pavilion the perfect choice for a coastal getaway.,a_inner_text,A
+81,bannisters pavilion,https://salterbrothers.com.au/portfolio/bannisters-pavilion/,href,A
+82,PreviousBannisters Port Stephens,PreviousBannisters Port Stephens,a_inner_text,A
+82,,#,href,D
+83,NextBannisters By The Sea,NextBannisters By The Sea,a_inner_text,A
+83,,#,href,D
+84,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+84,portfolio,/portfolio/,href,C
+85,"Bannisters By The SeaNew South WalesDramatic clifftop views over the glittering ocean, luxury accommodation and superb dining ensure guests have an unforgettable stay.","Bannisters By The SeaNew South WalesDramatic clifftop views over the glittering ocean, luxury accommodation and superb dining ensure guests have an unforgettable stay.",a_inner_text,A
+85,bannisters by the sea,https://salterbrothers.com.au/portfolio/bannisters-by-the-sea/,href,A
+86,PreviousBannisters Pavilion,PreviousBannisters Pavilion,a_inner_text,A
+86,,#,href,D
+87,NextKingsford Barossa,NextKingsford Barossa,a_inner_text,A
+87,,#,href,D
+88,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+88,portfolio,/portfolio/,href,C
+89,"Kingsford BarossaSouth Australia, AustraliaBuilt in 1856, Kingsford The Barossa is a picturesque venue that has been lovingly restored to become one of Australia’s finest luxury retreats.","Kingsford BarossaSouth Australia, AustraliaBuilt in 1856, Kingsford The Barossa is a picturesque venue that has been lovingly restored to become one of Australia’s finest luxury retreats.",a_inner_text,A
+89,kingsford barossa,https://salterbrothers.com.au/portfolio/kingsford-barossa/,href,A
+90,PreviousBannisters By The Sea,PreviousBannisters By The Sea,a_inner_text,A
+90,,#,href,D
+91,NextSofitel Adelaide,NextSofitel Adelaide,a_inner_text,A
+91,,#,href,D
+92,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+92,portfolio,/portfolio/,href,C
+93,About,About,a_inner_text,A
+93,about,https://salterbrothers.com.au/about/,href,C
+94,Our Team,Our Team,a_inner_text,A
+94,our team,https://salterbrothers.com.au/about/our-team/,href,C
+95,Our Boards,Our Boards,a_inner_text,A
+95,our boards,https://salterbrothers.com.au/about/our-boards/,href,C
+96,Our Specialist Funds,Our Specialist Funds,a_inner_text,A
+96,funds management,https://salterbrothers.com.au/funds-management/,href,C
+97,Property Funds,Property Funds,a_inner_text,A
+97,property funds,https://salterbrothers.com.au/funds-management/property-funds/,href,C
+98,Equity Funds,Equity Funds,a_inner_text,A
+98,private equity funds,https://salterbrothers.com.au/funds-management/private-equity-funds/,href,C
+99,Credit Funds,Credit Funds,a_inner_text,A
+99,credit funds,https://salterbrothers.com.au/funds-management/credit-funds/,href,C
+100,Immigration Investment,Immigration Investment,a_inner_text,A
+100,immigration investment,https://salterbrothers.com.au/funds-management/immigration-investment/,href,C
+101,SIV Australia,SIV Australia,a_inner_text,A
+101,significant investor visa australia,https://salterbrothers.com.au/funds-management/immigration-investment/significant-investor-visa-australia/,href,C
+102,Investor Portal,Investor Portal,a_inner_text,A
+102,portals,/portals/,href,C
+103,Advisory,Advisory,a_inner_text,A
+103,advisory,https://salterbrothers.com.au/advisory/,href,C
+104,Corporate & Strategic Advisory,Corporate & Strategic Advisory,a_inner_text,A
+104,corporate strategic advisory,https://salterbrothers.com.au/advisory/corporate-strategic-advisory/,href,C
+105,Mergers & Acquisitions,Mergers & Acquisitions,a_inner_text,A
+105,mergers and acquisitions advisory,https://salterbrothers.com.au/advisory/mergers-and-acquisitions-advisory/,href,C
+106,Contact,Contact,a_inner_text,A
+106,contact,/contact/,href,C
+108,Privacy Policy,Privacy Policy,a_inner_text,A
+108,privacy policy,https://salterbrothers.com.au/privacy-policy/,href,C
+109,Legal Disclaimer,Legal Disclaimer,a_inner_text,A
+109,disclaimer,https://salterbrothers.com.au/disclaimer/,href,C
+110,secure,secure,img_alt_text,B
+110,lock,/app/themes/salter-brothers/resources/assets/images/lock.png,src,B
+111,Salter Brothers,Salter Brothers,img_alt_text,B
+112,Salter Brothers,Salter Brothers,img_alt_text,B
+113,LinkedIn,LinkedIn,img_alt_text,B
+113,icon linkedin,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-linkedin.png,src,B
+114,Instagram,Instagram,img_alt_text,B
+114,icon instagram,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-instagram.png,src,B
+115,Facebook,Facebook,img_alt_text,B
+115,icon facebook,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-facebook.png,src,B
+116,Youtube,Youtube,img_alt_text,B
+116,icon youtube,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-youtube.png,src,B
+117,Salter Brothers,Salter Brothers,img_alt_text,B
+118,Investor Portal,Investor Portal,a_inner_text,A
+118,,javascript:;,href,C
+119,Investor Portal,Investor Portal,a_inner_text,A
+119,salterbrothers,https://app.junipersquare.com/i/salterbrothers,href,C
+120,Investor Portal (Pre 2024),Investor Portal (Pre 2024),a_inner_text,A
+120,investor portal,/investor-portal/,href,C
+121,secure,secure,img_alt_text,B
+121,lock,/app/themes/salter-brothers/resources/assets/images/lock.png,src,B
+122,Salter Brothers,Salter Brothers,a_inner_text,A
+122,salterbrothers,https://salterbrothers.com.au/,href,D
+123,Salter Brothers,Salter Brothers,a_inner_text,A
+123,salterbrothers,https://salterbrothers.com.au/,href,D
+124,About,About,a_inner_text,A
+124,about,https://salterbrothers.com.au/about/,href,C
+125,About Us,About Us,a_inner_text,A
+125,about,https://salterbrothers.com.au/about/,href,C
+126,ESG,ESG,a_inner_text,A
+126,about,https://salterbrothers.com.au/about/#esg,href,C
+127,Ratings & Awards,Ratings & Awards,a_inner_text,A
+127,ratings awards,https://salterbrothers.com.au/ratings-awards/,href,C
+128,Our Boards,Our Boards,a_inner_text,A
+128,our boards,https://salterbrothers.com.au/about/our-boards/,href,C
+129,Our Senior Team,Our Senior Team,a_inner_text,A
+129,our team,https://salterbrothers.com.au/about/our-team/,href,C
+130,Investors,Investors,a_inner_text,A
+130,investors,https://salterbrothers.com.au/investors/,href,C
+131,Funds Management,Funds Management,a_inner_text,A
+131,funds management,https://salterbrothers.com.au/funds-management/,href,C
+132,Property Funds,Property Funds,a_inner_text,A
+132,property funds,https://salterbrothers.com.au/funds-management/property-funds/,href,C
+133,Equity Funds,Equity Funds,a_inner_text,A
+133,private equity funds,https://salterbrothers.com.au/funds-management/private-equity-funds/,href,C
+134,Credit Funds,Credit Funds,a_inner_text,A
+134,credit funds,/funds-management/credit-funds/,href,C
+135,Decarbonisation,Decarbonisation,a_inner_text,A
+135,ksb,https://salterbrothers.com.au/ksb/,href,C
+136,Salter Brothers Emerging Companies Ltd,Salter Brothers Emerging Companies Ltd,a_inner_text,A
+136,emerging companies,https://salterbrothers.com.au/funds-management/emerging-companies/,href,C
+137,Salter Brothers Tech Fund,Salter Brothers Tech Fund,a_inner_text,A
+137,techfund,https://salterbrothers.com.au/techfund/,href,C
+138,Immigration Investment,Immigration Investment,a_inner_text,A
+138,immigration investment,https://salterbrothers.com.au/funds-management/immigration-investment/,href,C
+139,Advisory,Advisory,a_inner_text,A
+139,advisory,https://salterbrothers.com.au/advisory/,href,C
+140,Corporate & Strategic Advisory,Corporate & Strategic Advisory,a_inner_text,A
+140,corporate strategic advisory,https://salterbrothers.com.au/advisory/corporate-strategic-advisory/,href,C
+141,Mergers & Acquisitions,Mergers & Acquisitions,a_inner_text,A
+141,mergers and acquisitions advisory,https://salterbrothers.com.au/advisory/mergers-and-acquisitions-advisory/,href,C
+142,Equity Capital Markets,Equity Capital Markets,a_inner_text,A
+142,equity capital markets,https://salterbrothers.com.au/advisory/equity-capital-markets/,href,C
+143,Debt Capital Markets,Debt Capital Markets,a_inner_text,A
+143,debt capital markets,https://salterbrothers.com.au/advisory/debt-capital-markets/,href,C
+144,Hospitality,Hospitality,a_inner_text,A
+144,hospitality,https://salterbrothers.com.au/hospitality/,href,C
+145,Portfolio,Portfolio,a_inner_text,A
+145,portfolio,https://salterbrothers.com.au/portfolio/,href,C
+146,News & Insights,News & Insights,a_inner_text,A
+146,news press,https://salterbrothers.com.au/news-press/,href,C
+147,Latest News & Insights,Latest News & Insights,a_inner_text,A
+147,news press,https://salterbrothers.com.au/news-press/,href,C
+148,Research Reports,Research Reports,a_inner_text,A
+148,research reports,https://salterbrothers.com.au/research-reports/,href,C
+149,Investor Portals,Investor Portals,a_inner_text,A
+149,portals,https://salterbrothers.com.au/portals/,href,C
+150,Investor Portal,Investor Portal,a_inner_text,A
+150,salterbrothers,https://app.junipersquare.com/i/salterbrothers,href,C
+151,Investor Portal (Pre 2024),Investor Portal (Pre 2024),a_inner_text,A
+151,investor portal,/investor-portal/,href,C
+152,Contact,Contact,a_inner_text,A
+152,contact,https://salterbrothers.com.au/contact/,href,C
+153,About,About,a_inner_text,A
+153,about,https://salterbrothers.com.au/about/,href,C
+154,About Us,About Us,a_inner_text,A
+154,about,https://salterbrothers.com.au/about/,href,C
+155,ESG,ESG,a_inner_text,A
+155,about,https://salterbrothers.com.au/about/#esg,href,C
+156,Ratings & Awards,Ratings & Awards,a_inner_text,A
+156,ratings awards,https://salterbrothers.com.au/ratings-awards/,href,C
+157,Our Boards,Our Boards,a_inner_text,A
+157,our boards,https://salterbrothers.com.au/about/our-boards/,href,C
+158,Our Senior Team,Our Senior Team,a_inner_text,A
+158,our team,https://salterbrothers.com.au/about/our-team/,href,C
+159,Investors,Investors,a_inner_text,A
+159,investors,https://salterbrothers.com.au/investors/,href,C
+160,Funds Management,Funds Management,a_inner_text,A
+160,funds management,https://salterbrothers.com.au/funds-management/,href,C
+161,Property Funds,Property Funds,a_inner_text,A
+161,property funds,https://salterbrothers.com.au/funds-management/property-funds/,href,C
+162,Equity Funds,Equity Funds,a_inner_text,A
+162,private equity funds,https://salterbrothers.com.au/funds-management/private-equity-funds/,href,C
+163,Credit Funds,Credit Funds,a_inner_text,A
+163,credit funds,/funds-management/credit-funds/,href,C
+164,Decarbonisation,Decarbonisation,a_inner_text,A
+164,ksb,https://salterbrothers.com.au/ksb/,href,C
+165,Salter Brothers Emerging Companies Ltd,Salter Brothers Emerging Companies Ltd,a_inner_text,A
+165,emerging companies,https://salterbrothers.com.au/funds-management/emerging-companies/,href,C
+166,Salter Brothers Tech Fund,Salter Brothers Tech Fund,a_inner_text,A
+166,techfund,https://salterbrothers.com.au/techfund/,href,C
+167,Immigration Investment,Immigration Investment,a_inner_text,A
+167,immigration investment,https://salterbrothers.com.au/funds-management/immigration-investment/,href,C
+168,Advisory,Advisory,a_inner_text,A
+168,advisory,https://salterbrothers.com.au/advisory/,href,C
+169,Corporate & Strategic Advisory,Corporate & Strategic Advisory,a_inner_text,A
+169,corporate strategic advisory,https://salterbrothers.com.au/advisory/corporate-strategic-advisory/,href,C
+170,Mergers & Acquisitions,Mergers & Acquisitions,a_inner_text,A
+170,mergers and acquisitions advisory,https://salterbrothers.com.au/advisory/mergers-and-acquisitions-advisory/,href,C
+171,Equity Capital Markets,Equity Capital Markets,a_inner_text,A
+171,equity capital markets,https://salterbrothers.com.au/advisory/equity-capital-markets/,href,C
+172,Debt Capital Markets,Debt Capital Markets,a_inner_text,A
+172,debt capital markets,https://salterbrothers.com.au/advisory/debt-capital-markets/,href,C
+173,Hospitality,Hospitality,a_inner_text,A
+173,hospitality,https://salterbrothers.com.au/hospitality/,href,C
+174,Portfolio,Portfolio,a_inner_text,A
+174,portfolio,https://salterbrothers.com.au/portfolio/,href,C
+175,News & Insights,News & Insights,a_inner_text,A
+175,news press,https://salterbrothers.com.au/news-press/,href,C
+176,Latest News & Insights,Latest News & Insights,a_inner_text,A
+176,news press,https://salterbrothers.com.au/news-press/,href,C
+177,Research Reports,Research Reports,a_inner_text,A
+177,research reports,https://salterbrothers.com.au/research-reports/,href,C
+178,Investor Portals,Investor Portals,a_inner_text,A
+178,portals,https://salterbrothers.com.au/portals/,href,C
+179,Investor Portal,Investor Portal,a_inner_text,A
+179,salterbrothers,https://app.junipersquare.com/i/salterbrothers,href,C
+180,Investor Portal (Pre 2024),Investor Portal (Pre 2024),a_inner_text,A
+180,investor portal,/investor-portal/,href,C
+181,Contact,Contact,a_inner_text,A
+181,contact,https://salterbrothers.com.au/contact/,href,C
+182,Salter Brothers,Salter Brothers,img_alt_text,B
+183,Salter Brothers,Salter Brothers,img_alt_text,B
+184,Salter Brothers,Salter Brothers,a_inner_text,A
+184,salterbrothers,https://salterbrothers.com.au/,href,D
+185,Salter Brothers,Salter Brothers,a_inner_text,A
+185,salterbrothers,https://salterbrothers.com.au/,href,D
+186,About,About,a_inner_text,A
+186,about,https://salterbrothers.com.au/about/,href,C
+187,About Us,About Us,a_inner_text,A
+187,about,https://salterbrothers.com.au/about/,href,C
+188,ESG,ESG,a_inner_text,A
+188,about,https://salterbrothers.com.au/about/#esg,href,C
+189,Ratings & Awards,Ratings & Awards,a_inner_text,A
+189,ratings awards,https://salterbrothers.com.au/ratings-awards/,href,C
+190,Our Boards,Our Boards,a_inner_text,A
+190,our boards,https://salterbrothers.com.au/about/our-boards/,href,C
+191,Our Senior Team,Our Senior Team,a_inner_text,A
+191,our team,https://salterbrothers.com.au/about/our-team/,href,C
+192,Investors,Investors,a_inner_text,A
+192,investors,https://salterbrothers.com.au/investors/,href,C
+193,Funds Management,Funds Management,a_inner_text,A
+193,funds management,https://salterbrothers.com.au/funds-management/,href,C
+194,Property Funds,Property Funds,a_inner_text,A
+194,property funds,https://salterbrothers.com.au/funds-management/property-funds/,href,C
+195,Equity Funds,Equity Funds,a_inner_text,A
+195,private equity funds,https://salterbrothers.com.au/funds-management/private-equity-funds/,href,C
+196,Credit Funds,Credit Funds,a_inner_text,A
+196,credit funds,/funds-management/credit-funds/,href,C
+197,Decarbonisation,Decarbonisation,a_inner_text,A
+197,ksb,https://salterbrothers.com.au/ksb/,href,C
+198,Salter Brothers Emerging Companies Ltd,Salter Brothers Emerging Companies Ltd,a_inner_text,A
+198,emerging companies,https://salterbrothers.com.au/funds-management/emerging-companies/,href,C
+199,Salter Brothers Tech Fund,Salter Brothers Tech Fund,a_inner_text,A
+199,techfund,https://salterbrothers.com.au/techfund/,href,C
+200,Immigration Investment,Immigration Investment,a_inner_text,A
+200,immigration investment,https://salterbrothers.com.au/funds-management/immigration-investment/,href,C
+201,Advisory,Advisory,a_inner_text,A
+201,advisory,https://salterbrothers.com.au/advisory/,href,C
+202,Corporate & Strategic Advisory,Corporate & Strategic Advisory,a_inner_text,A
+202,corporate strategic advisory,https://salterbrothers.com.au/advisory/corporate-strategic-advisory/,href,C
+203,Mergers & Acquisitions,Mergers & Acquisitions,a_inner_text,A
+203,mergers and acquisitions advisory,https://salterbrothers.com.au/advisory/mergers-and-acquisitions-advisory/,href,C
+204,Equity Capital Markets,Equity Capital Markets,a_inner_text,A
+204,equity capital markets,https://salterbrothers.com.au/advisory/equity-capital-markets/,href,C
+205,Debt Capital Markets,Debt Capital Markets,a_inner_text,A
+205,debt capital markets,https://salterbrothers.com.au/advisory/debt-capital-markets/,href,C
+206,Hospitality,Hospitality,a_inner_text,A
+206,hospitality,https://salterbrothers.com.au/hospitality/,href,C
+207,Portfolio,Portfolio,a_inner_text,A
+207,portfolio,https://salterbrothers.com.au/portfolio/,href,C
+208,News & Insights,News & Insights,a_inner_text,A
+208,news press,https://salterbrothers.com.au/news-press/,href,C
+209,Latest News & Insights,Latest News & Insights,a_inner_text,A
+209,news press,https://salterbrothers.com.au/news-press/,href,C
+210,Research Reports,Research Reports,a_inner_text,A
+210,research reports,https://salterbrothers.com.au/research-reports/,href,C
+211,Investor Portals,Investor Portals,a_inner_text,A
+211,portals,https://salterbrothers.com.au/portals/,href,C
+212,Investor Portal,Investor Portal,a_inner_text,A
+212,salterbrothers,https://app.junipersquare.com/i/salterbrothers,href,C
+213,Investor Portal (Pre 2024),Investor Portal (Pre 2024),a_inner_text,A
+213,investor portal,/investor-portal/,href,C
+214,Contact,Contact,a_inner_text,A
+214,contact,https://salterbrothers.com.au/contact/,href,C
+215,About,About,a_inner_text,A
+215,about,https://salterbrothers.com.au/about/,href,C
+216,About Us,About Us,a_inner_text,A
+216,about,https://salterbrothers.com.au/about/,href,C
+217,ESG,ESG,a_inner_text,A
+217,about,https://salterbrothers.com.au/about/#esg,href,C
+218,Ratings & Awards,Ratings & Awards,a_inner_text,A
+218,ratings awards,https://salterbrothers.com.au/ratings-awards/,href,C
+219,Our Boards,Our Boards,a_inner_text,A
+219,our boards,https://salterbrothers.com.au/about/our-boards/,href,C
+220,Our Senior Team,Our Senior Team,a_inner_text,A
+220,our team,https://salterbrothers.com.au/about/our-team/,href,C
+221,Investors,Investors,a_inner_text,A
+221,investors,https://salterbrothers.com.au/investors/,href,C
+222,Funds Management,Funds Management,a_inner_text,A
+222,funds management,https://salterbrothers.com.au/funds-management/,href,C
+223,Property Funds,Property Funds,a_inner_text,A
+223,property funds,https://salterbrothers.com.au/funds-management/property-funds/,href,C
+224,Equity Funds,Equity Funds,a_inner_text,A
+224,private equity funds,https://salterbrothers.com.au/funds-management/private-equity-funds/,href,C
+225,Credit Funds,Credit Funds,a_inner_text,A
+225,credit funds,/funds-management/credit-funds/,href,C
+226,Decarbonisation,Decarbonisation,a_inner_text,A
+226,ksb,https://salterbrothers.com.au/ksb/,href,C
+227,Salter Brothers Emerging Companies Ltd,Salter Brothers Emerging Companies Ltd,a_inner_text,A
+227,emerging companies,https://salterbrothers.com.au/funds-management/emerging-companies/,href,C
+228,Salter Brothers Tech Fund,Salter Brothers Tech Fund,a_inner_text,A
+228,techfund,https://salterbrothers.com.au/techfund/,href,C
+229,Immigration Investment,Immigration Investment,a_inner_text,A
+229,immigration investment,https://salterbrothers.com.au/funds-management/immigration-investment/,href,C
+230,Advisory,Advisory,a_inner_text,A
+230,advisory,https://salterbrothers.com.au/advisory/,href,C
+231,Corporate & Strategic Advisory,Corporate & Strategic Advisory,a_inner_text,A
+231,corporate strategic advisory,https://salterbrothers.com.au/advisory/corporate-strategic-advisory/,href,C
+232,Mergers & Acquisitions,Mergers & Acquisitions,a_inner_text,A
+232,mergers and acquisitions advisory,https://salterbrothers.com.au/advisory/mergers-and-acquisitions-advisory/,href,C
+233,Equity Capital Markets,Equity Capital Markets,a_inner_text,A
+233,equity capital markets,https://salterbrothers.com.au/advisory/equity-capital-markets/,href,C
+234,Debt Capital Markets,Debt Capital Markets,a_inner_text,A
+234,debt capital markets,https://salterbrothers.com.au/advisory/debt-capital-markets/,href,C
+235,Hospitality,Hospitality,a_inner_text,A
+235,hospitality,https://salterbrothers.com.au/hospitality/,href,C
+236,Portfolio,Portfolio,a_inner_text,A
+236,portfolio,https://salterbrothers.com.au/portfolio/,href,C
+237,News & Insights,News & Insights,a_inner_text,A
+237,news press,https://salterbrothers.com.au/news-press/,href,C
+238,Latest News & Insights,Latest News & Insights,a_inner_text,A
+238,news press,https://salterbrothers.com.au/news-press/,href,C
+239,Research Reports,Research Reports,a_inner_text,A
+239,research reports,https://salterbrothers.com.au/research-reports/,href,C
+240,Investor Portals,Investor Portals,a_inner_text,A
+240,portals,https://salterbrothers.com.au/portals/,href,C
+241,Investor Portal,Investor Portal,a_inner_text,A
+241,salterbrothers,https://app.junipersquare.com/i/salterbrothers,href,C
+242,Investor Portal (Pre 2024),Investor Portal (Pre 2024),a_inner_text,A
+242,investor portal,/investor-portal/,href,C
+243,Contact,Contact,a_inner_text,A
+243,contact,https://salterbrothers.com.au/contact/,href,C
+244,Salter Brothers,Salter Brothers,img_alt_text,B
+245,Salter Brothers,Salter Brothers,img_alt_text,B
+246,All,All,a_inner_text,A
+246,,,href,C
+247,Hotel Portfolio Australia,Hotel Portfolio Australia,a_inner_text,A
+247,,#,href,D
+248,Hotel Portfolio USA,Hotel Portfolio USA,a_inner_text,A
+248,,#,href,D
+249,Hotel Portfolio Japan,Hotel Portfolio Japan,a_inner_text,A
+249,,#,href,D
+250,Retreats,Retreats,a_inner_text,A
+250,,#,href,D
+251,Private Equity Investments,Private Equity Investments,a_inner_text,A
+251,,#,href,D
+252,Residential & Commercial Australia,Residential & Commercial Australia,a_inner_text,A
+252,,#,href,D
+253,"Intercontinental MelbourneMelbourne, AustraliaThe InterContinental Melbourne is a 5 star rated hotel which reopened in late 2008 subsequent to a substantial refurbishment of an existing hotel, combining heritage features with modern facilities.","Intercontinental MelbourneMelbourne, AustraliaThe InterContinental Melbourne is a 5 star rated hotel which reopened in late 2008 subsequent to a substantial refurbishment of an existing hotel, combining heritage features with modern facilities.",a_inner_text,A
+253,intercontinental melbourne,https://salterbrothers.com.au/portfolio/intercontinental-melbourne/,href,A
+254,NextInterContinental Sydney Coogee Beach,NextInterContinental Sydney Coogee Beach,a_inner_text,A
+254,,#,href,D
+255,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+255,portfolio,/portfolio/,href,C
+256,"InterContinental Sydney Coogee BeachNew South Wales, AustraliaPositioned on Sydney’s iconic eastern coastline, InterContinental Sydney Coogee Beach is a 5 star rated hotel, offering a sophisticated coastal escape, exceptional dining and world-class hospitality.","InterContinental Sydney Coogee BeachNew South Wales, AustraliaPositioned on Sydney’s iconic eastern coastline, InterContinental Sydney Coogee Beach is a 5 star rated hotel, offering a sophisticated coastal escape, exceptional dining and world-class hospitality.",a_inner_text,A
+256,intercontinental sydney coogee beach,https://salterbrothers.com.au/portfolio/intercontinental-sydney-coogee-beach/,href,A
+257,PreviousIntercontinental Melbourne,PreviousIntercontinental Melbourne,a_inner_text,A
+257,,#,href,D
+258,NextBannisters Port Stephens,NextBannisters Port Stephens,a_inner_text,A
+258,,#,href,D
+259,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+259,portfolio,/portfolio/,href,C
+260,Bannisters Port StephensNew South WalesBannisters Port Stephens is a remodelled hotel and an ode to the glamour days of luxury hotels from the sixties and seventies.,Bannisters Port StephensNew South WalesBannisters Port Stephens is a remodelled hotel and an ode to the glamour days of luxury hotels from the sixties and seventies.,a_inner_text,A
+260,bannisters port stephens,https://salterbrothers.com.au/portfolio/bannisters-port-stephens/,href,A
+261,PreviousInterContinental Sydney Coogee Beach,PreviousInterContinental Sydney Coogee Beach,a_inner_text,A
+261,,#,href,D
+262,NextBannisters Pavilion,NextBannisters Pavilion,a_inner_text,A
+262,,#,href,D
+263,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+263,portfolio,/portfolio/,href,C
+264,Bannisters PavilionNew South WalesStylish and contemporary rooms and suites located near one of the south coast’s most beautiful beaches makes Bannisters Pavilion the perfect choice for a coastal getaway.,Bannisters PavilionNew South WalesStylish and contemporary rooms and suites located near one of the south coast’s most beautiful beaches makes Bannisters Pavilion the perfect choice for a coastal getaway.,a_inner_text,A
+264,bannisters pavilion,https://salterbrothers.com.au/portfolio/bannisters-pavilion/,href,A
+265,PreviousBannisters Port Stephens,PreviousBannisters Port Stephens,a_inner_text,A
+265,,#,href,D
+266,NextBannisters By The Sea,NextBannisters By The Sea,a_inner_text,A
+266,,#,href,D
+267,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+267,portfolio,/portfolio/,href,C
+268,"Bannisters By The SeaNew South WalesDramatic clifftop views over the glittering ocean, luxury accommodation and superb dining ensure guests have an unforgettable stay.","Bannisters By The SeaNew South WalesDramatic clifftop views over the glittering ocean, luxury accommodation and superb dining ensure guests have an unforgettable stay.",a_inner_text,A
+268,bannisters by the sea,https://salterbrothers.com.au/portfolio/bannisters-by-the-sea/,href,A
+269,PreviousBannisters Pavilion,PreviousBannisters Pavilion,a_inner_text,A
+269,,#,href,D
+270,NextKingsford Barossa,NextKingsford Barossa,a_inner_text,A
+270,,#,href,D
+271,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+271,portfolio,/portfolio/,href,C
+272,"Kingsford BarossaSouth Australia, AustraliaBuilt in 1856, Kingsford The Barossa is a picturesque venue that has been lovingly restored to become one of Australia’s finest luxury retreats.","Kingsford BarossaSouth Australia, AustraliaBuilt in 1856, Kingsford The Barossa is a picturesque venue that has been lovingly restored to become one of Australia’s finest luxury retreats.",a_inner_text,A
+272,kingsford barossa,https://salterbrothers.com.au/portfolio/kingsford-barossa/,href,A
+273,PreviousBannisters By The Sea,PreviousBannisters By The Sea,a_inner_text,A
+273,,#,href,D
+274,NextSofitel Adelaide,NextSofitel Adelaide,a_inner_text,A
+274,,#,href,D
+275,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+275,portfolio,/portfolio/,href,C
+276,All,All,a_inner_text,A
+276,,,href,C
+277,Hotel Portfolio Australia,Hotel Portfolio Australia,a_inner_text,A
+277,,#,href,D
+278,Hotel Portfolio USA,Hotel Portfolio USA,a_inner_text,A
+278,,#,href,D
+279,Hotel Portfolio Japan,Hotel Portfolio Japan,a_inner_text,A
+279,,#,href,D
+280,Retreats,Retreats,a_inner_text,A
+280,,#,href,D
+281,Private Equity Investments,Private Equity Investments,a_inner_text,A
+281,,#,href,D
+282,Residential & Commercial Australia,Residential & Commercial Australia,a_inner_text,A
+282,,#,href,D
+283,All,All,a_inner_text,A
+283,,,href,C
+284,Hotel Portfolio Australia,Hotel Portfolio Australia,a_inner_text,A
+284,,#,href,D
+285,Hotel Portfolio USA,Hotel Portfolio USA,a_inner_text,A
+285,,#,href,D
+286,Hotel Portfolio Japan,Hotel Portfolio Japan,a_inner_text,A
+286,,#,href,D
+287,Retreats,Retreats,a_inner_text,A
+287,,#,href,D
+288,Private Equity Investments,Private Equity Investments,a_inner_text,A
+288,,#,href,D
+289,Residential & Commercial Australia,Residential & Commercial Australia,a_inner_text,A
+289,,#,href,D
+290,All,All,a_inner_text,A
+290,,,href,C
+291,Hotel Portfolio Australia,Hotel Portfolio Australia,a_inner_text,A
+291,,#,href,D
+292,Hotel Portfolio USA,Hotel Portfolio USA,a_inner_text,A
+292,,#,href,D
+293,Hotel Portfolio Japan,Hotel Portfolio Japan,a_inner_text,A
+293,,#,href,D
+294,Retreats,Retreats,a_inner_text,A
+294,,#,href,D
+295,Private Equity Investments,Private Equity Investments,a_inner_text,A
+295,,#,href,D
+296,Residential & Commercial Australia,Residential & Commercial Australia,a_inner_text,A
+296,,#,href,D
+297,All,All,a_inner_text,A
+297,,,href,C
+298,Hotel Portfolio Australia,Hotel Portfolio Australia,a_inner_text,A
+298,,#,href,D
+299,Hotel Portfolio USA,Hotel Portfolio USA,a_inner_text,A
+299,,#,href,D
+300,Hotel Portfolio Japan,Hotel Portfolio Japan,a_inner_text,A
+300,,#,href,D
+301,Retreats,Retreats,a_inner_text,A
+301,,#,href,D
+302,Private Equity Investments,Private Equity Investments,a_inner_text,A
+302,,#,href,D
+303,Residential & Commercial Australia,Residential & Commercial Australia,a_inner_text,A
+303,,#,href,D
+304,"Intercontinental MelbourneMelbourne, AustraliaThe InterContinental Melbourne is a 5 star rated hotel which reopened in late 2008 subsequent to a substantial refurbishment of an existing hotel, combining heritage features with modern facilities.","Intercontinental MelbourneMelbourne, AustraliaThe InterContinental Melbourne is a 5 star rated hotel which reopened in late 2008 subsequent to a substantial refurbishment of an existing hotel, combining heritage features with modern facilities.",a_inner_text,A
+304,intercontinental melbourne,https://salterbrothers.com.au/portfolio/intercontinental-melbourne/,href,A
+305,NextInterContinental Sydney Coogee Beach,NextInterContinental Sydney Coogee Beach,a_inner_text,A
+305,,#,href,D
+306,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+306,portfolio,/portfolio/,href,C
+307,"InterContinental Sydney Coogee BeachNew South Wales, AustraliaPositioned on Sydney’s iconic eastern coastline, InterContinental Sydney Coogee Beach is a 5 star rated hotel, offering a sophisticated coastal escape, exceptional dining and world-class hospitality.","InterContinental Sydney Coogee BeachNew South Wales, AustraliaPositioned on Sydney’s iconic eastern coastline, InterContinental Sydney Coogee Beach is a 5 star rated hotel, offering a sophisticated coastal escape, exceptional dining and world-class hospitality.",a_inner_text,A
+307,intercontinental sydney coogee beach,https://salterbrothers.com.au/portfolio/intercontinental-sydney-coogee-beach/,href,A
+308,PreviousIntercontinental Melbourne,PreviousIntercontinental Melbourne,a_inner_text,A
+308,,#,href,D
+309,NextBannisters Port Stephens,NextBannisters Port Stephens,a_inner_text,A
+309,,#,href,D
+310,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+310,portfolio,/portfolio/,href,C
+311,Bannisters Port StephensNew South WalesBannisters Port Stephens is a remodelled hotel and an ode to the glamour days of luxury hotels from the sixties and seventies.,Bannisters Port StephensNew South WalesBannisters Port Stephens is a remodelled hotel and an ode to the glamour days of luxury hotels from the sixties and seventies.,a_inner_text,A
+311,bannisters port stephens,https://salterbrothers.com.au/portfolio/bannisters-port-stephens/,href,A
+312,PreviousInterContinental Sydney Coogee Beach,PreviousInterContinental Sydney Coogee Beach,a_inner_text,A
+312,,#,href,D
+313,NextBannisters Pavilion,NextBannisters Pavilion,a_inner_text,A
+313,,#,href,D
+314,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+314,portfolio,/portfolio/,href,C
+315,Bannisters PavilionNew South WalesStylish and contemporary rooms and suites located near one of the south coast’s most beautiful beaches makes Bannisters Pavilion the perfect choice for a coastal getaway.,Bannisters PavilionNew South WalesStylish and contemporary rooms and suites located near one of the south coast’s most beautiful beaches makes Bannisters Pavilion the perfect choice for a coastal getaway.,a_inner_text,A
+315,bannisters pavilion,https://salterbrothers.com.au/portfolio/bannisters-pavilion/,href,A
+316,PreviousBannisters Port Stephens,PreviousBannisters Port Stephens,a_inner_text,A
+316,,#,href,D
+317,NextBannisters By The Sea,NextBannisters By The Sea,a_inner_text,A
+317,,#,href,D
+318,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+318,portfolio,/portfolio/,href,C
+319,"Bannisters By The SeaNew South WalesDramatic clifftop views over the glittering ocean, luxury accommodation and superb dining ensure guests have an unforgettable stay.","Bannisters By The SeaNew South WalesDramatic clifftop views over the glittering ocean, luxury accommodation and superb dining ensure guests have an unforgettable stay.",a_inner_text,A
+319,bannisters by the sea,https://salterbrothers.com.au/portfolio/bannisters-by-the-sea/,href,A
+320,PreviousBannisters Pavilion,PreviousBannisters Pavilion,a_inner_text,A
+320,,#,href,D
+321,NextKingsford Barossa,NextKingsford Barossa,a_inner_text,A
+321,,#,href,D
+322,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+322,portfolio,/portfolio/,href,C
+323,"Kingsford BarossaSouth Australia, AustraliaBuilt in 1856, Kingsford The Barossa is a picturesque venue that has been lovingly restored to become one of Australia’s finest luxury retreats.","Kingsford BarossaSouth Australia, AustraliaBuilt in 1856, Kingsford The Barossa is a picturesque venue that has been lovingly restored to become one of Australia’s finest luxury retreats.",a_inner_text,A
+323,kingsford barossa,https://salterbrothers.com.au/portfolio/kingsford-barossa/,href,A
+324,PreviousBannisters By The Sea,PreviousBannisters By The Sea,a_inner_text,A
+324,,#,href,D
+325,NextSofitel Adelaide,NextSofitel Adelaide,a_inner_text,A
+325,,#,href,D
+326,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+326,portfolio,/portfolio/,href,C
+327,"Intercontinental MelbourneMelbourne, AustraliaThe InterContinental Melbourne is a 5 star rated hotel which reopened in late 2008 subsequent to a substantial refurbishment of an existing hotel, combining heritage features with modern facilities.","Intercontinental MelbourneMelbourne, AustraliaThe InterContinental Melbourne is a 5 star rated hotel which reopened in late 2008 subsequent to a substantial refurbishment of an existing hotel, combining heritage features with modern facilities.",a_inner_text,A
+327,intercontinental melbourne,https://salterbrothers.com.au/portfolio/intercontinental-melbourne/,href,A
+328,NextInterContinental Sydney Coogee Beach,NextInterContinental Sydney Coogee Beach,a_inner_text,A
+328,,#,href,D
+329,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+329,portfolio,/portfolio/,href,C
+330,"InterContinental Sydney Coogee BeachNew South Wales, AustraliaPositioned on Sydney’s iconic eastern coastline, InterContinental Sydney Coogee Beach is a 5 star rated hotel, offering a sophisticated coastal escape, exceptional dining and world-class hospitality.","InterContinental Sydney Coogee BeachNew South Wales, AustraliaPositioned on Sydney’s iconic eastern coastline, InterContinental Sydney Coogee Beach is a 5 star rated hotel, offering a sophisticated coastal escape, exceptional dining and world-class hospitality.",a_inner_text,A
+330,intercontinental sydney coogee beach,https://salterbrothers.com.au/portfolio/intercontinental-sydney-coogee-beach/,href,A
+331,PreviousIntercontinental Melbourne,PreviousIntercontinental Melbourne,a_inner_text,A
+331,,#,href,D
+332,NextBannisters Port Stephens,NextBannisters Port Stephens,a_inner_text,A
+332,,#,href,D
+333,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+333,portfolio,/portfolio/,href,C
+334,Bannisters Port StephensNew South WalesBannisters Port Stephens is a remodelled hotel and an ode to the glamour days of luxury hotels from the sixties and seventies.,Bannisters Port StephensNew South WalesBannisters Port Stephens is a remodelled hotel and an ode to the glamour days of luxury hotels from the sixties and seventies.,a_inner_text,A
+334,bannisters port stephens,https://salterbrothers.com.au/portfolio/bannisters-port-stephens/,href,A
+335,PreviousInterContinental Sydney Coogee Beach,PreviousInterContinental Sydney Coogee Beach,a_inner_text,A
+335,,#,href,D
+336,NextBannisters Pavilion,NextBannisters Pavilion,a_inner_text,A
+336,,#,href,D
+337,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+337,portfolio,/portfolio/,href,C
+338,Bannisters PavilionNew South WalesStylish and contemporary rooms and suites located near one of the south coast’s most beautiful beaches makes Bannisters Pavilion the perfect choice for a coastal getaway.,Bannisters PavilionNew South WalesStylish and contemporary rooms and suites located near one of the south coast’s most beautiful beaches makes Bannisters Pavilion the perfect choice for a coastal getaway.,a_inner_text,A
+338,bannisters pavilion,https://salterbrothers.com.au/portfolio/bannisters-pavilion/,href,A
+339,PreviousBannisters Port Stephens,PreviousBannisters Port Stephens,a_inner_text,A
+339,,#,href,D
+340,NextBannisters By The Sea,NextBannisters By The Sea,a_inner_text,A
+340,,#,href,D
+341,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+341,portfolio,/portfolio/,href,C
+342,"Bannisters By The SeaNew South WalesDramatic clifftop views over the glittering ocean, luxury accommodation and superb dining ensure guests have an unforgettable stay.","Bannisters By The SeaNew South WalesDramatic clifftop views over the glittering ocean, luxury accommodation and superb dining ensure guests have an unforgettable stay.",a_inner_text,A
+342,bannisters by the sea,https://salterbrothers.com.au/portfolio/bannisters-by-the-sea/,href,A
+343,PreviousBannisters Pavilion,PreviousBannisters Pavilion,a_inner_text,A
+343,,#,href,D
+344,NextKingsford Barossa,NextKingsford Barossa,a_inner_text,A
+344,,#,href,D
+345,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+345,portfolio,/portfolio/,href,C
+346,"Kingsford BarossaSouth Australia, AustraliaBuilt in 1856, Kingsford The Barossa is a picturesque venue that has been lovingly restored to become one of Australia’s finest luxury retreats.","Kingsford BarossaSouth Australia, AustraliaBuilt in 1856, Kingsford The Barossa is a picturesque venue that has been lovingly restored to become one of Australia’s finest luxury retreats.",a_inner_text,A
+346,kingsford barossa,https://salterbrothers.com.au/portfolio/kingsford-barossa/,href,A
+347,PreviousBannisters By The Sea,PreviousBannisters By The Sea,a_inner_text,A
+347,,#,href,D
+348,NextSofitel Adelaide,NextSofitel Adelaide,a_inner_text,A
+348,,#,href,D
+349,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+349,portfolio,/portfolio/,href,C
+350,"Intercontinental MelbourneMelbourne, AustraliaThe InterContinental Melbourne is a 5 star rated hotel which reopened in late 2008 subsequent to a substantial refurbishment of an existing hotel, combining heritage features with modern facilities.","Intercontinental MelbourneMelbourne, AustraliaThe InterContinental Melbourne is a 5 star rated hotel which reopened in late 2008 subsequent to a substantial refurbishment of an existing hotel, combining heritage features with modern facilities.",a_inner_text,A
+350,intercontinental melbourne,https://salterbrothers.com.au/portfolio/intercontinental-melbourne/,href,A
+351,NextInterContinental Sydney Coogee Beach,NextInterContinental Sydney Coogee Beach,a_inner_text,A
+351,,#,href,D
+352,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+352,portfolio,/portfolio/,href,C
+353,NextInterContinental Sydney Coogee Beach,NextInterContinental Sydney Coogee Beach,a_inner_text,A
+353,,#,href,D
+354,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+354,portfolio,/portfolio/,href,C
+355,NextInterContinental Sydney Coogee Beach,NextInterContinental Sydney Coogee Beach,a_inner_text,A
+355,,#,href,D
+356,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+356,portfolio,/portfolio/,href,C
+357,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+357,portfolio,/portfolio/,href,C
+358,"InterContinental Sydney Coogee BeachNew South Wales, AustraliaPositioned on Sydney’s iconic eastern coastline, InterContinental Sydney Coogee Beach is a 5 star rated hotel, offering a sophisticated coastal escape, exceptional dining and world-class hospitality.","InterContinental Sydney Coogee BeachNew South Wales, AustraliaPositioned on Sydney’s iconic eastern coastline, InterContinental Sydney Coogee Beach is a 5 star rated hotel, offering a sophisticated coastal escape, exceptional dining and world-class hospitality.",a_inner_text,A
+358,intercontinental sydney coogee beach,https://salterbrothers.com.au/portfolio/intercontinental-sydney-coogee-beach/,href,A
+359,PreviousIntercontinental Melbourne,PreviousIntercontinental Melbourne,a_inner_text,A
+359,,#,href,D
+360,NextBannisters Port Stephens,NextBannisters Port Stephens,a_inner_text,A
+360,,#,href,D
+361,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+361,portfolio,/portfolio/,href,C
+362,PreviousIntercontinental Melbourne,PreviousIntercontinental Melbourne,a_inner_text,A
+362,,#,href,D
+363,NextBannisters Port Stephens,NextBannisters Port Stephens,a_inner_text,A
+363,,#,href,D
+364,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+364,portfolio,/portfolio/,href,C
+365,PreviousIntercontinental Melbourne,PreviousIntercontinental Melbourne,a_inner_text,A
+365,,#,href,D
+366,NextBannisters Port Stephens,NextBannisters Port Stephens,a_inner_text,A
+366,,#,href,D
+367,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+367,portfolio,/portfolio/,href,C
+368,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+368,portfolio,/portfolio/,href,C
+369,Bannisters Port StephensNew South WalesBannisters Port Stephens is a remodelled hotel and an ode to the glamour days of luxury hotels from the sixties and seventies.,Bannisters Port StephensNew South WalesBannisters Port Stephens is a remodelled hotel and an ode to the glamour days of luxury hotels from the sixties and seventies.,a_inner_text,A
+369,bannisters port stephens,https://salterbrothers.com.au/portfolio/bannisters-port-stephens/,href,A
+370,PreviousInterContinental Sydney Coogee Beach,PreviousInterContinental Sydney Coogee Beach,a_inner_text,A
+370,,#,href,D
+371,NextBannisters Pavilion,NextBannisters Pavilion,a_inner_text,A
+371,,#,href,D
+372,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+372,portfolio,/portfolio/,href,C
+373,PreviousInterContinental Sydney Coogee Beach,PreviousInterContinental Sydney Coogee Beach,a_inner_text,A
+373,,#,href,D
+374,NextBannisters Pavilion,NextBannisters Pavilion,a_inner_text,A
+374,,#,href,D
+375,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+375,portfolio,/portfolio/,href,C
+376,PreviousInterContinental Sydney Coogee Beach,PreviousInterContinental Sydney Coogee Beach,a_inner_text,A
+376,,#,href,D
+377,NextBannisters Pavilion,NextBannisters Pavilion,a_inner_text,A
+377,,#,href,D
+378,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+378,portfolio,/portfolio/,href,C
+379,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+379,portfolio,/portfolio/,href,C
+380,Bannisters PavilionNew South WalesStylish and contemporary rooms and suites located near one of the south coast’s most beautiful beaches makes Bannisters Pavilion the perfect choice for a coastal getaway.,Bannisters PavilionNew South WalesStylish and contemporary rooms and suites located near one of the south coast’s most beautiful beaches makes Bannisters Pavilion the perfect choice for a coastal getaway.,a_inner_text,A
+380,bannisters pavilion,https://salterbrothers.com.au/portfolio/bannisters-pavilion/,href,A
+381,PreviousBannisters Port Stephens,PreviousBannisters Port Stephens,a_inner_text,A
+381,,#,href,D
+382,NextBannisters By The Sea,NextBannisters By The Sea,a_inner_text,A
+382,,#,href,D
+383,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+383,portfolio,/portfolio/,href,C
+384,PreviousBannisters Port Stephens,PreviousBannisters Port Stephens,a_inner_text,A
+384,,#,href,D
+385,NextBannisters By The Sea,NextBannisters By The Sea,a_inner_text,A
+385,,#,href,D
+386,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+386,portfolio,/portfolio/,href,C
+387,PreviousBannisters Port Stephens,PreviousBannisters Port Stephens,a_inner_text,A
+387,,#,href,D
+388,NextBannisters By The Sea,NextBannisters By The Sea,a_inner_text,A
+388,,#,href,D
+389,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+389,portfolio,/portfolio/,href,C
+390,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+390,portfolio,/portfolio/,href,C
+391,"Bannisters By The SeaNew South WalesDramatic clifftop views over the glittering ocean, luxury accommodation and superb dining ensure guests have an unforgettable stay.","Bannisters By The SeaNew South WalesDramatic clifftop views over the glittering ocean, luxury accommodation and superb dining ensure guests have an unforgettable stay.",a_inner_text,A
+391,bannisters by the sea,https://salterbrothers.com.au/portfolio/bannisters-by-the-sea/,href,A
+392,PreviousBannisters Pavilion,PreviousBannisters Pavilion,a_inner_text,A
+392,,#,href,D
+393,NextKingsford Barossa,NextKingsford Barossa,a_inner_text,A
+393,,#,href,D
+394,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+394,portfolio,/portfolio/,href,C
+395,PreviousBannisters Pavilion,PreviousBannisters Pavilion,a_inner_text,A
+395,,#,href,D
+396,NextKingsford Barossa,NextKingsford Barossa,a_inner_text,A
+396,,#,href,D
+397,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+397,portfolio,/portfolio/,href,C
+398,PreviousBannisters Pavilion,PreviousBannisters Pavilion,a_inner_text,A
+398,,#,href,D
+399,NextKingsford Barossa,NextKingsford Barossa,a_inner_text,A
+399,,#,href,D
+400,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+400,portfolio,/portfolio/,href,C
+401,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+401,portfolio,/portfolio/,href,C
+402,"Kingsford BarossaSouth Australia, AustraliaBuilt in 1856, Kingsford The Barossa is a picturesque venue that has been lovingly restored to become one of Australia’s finest luxury retreats.","Kingsford BarossaSouth Australia, AustraliaBuilt in 1856, Kingsford The Barossa is a picturesque venue that has been lovingly restored to become one of Australia’s finest luxury retreats.",a_inner_text,A
+402,kingsford barossa,https://salterbrothers.com.au/portfolio/kingsford-barossa/,href,A
+403,PreviousBannisters By The Sea,PreviousBannisters By The Sea,a_inner_text,A
+403,,#,href,D
+404,NextSofitel Adelaide,NextSofitel Adelaide,a_inner_text,A
+404,,#,href,D
+405,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+405,portfolio,/portfolio/,href,C
+406,PreviousBannisters By The Sea,PreviousBannisters By The Sea,a_inner_text,A
+406,,#,href,D
+407,NextSofitel Adelaide,NextSofitel Adelaide,a_inner_text,A
+407,,#,href,D
+408,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+408,portfolio,/portfolio/,href,C
+409,PreviousBannisters By The Sea,PreviousBannisters By The Sea,a_inner_text,A
+409,,#,href,D
+410,NextSofitel Adelaide,NextSofitel Adelaide,a_inner_text,A
+410,,#,href,D
+411,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+411,portfolio,/portfolio/,href,C
+412,Go back to the Portfolio page,Go back to the Portfolio page,a_inner_text,A
+412,portfolio,/portfolio/,href,C
+413,About,About,a_inner_text,A
+413,about,https://salterbrothers.com.au/about/,href,C
+414,Our Team,Our Team,a_inner_text,A
+414,our team,https://salterbrothers.com.au/about/our-team/,href,C
+415,Our Boards,Our Boards,a_inner_text,A
+415,our boards,https://salterbrothers.com.au/about/our-boards/,href,C
+416,Our Specialist Funds,Our Specialist Funds,a_inner_text,A
+416,funds management,https://salterbrothers.com.au/funds-management/,href,C
+417,Property Funds,Property Funds,a_inner_text,A
+417,property funds,https://salterbrothers.com.au/funds-management/property-funds/,href,C
+418,Equity Funds,Equity Funds,a_inner_text,A
+418,private equity funds,https://salterbrothers.com.au/funds-management/private-equity-funds/,href,C
+419,Credit Funds,Credit Funds,a_inner_text,A
+419,credit funds,https://salterbrothers.com.au/funds-management/credit-funds/,href,C
+420,Immigration Investment,Immigration Investment,a_inner_text,A
+420,immigration investment,https://salterbrothers.com.au/funds-management/immigration-investment/,href,C
+421,SIV Australia,SIV Australia,a_inner_text,A
+421,significant investor visa australia,https://salterbrothers.com.au/funds-management/immigration-investment/significant-investor-visa-australia/,href,C
+422,Investor Portal,Investor Portal,a_inner_text,A
+422,portals,/portals/,href,C
+423,Advisory,Advisory,a_inner_text,A
+423,advisory,https://salterbrothers.com.au/advisory/,href,C
+424,Corporate & Strategic Advisory,Corporate & Strategic Advisory,a_inner_text,A
+424,corporate strategic advisory,https://salterbrothers.com.au/advisory/corporate-strategic-advisory/,href,C
+425,Mergers & Acquisitions,Mergers & Acquisitions,a_inner_text,A
+425,mergers and acquisitions advisory,https://salterbrothers.com.au/advisory/mergers-and-acquisitions-advisory/,href,C
+426,Contact,Contact,a_inner_text,A
+426,contact,/contact/,href,C
+428,Privacy Policy,Privacy Policy,a_inner_text,A
+428,privacy policy,https://salterbrothers.com.au/privacy-policy/,href,C
+429,Legal Disclaimer,Legal Disclaimer,a_inner_text,A
+429,disclaimer,https://salterbrothers.com.au/disclaimer/,href,C
+430,LinkedIn,LinkedIn,img_alt_text,B
+430,icon linkedin,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-linkedin.png,src,B
+431,Instagram,Instagram,img_alt_text,B
+431,icon instagram,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-instagram.png,src,B
+432,Facebook,Facebook,img_alt_text,B
+432,icon facebook,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-facebook.png,src,B
+433,Youtube,Youtube,img_alt_text,B
+433,icon youtube,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-youtube.png,src,B
+434,Salter Brothers,Salter Brothers,img_alt_text,B
+435,About,About,a_inner_text,A
+435,about,https://salterbrothers.com.au/about/,href,C
+436,Our Team,Our Team,a_inner_text,A
+436,our team,https://salterbrothers.com.au/about/our-team/,href,C
+437,Our Boards,Our Boards,a_inner_text,A
+437,our boards,https://salterbrothers.com.au/about/our-boards/,href,C
+438,Our Specialist Funds,Our Specialist Funds,a_inner_text,A
+438,funds management,https://salterbrothers.com.au/funds-management/,href,C
+439,Property Funds,Property Funds,a_inner_text,A
+439,property funds,https://salterbrothers.com.au/funds-management/property-funds/,href,C
+440,Equity Funds,Equity Funds,a_inner_text,A
+440,private equity funds,https://salterbrothers.com.au/funds-management/private-equity-funds/,href,C
+441,Credit Funds,Credit Funds,a_inner_text,A
+441,credit funds,https://salterbrothers.com.au/funds-management/credit-funds/,href,C
+442,Immigration Investment,Immigration Investment,a_inner_text,A
+442,immigration investment,https://salterbrothers.com.au/funds-management/immigration-investment/,href,C
+443,SIV Australia,SIV Australia,a_inner_text,A
+443,significant investor visa australia,https://salterbrothers.com.au/funds-management/immigration-investment/significant-investor-visa-australia/,href,C
+444,Investor Portal,Investor Portal,a_inner_text,A
+444,portals,/portals/,href,C
+445,Advisory,Advisory,a_inner_text,A
+445,advisory,https://salterbrothers.com.au/advisory/,href,C
+446,Corporate & Strategic Advisory,Corporate & Strategic Advisory,a_inner_text,A
+446,corporate strategic advisory,https://salterbrothers.com.au/advisory/corporate-strategic-advisory/,href,C
+447,Mergers & Acquisitions,Mergers & Acquisitions,a_inner_text,A
+447,mergers and acquisitions advisory,https://salterbrothers.com.au/advisory/mergers-and-acquisitions-advisory/,href,C
+448,Contact,Contact,a_inner_text,A
+448,contact,/contact/,href,C
+450,LinkedIn,LinkedIn,img_alt_text,B
+450,icon linkedin,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-linkedin.png,src,B
+451,Instagram,Instagram,img_alt_text,B
+451,icon instagram,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-instagram.png,src,B
+452,Facebook,Facebook,img_alt_text,B
+452,icon facebook,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-facebook.png,src,B
+453,Youtube,Youtube,img_alt_text,B
+453,icon youtube,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-youtube.png,src,B
+454,Salter Brothers,Salter Brothers,img_alt_text,B
+455,Salter Brothers,Salter Brothers,img_alt_text,B
+456,Privacy Policy,Privacy Policy,a_inner_text,A
+456,privacy policy,https://salterbrothers.com.au/privacy-policy/,href,C
+457,Legal Disclaimer,Legal Disclaimer,a_inner_text,A
+457,disclaimer,https://salterbrothers.com.au/disclaimer/,href,C
+458,Privacy Policy,Privacy Policy,a_inner_text,A
+458,privacy policy,https://salterbrothers.com.au/privacy-policy/,href,C
+459,Legal Disclaimer,Legal Disclaimer,a_inner_text,A
+459,disclaimer,https://salterbrothers.com.au/disclaimer/,href,C
+904,app,/app/themes/salter-brothers/resources/assets/images/lock.png,image_src,I
+906,themes,/app/themes/salter-brothers/resources/assets/images/lock.png,image_src,I
+908,salter brothers,/app/themes/salter-brothers/resources/assets/images/lock.png,image_src,I
+910,resources,/app/themes/salter-brothers/resources/assets/images/lock.png,image_src,I
+912,assets,/app/themes/salter-brothers/resources/assets/images/lock.png,image_src,I
+914,images,/app/themes/salter-brothers/resources/assets/images/lock.png,image_src,I
+916,lock,/app/themes/salter-brothers/resources/assets/images/lock.png,image_src,I
+918,app,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+920,themes,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+922,salter brothers,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+924,dist,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+926,images,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+928,close icon 8b345082,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+930,app,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+932,themes,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+934,salter brothers,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+936,dist,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+938,images,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+940,close icon 8b345082,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+942,app,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+944,themes,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+946,salter brothers,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+948,dist,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+950,images,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+952,close icon 8b345082,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+954,app,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+956,themes,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+958,salter brothers,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+960,dist,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+962,images,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+964,close icon 8b345082,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+966,app,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+968,themes,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+970,salter brothers,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+972,dist,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+974,images,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+976,close icon 8b345082,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+978,app,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+980,themes,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+982,salter brothers,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+984,dist,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+986,images,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+988,close icon 8b345082,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/close-icon_8b345082.svg,image_src,I
+990,app,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-linkedin.png,image_src,I
+992,themes,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-linkedin.png,image_src,I
+994,salter brothers,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-linkedin.png,image_src,I
+996,dist,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-linkedin.png,image_src,I
+998,images,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-linkedin.png,image_src,I
+1000,icon linkedin,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-linkedin.png,image_src,I
+1002,app,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-instagram.png,image_src,I
+1004,themes,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-instagram.png,image_src,I
+1006,salter brothers,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-instagram.png,image_src,I
+1008,dist,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-instagram.png,image_src,I
+1010,images,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-instagram.png,image_src,I
+1012,icon instagram,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-instagram.png,image_src,I
+1014,app,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-facebook.png,image_src,I
+1016,themes,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-facebook.png,image_src,I
+1018,salter brothers,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-facebook.png,image_src,I
+1020,dist,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-facebook.png,image_src,I
+1022,images,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-facebook.png,image_src,I
+1024,icon facebook,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-facebook.png,image_src,I
+1026,app,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-youtube.png,image_src,I
+1028,themes,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-youtube.png,image_src,I
+1030,salter brothers,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-youtube.png,image_src,I
+1032,dist,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-youtube.png,image_src,I
+1034,images,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-youtube.png,image_src,I
+1036,icon youtube,https://salterbrothers.com.au/app/themes/salter-brothers/dist/images/icon-youtube.png,image_src,I

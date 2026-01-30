@@ -1,0 +1,243 @@
+card_id,text,raw_text,type,rank
+1,email@example.com,email@example.com,a_inner_text,D
+1,email@example,mailto:email@example.com,href,C
+3,email@example.com,email@example.com,a_inner_text,D
+3,email@example,mailto:email@example.com,href,C
+4,ABOUT US,ABOUT US,a_inner_text,D
+4,about us,https://cpecapital.com/about-us/,href,C
+5,OUR PEOPLE,OUR PEOPLE,a_inner_text,D
+5,our people,https://cpecapital.com/our-people/,href,C
+6,PORTFOLIO,PORTFOLIO,a_inner_text,D
+6,portfolio companies,https://cpecapital.com/portfolio-companies/,href,C
+7,FOR INVESTORS,FOR INVESTORS,a_inner_text,D
+7,for investors generating consistent returns,https://cpecapital.com/for-investors-generating-consistent-returns/,href,C
+8,LOOKING FOR INVESTMENT,LOOKING FOR INVESTMENT,a_inner_text,D
+8,looking for investment cpe capital a generalist investor,https://cpecapital.com/looking-for-investment-cpe-capital-a-generalist-investor/,href,C
+9,NEWS,NEWS,a_inner_text,D
+9,latest news on cpe capital and its portfolio companies,https://cpecapital.com/latest-news-on-cpe-capital-and-its-portfolio-companies/,href,C
+10,CONTACT,CONTACT,a_inner_text,D
+10,contact cpe capital,https://cpecapital.com/contact-cpe-capital/,href,C
+11,INVESTOR LOGIN,INVESTOR LOGIN,a_inner_text,D
+11,investors,https://investors.cpecapital.com,href,D
+12,Text Hover,Text Hover,a_inner_text,D
+12,,,href,C
+13,Text Hover,Text Hover,a_inner_text,D
+13,,,href,C
+14,britishsausage.com.au/,britishsausage.com.au/,a_inner_text,D
+14,britishsausage,https://britishsausage.com.au/,href,D
+15,Text Hover,Text Hover,a_inner_text,D
+15,,,href,C
+16,Text Hover,Text Hover,a_inner_text,D
+16,,,href,C
+17,modusprojects.com.au,modusprojects.com.au,a_inner_text,D
+17,modusprojects,http://modusprojects.com.au,href,D
+18,Text Hover,Text Hover,a_inner_text,D
+18,,,href,C
+19,Text Hover,Text Hover,a_inner_text,D
+19,,,href,C
+20,ambroseconstruct.com.au,ambroseconstruct.com.au,a_inner_text,D
+20,ambroseconstruct,http://ambroseconstruct.com.au,href,D
+21,Text Hover,Text Hover,a_inner_text,D
+21,,,href,C
+22,Text Hover,Text Hover,a_inner_text,D
+22,,,href,C
+23,pushys.com.au,pushys.com.au,a_inner_text,D
+23,pushys,http://pushys.com.au,href,D
+24,bikebug.com,bikebug.com,a_inner_text,D
+24,bikebug,http://bikebug.com,href,D
+25,Text Hover,Text Hover,a_inner_text,D
+25,,,href,C
+26,Text Hover,Text Hover,a_inner_text,D
+26,,,href,C
+27,bmrecycling.com.au,bmrecycling.com.au,a_inner_text,D
+27,bmrecycling,http://bmrecycling.com.au,href,D
+28,Text Hover,Text Hover,a_inner_text,D
+28,,,href,C
+29,Text Hover,Text Hover,a_inner_text,D
+29,,,href,C
+30,asdam.org,asdam.org,a_inner_text,D
+30,asdam,http://asdam.org,href,D
+31,here,here,a_inner_text,D
+31,for investors generating consistent returns,https://cpecapital.com/for-investors-generating-consistent-returns,href,C
+32,Text Hover,Text Hover,a_inner_text,D
+32,,,href,C
+33,Text Hover,Text Hover,a_inner_text,D
+33,,,href,C
+34,britishsausage.com.au/,britishsausage.com.au/,a_inner_text,D
+34,britishsausage,https://britishsausage.com.au/,href,D
+35,Text Hover,Text Hover,a_inner_text,D
+35,,,href,C
+36,Text Hover,Text Hover,a_inner_text,D
+36,,,href,C
+37,Text Hover,Text Hover,a_inner_text,D
+37,,,href,C
+38,britishsausage.com.au/,britishsausage.com.au/,a_inner_text,D
+38,britishsausage,https://britishsausage.com.au/,href,D
+39,britishsausage.com.au/,britishsausage.com.au/,a_inner_text,D
+39,britishsausage,https://britishsausage.com.au/,href,D
+40,Text Hover,Text Hover,a_inner_text,D
+40,,,href,C
+41,Text Hover,Text Hover,a_inner_text,D
+41,,,href,C
+42,modusprojects.com.au,modusprojects.com.au,a_inner_text,D
+42,modusprojects,http://modusprojects.com.au,href,D
+43,Text Hover,Text Hover,a_inner_text,D
+43,,,href,C
+44,Text Hover,Text Hover,a_inner_text,D
+44,,,href,C
+45,Text Hover,Text Hover,a_inner_text,D
+45,,,href,C
+46,modusprojects.com.au,modusprojects.com.au,a_inner_text,D
+46,modusprojects,http://modusprojects.com.au,href,D
+47,modusprojects.com.au,modusprojects.com.au,a_inner_text,D
+47,modusprojects,http://modusprojects.com.au,href,D
+48,Text Hover,Text Hover,a_inner_text,D
+48,,,href,C
+49,Text Hover,Text Hover,a_inner_text,D
+49,,,href,C
+50,ambroseconstruct.com.au,ambroseconstruct.com.au,a_inner_text,D
+50,ambroseconstruct,http://ambroseconstruct.com.au,href,D
+51,Text Hover,Text Hover,a_inner_text,D
+51,,,href,C
+52,Text Hover,Text Hover,a_inner_text,D
+52,,,href,C
+53,Text Hover,Text Hover,a_inner_text,D
+53,,,href,C
+54,ambroseconstruct.com.au,ambroseconstruct.com.au,a_inner_text,D
+54,ambroseconstruct,http://ambroseconstruct.com.au,href,D
+55,ambroseconstruct.com.au,ambroseconstruct.com.au,a_inner_text,D
+55,ambroseconstruct,http://ambroseconstruct.com.au,href,D
+56,Text Hover,Text Hover,a_inner_text,D
+56,,,href,C
+57,Text Hover,Text Hover,a_inner_text,D
+57,,,href,C
+58,pushys.com.au,pushys.com.au,a_inner_text,D
+58,pushys,http://pushys.com.au,href,D
+59,bikebug.com,bikebug.com,a_inner_text,D
+59,bikebug,http://bikebug.com,href,D
+60,Text Hover,Text Hover,a_inner_text,D
+60,,,href,C
+61,Text Hover,Text Hover,a_inner_text,D
+61,,,href,C
+62,Text Hover,Text Hover,a_inner_text,D
+62,,,href,C
+63,pushys.com.au,pushys.com.au,a_inner_text,D
+63,pushys,http://pushys.com.au,href,D
+64,bikebug.com,bikebug.com,a_inner_text,D
+64,bikebug,http://bikebug.com,href,D
+65,pushys.com.au,pushys.com.au,a_inner_text,D
+65,pushys,http://pushys.com.au,href,D
+66,bikebug.com,bikebug.com,a_inner_text,D
+66,bikebug,http://bikebug.com,href,D
+67,Text Hover,Text Hover,a_inner_text,D
+67,,,href,C
+68,Text Hover,Text Hover,a_inner_text,D
+68,,,href,C
+69,bmrecycling.com.au,bmrecycling.com.au,a_inner_text,D
+69,bmrecycling,http://bmrecycling.com.au,href,D
+70,Text Hover,Text Hover,a_inner_text,D
+70,,,href,C
+71,Text Hover,Text Hover,a_inner_text,D
+71,,,href,C
+72,Text Hover,Text Hover,a_inner_text,D
+72,,,href,C
+73,bmrecycling.com.au,bmrecycling.com.au,a_inner_text,D
+73,bmrecycling,http://bmrecycling.com.au,href,D
+74,bmrecycling.com.au,bmrecycling.com.au,a_inner_text,D
+74,bmrecycling,http://bmrecycling.com.au,href,D
+75,Text Hover,Text Hover,a_inner_text,D
+75,,,href,C
+76,Text Hover,Text Hover,a_inner_text,D
+76,,,href,C
+77,asdam.org,asdam.org,a_inner_text,D
+77,asdam,http://asdam.org,href,D
+78,Text Hover,Text Hover,a_inner_text,D
+78,,,href,C
+79,Text Hover,Text Hover,a_inner_text,D
+79,,,href,C
+80,Text Hover,Text Hover,a_inner_text,D
+80,,,href,C
+81,asdam.org,asdam.org,a_inner_text,D
+81,asdam,http://asdam.org,href,D
+82,asdam.org,asdam.org,a_inner_text,D
+82,asdam,http://asdam.org,href,D
+83,here,here,a_inner_text,D
+83,for investors generating consistent returns,https://cpecapital.com/for-investors-generating-consistent-returns,href,C
+84,here,here,a_inner_text,D
+84,for investors generating consistent returns,https://cpecapital.com/for-investors-generating-consistent-returns,href,C
+85,here,here,a_inner_text,D
+85,for investors generating consistent returns,https://cpecapital.com/for-investors-generating-consistent-returns,href,C
+86,Core Principles,Core Principles,a_inner_text,D
+86,about us,https://cpecapital.com/about-us/#core-principles,href,C
+87,Pioneering Spirit,Pioneering Spirit,a_inner_text,D
+87,about us,https://cpecapital.com/about-us/#pioneering-spirit,href,C
+88,Awards,Awards,a_inner_text,D
+88,about us,https://cpecapital.com/about-us/#awards,href,C
+89,Our People,Our People,a_inner_text,D
+89,our people,https://cpecapital.com/our-people/,href,C
+90,Privacy Policy,Privacy Policy,a_inner_text,D
+90,privacy policy,https://cpecapital.com/privacy-policy/,href,C
+91,Disclaimer,Disclaimer,a_inner_text,D
+91,cpe capital disclaimer,https://cpecapital.com/cpe-capital-disclaimer/,href,C
+92,ABF,ABF,a_inner_text,D
+92,portfolio,https://cpecapital.com/portfolio/#001,href,C
+93,Modus,Modus,a_inner_text,D
+93,portfolio,https://cpecapital.com/portfolio/#001,href,C
+94,Ambrose Construct,Ambrose Construct,a_inner_text,D
+94,portfolio,https://cpecapital.com/portfolio/#002,href,C
+95,Adventure Online,Adventure Online,a_inner_text,D
+95,portfolio,https://cpecapital.com/portfolio/#002,href,C
+96,Banksmeadow Recycling,Banksmeadow Recycling,a_inner_text,D
+96,portfolio,https://cpecapital.com/portfolio/#003,href,C
+97,ASDAM,ASDAM,a_inner_text,D
+97,portfolio companies,https://cpecapital.com/portfolio-companies/#003,href,C
+98,Performance and Returns,Performance and Returns,a_inner_text,D
+98,for investors,https://cpecapital.com/for-investors/#performance-and-returns,href,C
+99,Realised Investments,Realised Investments,a_inner_text,D
+99,for investors,https://cpecapital.com/for-investors/#realised-investments,href,C
+100,Investment Approach,Investment Approach,a_inner_text,D
+100,for investors,https://cpecapital.com/for-investors/#investment-approach,href,C
+101,Responsible Investment,Responsible Investment,a_inner_text,D
+101,for investors,https://cpecapital.com/for-investors/#responsible-investment,href,C
+102,What We Look For,What We Look For,a_inner_text,D
+102,looking for investment,https://cpecapital.com/looking-for-investment/#what-we-look-for,href,C
+103,Investment History,Investment History,a_inner_text,D
+103,looking for investment,https://cpecapital.com/looking-for-investment/#investment-history,href,C
+104,Core Principles,Core Principles,a_inner_text,D
+104,about us,https://cpecapital.com/about-us/#core-principles,href,C
+105,Pioneering Spirit,Pioneering Spirit,a_inner_text,D
+105,about us,https://cpecapital.com/about-us/#pioneering-spirit,href,C
+106,Awards,Awards,a_inner_text,D
+106,about us,https://cpecapital.com/about-us/#awards,href,C
+107,Our People,Our People,a_inner_text,D
+107,our people,https://cpecapital.com/our-people/,href,C
+108,Privacy Policy,Privacy Policy,a_inner_text,D
+108,privacy policy,https://cpecapital.com/privacy-policy/,href,C
+109,Disclaimer,Disclaimer,a_inner_text,D
+109,cpe capital disclaimer,https://cpecapital.com/cpe-capital-disclaimer/,href,C
+110,ABF,ABF,a_inner_text,D
+110,portfolio,https://cpecapital.com/portfolio/#001,href,C
+111,Modus,Modus,a_inner_text,D
+111,portfolio,https://cpecapital.com/portfolio/#001,href,C
+112,Ambrose Construct,Ambrose Construct,a_inner_text,D
+112,portfolio,https://cpecapital.com/portfolio/#002,href,C
+113,Adventure Online,Adventure Online,a_inner_text,D
+113,portfolio,https://cpecapital.com/portfolio/#002,href,C
+114,Banksmeadow Recycling,Banksmeadow Recycling,a_inner_text,D
+114,portfolio,https://cpecapital.com/portfolio/#003,href,C
+115,ASDAM,ASDAM,a_inner_text,D
+115,portfolio companies,https://cpecapital.com/portfolio-companies/#003,href,C
+116,Performance and Returns,Performance and Returns,a_inner_text,D
+116,for investors,https://cpecapital.com/for-investors/#performance-and-returns,href,C
+117,Realised Investments,Realised Investments,a_inner_text,D
+117,for investors,https://cpecapital.com/for-investors/#realised-investments,href,C
+118,Investment Approach,Investment Approach,a_inner_text,D
+118,for investors,https://cpecapital.com/for-investors/#investment-approach,href,C
+119,Responsible Investment,Responsible Investment,a_inner_text,D
+119,for investors,https://cpecapital.com/for-investors/#responsible-investment,href,C
+120,What We Look For,What We Look For,a_inner_text,D
+120,looking for investment,https://cpecapital.com/looking-for-investment/#what-we-look-for,href,C
+121,Investment History,Investment History,a_inner_text,D
+121,looking for investment,https://cpecapital.com/looking-for-investment/#investment-history,href,C
+240,CPE Logo White,https://cpecapital.com/wp-content/uploads/2019/09/CPE_Logo_White.png,image_src,I
+242,CPE Logo White,https://cpecapital.com/wp-content/uploads/2019/09/CPE_Logo_White.png,image_src,I
