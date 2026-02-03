@@ -11,7 +11,7 @@ from urllib.parse import urljoin
 import lxml
 from bs4 import BeautifulSoup   
 from urllib.parse import urlparse
-from helper_functions import *
+from .helper_functions import *
 
 
 """

@@ -11,8 +11,8 @@ from urllib.parse import urljoin
 import lxml
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
-from helper_functions import *
-from step3_helperFunctions import _norm, _domain, _name_matches, _collect_cards
+from .helper_functions import *
+from .step3_helperFunctions import _norm, _domain, _name_matches, _collect_cards
 
 """
 
@@ -187,7 +187,17 @@ def name_from_src(src: str, image_mode = False) -> list[str]|str|None:
             
         return [ _norm(cs) for cs in cand_segs if cs]
 
-    base = re.split(r"[.]", candidate_seg)[0]
+    if 'logo' in candidate_seg.lower():
+        #likely in the same segment as cand name from manual examination
+        cand_list = re.split(r"[.]", candidate_seg)
+        for cs in cand_list:
+            if 'logo' in cs.lower():
+                base = cs
+                base = base.replace('logo','')
+                break
+    else:
+        base = re.split(r"[.]", candidate_seg)[0]
+        
     base = re.sub(r"[-_]+", " ", base)  # replace hyphens/underscores with spaces
     base = base.strip()
 

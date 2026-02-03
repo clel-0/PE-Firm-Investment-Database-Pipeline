@@ -1,7 +1,7 @@
-from manual_HTML_analysis.step3_attempt3 import name_from_src
-from manual_HTML_analysis.step3_attempt4 import name_from_href
-from manual_HTML_analysis.step3_helperFunctions import inner_text_logic, _norm
-from manual_HTML_analysis.text_scoring import element_path_signature
+from ..manual_HTML_analysis.step3_attempt3 import name_from_src
+from ..manual_HTML_analysis.step3_attempt4 import name_from_href
+from ..manual_HTML_analysis.step3_helperFunctions import inner_text_logic, _norm
+from ..manual_HTML_analysis.text_scoring import element_path_signature
 
 from bs4 import BeautifulSoup as B
 from bs4 import Tag
@@ -30,57 +30,69 @@ def convert_html_to_tree(soup: B):
     (vector will be added later, as vectorisation is dependent on the above attributes)
 
     """
-    id = 0  # unique tagID counter
+
+    
+    tag_id = 0  # unique tagID counter
     id_to_node = {}
+    queued = set()  # Track which bs4 elements have been queued
  
     def build_node(bs4_element):
         
-        nonlocal id
+        nonlocal tag_id
         nonlocal id_to_node
 
+ 
+        try:
+            class_raw = bs4_element.get('class', [])
+            class_raw = _norm(" ".join(class_raw)) if class_raw else ""
 
-        class_raw = bs4_element.get('class', [])
-        class_raw = _norm(" ".join(class_raw)) if class_raw else ""
+              
+            inner_text = inner_text_logic(bs4_element)
 
-        inner_text_raw = bs4_element.get_text(separator=' ', strip=True) if bs4_element.get_text() else ""   
-        inner_text = inner_text_logic(inner_text_raw)
+            if bs4_element.get('href'):
+                url_text = name_from_href(bs4_element.get('href'))
+                url_type = 0
+            elif bs4_element.get('src'):
+                url_text = name_from_src(bs4_element.get('src'))
+                url_type = 1
+            else:
+                url_text = ""
+                url_type = -1 #represents no url
 
-        if bs4_element.get('href'):
-            url_text = name_from_href(bs4_element.get('href'))
-            url_type = 0
-        elif bs4_element.get('src'):
-            url_text = name_from_src(bs4_element.get('src'))
-            url_type = 1
-        else:
-            url_text = ""
-            url_type = -1 #represents no url
+            #groupID 
+            try:
+                sig = element_path_signature(bs4_element)
+                sig = tuple(sig)
+            except Exception as e:
+                print(f"Warning: Could not compute signature for {bs4_element.name}: {e}")
+                sig = ()
 
-        #groupID 
-        sig = element_path_signature(bs4_element)
-        sig = tuple(sig)
+            node = {
+                'children': [],
+                'sig': sig,
+                'tagID': tag_id,
+                'tagName': bs4_element.name if bs4_element.name else "",
+                'class': class_raw,
+                'UrlText': url_text,
+                'UrlType': url_type,
+                'InnerText': inner_text,
+                'bs4_element': bs4_element  # Store the original bs4 element for reference: namely for href searching
+            }
 
-        
-
-
-        node = {
-            'children': [],
-            'sig': sig,
-            'tagID': id,
-            'tagName': bs4_element.name if bs4_element.name else "",
-            'class': class_raw,
-            'UrlText': url_text,
-            'UrlType': url_type,
-            'InnerText': inner_text,
-            'bs4_element': bs4_element  # Store the original bs4 element for reference: namely for href searching
-        }
-
-        id_to_node[id] = node
-        return node    
+            id_to_node[tag_id] = node
+            tag_id += 1  # Increment here so every node gets unique ID
+            return node
+        except Exception as e:
+            import traceback
+            print(f"ERROR in build_node: {e}")
+            traceback.print_exc()
+            return None    
     
     
 
     soup_heads = []
-    soup_heads.append(soup.html) # starting from the html tag
+    soup_heads.append((soup.html, None)) # (bs4_element, parent_tree_node)
+    queued.add(id(soup.html)) #this ensures we don't re-queue the same bs4 element
 
     headcheck = True #this will be used to save the head node later
 
@@ -88,13 +100,24 @@ def convert_html_to_tree(soup: B):
 
     #while loop that builds the tree: BFS traversal
     while soup_heads != []:
-        current_bs4 = soup_heads.pop(0)
+        current_bs4, parent_node = soup_heads.pop(0)
+        
+        # Build node only once when popped from queue
         current_tree_node = build_node(current_bs4)
+        
+        # Attach to parent if not root
+        if parent_node is not None:
+            parent_node['children'].append(current_tree_node)
 
         #sets the head node  
         if headcheck:
             tree_head = current_tree_node
             headcheck = False
+
+        # Skip if build_node returned None
+        if current_tree_node is None:
+            print("Skipping a node due to build_node failure.")
+            continue
 
         children = [
             c for c in current_bs4.children
@@ -104,10 +127,10 @@ def convert_html_to_tree(soup: B):
         #builds the child nodes and appends them to the current tree node
         for child in children:
             if isinstance(child, Tag):
-                child_node = build_node(child)
-                id += 1
-                current_tree_node['children'].append(child_node)
-                soup_heads.append(child)
+                # Only add to queue if not already queued
+                if id(child) not in queued:
+                    soup_heads.append((child, current_tree_node))
+                    queued.add(id(child))
         
 
     return tree_head, id_to_node

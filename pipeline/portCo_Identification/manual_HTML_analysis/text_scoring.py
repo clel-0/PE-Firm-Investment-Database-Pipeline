@@ -10,8 +10,8 @@ JUNK_STRINGS = {
 import re
 import pandas as pd
 
-from grouping_cands import check_card_ids, group_homogeneous_lists_df
-from step3_helperFunctions import _norm
+from .grouping_cands import check_card_ids, group_homogeneous_lists_df
+from .step3_helperFunctions import _norm
 
 import os
 from dotenv import load_dotenv

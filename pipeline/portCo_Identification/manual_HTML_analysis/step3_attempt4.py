@@ -11,7 +11,7 @@ from urllib.parse import urljoin
 import lxml
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
-from step3_helperFunctions import _norm, _domain, _name_matches
+from .step3_helperFunctions import _norm, _domain, _name_matches
 
 
 
@@ -61,8 +61,8 @@ From this example, we would extract 'be-campbell' as the portCo name.
 """
 
 
-HREF_ANCHORS_A = {"investments", "portfolio", "companies", "investment-portfolio"}
-HREF_ANCHORS_B = {"company", "funds"}
+HREF_ANCHORS = {"investments", "portfolio", "companies", "investment-portfolio","company", "funds"}
+
 
 
 def name_from_href(href: str) -> tuple[str|None,str]:
@@ -96,18 +96,12 @@ def name_from_href(href: str) -> tuple[str|None,str]:
 
     # ----- Try A-patterns -----
     for i, seg in enumerate(lower_segments):
-        if seg in HREF_ANCHORS_A and i + 1 < len(segments):
+        if seg in HREF_ANCHORS and i + 1 < len(segments):
             candidate = segments[i + 1]
             pattern_rank = "A"
             break
 
-    # ----- Try B-patterns -----
-    if candidate is None:
-        for i, seg in enumerate(lower_segments):
-            if seg in HREF_ANCHORS_B and i + 1 < len(segments):
-                candidate = segments[i + 1]
-                pattern_rank = "B"
-                break
+    # B-pattern removed for simplification
 
     # ----- Fallback: last segment -----
     if candidate is None and segments:

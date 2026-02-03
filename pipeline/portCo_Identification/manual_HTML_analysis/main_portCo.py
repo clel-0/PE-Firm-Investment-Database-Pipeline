@@ -15,18 +15,18 @@ from dotenv import load_dotenv
 from datetime import datetime
 
 
-from step1_attempt1 import *
-from step1_attempt2 import *
-from step1_attempt3 import *
-from step2_attempt1 import *
-from step3_attempt1 import *
-from step3_attempt2 import *
-from step3_attempt3 import *
-from step3_attempt4 import *
-from helper_functions import *
-from step3_helperFunctions import textCandidates_df, step3_attempt_image_src_global
-from text_scoring import select_portcos_for_firm
-from step1_csv_append import append_to_csv
+from .step1_attempt1 import *
+from .step1_attempt2 import *
+from .step1_attempt3 import *
+from .step2_attempt1 import *
+from .step3_attempt1 import *
+from .step3_attempt2 import *
+from .step3_attempt3 import *
+from .step3_attempt4 import *
+from .helper_functions import *
+from .step3_helperFunctions import textCandidates_df, step3_attempt_image_src_global
+from .text_scoring import select_portcos_for_firm
+from .step1_csv_append import append_to_csv
 
 
 load_dotenv()  # Load environment variables from .env file

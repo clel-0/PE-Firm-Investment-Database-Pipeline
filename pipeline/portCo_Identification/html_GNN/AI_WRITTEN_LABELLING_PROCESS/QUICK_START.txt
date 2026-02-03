@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+"""
+QUICK START - PortCo Labeling System
+
+Copy & paste these commands.
+"""
+
+# ============================================================================
+# 1. Install
+# ============================================================================
+
+"""
+pip install pandas requests beautifulsoup4 streamlit
+"""
+
+# ============================================================================
+# 2. Create CSV
+# ============================================================================
+
+"""
+Create file: pe_firms.csv
+
+FullName,Website
+Bain Capital,https://www.baincapital.com
+Apollo Global,https://www.apolloglobal.com
+"""
+
+# ============================================================================
+# 3. Extract leaves (from repo root)
+# ============================================================================
+
+"""
+python -m pipeline.portCo_Identification.html_GNN.AI_WRITTEN_LABELLING_PROCESS.GNN_training_target
+
+For each PE firm, the homepage website will be displayed.
+Copy & paste the portfolio page URL when asked.
+Output: labeling_data_<timestamp>.json in output/ folder
+"""
+
+# ============================================================================
+# 4. Label in browser
+# ============================================================================
+
+"""
+streamlit run app.py
+
+- Load labeling_data.json
+- For each leaf: check if PortCo name, select text source
+- Save to labels.json
+"""
+
+# ============================================================================
+# Done
+# ============================================================================
+
+"""
+Output: labels.json (ready for GNN training)
+"""
+
+print(__doc__)
