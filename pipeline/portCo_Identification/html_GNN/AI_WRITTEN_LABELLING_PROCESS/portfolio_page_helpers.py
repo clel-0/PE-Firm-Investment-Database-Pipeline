@@ -52,8 +52,9 @@ def fetch_portfolio_page(pe_firm_name: str, website_url: str, allow_auto_fetch: 
     
     #try to auto find portfolio page using f"{website_url}/portfolio"
     if allow_auto_fetch:
+       
         candidate_portfolio_url = urljoin(website_url.rstrip('/') + '/', 'portfolio')
-        soup, website_url = _soup_finder(candidate_portfolio_url, "✓ Auto-fetched portfolio page", "✗ Auto-fetching portfolio page failed", auto_fetch=True)
+        soup, website_url = _soup_finder(candidate_portfolio_url, f"✓ Auto-fetched portfolio page for {pe_firm_name}", f"✗ Auto-fetching portfolio page failed for {pe_firm_name}", auto_fetch=True)
         if soup:
             return soup, website_url, True, candidate_portfolio_url
 

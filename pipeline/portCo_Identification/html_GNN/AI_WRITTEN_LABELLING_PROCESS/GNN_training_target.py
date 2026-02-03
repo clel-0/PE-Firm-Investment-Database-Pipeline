@@ -60,8 +60,9 @@ def find_portfolio_href_in_homepage(homepage_url: str, portfolio_url: str) -> tu
             href = leaf['bs4_element'].get('href', '')
             # Normalize both URLs (strip trailing slashes, lowercase)
             normalized_href = urlparse(href.rstrip('/')).geturl().lower()
+            href_with_slash = urlparse(href.rstrip('/') + '/').geturl().lower()
             normalized_portfolio = urlparse(portfolio_url.rstrip('/')).geturl().lower()
-            if normalized_href == normalized_portfolio:
+            if normalized_href == normalized_portfolio or href_with_slash == normalized_portfolio:
                 return homepage_soup, leaf['tagID']
 
         return homepage_soup, None
@@ -101,6 +102,9 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
         allow_auto_fetch = True
 
         while go_again:
+
+            if not first_attempt_done:
+                print(f"Attempting auto-fetch for {pe_firm_name}...")
 
             soup, updated_website_url, auto_fetched, portfolio_url_used = fetch_portfolio_page(pe_firm_name, website_url, allow_auto_fetch=allow_auto_fetch)
             allow_auto_fetch = False  # only allow auto-fetch once
@@ -148,7 +152,7 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
                     if portfolio_href_tagid is not None:
                         portfolio_href_data[website_url] = portfolio_href_tagid
                         if auto_fetched:
-                            print(f"✓ Auto-fetched portfolio page and found href at tagID: {portfolio_href_tagid}")
+                            print(f"✓ Auto-fetched portfolio page for {pe_firm_name} and found href at tagID: {portfolio_href_tagid}")
                         else:
                             print(f"✓ Found portfolio href at tagID: {portfolio_href_tagid}")
                         go_again = False
@@ -157,7 +161,7 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
                         if not auto_fetched:
                             print(f"✗ Could not find matching portfolio href in homepage")
                         else:
-                            print("✗ Auto-fetch succeeded but couldn't find portfolio href in homepage")
+                            print(f"✗ Auto-fetch succeeded for {pe_firm_name} but couldn't find portfolio href in homepage")
                         if not first_attempt_done:
                             first_attempt_done = True
                         else:
