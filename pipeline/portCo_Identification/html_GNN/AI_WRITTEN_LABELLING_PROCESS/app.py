@@ -17,22 +17,24 @@ st.title("Label PortCo Names")
 
 st.sidebar.header("Setup")
 
-def get_latest_labeling_data_path() -> str:
+def get_labeling_data_files() -> list:
     output_dir = Path(__file__).resolve().parents[4] / "output"
     if not output_dir.exists():
-        return "labeling_data.json"
+        return ["labeling_data.json"]
 
     candidates = sorted(
         output_dir.glob("labeling_data_*.json"),
         key=lambda p: p.stat().st_mtime,
         reverse=True
     )
-    return str(candidates[0]) if candidates else "labeling_data.json"
+    return [str(p) for p in candidates] if candidates else ["labeling_data.json"]
 
 
-labeling_data_path = st.sidebar.text_input(
-    "Labeling data JSON path:",
-    value=get_latest_labeling_data_path()
+available_files = get_labeling_data_files()
+labeling_data_path = st.sidebar.selectbox(
+    "Labeling data JSON file:",
+    options=available_files,
+    index=0
 )
 
 if st.sidebar.button("Load Data"):
@@ -98,30 +100,38 @@ st.divider()
 
 sample_data = st.session_state.labeling_data[current_sample_id]
 leaves = sample_data['leaves']
+portfolio_page_url = sample_data.get('portfolio_page_url', 'N/A')
 
 st.subheader(f"Sample: {current_sample_id}")
 st.caption(f"Total leaves: {len(leaves)}")
+st.caption(f"Portfolio page URL: {portfolio_page_url}")
 
 if current_sample_id not in st.session_state.labels:
     st.session_state.labels[current_sample_id] = {}
 
 current_labels = st.session_state.labels[current_sample_id]
 
+leafList = [l for l in leaves.items() if l[1]['innerText']]
+if leafList != leaves.items():
+    st.info(f"Showing {len(leafList)} leaves with non-empty innerText out of {len(leaves)} total leaves.")
+
 # Display each leaf
-for tag_id, leaf_info in sorted(leaves.items(), key=lambda x: int(x[0])):
-    inner = leaf_info['innerText'][:100]
-    url = leaf_info['urlText'][:50]
+for tag_id, leaf_info in sorted(leafList, key=lambda x: int(x[0])):
+    inner = leaf_info['innerText']
+    url = leaf_info['urlText'] if leaf_info['urlText'] else ""
+    if isinstance(url, list):
+        url = url[0] if url else ""
     
     with st.expander(f"**{tag_id}** - {leaf_info['tagName']}: {inner}"):
         col1, col2 = st.columns(2)
         
         with col1:
             st.write("**InnerText:**")
-            st.text(leaf_info['innerText'])
+            st.text(inner)
         
         with col2:
             st.write("**UrlText:**")
-            st.text(leaf_info['urlText'])
+            st.text(url)
         
         st.divider()
         
@@ -144,8 +154,8 @@ for tag_id, leaf_info in sorted(leaves.items(), key=lambda x: int(x[0])):
             current_labels[tag_id] = {
                 'is_portco': True,
                 'text_source': text_source,
-                'innerText': leaf_info['innerText'],
-                'urlText': leaf_info['urlText']
+                'innerText': inner,
+                'urlText': url
             }
         else:
             if tag_id in current_labels:

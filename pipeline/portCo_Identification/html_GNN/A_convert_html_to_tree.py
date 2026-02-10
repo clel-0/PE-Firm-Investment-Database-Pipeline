@@ -48,6 +48,12 @@ def convert_html_to_tree(soup: B):
 
               
             inner_text = inner_text_logic(bs4_element)
+            if not inner_text:
+                #check alternative inner text sources for certain tags
+                if bs4_element.name == 'img':
+                    inner_text = bs4_element.get('alt', '')
+                    if ";" in inner_text:
+                        inner_text = inner_text.split(";")[0]  #take text before semicolon, as alt text often has "Company Name; additional info"
 
             if bs4_element.get('href'):
                 url_text = name_from_href(bs4_element.get('href'))
@@ -59,7 +65,10 @@ def convert_html_to_tree(soup: B):
                 url_text = ""
                 url_type = -1 #represents no url
 
-            #groupID 
+            if isinstance(url_text, list):
+                url_text = url_text[0] if url_text else ""  # Take first element if list, else empty string
+
+            
             try:
                 sig = element_path_signature(bs4_element)
                 sig = tuple(sig)

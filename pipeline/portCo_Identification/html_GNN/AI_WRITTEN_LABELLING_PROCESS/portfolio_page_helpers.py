@@ -18,7 +18,7 @@ def _fetch_html(url:str, timeout:int=10) -> bytes | None:
             with sync_playwright() as p:
                 browser = p.chromium.launch(headless=True)
                 page = browser.new_page()
-                page.goto(url, wait_until="networkidle", timeout=timeout*1000)
+                page.goto(url, wait_until="load", timeout=timeout*1000)
                 html = page.content()
                 browser.close()
                 return html.encode('utf-8')
@@ -45,18 +45,18 @@ def fetch_portfolio_page(pe_firm_name: str, website_url: str, allow_auto_fetch: 
                     print(f"✓ Parsed HTML with BeautifulSoup")
             return soup, website_url
         except Exception as e:
-            if not auto_fetch:
-                print(f"{failure_print}: {e}")
+            print(f"{failure_print}: {e}")
             return None, website_url
 
     
     #try to auto find portfolio page using f"{website_url}/portfolio"
     if allow_auto_fetch:
-       
-        candidate_portfolio_url = urljoin(website_url.rstrip('/') + '/', 'portfolio')
-        soup, website_url = _soup_finder(candidate_portfolio_url, f"✓ Auto-fetched portfolio page for {pe_firm_name}", f"✗ Auto-fetching portfolio page failed for {pe_firm_name}", auto_fetch=True)
-        if soup:
-            return soup, website_url, True, candidate_portfolio_url
+        base = website_url.rstrip('/') + '/'
+        candidate_portfolio_urls = [urljoin(base, 'portfolio'), urljoin(base, 'investments'), urljoin(base, 'portfolio/')]
+        for i,candidate_portfolio_url in enumerate(candidate_portfolio_urls):
+            soup, website_url = _soup_finder(candidate_portfolio_url, f"✓ Auto-fetched portfolio page for {pe_firm_name} on attempt {i+1}", f"✗ Auto-fetching portfolio page on attempt {i+1} failed for {pe_firm_name}", auto_fetch=True)
+            if soup:
+                return soup, website_url, True, candidate_portfolio_url
 
     print(f"\n{pe_firm_name}")
     print("-" * 60)
@@ -67,7 +67,7 @@ def fetch_portfolio_page(pe_firm_name: str, website_url: str, allow_auto_fetch: 
     while True:
         is_pe_page = input("Is the homepage the PE page? [y/n]: ").strip().lower()
         if is_pe_page == 'n':
-            pe_page_url = input("Enter the actual PE/portfolio page URL (copy & paste): ").strip()
+            pe_page_url = input("Enter the actual PE page URL (copy & paste): ").strip()
             website_url = pe_page_url
             break
         elif is_pe_page == 'y':

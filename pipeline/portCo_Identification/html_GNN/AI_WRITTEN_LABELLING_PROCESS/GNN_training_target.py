@@ -50,9 +50,16 @@ def find_portfolio_href_in_homepage(homepage_url: str, portfolio_url: str) -> tu
             if full_href.netloc == full_portfolio.netloc and full_href.path == full_portfolio.path:
                 return homepage_soup, leaf['tagID']
             
-            # Try path-only comparison (for relative hrefs like '/investments')
-            if href.startswith('/') and href == full_portfolio.path:
-                return homepage_soup, leaf['tagID']
+            # Try path-only comparison (for relative hrefs like '/investments' or 'investments')
+            if href:
+                href_path = href.split('?', 1)[0].rstrip('/')
+                portfolio_path = full_portfolio.path.rstrip('/')
+                if href_path.startswith('/'):
+                    href_path = href_path
+                else:
+                    href_path = f"/{href_path}"
+                if href_path == portfolio_path:
+                    return homepage_soup, leaf['tagID']
         
 
         #in the case portfolio page is not a subpage, but a separate domain (e.g. microsite)
@@ -109,12 +116,17 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
             soup, updated_website_url, auto_fetched, portfolio_url_used = fetch_portfolio_page(pe_firm_name, website_url, allow_auto_fetch=allow_auto_fetch)
             allow_auto_fetch = False  # only allow auto-fetch once
             
+            if not portfolio_url_used:
+                go_again = False
+                continue  #user opted to skip
+
             # Update df if website changed
             if updated_website_url != website_url:
                 df.loc[idx, 'Website'] = updated_website_url
                 website_url = updated_website_url
             
             if soup is None:
+                go_again = False
                 continue
 
             # Convert to tree and extract leaves
@@ -136,7 +148,8 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
                 
                 labeling_data[sample_id] = {
                     'leaves': leaf_dict,
-                    'total_leaves': leaf_count
+                    'total_leaves': leaf_count,
+                    'portfolio_url': portfolio_url_used
                 }
                 
                 if not auto_fetched:
@@ -152,7 +165,7 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
                     if portfolio_href_tagid is not None:
                         portfolio_href_data[website_url] = portfolio_href_tagid
                         if auto_fetched:
-                            print(f"✓ Auto-fetched portfolio page for {pe_firm_name} and found href at tagID: {portfolio_href_tagid}")
+                            print(f"✓ Auto-fetched portfolio page {portfolio_url} for {pe_firm_name} and found href at tagID: {portfolio_href_tagid}")
                         else:
                             print(f"✓ Found portfolio href at tagID: {portfolio_href_tagid}")
                         go_again = False
@@ -178,6 +191,16 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
                 else:
                     go_again = False
     
+    # Filter out unwanted leaves; ensure keep to the same with the tree structure in the GNN code
+    for sample_id in labeling_data:
+        leaves = labeling_data[sample_id]['leaves']
+        labeling_data[sample_id]['leaves'] = {
+            tag_id: leaf for tag_id, leaf in leaves.items()
+            if not (leaf['innerText'] == 'placeholder' or 
+                    (leaf.get('innerText') is None and leaf['urlText'] == ''))
+        }
+        labeling_data[sample_id]['total_leaves'] = len(labeling_data[sample_id]['leaves'])
+    
     # Save to JSON
     with open(output_json, 'w', encoding='utf-8') as f:
         json.dump(labeling_data, f, indent=2, ensure_ascii=False)
@@ -193,7 +216,7 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
     print(f"\n{'='*60}")
     print(f"✓ Saved {len(labeling_data)} samples to {output_json}")
     print(f"✓ Saved {len(portfolio_href_data)} portfolio hrefs to {portfolio_href_json}")
-    print(f"Ready to label in Streamlit: streamlit run app.py")
+    print(f"Ready to label in Streamlit: streamlit run pipeline/portCo_Identification/html_GNN/AI_WRITTEN_LABELLING_PROCESS/app.py")
     print(f"{'='*60}")
 
 

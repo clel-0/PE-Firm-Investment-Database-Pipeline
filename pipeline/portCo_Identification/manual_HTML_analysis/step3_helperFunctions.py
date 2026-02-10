@@ -60,6 +60,12 @@ def inner_text_logic(t):
     if t.name == "figcaption":
         text = t.get_text(strip=True)
         #print(f"text found in <figcaption>: {text}")
+    if t.name == "div" and not text:
+        text = t.get_text(strip=True)
+        #print(f"text found in <div>: {text}")
+    if t.name == "span" and not text:
+        text = t.get_text(strip=True)
+        #print(f"text found in <span>: {text}")
         
     if text:
         return text
