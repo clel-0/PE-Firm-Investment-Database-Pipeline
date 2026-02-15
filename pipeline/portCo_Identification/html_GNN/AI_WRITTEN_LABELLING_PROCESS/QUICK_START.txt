@@ -42,7 +42,7 @@ Output: labeling_data_<timestamp>.json in output/ folder
 # ============================================================================
 
 """
-streamlit run app.py
+streamlit run pipeline/portCo_Identification/html_GNN/AI_WRITTEN_LABELLING_PROCESS/app.py
 
 - Load labeling_data.json
 - For each leaf: check if PortCo name, select text source

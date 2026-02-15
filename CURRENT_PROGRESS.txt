@@ -1,0 +1,14 @@
+- app.py should be reconfigured to produce appropriate naming labels structure for training
+- note that main_website to portfolio_href dict structure should be considered
+- added all nodes with inner text (or alt text) to the list of candidate nodes
+- training loop not yet complete
+
+TODO:
+MAIN PRIORITY: ENSURE LABELLING DATA IS IN A FORMAT THAT IS USEABLE FOR TRAINING
+1. Read through yourself + use copilot to ensure that all of app.py and training_target.py is correct
+2. double check convert_html_to_tree as well as rest of labelling pipeline to ensure no obvious bugs
+3. add code to ensure that all portfolio subpage hrefs that arent matched to a tag_id arent added to the portco naming labelling list
+4. add code to ensure that all portco naming samples that have empty tagID lists are removed from labels.json
+5. add datetime index to labels.json in app.py
+6. redo both subpage labelling and portco labelling processes.
+7. write training_loop.py, run and debug

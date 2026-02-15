@@ -1,0 +1,1146 @@
+{
+  "Fortitude Investment Partners_0": {
+    "386": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Active Adventures",
+      "urlText": "activeadventures"
+    },
+    "395": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Aged Care Decisions",
+      "urlText": "agedcaredecisions"
+    },
+    "404": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Aura Medical Group",
+      "urlText": "auramedicalgroup"
+    },
+    "413": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Birch & Waite",
+      "urlText": "birchandwaite"
+    },
+    "422": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Nomad Breads",
+      "urlText": "nomadbreads"
+    },
+    "431": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Nutra Organics",
+      "urlText": "nutraorganics"
+    },
+    "440": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Shorthand",
+      "urlText": "shorthand"
+    },
+    "449": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "The Energy Network (TEN)",
+      "urlText": "tengroup"
+    },
+    "458": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Machines4U",
+      "urlText": "machines4u"
+    },
+    "476": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "GM Hotels",
+      "urlText": "gm hotels case study"
+    },
+    "487": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Shopper",
+      "urlText": "shopper case study"
+    },
+    "498": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Quality Foods & Beverages",
+      "urlText": "qfb"
+    },
+    "510": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Better Medical",
+      "urlText": "better medical"
+    },
+    "522": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Hospital Pharmacy Services",
+      "urlText": "hospital pharmacy services"
+    },
+    "534": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Foundation Early Learning",
+      "urlText": "foundation early learning"
+    },
+    "546": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Readify",
+      "urlText": "readify"
+    }
+  },
+  "Adamantem Capital_1": {
+    "298": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Mason Stevens",
+      "urlText": ""
+    },
+    "295": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Microgrid",
+      "urlText": ""
+    },
+    "292": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "QANTM",
+      "urlText": ""
+    },
+    "289": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Edge Zero",
+      "urlText": ""
+    },
+    "286": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Evnex",
+      "urlText": ""
+    },
+    "283": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Ecoware",
+      "urlText": ""
+    },
+    "280": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Retail Zoo",
+      "urlText": ""
+    },
+    "271": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Climate Friendly",
+      "urlText": ""
+    },
+    "277": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Advara HeartCare",
+      "urlText": ""
+    },
+    "274": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "NAK Hair",
+      "urlText": ""
+    },
+    "268": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Linen Services Australia",
+      "urlText": ""
+    },
+    "265": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Legend",
+      "urlText": ""
+    },
+    "262": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Hellers",
+      "urlText": ""
+    },
+    "259": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Zenitas",
+      "urlText": ""
+    },
+    "256": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Servian",
+      "urlText": ""
+    },
+    "253": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Hygain Holdings",
+      "urlText": ""
+    },
+    "250": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Heritage Lifecare",
+      "urlText": ""
+    }
+  },
+  "Anacacia Capital_3": {
+    "1192": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Big River",
+      "urlText": ""
+    },
+    "1262": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Yumi’s",
+      "urlText": ""
+    },
+    "1259": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "RIS",
+      "urlText": ""
+    },
+    "1254": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Planet Services",
+      "urlText": ""
+    },
+    "1251": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "NW Group",
+      "urlText": ""
+    },
+    "1249": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Mwave",
+      "urlText": ""
+    },
+    "1246": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Muir",
+      "urlText": ""
+    },
+    "1242": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Lomb",
+      "urlText": ""
+    },
+    "1239": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "LEDified",
+      "urlText": ""
+    },
+    "1236": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "K Care",
+      "urlText": ""
+    },
+    "1233": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Home Appliances",
+      "urlText": ""
+    },
+    "1225": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Catalyst Education",
+      "urlText": ""
+    },
+    "1222": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Appen",
+      "urlText": ""
+    },
+    "1219": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Acculec",
+      "urlText": ""
+    },
+    "1216": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Sureway",
+      "urlText": ""
+    },
+    "1213": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "RP Infrastructure",
+      "urlText": ""
+    },
+    "1210": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Pump",
+      "urlText": ""
+    },
+    "1205": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Opteon",
+      "urlText": ""
+    },
+    "1200": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Florabelle",
+      "urlText": ""
+    },
+    "1195": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Direct Couriers",
+      "urlText": ""
+    }
+  },
+  "Anchorage Capital Partners_4": {
+    "259": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Access Community Health New",
+      "urlText": "filters:quality(80)"
+    },
+    "279": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for Total Eden",
+      "urlText": "filters:quality(80)"
+    },
+    "278": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for Solgen Energy Group",
+      "urlText": "filters:quality(80)"
+    },
+    "277": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for Rail First Asset Management",
+      "urlText": "filters:quality(80)"
+    },
+    "276": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for Golden Circle",
+      "urlText": "filters:quality(80)"
+    },
+    "275": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for First Engineering",
+      "urlText": "filters:quality(80)"
+    },
+    "274": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Facilities First Logo",
+      "urlText": "filters:quality(80)"
+    },
+    "273": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Dick Smith Logo",
+      "urlText": "filters:quality(80)"
+    },
+    "272": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for Contract Resources",
+      "urlText": "filters:quality(80)"
+    },
+    "271": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for Burger King NZ",
+      "urlText": "filters:quality(80)"
+    },
+    "270": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for Brand Collective + Shoes & Sox",
+      "urlText": "filters:quality(80)"
+    },
+    "269": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for Bisalloy Steel",
+      "urlText": "filters:quality(80)"
+    },
+    "268": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for Affinity Education Group",
+      "urlText": "filters:quality(80)"
+    },
+    "267": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for Acrow Formwork & Scaffolding",
+      "urlText": "filters:quality(80)"
+    },
+    "266": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Logo for SPL",
+      "urlText": "filters:quality(80)"
+    },
+    "265": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "GBST (new)",
+      "urlText": "filters:quality(80)"
+    },
+    "264": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Evolve Education Group logo",
+      "urlText": "filters:quality(80)"
+    },
+    "263": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "ENTAG logo",
+      "urlText": "filters:quality(80)"
+    },
+    "262": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "ELF Group",
+      "urlText": "filters:quality(80)"
+    },
+    "261": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "David Jones",
+      "urlText": "filters:quality(80)"
+    },
+    "260": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "AWCON logo",
+      "urlText": "filters:quality(80)"
+    }
+  },
+  "Bain Capital_5": {
+    "1573": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Zelis",
+      "urlText": "zelis pe"
+    },
+    "1568": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "York Holdings",
+      "urlText": "york holdings pe"
+    },
+    "1563": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "XTEL",
+      "urlText": "xtel"
+    },
+    "1558": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Works Human Intelligence",
+      "urlText": "WHI%20%20 %20BC%20Template"
+    },
+    "1553": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Waystar",
+      "urlText": "Waystar Template BC%20portoflio%20s"
+    },
+    "1548": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "VXI",
+      "urlText": "VXI%20 %20BC%20portoflio%20s"
+    },
+    "1544": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Vitalink",
+      "urlText": "Vitalink BC%20portoflio%20s"
+    },
+    "1539": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Virgin Voyages",
+      "urlText": "Virgin BC%20portoflio%20s"
+    },
+    "1534": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Virgin Australia",
+      "urlText": "Virgin%20Australia BC%20portoflio%20s"
+    },
+    "1529": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Valeo Foods",
+      "urlText": "Valeo%20 %20BC%20portoflio%20s"
+    },
+    "1524": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "US Renal Care",
+      "urlText": "BC%20portoflio%20s%20 %20US%20Renal%20Care"
+    },
+    "1519": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "US LBM",
+      "urlText": "US%20LBM BC%20portoflio%20s"
+    }
+  },
+  "Bridgeport Capital_7": {
+    "156": {
+      "is_portco": true,
+      "text_source": "urlText",
+      "innerText": "www.trippaswhitegroup.com.au",
+      "urlText": "trippaswhitegroup"
+    },
+    "153": {
+      "is_portco": true,
+      "text_source": "urlText",
+      "innerText": "www.noblebeverages.com",
+      "urlText": "noblebeverages"
+    },
+    "149": {
+      "is_portco": true,
+      "text_source": "urlText",
+      "innerText": "www.ucs.com.au",
+      "urlText": "ucs"
+    }
+  },
+  "CPE Capital_8": {
+    "532": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Ambrose Construct",
+      "urlText": "portfolio"
+    },
+    "533": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Adventure Online",
+      "urlText": "portfolio"
+    },
+    "534": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Banksmeadow Recycling",
+      "urlText": "portfolio"
+    },
+    "535": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "ASDAM",
+      "urlText": "portfolio companies"
+    },
+    "530": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "ABF",
+      "urlText": "portfolio"
+    },
+    "531": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Modus",
+      "urlText": "portfolio"
+    },
+    "2426": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Direct Group (CPEC 9)",
+      "urlText": ""
+    },
+    "2425": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Containerchain (CPEC 8)",
+      "urlText": ""
+    },
+    "2424": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Panthera (CPEC 8)",
+      "urlText": ""
+    },
+    "2423": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Pepperstone (CPEC 8)",
+      "urlText": ""
+    },
+    "2422": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Dutton Group (CPEC 8)",
+      "urlText": ""
+    },
+    "2421": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Cell Care (CPEC 8)",
+      "urlText": ""
+    },
+    "2420": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Jaybro (CPEC 8)",
+      "urlText": ""
+    },
+    "2419": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Gourmet Food Holdings (CPEC 8)",
+      "urlText": ""
+    },
+    "2418": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "StraitNZ (CPEC 8)",
+      "urlText": ""
+    }
+  },
+  "LVP_14": {
+    "405": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "SEISMA",
+      "urlText": "SEISMA"
+    },
+    "407": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Genea",
+      "urlText": "Genea"
+    },
+    "408": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Baby Village",
+      "urlText": "Baby Village"
+    },
+    "409": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "simplyai",
+      "urlText": "simplyai"
+    },
+    "410": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "adora",
+      "urlText": "adora"
+    },
+    "411": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "zenitas",
+      "urlText": "zenitas"
+    },
+    "414": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "mint",
+      "urlText": "mint"
+    },
+    "415": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "academyEX",
+      "urlText": "academyEX"
+    },
+    "416": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "healthengine",
+      "urlText": "healthengine"
+    },
+    "417": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "mint",
+      "urlText": "mint"
+    },
+    "419": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "healthengine",
+      "urlText": "healthengine"
+    },
+    "418": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "academyEX",
+      "urlText": "academyEX"
+    }
+  },
+  "Mercury Capital_16": {
+    "234": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "JMC",
+      "urlText": ""
+    },
+    "237": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Findex",
+      "urlText": ""
+    },
+    "243": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Matrix Education",
+      "urlText": ""
+    },
+    "240": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Fyfe",
+      "urlText": ""
+    },
+    "246": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Avive",
+      "urlText": ""
+    },
+    "258": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Re.Group",
+      "urlText": ""
+    },
+    "261": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Architectus",
+      "urlText": ""
+    },
+    "264": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "E&P Financial Group",
+      "urlText": ""
+    },
+    "270": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "ResourceCo",
+      "urlText": ""
+    },
+    "267": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Green by Nature",
+      "urlText": ""
+    },
+    "276": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "NXP",
+      "urlText": ""
+    },
+    "279": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "TEG",
+      "urlText": ""
+    },
+    "287": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Fiftyfive5",
+      "urlText": ""
+    },
+    "332": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Hexagon",
+      "urlText": ""
+    },
+    "329": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Nexus",
+      "urlText": ""
+    },
+    "326": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Tamaki Health",
+      "urlText": ""
+    },
+    "323": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "IVHQ",
+      "urlText": ""
+    },
+    "320": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Blue Star",
+      "urlText": ""
+    },
+    "317": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Australian Animal Hospitals",
+      "urlText": ""
+    },
+    "314": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Novotech",
+      "urlText": ""
+    },
+    "308": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "HealthStrong",
+      "urlText": ""
+    },
+    "296": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "MessageMedia",
+      "urlText": ""
+    },
+    "311": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Estia Health",
+      "urlText": ""
+    }
+  },
+  "Next Capital_18": {
+    "454": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Travvia",
+      "urlText": ""
+    },
+    "458": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Enviropacific",
+      "urlText": ""
+    },
+    "462": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Eptec",
+      "urlText": ""
+    },
+    "466": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "TMX",
+      "urlText": ""
+    },
+    "470": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Silver Chef",
+      "urlText": ""
+    },
+    "474": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "NZ Bus",
+      "urlText": ""
+    },
+    "478": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "iSeek",
+      "urlText": ""
+    },
+    "482": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Noisette",
+      "urlText": ""
+    },
+    "486": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Funlab",
+      "urlText": ""
+    },
+    "490": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Lynch Group",
+      "urlText": ""
+    },
+    "493": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Zenith Payments",
+      "urlText": ""
+    },
+    "498": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Scentia",
+      "urlText": ""
+    },
+    "503": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Globewest",
+      "urlText": ""
+    },
+    "507": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Alloggio",
+      "urlText": ""
+    },
+    "511": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Infin8 Care",
+      "urlText": ""
+    },
+    "515": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Scottish Pacific",
+      "urlText": ""
+    },
+    "520": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Aerocare",
+      "urlText": ""
+    },
+    "526": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Discovery",
+      "urlText": ""
+    },
+    "531": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Vitaco",
+      "urlText": ""
+    },
+    "536": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "GoBus",
+      "urlText": ""
+    },
+    "540": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Compare Club",
+      "urlText": ""
+    },
+    "544": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Country Care Group",
+      "urlText": ""
+    }
+  },
+  "Pacific Equity Partners_20": {
+    "467": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "SG Fleet",
+      "urlText": ""
+    },
+    "473": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "FMH Group",
+      "urlText": ""
+    },
+    "479": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "ATOM",
+      "urlText": ""
+    },
+    "485": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "FirstCape",
+      "urlText": ""
+    },
+    "491": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Healthia",
+      "urlText": ""
+    },
+    "497": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "UP Education",
+      "urlText": ""
+    },
+    "503": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Opal Healthcare",
+      "urlText": ""
+    },
+    "509": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "iNova Pharmaceuticals",
+      "urlText": ""
+    },
+    "515": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Serenitas",
+      "urlText": ""
+    },
+    "527": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Cranky Health",
+      "urlText": ""
+    },
+    "533": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "LMS Energy",
+      "urlText": ""
+    },
+    "539": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Healthe Care",
+      "urlText": ""
+    },
+    "545": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Intellihub",
+      "urlText": ""
+    },
+    "623": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "ACG",
+      "urlText": ""
+    },
+    "617": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Manuka Health",
+      "urlText": ""
+    },
+    "611": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Allied Pinnacle",
+      "urlText": ""
+    },
+    "605": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "WINconnect",
+      "urlText": ""
+    },
+    "593": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Evolution Healthcare",
+      "urlText": ""
+    },
+    "599": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "AutoPacific Group",
+      "urlText": ""
+    },
+    "575": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "American Stock Transfer and Trust Company",
+      "urlText": ""
+    },
+    "587": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "LifeHealthcare",
+      "urlText": ""
+    },
+    "581": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Patties Foods",
+      "urlText": ""
+    },
+    "569": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Zenith Energy",
+      "urlText": ""
+    },
+    "563": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Magentus",
+      "urlText": ""
+    },
+    "557": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Modern Star",
+      "urlText": ""
+    },
+    "551": {
+      "is_portco": true,
+      "text_source": "innerText",
+      "innerText": "Agright",
+      "urlText": ""
+    }
+  }
+}

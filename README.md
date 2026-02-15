@@ -2,6 +2,10 @@
 
 Python-based automation to extract PE Firm members of the Australian Investment Council and construct a comprehensive database of their portfolio companies as well as the founders/owners who sold them.
 
+**Prerequisites:**
+- Python 3.8+
+- Node.js (required for Playwright)
+
 ## Installation
 Within the terminal enter each of the following commands sequentially
 ```bash
@@ -13,6 +17,15 @@ venv\Scripts\activate      # Windows
 pip install -r requirements.txt
 playwright install
 ```
+
+Also ensure to provide your Google CX and API keys within portCo_Identification/.env:
+```bash
+
+API_KEY = "{Google API Key Here}"
+CX = "{CX Key Here}"
+
+```
+
 
 Currently, only the seed_aic.py is fully operational and accurate, with the portCo_Identification pipeline being fully operational but not completely accurate. founded_year.py is not yet being used to add founding years to PE_firms.csv due to the appearance of 429 errors in response to GoogleAPI requests, that still need to be resolved. 
 

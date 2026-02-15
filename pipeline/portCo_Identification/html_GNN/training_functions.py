@@ -12,7 +12,7 @@ from C_subpage_GNN_process import portfolio_page_finder_GNN
 from D_naming_GNN_process import GNN_process_portCo, f
 from E_name_grouping import scores
 
-def train_naming_GNN(training_dict, batch_size=4, learning_rate=0.001, lambda1=1, lambda2=0.1, lambda3=0.1, dev='cpu', dtype=torch.float32):
+def train_naming_GNN(training_dict, naming_params_package, dev='cpu', batch_size=4, learning_rate=0.001, lambda1=1, lambda2=0.1, lambda3=0.1, dtype=torch.float32):
     
     torch.set_default_dtype(dtype)
     #set datetime
@@ -141,8 +141,8 @@ def train_naming_GNN(training_dict, batch_size=4, learning_rate=0.001, lambda1=1
         """
         Compute loss for a single sample.
         
-        training_batch: sampleID: (soup, [true_scores], overall_type) tuples, length = batch_size
-
+        training_batch: {sampleID: {soup, [true_scores], overall_type}} dict, length = batch_size
+    
         where true_scores is a SORTED (by key) dict of nodeIDs: {1 if portCo name else 0}
         (1 and 0 are torch scalars for differentiability)
         overall_type: torch scalar (1 for InnerText, 0 for UrlText)
@@ -151,8 +151,11 @@ def train_naming_GNN(training_dict, batch_size=4, learning_rate=0.001, lambda1=1
         total_loss = torch.tensor(0.0, device=dev)
 
         
-        for i, (soup, true_scores, true_type) in training_batch.items():
-
+        for i, sample in training_batch.items():
+            soup = sample['soup']
+            true_scores = sample['correct_portCo_tagIDs'] #list of tagIDs that are true portCo names
+            true_type = sample['overall_type']
+            true_type = torch.tensor(1.0, device=dev) if true_type == "innerText" else torch.tensor(0.0, device=dev) #convert to torch scalar for differentiability
 
             #____create_comparison_dict____
             """
@@ -167,6 +170,9 @@ def train_naming_GNN(training_dict, batch_size=4, learning_rate=0.001, lambda1=1
                 return None
             
             comparison_dict = defaultdict(lambda: {'predicted': torch.tensor(0.0, device=dev, dtype=dtype), 'true': torch.tensor(0.0, device=dev, dtype=dtype)})  #key: nodeID, value: dict with 'predicted' and 'true' entries
+            
+            #traversing through predicted_scores ensures alignment
+            true_scores = {k: torch.tensor(1.0, device=dev) if k in true_scores else torch.tensor(0.0, device=dev) for k in predicted_scores.keys()}  #convert list of true portCo tagIDs to dict of nodeID: {1 if portCo name else 0}, with torch scalars for differentiability. Only include nodes that are in predicted_scores to ensure alignment.
 
             id_keys = predicted_scores.keys()
 
@@ -217,39 +223,9 @@ def train_naming_GNN(training_dict, batch_size=4, learning_rate=0.001, lambda1=1
 
 
 
-    #Define all parameters here
-
-    W_class = torch.nn.Parameter(torch.randn(50,384)*0.01, device=dev)
-    b_class = torch.nn.Parameter(torch.randn(50)*0.01, device=dev)
-
-    W_text = torch.nn.Parameter(torch.randn(100,384)*0.01, device=dev)
-    b_text = torch.nn.Parameter(torch.randn(100)*0.01, device=dev)
-    W_sig = torch.nn.Parameter(torch.randn(50,384)*0.01, device=dev)
-    
-
-    W_s = torch.nn.Parameter(torch.randn(2,351)*0.01, device=dev)
-    b_s = torch.nn.Parameter(torch.randn(2,1)*0.01, device=dev)
-
-    #[W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci]
-    namingParams = [
-        torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev),  #W_i
-        torch.nn.Parameter(torch.randn(351)*0.01, device=dev),      #b_i
-        torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev),  #W_qs
-        torch.nn.Parameter(torch.randn(351)*0.01, device=dev),      #b_qs
-        torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev),  #W_qi
-        torch.nn.Parameter(torch.randn(351)*0.01, device=dev),      #b_qi   
-        torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev),  #W_k
-        torch.nn.Parameter(torch.randn(351)*0.01, device=dev),      #b_k
-        torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev),  #W_c1
-        torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev),  #W_c2
-        torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev),  #W_i1
-        torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev),  #W_i2
-        torch.nn.Parameter(torch.randn(351)*0.01, device=dev),      #w_c
-        torch.nn.Parameter(torch.randn(351)*0.01, device=dev),      #w_i
-        torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev),  #W_ci
-        torch.nn.Parameter(torch.randn(351)*0.01, device=dev)       #b_ci
-    ]
-    
+    #unpack naming params
+    #namingParams is [W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_c1, W_c2, W_i1, W_i2, w_c, w_i, W_ci, b_ci]
+    W_class, b_class, W_text, b_text, W_sig, W_s, b_s, namingParams = naming_params_package
 
 
     optimizer = torch.optim.Adam(
@@ -306,9 +282,9 @@ def train_naming_GNN(training_dict, batch_size=4, learning_rate=0.001, lambda1=1
 
 
 
-def train_portfolio_page_finder_GNN(training_dict, batch_size=4, learning_rate=0.001, T1=10, T2=1000,dev='cpu', dtype=torch.float32):
+def train_portfolio_page_finder_GNN(training_dict, portfolio_params_package, dev='cpu', batch_size=4, learning_rate=0.001, T1=10, T2=1000, dtype=torch.float32):
     """
-    training_dict: dict of {sample_ID: (soup, true_portfolio_page_node)}
+    training_dict: dict of {sample_ID: {soup, true_portfolio_page_node}}
     
     batch_size: int, number of samples per training batch
 
@@ -348,10 +324,12 @@ def train_portfolio_page_finder_GNN(training_dict, batch_size=4, learning_rate=0
 
     def page_batch_loss(training_batch, W_class, b_class, W_text, b_text, W_sig, W_down, b_down, W_info, b_info, W_key, b_key, W_final, b_final):
         """
-        training_batch: sampleID: (soup, true_portfolio_page_node) tuples, length = batch_size 
+        training_batch: sampleID: {soup, true_portfolio_page_node} tuples, length = batch_size 
         """
         total_loss = torch.tensor(0.0, device=dev, dtype=dtype)
-        for i, (soup, true_node) in training_batch.items():
+        for i, sample in training_batch.items():
+            soup = sample['soup']
+            true_node = sample['true_portfolio_page_node'] 
             
             """
             id_to_score: dict of {leafID: score}
@@ -406,19 +384,7 @@ def train_portfolio_page_finder_GNN(training_dict, batch_size=4, learning_rate=0
 
 
     #Define all parameters here
-    W_class = torch.nn.Parameter(torch.randn(50,384)*0.01, device=dev)
-    b_class = torch.nn.Parameter(torch.randn(50)*0.01, device=dev)
-    W_text = torch.nn.Parameter(torch.randn(100,384)*0.01, device=dev)
-    b_text = torch.nn.Parameter(torch.randn(100)*0.01, device=dev)
-    W_sig = torch.nn.Parameter(torch.randn(50,384)*0.01, device=dev)    
-    W_down = torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev)
-    b_down = torch.nn.Parameter(torch.randn(351)*0.01, device=dev)
-    W_info = torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev)
-    b_info = torch.nn.Parameter(torch.randn(351)*0.01, device=dev)
-    W_key = torch.nn.Parameter(torch.randn(351,351)*0.01, device=dev)
-    b_key = torch.nn.Parameter(torch.randn(351)*0.01, device=dev)
-    W_final = torch.nn.Parameter(torch.randn(1,351)*0.01, device=dev)
-    b_final = torch.nn.Parameter(torch.randn(1)*0.01, device=dev)
+    W_class, b_class, W_text, b_text, W_sig, W_down, b_down, W_info, b_info, W_key, b_key, W_final, b_final = portfolio_params_package 
 
     optimizer = torch.optim.Adam(
         [W_class, b_class, W_text, b_text, W_sig, W_down, b_down, W_info, b_info, W_key, b_key, W_final, b_final],

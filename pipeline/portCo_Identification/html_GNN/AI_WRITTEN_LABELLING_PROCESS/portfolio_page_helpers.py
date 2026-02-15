@@ -86,14 +86,14 @@ def fetch_portfolio_page(pe_firm_name: str, website_url: str, allow_auto_fetch: 
 
 
 
-
+#BIG CHANGE: LEAVES WILL NOW BE REPLACED WITH LEAVES + ALL NON-LEAF NODES WITH INNERTEXT (since these can also be portCo name candidates). 
 def extract_all_leaves(tree_head: dict) -> dict:
     i = 0
-    """Extract all leaf nodes (nodes with no children). Returns {tagID: node}"""
+    """Extract all leaf nodes (nodes with no children) and non-leaf nodes with innerText. Returns {tagID: node}"""
     leaves = {}
     
     def traverse(node):
-        if not node['children']:
+        if not node['children'] or node.get('innerText'):  # Check if it's a leaf node (no children) or a non-leaf node with innerText
             leaves[node['tagID']] = node
             nonlocal i
             i += 1

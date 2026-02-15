@@ -66,6 +66,9 @@ def inner_text_logic(t):
     if t.name == "span" and not text:
         text = t.get_text(strip=True)
         #print(f"text found in <span>: {text}")
+    if t.name in ["p","strong"] and not text:
+        text = t.get_text(strip=True)
+        #print(f"text found in <{t.name}>: {text}")
         
     if text:
         return text

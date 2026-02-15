@@ -5,6 +5,14 @@ Workflow:
 1. User provides portfolio subpage URL for each PE firm
 2. System extracts all leaves (text elements) from that page
 3. User labels which leaves are PortCo names
+
+output:
+
+json file with structure:
+{main_website_url: tagID of HTML node containing portfolio href in homepage}
+
+note: in the naming GNN target label dict, the portfolio page URL is the key 
+
 """
 
 from playwright.sync_api import sync_playwright, Error
@@ -146,11 +154,7 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
                         'tagName': node['tagName']
                     }
                 
-                labeling_data[sample_id] = {
-                    'leaves': leaf_dict,
-                    'total_leaves': leaf_count,
-                    'portfolio_url': portfolio_url_used
-                }
+                
                 
                 if not auto_fetched:
                     print(f"✓ Extracted {len(leaves)} leaves")
@@ -168,6 +172,13 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
                             print(f"✓ Auto-fetched portfolio page {portfolio_url} for {pe_firm_name} and found href at tagID: {portfolio_href_tagid}")
                         else:
                             print(f"✓ Found portfolio href at tagID: {portfolio_href_tagid}")
+
+                        print(f"CONFIRMATION: portfolio URL used: {portfolio_url_used} for {pe_firm_name}")
+                        labeling_data[sample_id] = {
+                            'leaves': leaf_dict,
+                            'total_leaves': leaf_count,
+                            'portfolio_url': portfolio_url_used
+                        }
                         go_again = False
                         
                     else:
@@ -206,7 +217,8 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
         json.dump(labeling_data, f, indent=2, ensure_ascii=False)
     
     # Save portfolio href data
-    portfolio_href_json = output_json.replace('labeling_data_', 'portfolio_href_')
+    porfolio_href_json = output_json.replace('labeling_data', 'training_data')
+    portfolio_href_json = output_json.replace('labeling_data_', 'portfolio_href_data_')
     with open(portfolio_href_json, 'w', encoding='utf-8') as f:
         json.dump(portfolio_href_data, f, indent=2, ensure_ascii=False)
     
@@ -224,13 +236,17 @@ if __name__ == "__main__":
     import time
     import sys
     from pathlib import Path
+    import os
     
     curr_time = time.strftime("%Y%m%d-%H%M%S")
 
     # Get path relative to repo root
     repo_root = Path(__file__).parent.parent.parent.parent.parent
     csv_path = sys.argv[1] if len(sys.argv) > 1 else str(repo_root / "output" / "PE_firms.csv")
-    json_path = str(repo_root / "output" / f"labeling_data_{curr_time}.json")
+    json_path = str(repo_root / "output" / "labeling_data" / f"labeling_data_{curr_time}.json")
+    
+    os.makedirs(Path(json_path).parent, exist_ok=True)
+
     
     prepare_labeling_data(csv_path, json_path)
     
