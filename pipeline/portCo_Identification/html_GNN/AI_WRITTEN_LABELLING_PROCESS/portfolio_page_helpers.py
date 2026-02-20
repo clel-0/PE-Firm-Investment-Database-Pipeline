@@ -1,4 +1,3 @@
-from playwright.sync_api import sync_playwright, Error
 import json
 import requests
 from urllib.parse import urljoin, urlparse
@@ -15,13 +14,20 @@ def _fetch_html(url:str, timeout:int=10) -> bytes | None:
         return response.content
     except requests.HTTPError as e:
         if e.response.status_code == 403:
-            with sync_playwright() as p:
-                browser = p.chromium.launch(headless=True)
-                page = browser.new_page()
-                page.goto(url, wait_until="load", timeout=timeout*1000)
-                html = page.content()
-                browser.close()
-                return html.encode('utf-8')
+            try:
+                from playwright.sync_api import sync_playwright
+            except Exception:
+                return None
+            try:
+                with sync_playwright() as p:
+                    browser = p.chromium.launch(headless=True)
+                    page = browser.new_page()
+                    page.goto(url, wait_until="load", timeout=timeout*1000)
+                    html = page.content()
+                    browser.close()
+                    return html.encode('utf-8')
+            except Exception:
+                return None
         raise #re-raise other HTTP errors
 
 
@@ -86,14 +92,17 @@ def fetch_portfolio_page(pe_firm_name: str, website_url: str, allow_auto_fetch: 
 
 
 
-#BIG CHANGE: LEAVES WILL NOW BE REPLACED WITH LEAVES + ALL NON-LEAF NODES WITH INNERTEXT (since these can also be portCo name candidates). 
+#BIG CHANGE: CANDIDATE NODES = STRUCTURAL LEAVES + NON-LEAF NODES WITH INNERTEXT.
 def extract_all_leaves(tree_head: dict) -> dict:
     i = 0
-    """Extract all leaf nodes (nodes with no children) and non-leaf nodes with innerText. Returns {tagID: node}"""
+    """Extract candidate nodes: structural leaves and non-leaf nodes with innerText. Returns {tagID: node}"""
     leaves = {}
+
+    if not tree_head:
+        return leaves, i
     
     def traverse(node):
-        if not node['children'] or node.get('innerText'):  # Check if it's a leaf node (no children) or a non-leaf node with innerText
+        if not node['children'] or node.get('InnerText'):  # Check if it's a leaf node (no children) or a non-leaf node with innerText
             leaves[node['tagID']] = node
             nonlocal i
             i += 1

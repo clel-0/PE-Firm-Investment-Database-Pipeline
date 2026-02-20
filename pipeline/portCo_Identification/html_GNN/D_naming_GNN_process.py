@@ -1,8 +1,11 @@
-
-from C_subpage_GNN_process import normalise_vector
+if __package__:
+    from .C_subpage_GNN_process import normalise_vector
+else:
+    from C_subpage_GNN_process import normalise_vector
 import torch
 import torch.nn.functional as F
 import math 
+import time
 
 
 def s(x):
@@ -20,20 +23,36 @@ def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_
     """
     __Process: 'Drip-down" Graph Neural Network to find portCo names.__
         Assumptions:
-            - PortCo names can be found within the leaves of the html tree.
+            - PortCo names can be found within structural leaves and non-leaf nodes with InnerText.
             - Each node has a 'vector' attribute (351 dim) already computed.
         
     """
+
+    
+    run_start = time.perf_counter()
+    print("[NAMING][FORWARD] Starting GNN_process_portCo.")
+
+    if not tree_head:
+        print("[NAMING][FORWARD] Empty tree; returning no candidates.")
+        return []
 
     done = False
     atStart = True
     headList = [tree_head]
     leafList = []
+    seen_leaf_ids = set()
     
     boost_score_now = []
     boost_score_later = []
 
+    def is_candidate_node(node):
+        """Candidate nodes are structural leaves OR non-leaf nodes with InnerText."""
+        return (node.get('children') == []) or bool(node.get('InnerText'))
+
+    layer_idx = 0
     while not done:
+        layer_t0 = time.perf_counter()
+        print(f"[NAMING][LAYER {layer_idx}] processing {len(headList)} nodes...")
         new_headList = []
 
         boost_score_now = boost_score_later
@@ -44,6 +63,11 @@ def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_
         
         for head in headList: 
 
+            leaf_id = head.get('tagID')
+            if is_candidate_node(head) and leaf_id not in seen_leaf_ids:
+                leafList.append(head)
+                seen_leaf_ids.add(leaf_id)
+
             if head['children'] == []:
                 if atStart:
                     head['level'] = torch.tensor(0, device=dev, dtype=torch.float32)
@@ -52,6 +76,7 @@ def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_
                     head['standard'] = h_s
                     head['instruction'] = h_i
                     atStart = False
+                new_headList.append(head)
                 continue #leaf node, nothing to process
 
 
@@ -127,16 +152,15 @@ def GNN_process_portCo(tree_head, W_i, b_i, W_qs, b_qs, W_qi, b_qi, W_k, b_k, W_
                     if gc['children'] == []:
                         boost_score_later.append((score_s, gc['sig_vector']))  #store both score and sig_vector for later use in leaf scoring
 
-        
+        done = all(head.get('children') == [] for head in new_headList)
 
         headList = new_headList
+        print(
+            f"[NAMING][LAYER {layer_idx}] done in {time.perf_counter() - layer_t0:.3f}s; "
+            f"next_layer_nodes={len(headList)}, candidate_leaves_so_far={len(leafList)}"
+        )
+        layer_idx += 1
 
+    print(f"[NAMING][FORWARD] Completed in {time.perf_counter() - run_start:.3f}s; total_candidates={len(leafList)}")
 
-        done = True
-        for head in headList:
-            if head['children'] != []:
-                done = False #still more to process
-            else:
-                leafList.append(head)  #collect leaf nodes. 
-        
     return leafList 

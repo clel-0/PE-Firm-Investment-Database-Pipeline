@@ -1,6 +1,11 @@
 import os
-from playwright.sync_api import sync_playwright, Error
-import playwright
+try:
+    from playwright.sync_api import sync_playwright, Error
+    import playwright
+except Exception:
+    sync_playwright = None
+    Error = Exception
+    playwright = None
 from pathlib import Path
 from datetime import datetime
 import json
@@ -148,7 +153,7 @@ def step3_attempt_4(cand_by_card: dict) -> list[dict]:
         
             href = info.get("url")
             hrefText = name_from_href(href)
-            if hrefText:
+            if hrefText and hrefText[0]:
                 #print(f"Extracted hrefText: {hrefText} from href: {href} from text {i} in card {info.get('card_id')}") 
                 cls["hrefTexts"][hrefText[0]] = {"text": (href, hrefText[1]), "soup_object": portCo.get("soup_object")}
                 #note: hrefText is a tuple (name, rank), we only want the name here. This will also be important for confidence ranking later.

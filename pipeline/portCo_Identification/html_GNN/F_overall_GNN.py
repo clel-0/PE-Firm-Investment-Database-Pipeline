@@ -12,6 +12,22 @@ from D_naming_GNN_process import GNN_process_portCo
 from E_name_grouping import scores
 
 
+"""
+
+
+
+
+NOTE: THIS FILE ISN'T COMPLETED AT THE MOMENT, AND ISNT THE FOCUS OF THE CURRENT WORK, SO IT HASN'T BEEN FULLY INTEGRATED OR TESTED. DISREGARD THIS FILE FOR NOW; FOCUS IS TO GET LABELLING AND TRAINING WORKING FIRST. THIS FILE WILL BE USED IN LATER STAGES TO INTEGRATE ALL COMPONENTS AND CREATE AN END-TO-END GNN SOLUTION FOR PORTCO IDENTIFICATION, BUT FOR NOW, THE FOCUS IS ON GETTING THE INDIVIDUAL COMPONENTS WORKING WELL AND TESTED INDEPENDENTLY. 
+
+
+
+
+"""
+
+
+
+
+
 def overall_GNN(is_PF_subpage: bool, website: str, soup: B, W_class, b_class, W_text, b_text, W_sig, W_s, b_s, namesParams, subpageParams, dev, dtype=torch.float32) -> list:
     """
     Overall GNN process to extract portCo names from HTML soup.

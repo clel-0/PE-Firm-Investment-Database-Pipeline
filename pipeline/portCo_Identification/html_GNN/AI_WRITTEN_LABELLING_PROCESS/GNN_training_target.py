@@ -3,8 +3,8 @@ Core functions for PortCo labeling system.
 
 Workflow:
 1. User provides portfolio subpage URL for each PE firm
-2. System extracts all leaves (text elements) from that page
-3. User labels which leaves are PortCo names
+2. System extracts all candidate nodes (structural leaves + non-leaf nodes with InnerText)
+3. User labels which candidate nodes are PortCo names
 
 output:
 
@@ -15,11 +15,10 @@ note: in the naming GNN target label dict, the portfolio page URL is the key
 
 """
 
-from playwright.sync_api import sync_playwright, Error
 import json
-import requests
 from urllib.parse import urljoin, urlparse
 from bs4 import BeautifulSoup as B
+from pathlib import Path
 from ..A_convert_html_to_tree import convert_html_to_tree
 from .portfolio_page_helpers import _fetch_html, fetch_portfolio_page, extract_all_leaves
 #note: _fetch_html returns bytes | None
@@ -91,7 +90,7 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
     Main workflow:
     1. Load PE firms from CSV
     2. Ask user for portfolio page URL for each firm
-    3. Extract leaves from each portfolio page
+    3. Extract candidate nodes from each portfolio page
     4. Find portfolio href in homepage for GNN training
     5. Save to JSON for Streamlit app
     """
@@ -99,6 +98,15 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
     
     # Load PE firms
     df = pd.read_csv(training_csv)
+
+    name_col = 'FullName' if 'FullName' in df.columns else 'PE_firm_name'
+    website_col = 'Website' if 'Website' in df.columns else 'website'
+    if name_col not in df.columns or website_col not in df.columns:
+        raise KeyError(
+            "Expected CSV columns for firm name and website. Supported pairs: "
+            "('FullName','Website') or ('PE_firm_name','website')."
+        )
+
     print(f"\nLoaded {len(df)} PE firms from {training_csv}")
     print("=" * 60)
     print("Enter portfolio page URLs (copy & paste from browser)")
@@ -108,8 +116,8 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
     portfolio_href_data = {}  # Maps homepage URL to portfolio href tagID
     
     for idx, row in df.iterrows():
-        pe_firm_name = row['FullName']
-        website_url = row['Website']
+        pe_firm_name = row[name_col]
+        website_url = row[website_col]
         sample_id = f"{pe_firm_name}_{idx}"
         
         first_attempt_done = False
@@ -130,21 +138,21 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
 
             # Update df if website changed
             if updated_website_url != website_url:
-                df.loc[idx, 'Website'] = updated_website_url
+                df.loc[idx, website_col] = updated_website_url
                 website_url = updated_website_url
             
             if soup is None:
                 go_again = False
                 continue
 
-            # Convert to tree and extract leaves
+            # Convert to tree and extract candidate nodes
             try:
                 tree_head, _ = convert_html_to_tree(soup)
                 if not auto_fetched:
                     print(f" - Converted HTML to tree")
                 leaves, leaf_count = extract_all_leaves(tree_head)
                 if not auto_fetched:
-                    print(f" - Extracted {leaf_count} leaves from tree (should be equal to {len(leaves)})")
+                    print(f" - Extracted {leaf_count} candidate nodes from tree (should be equal to {len(leaves)})")
                 # Create labeling dict
                 leaf_dict = {}
                 for tag_id, node in leaves.items():
@@ -157,7 +165,7 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
                 
                 
                 if not auto_fetched:
-                    print(f"✓ Extracted {len(leaves)} leaves")
+                    print(f"✓ Extracted {len(leaves)} candidate nodes")
                 
                 # Find portfolio href in homepage for second GNN training
                 if not auto_fetched:
@@ -177,7 +185,8 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
                         labeling_data[sample_id] = {
                             'leaves': leaf_dict,
                             'total_leaves': leaf_count,
-                            'portfolio_url': portfolio_url_used
+                            'portfolio_url': portfolio_url_used,
+                            'portfolio_html': str(soup)
                         }
                         go_again = False
                         
@@ -202,7 +211,7 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
                 else:
                     go_again = False
     
-    # Filter out unwanted leaves; ensure keep to the same with the tree structure in the GNN code
+    # Filter out unwanted candidate nodes; keep this consistent with naming GNN candidate semantics
     for sample_id in labeling_data:
         leaves = labeling_data[sample_id]['leaves']
         labeling_data[sample_id]['leaves'] = {
@@ -217,8 +226,12 @@ def prepare_labeling_data(training_csv: str, output_json: str) -> None:
         json.dump(labeling_data, f, indent=2, ensure_ascii=False)
     
     # Save portfolio href data
-    porfolio_href_json = output_json.replace('labeling_data', 'training_data')
-    portfolio_href_json = output_json.replace('labeling_data_', 'portfolio_href_data_')
+    output_path = Path(output_json)
+    repo_root = Path(__file__).resolve().parents[4]
+    training_data_dir = repo_root / "output" / "training_data"
+    training_data_dir.mkdir(parents=True, exist_ok=True)
+    suffix = output_path.stem.replace("labeling_data_", "")
+    portfolio_href_json = training_data_dir / f"portfolio_href_data_{suffix}.json"
     with open(portfolio_href_json, 'w', encoding='utf-8') as f:
         json.dump(portfolio_href_data, f, indent=2, ensure_ascii=False)
     

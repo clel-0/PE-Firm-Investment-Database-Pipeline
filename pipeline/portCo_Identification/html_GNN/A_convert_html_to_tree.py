@@ -67,6 +67,8 @@ def convert_html_to_tree(soup: B):
 
             if isinstance(url_text, list):
                 url_text = url_text[0] if url_text else ""  # Take first element if list, else empty string
+            if isinstance(url_text, tuple):
+                url_text = url_text[0] if url_text else ""
 
             
             try:
@@ -99,9 +101,13 @@ def convert_html_to_tree(soup: B):
     
     
 
+    root_tag = soup.html if getattr(soup, "html", None) is not None else soup.find(True)
+    if root_tag is None:
+        return None, {}
+
     soup_heads = []
-    soup_heads.append((soup.html, None)) # (bs4_element, parent_tree_node)
-    queued.add(id(soup.html)) #this ensures we don't re-queue the same bs4 element
+    soup_heads.append((root_tag, None)) # (bs4_element, parent_tree_node)
+    queued.add(id(root_tag)) #this ensures we don't re-queue the same bs4 element
 
     headcheck = True #this will be used to save the head node later
 
@@ -113,6 +119,11 @@ def convert_html_to_tree(soup: B):
         
         # Build node only once when popped from queue
         current_tree_node = build_node(current_bs4)
+
+        # Skip if build_node returned None
+        if current_tree_node is None:
+            print("Skipping a node due to build_node failure.")
+            continue
         
         # Attach to parent if not root
         if parent_node is not None:
@@ -122,11 +133,6 @@ def convert_html_to_tree(soup: B):
         if headcheck:
             tree_head = current_tree_node
             headcheck = False
-
-        # Skip if build_node returned None
-        if current_tree_node is None:
-            print("Skipping a node due to build_node failure.")
-            continue
 
         children = [
             c for c in current_bs4.children

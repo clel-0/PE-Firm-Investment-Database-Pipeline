@@ -1,6 +1,11 @@
 import os
-from playwright.sync_api import sync_playwright, Error
-import playwright
+try:
+    from playwright.sync_api import sync_playwright, Error
+    import playwright
+except Exception:
+    sync_playwright = None
+    Error = Exception
+    playwright = None
 from pathlib import Path
 from datetime import datetime
 import json

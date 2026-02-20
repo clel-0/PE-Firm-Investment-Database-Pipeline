@@ -49,13 +49,14 @@ __OUTPUT STRUCTURE__
 
 save a JSON file with structure:
 
-{website_url: {portco_tagIDs: [], overall_type: "innerText"/"urlText"}}
+{sample_id: {sample_id: str, portfolio_url: str, portfolio_html: str, portfolio_html_sha256: str, portco_tagIDs: [], overall_type: "innerText"/"urlText"}}
 
 """
 
 import streamlit as st
 import json
 import os
+import hashlib
 from pathlib import Path
 import time
 
@@ -71,16 +72,23 @@ st.title("Label PortCo Names")
 
 st.sidebar.header("Setup")
 
+def compute_sha256(text: str | None) -> str:
+    if text is None:
+        return ""
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
 def get_labeling_data_files() -> list:
-    output_dir = Path(__file__).resolve().parents[4] / "output"
-    if not output_dir.exists():
+    output_root = Path(__file__).resolve().parents[4] / "output"
+    if not output_root.exists():
         return ["labeling_data.json"]
 
-    candidates = sorted(
-        output_dir.glob("labeling_data_*.json"),
-        key=lambda p: p.stat().st_mtime,
-        reverse=True
-    )
+    search_dirs = [output_root, output_root / "labeling_data"]
+    candidates = []
+    for search_dir in search_dirs:
+        if search_dir.exists():
+            candidates.extend(search_dir.glob("labeling_data_*.json"))
+
+    candidates = sorted(candidates, key=lambda p: p.stat().st_mtime, reverse=True)
     return [str(p) for p in candidates] if candidates else ["labeling_data.json"]
 
 
@@ -104,12 +112,13 @@ repo_root = Path(__file__).parent.parent.parent.parent.parent
 
 output_path = st.sidebar.text_input(
     "Save labels to:",
-    value=str(repo_root / "output" / f"naming_data_{current_time}.json")
+    value=str(repo_root / "output" / "training_data" / f"naming_data_{current_time}.json")
 )
 
 if st.sidebar.button("Save Labels", type="primary"):
 
     if 'labels' in st.session_state:
+        Path(output_path).parent.mkdir(parents=True, exist_ok=True)
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(st.session_state.labels, f, indent=2, ensure_ascii=False)
         st.sidebar.success(f"✓ Saved to {output_path}")
@@ -153,27 +162,52 @@ st.session_state.current_sample_idx = sample_ids.index(current_sample_id)
 st.divider()
 
 # ============================================================================
-# Display and label leaves
+# Display and label candidates
 # ============================================================================
 
 sample_data = st.session_state.labeling_data[current_sample_id]
 leaves = sample_data['leaves']
 portfolio_page_url = sample_data.get('portfolio_url', 'N/A' )
+portfolio_html = sample_data.get('portfolio_html')
+portfolio_html_sha256 = compute_sha256(portfolio_html)
 
 st.subheader(f"Sample: {current_sample_id}")
-st.caption(f"Total leaves: {len(leaves)}")
+st.caption(f"Total candidates: {len(leaves)}")
 st.caption(f"Portfolio page URL: {portfolio_page_url}")
 
-label_key = portfolio_page_url  # website_url in the output JSON
+label_key = current_sample_id  # sample_id in the output JSON
 
 if label_key not in st.session_state.labels:
-    st.session_state.labels[label_key] = {"portco_tagIDs": [], "overall_type": "innerText"}
+    migrated = False
+    if portfolio_page_url in st.session_state.labels:
+        old_entry = st.session_state.labels.pop(portfolio_page_url)
+        st.session_state.labels[label_key] = old_entry
+        migrated = True
+    if not migrated:
+        st.session_state.labels[label_key] = {
+            "sample_id": current_sample_id,
+            "portfolio_url": portfolio_page_url,
+            "portfolio_html": portfolio_html,
+            "portfolio_html_sha256": portfolio_html_sha256,
+            "portco_tagIDs": [],
+            "overall_type": "innerText"
+        }
 
 current_labels = st.session_state.labels[label_key]
+current_labels["sample_id"] = current_sample_id
+current_labels["portfolio_url"] = portfolio_page_url
+current_labels["portfolio_html"] = portfolio_html
+current_labels["portfolio_html_sha256"] = portfolio_html_sha256
 
-leafList = [l for l in leaves.items() if l[1]['innerText']]
-if leafList != leaves.items():
-    st.info(f"Showing {len(leafList)} leaves with non-empty innerText out of {len(leaves)} total leaves.")
+current_labels["overall_type"] = st.radio(
+    "Text source (applies to the whole page):",
+    ["innerText", "urlText"],
+    index=0 if current_labels.get("overall_type", "innerText") == "innerText" else 1,
+    key=f"{current_sample_id}_overall_type",
+    horizontal=True
+)
+
+leafList = list(leaves.items())
 
 # Display each leaf
 for tag_id, leaf_info in sorted(leafList, key=lambda x: int(x[0])):
@@ -203,17 +237,6 @@ for tag_id, leaf_info in sorted(leafList, key=lambda x: int(x[0])):
         )
 
         if is_portco:
-            # We want ONE overall type for the page; use the stored one as the default
-            text_source = st.radio(
-                "Text source (applies to the whole page):",
-                ["innerText", "urlText"],
-                index=0 if current_labels.get("overall_type", "innerText") == "innerText" else 1,
-                key=f"{current_sample_id}_{tag_id}_source",
-                horizontal=True
-            )
-
-            current_labels["overall_type"] = text_source
-
             if tag_id not in current_labels["portco_tagIDs"]:
                 current_labels["portco_tagIDs"].append(tag_id)
 
@@ -225,9 +248,9 @@ st.divider()
 
 
 # No PE firms have 0 portcos. Therefore an empty portco_tagIDs list implies labeling was not completed for that page. 
-for k,v in st.session_state.labels.items():
-    if v["portco_tagIDs"] == []:
-        del st.session_state.labels[k]
+empty_label_keys = [k for k, v in st.session_state.labels.items() if v["portco_tagIDs"] == []]
+for k in empty_label_keys:
+    del st.session_state.labels[k]
 
 
 # Navigation
@@ -245,7 +268,7 @@ with col2:
 
 with col3:
     if st.button("🗑️ Clear this sample"):
-        label_key = portfolio_page_url
+        label_key = current_sample_id
         if label_key in st.session_state.labels:
             del st.session_state.labels[label_key]
         st.rerun()

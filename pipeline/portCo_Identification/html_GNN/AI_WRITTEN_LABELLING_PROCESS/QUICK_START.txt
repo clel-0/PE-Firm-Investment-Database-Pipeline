@@ -58,3 +58,9 @@ Output: labels.json (ready for GNN training)
 """
 
 print(__doc__)
+
+
+
+Next step: enter the following into the terminal:
+
+python -m pipeline.portCo_Identification.html_GNN.training_loop
