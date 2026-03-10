@@ -3,12 +3,23 @@
 - added all nodes with inner text (or alt text) to the list of candidate nodes
 - training loop not yet complete
 
-TODO:
-MAIN PRIORITY: ENSURE LABELLING DATA IS IN A FORMAT THAT IS USEABLE FOR TRAINING
-1. Read through yourself + use copilot to ensure that all of app.py and training_target.py is correct
-2. double check convert_html_to_tree as well as rest of labelling pipeline to ensure no obvious bugs
-3. add code to ensure that all portfolio subpage hrefs that arent matched to a tag_id arent added to the portco naming labelling list
-4. add code to ensure that all portco naming samples that have empty tagID lists are removed from labels.json
-5. add datetime index to labels.json in app.py
-6. redo both subpage labelling and portco labelling processes.
-7. write training_loop.py, run and debug
+TODO: reduce all the overhead from the GNN process using batch tensor ops:
+
+For C: 
+
+1. h_info for a whole layer: stack all head vectors into H and compute once, e.g. H_info = relu(H @ W_info.T + b_info).
+
+2. v_key for all candidate children in that layer: stack child vectors V_child, then V_key = relu(V_child @ W_key.T + b_key).
+
+3. Scores can be computed for all parent-child edges in one tensor pass using an edge index:
+    parent_idx[e] tells which head each child edge belongs to.
+    score_e = dot(H_info[parent_idx[e]], V_key[e]) / sqrt(d).
+
+4. Then do a segment softmax by parent_idx (not global softmax), so each head normalizes only across its own children.
+
+5. Child updates can also be batched:
+    M_parent = relu(H @ W_down.T + b_down),
+    gather M_edge = M_parent[parent_idx],
+    V_new = normalize(V_child + score.unsqueeze(1) * M_edge, dim=1).
+
+ Key point: different children having different heads does not block one big tensor calc, as long as you use indexing (parent_idx) over an edge list. 

@@ -1,19 +1,19 @@
 if __package__:
     from .A_convert_html_to_tree import convert_html_to_tree
     from .B_convert_node_to_vector import convert_tree_to_vectors
+    from .C_functions import *
 else:
     from A_convert_html_to_tree import convert_html_to_tree
     from B_convert_node_to_vector import convert_tree_to_vectors
+    from C_functions import *
 import torch
 import torch.nn.functional as F
 from bs4 import BeautifulSoup as B
 import time
+from collections import defaultdict
 
-def normalise_vector(v: torch.Tensor) -> torch.Tensor:
-    """
-    Normalise a vector to unit length.
-    """
-    return F.normalize(v, p=2, dim=0) #dim=0 means use the only dimension, p=2 means L2 norm
+
+
 
 
 def portfolio_page_finder_GNN(soup: B, W_class, b_class, W_text, b_text, W_sig, W_down, b_down, W_info, b_info, W_key, b_key, W_final, b_final, dev='cpu') -> dict:
@@ -31,7 +31,6 @@ def portfolio_page_finder_GNN(soup: B, W_class, b_class, W_text, b_text, W_sig, 
 
     """
 
-    
 
     run_start = time.perf_counter()
     print("[SUBPAGE][FORWARD] Starting portfolio_page_finder_GNN forward pass.")
@@ -51,6 +50,12 @@ def portfolio_page_finder_GNN(soup: B, W_class, b_class, W_text, b_text, W_sig, 
     hrefLeaves = []
     done = False
 
+    href_nodes_set = set(soup.find_all(href=True))
+
+    #prepare head tensor
+    #SOLUTION_1
+    h_tensor = torch.stack([tree_head.get('vector')], dim=1)  #shape (351, num_heads) stack process on 1 vec
+
     print("[SUBPAGE][FORWARD] Starting GNN layer propagation...")
 
     i = 0
@@ -60,52 +65,55 @@ def portfolio_page_finder_GNN(soup: B, W_class, b_class, W_text, b_text, W_sig, 
         done = True
         new_headlist = []
 
+        #load in vectors to allow for batch tensor operations, which should speed up the process significantly compared to pure python iteration. Still doing the same drip-down process, but in batches.
+
+        child_vec_dict, child_node_dict, hrefLeaves, new_headlist, new_leaves = load_node_vecs(headlist, href_nodes_set, hrefLeaves, new_headlist)
+
+        h_info_batch, h_tensor = batch_h_info(h_tensor, W_info, b_info)
+
+        v_key_batch, child_tensors = batch_v_key(headlist, child_vec_dict, W_key, b_key)
+
+        if v_key_batch is None:
+            print("Error in batch_v_key processing. Stopping GNN layer propagation to avoid misalignment issues.")
+            return {}
+
+        num_children_per_head = {}
+        nodes_before_head = {}
+        old_head_tag_ID = None
+        
         for head in headlist:
+            tag_id = head.get('tagID')
+            len_children = len(child_node_dict[tag_id])
+            num_children_per_head[tag_id] = len_children
+            if old_head_tag_ID is None:
+                nodes_before_head[tag_id] = 0
+            nodes_before_head[tag_id] = nodes_before_head.get(old_head_tag_ID, 0) + num_children_per_head.get(old_head_tag_ID, 0)
+            old_head_tag_ID = tag_id
 
-            if not head:
-                continue
-            
-            # manual traversal to find href-leaves to allow for more transparency in the process
-            has_href = bool(head['bs4_element'] and head['bs4_element'].get('href'))
-            has_href_descendant = False
-            if head['bs4_element'] is not None:
-                for descendant in head['bs4_element'].descendants:
-                    if descendant is head['bs4_element']:
-                        continue
-                    if getattr(descendant, 'get', None) and descendant.get('href'):
-                        has_href_descendant = True
-                        break
-            if has_href and not has_href_descendant:
-                #this is a href-leaf
-                hrefLeaves.append(head)
-                continue
 
-            done = False #still more to process; if all were processed, while loop would have skipped due to continue above
 
-            score_list = []
+        softmaxed_scores = score_children(h_info_batch, v_key_batch, num_children_per_head, headlist, dev)
 
-            for child in head['children']:
-                new_headlist.append(child)
-                v = child['vector']
-                h_info = F.relu(W_info @ head['vector'] + b_info)
-                v_key = F.relu(W_key @ v + b_key)
+        updated_child_tensors = apply_score_updates(h_tensor, child_tensors, softmaxed_scores, W_down, b_down, dev)
 
-                score = (h_info.transpose(0,1) @ v_key) / torch.sqrt(torch.tensor([351.0], device=dev, dtype=torch.float32))  #scaling by sqrt of dimension
-                score_list.append(score)
+        stacked_updated_tensors = torch.cat(updated_child_tensors, dim=1)  #shape (351, num_children)        
 
-            if not score_list:
-                continue
-            
-            score_array = torch.stack(score_list).flatten()
-            score_softmax = torch.softmax(score_array, dim=0)
 
-            for child, score in zip(head['children'], score_softmax):
-                v = child['vector']
-                v = normalise_vector(v + score * F.relu(W_down @ head['vector'] + b_down))
-                child['vector'] = v
+        ##BIG ISSUE: NO LEAF WILL BE IN NEW_HEADLIST, SO THE BELOW FOR LOOP WONT WORK
+        # SOLUTION: WE NEED TO CONSTRUCT A MAP TO IDENTIFY WHICH CHILD NODES WERE PROCESSED AND FURTHERMORE WHERE THEY ARE IN STACKED_UPDATED_TENSORS    
+        for head in headlist:
+            nodes_before = nodes_before_head.get(head.get('tagID'), 0)
+            for idx, child in enumerate(child_node_dict[head.get('tagID')]):
+                if child in new_leaves:
+                    child['vector'] = stacked_updated_tensors[:, nodes_before + idx]  #update the vector of the child node with the corresponding updated tensor, only if needed i.e. only for nodes that will be href leaves.
 
-                
+        h_tensor = stacked_updated_tensors
+  
         headlist = new_headlist
+
+        if new_headlist:
+            done = False #new heads with href descendants were added, so we are not done yet
+        
         print(
             f"[SUBPAGE][LAYER {i}] done in {time.perf_counter() - layer_t0:.3f}s; "
             f"next_layer_nodes={len(headlist)}, href_leaves_so_far={len(hrefLeaves)}"
