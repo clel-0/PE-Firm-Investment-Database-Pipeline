@@ -6,6 +6,8 @@ Python-based automation to extract PE Firm members of the Australian Investment 
 - Python 3.8+
 - Node.js (required for Playwright)
 
+**NOTE:** As a personal project,  a GNN assisted scraper under 'html_GNN' is currently being developed as an alternative to the original scraper, which is under 'manual_HTML_analysis'. Work on html_GNN is currently on hold due to university commitments.
+
 ## Installation
 Within the terminal enter each of the following commands sequentially
 ```bash
